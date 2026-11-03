@@ -60,3 +60,19 @@ GitHub Pages serves the ready static files. A local HTTP server is sufficient fo
 Isolated element previews use stable source selectors, hide unrelated siblings without changing layout, and fit their full bounds into the available width. Preview padding scales with the content; small controls do not inherit a large scene minimum height. Bounds observers attach only to existing nodes. Original missing SVG context is supplied by the specimen's optional `svg_sources` field, referencing SVG from existing PLAZA examples.
 
 Preview state setup scrolls only its own iframe. Catalog section navigation uses one cancellable GSAP scroll with the mobile header offset; asynchronous preview sizing preserves the current reading position.
+
+## Browser verification
+
+The repeatable Playwright Core suite is in `tests/e2e/`. Run `npm ci` and `npm test` there for desktop/mobile interaction checks, or `node run.cjs --all` to include every catalog route. See `tests/e2e/README.md` for browser paths, published-site testing and JSON reports. Tests run sequentially without screenshots.
+
+Preparing frames remain hidden at a fixed viewport position until their state is ready, so native dialog autofocus cannot scroll the catalog. State readiness polling uses native timers and continues independently of paused offscreen animation. State setup begins after DOM initialization rather than waiting for every image to download. Unsupported states finish with an explicit explanation instead of an indefinite loading indicator.
+
+Repeated rows with the same disclosure markup share a representative expanded state. State discovery stays within the selected specimen, so unrelated context controls are not advertised as component states. Source theme modes, gallery positions and medical goal variants use their dedicated states instead of inferring selection from arbitrary `aria-pressed` attributes. Replaying or changing a specimen creates a fresh iframe, and duplicate history events do not rebuild the same route twice. Background state setup restores the reader’s current search/control focus.
+
+Element section identifiers use their original catalog keys independently of responsive target indexes. This prevents sections from overwriting each other and leaving orphaned preview loads. Position preservation anchors the visible specimen or the next nested heading when the viewport is in a gap between sections. Modal presets are offered only when the source trigger has its required local dialog content.
+
+The catalog reserves only the document height needed for a requested heading to remain readable when the last accordion closes. This reserve resets when navigating to another component. Scroll preservation skips unnecessary layout scans at the top of the page; background initialization therefore scales with fewer repeated measurements.
+
+Tab image preloading has a bounded wait; a stalled image cannot keep its panel hidden. Canonical [ResizeObserver loop notifications](https://www.w3.org/TR/resize-observer/#deliver-resize-loop-error) are retained as measurement warnings, separately from script exceptions; preview resize writes are scheduled outside observer delivery.
+
+Crop coordinates are measured in the source viewport after local document scrolling. Ordinary previews keep their original viewport height; they never grow to the element’s position down a long page. Print pages may use their physical page height, while taller interactive elements retain a scrollable native viewport. Local image assets are explicitly permitted by the preview CSP.

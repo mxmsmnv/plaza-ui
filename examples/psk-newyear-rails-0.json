@@ -342,7 +342,8 @@
     "runtime/shared/assets/header/logo-orbit.js",
     "runtime/compositions/context.js",
     "runtime/compositions/newyear-rails.js",
-    "runtime/cards/video.gated.js"
+    "runtime/cards/video.gated.js",
+    "runtime/compositions/newyear-plan.js"
   ],
   "layout": {
     "viewport": {

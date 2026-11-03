@@ -139,7 +139,8 @@
       if (index === active) { clean(); group.removeAttribute('aria-busy'); return; }
       if (motion) {
         group.setAttribute('aria-busy','true');
-        await warm(panels[index]);
+        // A slow or missing image must not block tab navigation.
+        await Promise.race([warm(panels[index]),new Promise(resolve=>setTimeout(resolve,400))]);
         if (request !== intent) return;
       }
       group.removeAttribute('aria-busy');

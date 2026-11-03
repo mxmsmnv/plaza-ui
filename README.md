@@ -73,3 +73,9 @@ Original PLAZA components and media remain attributed to their respective owners
 ## License
 
 See [LICENSE](LICENSE): MIT for original catalog tooling and documentation only. Original PLAZA materials and third-party dependencies retain their own rights and terms. Notices are included in `licenses/` and bundle headers.
+
+## Browser Tests
+
+Run `npm ci` and `npm test` in `tests/e2e/` for Chromium interaction checks at mobile and desktop widths. Use `node run.cjs --all` to include all catalog routes. The suite starts a local server, writes a JSON report and closes its browser afterward; it does not take screenshots. See [the test guide](tests/e2e/README.md).
+
+[Last recorded browser run](tests/e2e/last-run.json).

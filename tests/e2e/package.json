@@ -1,0 +1,12 @@
+{
+  "name": "plaza-ui-browser-tests",
+  "private": true,
+  "scripts": {
+    "test": "node run.cjs",
+    "test:smoke": "node run.cjs --smoke"
+  },
+  "devDependencies": {
+    "playwright-core": "1.64.1"
+  },
+  "version": "1.0.0"
+}

@@ -66,10 +66,35 @@
  function startCSSMotion(){document.addEventListener('animationstart',scheduleCSS,true);new MutationObserver(scheduleCSS).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class','hidden','open'],childList:true});window.addEventListener('load',scheduleCSS,{once:true});scheduleCSS()}
  let entrance;
  function enter(nodes){entrance?.revert();const targets=[...nodes];if(!targets.length||matchMedia('(prefers-reduced-motion:reduce)').matches)return;entrance=gsap.context(()=>gsap.from(targets,{autoAlpha:0,y:10,duration:.24,stagger:.025,ease:'power2.out',clearProps:'opacity,visibility,transform'}))}
- function keepPosition(update){const offset=innerWidth<=700?(document.querySelector('.mobile-header')?.getBoundingClientRect().height||0)+24:24;const candidates=[...document.querySelectorAll('#catalog .component-section,#catalog .state-example')].filter(n=>{const r=n.getBoundingClientRect();return r.top<=offset&&r.bottom>offset});const anchor=scrollY>0?candidates.at(-1):null,before=anchor?.getBoundingClientRect().top;update();if(anchor?.isConnected&&Number.isFinite(before)){const delta=anchor.getBoundingClientRect().top-before;if(Math.abs(delta)>.5)window.scrollBy({top:delta,behavior:'instant'})}}
- let scrollMotion;
- function stopScroll(){scrollMotion?.kill();scrollMotion=null}
- function scrollToNode(target){const root=document.scrollingElement,offset=innerWidth<=700?document.querySelector('.mobile-header')?.getBoundingClientRect().height||0:0;stopScroll();const destination=()=>Math.max(0,target.getBoundingClientRect().top+root.scrollTop-offset-24);if(matchMedia('(prefers-reduced-motion:reduce)').matches){window.scrollTo({top:destination(),behavior:'instant'});return}const start=root.scrollTop,progress={value:0};const stop=()=>{motion.kill();cleanup()},cleanup=()=>{for(const type of ['wheel','touchstart','pointerdown','keydown'])window.removeEventListener(type,stop)};const motion=scrollMotion=gsap.to(progress,{value:1,duration:.4,ease:'power2.out',onUpdate:()=>{root.scrollTop=start+(destination()-start)*progress.value},onComplete:cleanup,onInterrupt:cleanup});for(const type of ['wheel','touchstart','pointerdown','keydown'])window.addEventListener(type,stop,{passive:true,once:true})}
+ // Preserve enough document height to avoid bottom-of-page scroll clamping.
+ function readingRoom(top){const missing=Math.ceil(top+innerHeight-document.documentElement.scrollHeight),main=document.querySelector('#components');if(main&&missing>0)main.style.minHeight=(main.offsetHeight+missing)+'px'}
+ // Anchor the content being read, including gaps before nested state headings.
+ function keepPosition(update){
+  if(scrollY<=0){update();return}
+  let anchor=readingAnchor?.isConnected?readingAnchor:null;
+  if(!anchor){
+   const offset=innerWidth<=700?(document.querySelector('.mobile-header')?.getBoundingClientRect().height||0)+24:24;
+   const catalog=document.querySelector('#catalog'),box=catalog?.getBoundingClientRect(),x=box?box.left+Math.min(box.width,innerWidth-box.left)/2:innerWidth/2;
+   const region=document.elementFromPoint(x,offset)?.closest('.specimen,.section-heading,.default-state-title,.specimen-caption,.source-details,.state-section-nav');
+   anchor=region?.closest('.state-example,.component-section');
+   if(!anchor){const blocks=[...document.querySelectorAll('#catalog .component-section,#catalog .state-example')];anchor=blocks.filter(n=>{const r=n.getBoundingClientRect();return r.top>=offset&&r.top<innerHeight}).sort((a,b)=>a.getBoundingClientRect().top-b.getBoundingClientRect().top)[0]||blocks.find(n=>{const r=n.getBoundingClientRect();return r.top<=offset&&r.bottom>offset})}
+  }
+  const before=anchor?.getBoundingClientRect().top;update();
+  if(anchor?.isConnected&&Number.isFinite(before)){const delta=anchor.getBoundingClientRect().top-before;if(Math.abs(delta)>.5){readingRoom(scrollY+delta);window.scrollBy({top:delta,behavior:'instant'})}}
+ }
+
+ let scrollMotion,readingAnchor,releaseAnchor;
+ function stopScroll(){scrollMotion?.kill();scrollMotion=null;readingAnchor=null;releaseAnchor?.();releaseAnchor=null}
+ function scrollToNode(target){
+  const root=document.scrollingElement,offset=innerWidth<=700?document.querySelector('.mobile-header')?.getBoundingClientRect().height||0:0;
+  stopScroll();readingAnchor=target;const events=['wheel','touchstart','pointerdown','keydown'];
+  releaseAnchor=()=>{for(const type of events)window.removeEventListener(type,stopScroll)};
+  for(const type of events)window.addEventListener(type,stopScroll,{passive:true,once:true});
+  const destination=()=>Math.max(0,target.getBoundingClientRect().top+root.scrollTop-offset-24);readingRoom(destination());
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){window.scrollTo({top:destination(),behavior:'instant'});return}
+  const start=root.scrollTop,progress={value:0};scrollMotion=gsap.to(progress,{value:1,duration:.4,ease:'power2.out',onUpdate:()=>{root.scrollTop=start+(destination()-start)*progress.value},onComplete:()=>{scrollMotion=null}})
+ }
+
  function start(){if(started)return;started=true;Alpine.data('plazaExample',()=>({active:true}));if(!document.body.hasAttribute('x-data'))document.body.setAttribute('x-data','plazaExample');Alpine.start();startCSSMotion();document.documentElement.dataset.uiEngine='alpine';document.documentElement.dataset.motionEngine='gsap'}
  let viewportPaused=false;window.addEventListener('message',event=>{if(event.source!==parent||event.data?.plazaPreview!==true||typeof event.data.viewportVisible!=='boolean')return;viewportPaused=!event.data.viewportVisible;if(viewportPaused){gsap.globalTimeline.pause();gsap.ticker.sleep();document.querySelectorAll('video').forEach(video=>video.pause())}else{gsap.globalTimeline.resume();gsap.ticker.wake()}});
  window.PlazaRuntime={on,off,start,state:(data)=>Alpine.reactive(data),stats};window.PlazaMotion={frame,cancelFrame,animate,enter,scrollToNode,stopScroll,keepPosition,easing};

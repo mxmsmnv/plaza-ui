@@ -16,3 +16,9 @@ Initial release.
 - Correct mobile specimen fitting, stable target selection, isolated crop canvases and restored original phone SVG context.
 
 - Stabilize component/state navigation and accordion previews, preserve the reading position during loading, and remove the active sidebar stripe.
+
+- Add repeatable browser end-to-end checks; isolate native dialog focus during preparation, finish unsupported states, and initialize examples independently of image downloads.
+
+- Keep element state IDs stable across responsive layouts, prevent bottom-page scroll clamping, and restore the original seating-plan dependency in the New Year rails example.
+
+- Preserve native preview viewport dimensions while cropping, permit local preview images, and bound image preloading so tabs remain responsive. Verify 140 browser checks across all 116 component routes and both viewport widths.

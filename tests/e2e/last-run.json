@@ -1,0 +1,701 @@
+{
+  "version": "1.0.0",
+  "version_code": 100,
+  "checked_at": "2026-11-03T23:16:46.118034+00:00",
+  "mode": "Full catalog sweep plus focused regression reruns after repairs",
+  "browser": "156.0.8078.80",
+  "playwright": "1.64.1",
+  "widths": [
+    390,
+    1280
+  ],
+  "additional_crop_widths": [
+    320,
+    768
+  ],
+  "screenshots": false,
+  "checks": 140,
+  "passed": 140,
+  "failed": 0,
+  "interaction_checks": [
+    {
+      "name": "390: overview, search and profile filters",
+      "passed": true
+    },
+    {
+      "name": "390: sidebar, history, theme persistence",
+      "passed": true
+    },
+    {
+      "name": "390: element jumps, code, replay and native size",
+      "passed": true
+    },
+    {
+      "name": "390: accordion pointer and keyboard, no page jumps",
+      "passed": true
+    },
+    {
+      "name": "390: tabs switch panels",
+      "passed": true
+    },
+    {
+      "name": "390: tabs remain usable while an image is stalled",
+      "passed": true
+    },
+    {
+      "name": "390: booklet pages loaded without scrolling",
+      "passed": true
+    },
+    {
+      "name": "390: rapid route changes and overview cleanup",
+      "passed": true
+    },
+    {
+      "name": "390: responsive crops remain inside their viewport",
+      "passed": true
+    },
+    {
+      "name": "390: wide native previews start at the visible left edge",
+      "passed": true
+    },
+    {
+      "name": "390: source profile changes rebuild previews once",
+      "passed": true
+    },
+    {
+      "name": "390: background dialogs do not steal search focus",
+      "passed": true
+    },
+    {
+      "name": "1280: overview, search and profile filters",
+      "passed": true
+    },
+    {
+      "name": "1280: sidebar, history, theme persistence",
+      "passed": true
+    },
+    {
+      "name": "1280: element jumps, code, replay and native size",
+      "passed": true
+    },
+    {
+      "name": "1280: accordion pointer and keyboard, no page jumps",
+      "passed": true
+    },
+    {
+      "name": "1280: tabs switch panels",
+      "passed": true
+    },
+    {
+      "name": "1280: tabs remain usable while an image is stalled",
+      "passed": true
+    },
+    {
+      "name": "1280: booklet pages loaded without scrolling",
+      "passed": true
+    },
+    {
+      "name": "1280: rapid route changes and overview cleanup",
+      "passed": true
+    },
+    {
+      "name": "1280: responsive crops remain inside their viewport",
+      "passed": true
+    },
+    {
+      "name": "1280: wide native previews start at the visible left edge",
+      "passed": true
+    },
+    {
+      "name": "1280: source profile changes rebuild previews once",
+      "passed": true
+    },
+    {
+      "name": "1280: background dialogs do not steal search focus",
+      "passed": true
+    }
+  ],
+  "component_routes": [
+    {
+      "id": "accordion",
+      "passed": true,
+      "frames": 10
+    },
+    {
+      "id": "booking-panel",
+      "passed": true,
+      "frames": 20
+    },
+    {
+      "id": "breadcrumbs",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "card-spotlight",
+      "passed": true,
+      "frames": 13
+    },
+    {
+      "id": "consultant-portrait-gaze",
+      "passed": true,
+      "frames": 20
+    },
+    {
+      "id": "dialog-close",
+      "passed": true,
+      "frames": 28
+    },
+    {
+      "id": "editor-foundation",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "elastic-headings",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "font-foundation",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "footer-meta",
+      "passed": true,
+      "frames": 41
+    },
+    {
+      "id": "footer-shell",
+      "passed": true,
+      "frames": 50
+    },
+    {
+      "id": "footer-sitemap",
+      "passed": true,
+      "frames": 50
+    },
+    {
+      "id": "glass-surface",
+      "passed": true,
+      "frames": 14
+    },
+    {
+      "id": "guest-search",
+      "passed": true,
+      "frames": 18
+    },
+    {
+      "id": "header-shell",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "heading-motion",
+      "passed": true,
+      "frames": 10
+    },
+    {
+      "id": "hero-video",
+      "passed": true,
+      "frames": 11
+    },
+    {
+      "id": "home-booking-search",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "home-gallery",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "home-loading-choreography",
+      "passed": true,
+      "frames": 29
+    },
+    {
+      "id": "icon-registry",
+      "passed": true,
+      "frames": 23
+    },
+    {
+      "id": "inner-photo",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "layout-and-controls",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "mobile-home-faq-wrapper",
+      "passed": true,
+      "frames": 11
+    },
+    {
+      "id": "network-atlas-hero",
+      "passed": true,
+      "frames": 14
+    },
+    {
+      "id": "network-booking-social-layout",
+      "passed": true,
+      "frames": 21
+    },
+    {
+      "id": "network-care",
+      "passed": true,
+      "frames": 7
+    },
+    {
+      "id": "network-comparison",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "network-faq",
+      "passed": true,
+      "frames": 10
+    },
+    {
+      "id": "network-home",
+      "passed": true,
+      "frames": 29
+    },
+    {
+      "id": "network-map-camera-dialogs",
+      "passed": true,
+      "frames": 18
+    },
+    {
+      "id": "network-principles-rail",
+      "passed": true,
+      "frames": 7
+    },
+    {
+      "id": "network-print-booklet",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "network-privacy-cookie",
+      "passed": true,
+      "frames": 11
+    },
+    {
+      "id": "network-property-card",
+      "passed": true,
+      "frames": 26
+    },
+    {
+      "id": "network-rating",
+      "passed": true,
+      "frames": 26
+    },
+    {
+      "id": "network-shell-adapter",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "network-video-poster-pair",
+      "passed": true,
+      "frames": 26
+    },
+    {
+      "id": "night-background",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "page-menu",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "page-transition",
+      "passed": true,
+      "frames": 18
+    },
+    {
+      "id": "photo-gallery",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "photo-material",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "photo-story",
+      "passed": true,
+      "frames": 78
+    },
+    {
+      "id": "plaza-room-print-family",
+      "passed": true,
+      "frames": 1
+    },
+    {
+      "id": "privacy-contrast",
+      "passed": true,
+      "frames": 11
+    },
+    {
+      "id": "profile-tokens",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "property-home-print-booklet",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "property-not-found-recovery",
+      "passed": true,
+      "frames": 23
+    },
+    {
+      "id": "property-picker",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "property-print-foundation",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "psg-booking-page",
+      "passed": true,
+      "frames": 18
+    },
+    {
+      "id": "psg-contact-priority",
+      "passed": true,
+      "frames": 12
+    },
+    {
+      "id": "psg-data-table",
+      "passed": true,
+      "frames": 21
+    },
+    {
+      "id": "psg-detail-page",
+      "passed": true,
+      "frames": 10
+    },
+    {
+      "id": "psg-document-search",
+      "passed": true,
+      "frames": 17
+    },
+    {
+      "id": "psg-editorial-refinement",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "psg-gallery-print",
+      "passed": true,
+      "frames": 24
+    },
+    {
+      "id": "psg-guide-feature-card",
+      "passed": true,
+      "frames": 12
+    },
+    {
+      "id": "psg-guide-feature-rail",
+      "passed": true,
+      "frames": 12
+    },
+    {
+      "id": "psg-guide-hero",
+      "passed": true,
+      "frames": 13
+    },
+    {
+      "id": "psg-guide-navigation",
+      "passed": true,
+      "frames": 7
+    },
+    {
+      "id": "psg-guide-page",
+      "passed": true,
+      "frames": 41
+    },
+    {
+      "id": "psg-guide-prose-section",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "psg-photo-story",
+      "passed": true,
+      "frames": 118
+    },
+    {
+      "id": "psg-profile-shell-adapter",
+      "passed": true,
+      "frames": 31
+    },
+    {
+      "id": "psg-room-card-adapter",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "psg-room-detail",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "psg-room-photo-gallery",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "psg-wifi-welcome",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "psk-about-award",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "psk-about-editorial",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "psk-about-jobs-contacts",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "psk-about-print",
+      "passed": true,
+      "frames": 3
+    },
+    {
+      "id": "psk-candy-catalogue",
+      "passed": true,
+      "frames": 21
+    },
+    {
+      "id": "psk-channel-pages",
+      "passed": true,
+      "frames": 17
+    },
+    {
+      "id": "psk-dining-editorial",
+      "passed": true,
+      "frames": 76
+    },
+    {
+      "id": "psk-dining-gallery",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "psk-dining-print",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "psk-documents-browser",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "psk-ds-catalogue",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "psk-ds-live-cards",
+      "passed": true,
+      "frames": 82
+    },
+    {
+      "id": "psk-ds-reference-tools",
+      "passed": true,
+      "frames": 38
+    },
+    {
+      "id": "psk-faq-packing",
+      "passed": true,
+      "frames": 12
+    },
+    {
+      "id": "psk-feature-card",
+      "passed": true,
+      "frames": 14
+    },
+    {
+      "id": "psk-guide-page",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "psk-medical-goal",
+      "passed": true,
+      "frames": 19
+    },
+    {
+      "id": "psk-medical-landing",
+      "passed": true,
+      "frames": 116
+    },
+    {
+      "id": "psk-medical-methods",
+      "passed": true,
+      "frames": 14
+    },
+    {
+      "id": "psk-medical-print",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "psk-medical-registry",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "psk-medical-sheet",
+      "passed": true,
+      "frames": 16
+    },
+    {
+      "id": "psk-newyear-page",
+      "passed": true,
+      "frames": 51
+    },
+    {
+      "id": "psk-newyear-plan",
+      "passed": true,
+      "frames": 45
+    },
+    {
+      "id": "psk-newyear-print",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "psk-newyear-rails",
+      "passed": true,
+      "frames": 51
+    },
+    {
+      "id": "psk-program-card",
+      "passed": true,
+      "frames": 18
+    },
+    {
+      "id": "psk-service-card",
+      "passed": true,
+      "frames": 12
+    },
+    {
+      "id": "psk-services-page",
+      "passed": true,
+      "frames": 71
+    },
+    {
+      "id": "psk-services-transfer-business",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "rail-carousel",
+      "passed": true,
+      "frames": 7
+    },
+    {
+      "id": "resort-profile-shell-adapter",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "room-card-interaction",
+      "passed": true,
+      "frames": 22
+    },
+    {
+      "id": "scroll-reveal",
+      "passed": true,
+      "frames": 10
+    },
+    {
+      "id": "search-targets",
+      "passed": true,
+      "frames": 10
+    },
+    {
+      "id": "section-rhythm",
+      "passed": true,
+      "frames": 10
+    },
+    {
+      "id": "semantic-card-system",
+      "passed": true,
+      "frames": 7
+    },
+    {
+      "id": "semantic-links",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "sticky-photo-copy",
+      "passed": true,
+      "frames": 13
+    },
+    {
+      "id": "sticky-table-head",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "sun-icon",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "table-foundation",
+      "passed": true,
+      "frames": 6
+    },
+    {
+      "id": "tabs",
+      "passed": true,
+      "frames": 17
+    },
+    {
+      "id": "theme-transition",
+      "passed": true,
+      "frames": 9
+    },
+    {
+      "id": "tooltips",
+      "passed": true,
+      "frames": 8
+    },
+    {
+      "id": "welcome-book-navigation",
+      "passed": true,
+      "frames": 14
+    }
+  ],
+  "measurement_warnings": []
+}
