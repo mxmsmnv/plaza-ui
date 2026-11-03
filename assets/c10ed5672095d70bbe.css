@@ -1,0 +1,7 @@
+/* Column headings are structural text. Links and buttons retain their own action colours.
+   This property-scoped contract also covers imported cell styles and sticky clones. */
+body.plaza-object-kislovodsk :is(thead > tr > th, thead > tr > td, th[scope="col"], th[scope="colgroup"], [role="columnheader"]) {
+  text-align: center !important;
+  vertical-align: middle !important;
+  color: inherit !important;
+}

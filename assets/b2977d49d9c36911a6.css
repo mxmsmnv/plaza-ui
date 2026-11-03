@@ -1,0 +1,50 @@
+/* Camera and header phone share one service-link role; each property owns its palette. */
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone){
+ color:var(--plaza-service-link-color)!important;
+ text-decoration:none!important;background-image:none!important;border-bottom:0!important;
+ transition:color var(--plaza-icon-duration,.35s) ease;
+}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone):is(:hover,:focus-visible){color:var(--plaza-service-link-hover)!important}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone) :is(span,svg){color:inherit!important;text-decoration:none!important;background-image:none!important;border-bottom:0!important}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone)::before,
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone)::after,
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone) span::before,
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone) span::after{content:none!important}
+@media(prefers-reduced-motion:reduce){html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) :is(.hero-camera-link,.hero-tour-link,.header-call,.header-phone){transition:none}}
+
+/* Named components only; player controls and button content keep their own colours. */
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-plaza) :is(.site-header .brand,.site-header .pn-mark,.site-header .pn-burger,.hero-media-links a,a.plaza-underline,a.plaza-text-link,.text-link a,.comparison-room-name,.booking-phone a,.footer-contact>a,.footer-address-link,.footer-nav a,.social-links a,.hero-glass .glass-icon,.plaza-icon):not(:where([data-plaza-footer="edges"] *,html[data-theme=dark] .booking-phone a)){color:var(--plaza-ui-gold)!important}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-plaza) :is(.hero-media-links a,a.plaza-underline,a.plaza-text-link,.text-link a,.comparison-room-name,.booking-phone a,.footer-contact>a,.footer-address-link,.footer-nav a,.social-links a):is(:hover,:focus-visible):not(:where([data-plaza-footer="edges"] *,html[data-theme=dark] .booking-phone a)){color:var(--plaza-ui-gold-hover)!important}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-plaza) .site-header .brand svg [fill]:not([fill="none"]){fill:var(--plaza-ui-gold)!important}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-plaza) .site-header .pn-burger>span{background:var(--plaza-ui-gold)!important}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-plaza) .site-header .pn-mark{border-color:var(--plaza-ui-gold)!important}
+html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-plaza) :is(.hero-glass .glass-icon,.plaza-icon) svg{color:inherit!important}
+
+/* Network gold text links/icons use the same theme roles as Kislovodsk. */
+html body.plaza-shell.plaza-object-plaza :is(.pn-link,.pn-external,.pn-quick,.pn-quick-link,.pn-quick-label,.pn-quick-icon,.pn-service-link,.pn-icon){color:var(--plaza-ui-gold)!important}
+html body.plaza-shell.plaza-object-plaza :is(.pn-link,.pn-external,.pn-quick,.pn-quick-link,.pn-service-link):is(:hover,:focus-visible),html body.plaza-shell.plaza-object-plaza :is(.pn-quick,.pn-quick-link):is(:hover,:focus-visible) :is(.pn-quick-label,.pn-quick-icon){color:var(--plaza-ui-gold-hover)!important}
+/* One header colour contract for all three sites: phone text, receiver, and burger lines. */
+html body.plaza-shell:is(.plaza-object-plaza,.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .site-header :is(a.header-call,.pn-burger){color:var(--plaza-service-link-color)!important}
+html body.plaza-shell:is(.plaza-object-plaza,.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .site-header :is(a.header-call,.pn-burger):is(:hover,:focus-visible){color:var(--plaza-service-link-hover)!important}
+html body.plaza-shell:is(.plaza-object-plaza,.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .site-header a.header-call :is(span,svg){color:inherit!important}
+html body.plaza-shell:is(.plaza-object-plaza,.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .site-header .pn-burger>span{background-color:currentColor!important}
+
+/* Embedded prose links retain the text baseline; separate action links keep their icons. */
+html body.plaza-shell.plaza-object-kislovodsk main a.plaza-inline-prose-link{display:inline;min-height:0;vertical-align:baseline}
+
+/* Link-only actions have no list marker; real content enumerations keep theirs. */
+body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main :is(ul,ol).plaza-action-link-list{list-style:none;padding-inline-start:0;margin-inline:0}
+body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main .plaza-action-link-list>li{list-style:none}
+body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main .plaza-action-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-block:16px}
+body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main .plaza-action-links>p{margin:0}
+body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main svg.plaza-content-file-word{fill:currentColor;stroke:none}
+
+/* Canonical text-label underline, extracted from object-header-behavior.php.
+   Loaded for all three profiles; action colours remain with their component. */
+body.plaza-shell a.plaza-text-link,body.plaza-shell a.plaza-text-link:is(:hover,:focus-visible){text-decoration:none!important;border-bottom:0!important;background-image:none!important;box-shadow:none}
+body.plaza-shell a.plaza-text-link::before,body.plaza-shell a.plaza-text-link::after{content:none!important}
+body.plaza-shell a.plaza-text-link .plaza-link-label{display:inline;position:relative;padding-block:2px;background-image:linear-gradient(currentColor,currentColor)!important;background-position:left bottom!important;background-repeat:no-repeat!important;background-size:0 var(--link-underline-thickness,1px)!important;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-decoration:none!important;border-bottom:0!important;transition:background-size .35s ease!important}
+body.plaza-shell a.plaza-text-link .plaza-link-label::before,body.plaza-shell a.plaza-text-link .plaza-link-label::after{content:none!important}
+body.plaza-shell a.plaza-text-link:is(:hover,:focus-visible) .plaza-link-label{background-size:100% var(--link-underline-thickness,1px)!important}
+body.plaza-shell a.plaza-text-link:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){body.plaza-shell a.plaza-text-link .plaza-link-label{transition:none!important}}

@@ -1,0 +1,72 @@
+/* Shared comparison scrollbar: object/theme colors come from existing tokens. */
+.comparison-scroll{scrollbar-width:thin;scrollbar-color:var(--plaza-service-link-color,var(--gold)) var(--surface);}
+.comparison-scroll::-webkit-scrollbar{height:10px;width:10px}
+.comparison-scroll::-webkit-scrollbar-track{background:var(--surface);border-radius:4px}
+.comparison-scroll::-webkit-scrollbar-thumb{background:var(--plaza-service-link-color,var(--gold));border:2px solid var(--surface);border-radius:8px}
+.comparison-scroll::-webkit-scrollbar-thumb:hover{background:var(--plaza-service-link-hover,var(--gold))}
+.comparison-scroll::-webkit-scrollbar-corner{background:var(--surface)}
+
+/* Quiet info control; image and reverse share the approved room-preview surface. */
+.comparison-view-filter{position:relative;display:flex;min-width:0}
+.comparison-filters .comparison-view-filter>[data-room-filter]{padding-right:46px;width:100%}
+html body .comparison-filters .comparison-view-help{position:absolute;right:1px;top:50%;transform:translateY(-50%)!important;display:inline-flex;flex:none;align-items:center;justify-content:center;box-sizing:border-box;min-width:40px;width:40px;max-width:40px;min-height:44px;height:44px;padding:0!important;margin:0!important;border:0!important;background:none!important;box-shadow:none!important;filter:none!important;outline:0;color:var(--plaza-service-link-color,var(--gold));opacity:.48;border-radius:0!important;cursor:pointer;z-index:1;transition:color var(--plaza-icon-duration,.35s) ease,opacity var(--plaza-icon-duration,.35s) ease}
+html body .comparison-view-help::before,html body .comparison-view-help::after{display:none!important;content:none!important}
+html body .comparison-view-help svg{width:14px;height:14px;flex:none;transform:none!important;filter:none!important;box-shadow:none!important}
+html body .comparison-view-filter:has([aria-pressed=true]) .comparison-view-help{color:#fff}
+@media(hover:hover) and (pointer:fine){html body .comparison-filters .comparison-view-help:hover{opacity:1;color:var(--plaza-service-link-hover,var(--gold))}}
+html body .comparison-filters .comparison-view-help:focus-visible{opacity:1;color:var(--plaza-service-link-hover,var(--gold));outline:1px solid currentColor;outline-offset:-10px}
+html body .comparison-view-filter:has([aria-pressed=true]) .comparison-view-help:is(:hover,:focus-visible){color:#fff}
+.comparison-preview.comparison-view-preview{display:block!important;max-width:calc(100vw - 32px);outline:none}
+.comparison-preview.comparison-view-preview[hidden]{display:none!important}
+.comparison-view-preview .comparison-flip-front img{display:block;width:100%;height:100%;object-fit:cover}
+.comparison-preview.comparison-view-preview .comparison-flip-back{justify-content:center;gap:12px}
+.comparison-preview.comparison-view-preview .comparison-flip-description{font-size:13px;line-height:1.55}
+@media(max-width:700px){.comparison-view-filter{flex:1;min-width:120px}.comparison-filters .comparison-view-filter>[data-room-filter]{min-width:0}.comparison-filters .comparison-view-help{flex:none}}
+@media(prefers-reduced-motion:reduce){html body .comparison-filters .comparison-view-help{transition:none}}
+
+/* plaza-comparison-type-system: Material3 roles, shared by Kislovodsk and Zheleznovodsk. */
+body.plaza-room-comparison-page #main article.prose>p,
+body.plaza-room-comparison-page #main .resort-catalog>.intro,
+body.plaza-room-comparison-page #main .wellness-page-booking>p{font-size:var(--plaza-comparison-body-size);line-height:var(--plaza-comparison-body-line)}
+body.plaza-room-comparison-page .plaza-room-comparison{--plaza-comparison-row-hover:color-mix(in srgb,var(--plaza-service-link-color,var(--gold)) var(--plaza-comparison-row-hover-strength),transparent)}
+body.plaza-room-comparison-page .comparison-filters [data-room-filter],
+body.plaza-room-comparison-page .plaza-room-comparison>.small-muted,
+body.plaza-room-comparison-page .comparison-scroll .comparison-table,
+body.plaza-room-comparison-page .comparison-scroll .comparison-table :is(th,td,small),
+body.plaza-room-comparison-page .comparison-sticky-head .comparison-table :is(th,td,small),
+body.plaza-room-comparison-page .comparison-price-button .comparison-book,
+body.plaza-room-comparison-page #main .detail-actions>a{font-size:var(--plaza-comparison-data-size);line-height:var(--plaza-comparison-data-line)}
+body.plaza-room-comparison-page .comparison-filters .comparison-filter-count{font-size:var(--plaza-comparison-meta-size);line-height:var(--plaza-comparison-meta-line)}
+body.plaza-room-comparison-page .comparison-scroll .comparison-table caption{font-size:var(--plaza-comparison-title-size);line-height:var(--plaza-comparison-title-line)}
+body.plaza-room-comparison-page .comparison-scroll .comparison-table :is(th,td){padding-block:var(--plaza-comparison-cell-padding-block,14px)}
+body.plaza-room-comparison-page .comparison-scroll .comparison-table tbody tr>:is(th,td){box-shadow:inset 0 0 0 9999px transparent;transition:box-shadow var(--plaza-comparison-row-hover-duration) ease}
+body.plaza-room-comparison-page .comparison-scroll .comparison-table tbody tr:focus-within>:is(th,td){box-shadow:inset 0 0 0 9999px var(--plaza-comparison-row-hover)}
+@media(hover:hover) and (pointer:fine){body.plaza-room-comparison-page .comparison-scroll .comparison-table tbody tr:hover>:is(th,td){box-shadow:inset 0 0 0 9999px var(--plaza-comparison-row-hover)}}
+@media(prefers-reduced-motion:reduce){body.plaza-room-comparison-page .comparison-scroll .comparison-table tbody tr>:is(th,td){transition:none}}
+
+/* Kislovodsk has a secondary explanation in the places column heading. */
+body.plaza-room-comparison-page .comparison-scroll .comparison-table thead th small,
+body.plaza-room-comparison-page .comparison-sticky-head .comparison-table thead th small{font-size:var(--plaza-comparison-meta-size);line-height:var(--plaza-comparison-meta-line)}
+
+/* The final cell may request extra space without overriding the shared inset contract. */
+.comparison-table tr>:last-child{--plaza-table-cell-end:calc(var(--plaza-table-inset) + var(--plaza-comparison-end-padding,0px))}
+/* Both property comparison tables: 12px data, bold headings, 8px around row content. */
+body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .comparison-table{--plaza-comparison-end-padding:8px;--plaza-comparison-data-size:12px;--plaza-comparison-data-line:18px;--plaza-comparison-cell-padding-block:8px;min-width:960px}
+body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .comparison-table tbody th{font-weight:400}
+body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .comparison-table thead th{font-weight:500;color:var(--plaza-service-link-color,var(--gold));text-align:center;vertical-align:middle;box-sizing:border-box;height:calc(var(--plaza-button-min-height) + 2 * var(--plaza-comparison-cell-padding-block) + 1px)}
+body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .comparison-sticky-head .comparison-table th{padding-block:var(--plaza-comparison-cell-padding-block)}
+body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .comparison-sticky-head .comparison-table tr>:last-child{padding-inline-end:var(--plaza-table-cell-end)}
+.comparison-places-note{font-size:.7em;line-height:0;vertical-align:super;margin-inline-start:2px}
+.comparison-places-note abbr{border:0;text-decoration:none;cursor:help;font-weight:400;pointer-events:auto}
+
+/* Comparison toolbar: the existing filters look like tabs attached to their table. */
+.comparison-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;min-width:0;background:linear-gradient(var(--line),var(--line)) left bottom/100% 1px no-repeat}
+.comparison-toolbar .comparison-filters{flex:0 1 auto;flex-wrap:nowrap;gap:8px;min-width:0;max-width:100%;margin:0;overflow-x:auto;scrollbar-width:thin}
+.comparison-toolbar .comparison-filters [data-room-filter]{flex:none;position:relative;box-sizing:border-box;min-height:58px;white-space:nowrap;border-radius:8px 8px 0 0;border-bottom:1px solid var(--line);background-color:var(--surface);background-image:var(--plaza-comparison-tab-idle-bg);padding:12px 16px;color:var(--muted);transition:background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.comparison-toolbar .comparison-filters [data-room-filter][aria-pressed=true]{background-color:var(--paper,var(--surface));background-image:linear-gradient(180deg,var(--plaza-fact-tint-start),transparent),linear-gradient(var(--glass-panel-bg),var(--glass-panel-bg));border-bottom-color:transparent;color:var(--ink);box-shadow:inset 0 2px 0 var(--plaza-comparison-tab-edge);font-weight:500}
+.comparison-toolbar .comparison-filters [data-room-filter]:focus-visible{outline-offset:-4px}
+.comparison-toolbar>.small-muted{flex:0 1 auto;min-width:0;margin:0;padding-bottom:14px;font-size:var(--plaza-comparison-meta-size);line-height:var(--plaza-comparison-meta-line);text-align:right;text-wrap:balance}
+.comparison-toolbar+.comparison-scroll{margin-top:0;border-top:0;border-start-start-radius:0;border-start-end-radius:0}
+.comparison-toolbar+.comparison-scroll .comparison-table thead th{border-top:0}
+@media(max-width:900px){.comparison-toolbar{flex-direction:column-reverse;align-items:stretch;gap:12px}.comparison-toolbar>.small-muted{padding-bottom:0;text-align:right}.comparison-toolbar .comparison-filters{width:100%}}
+@media(prefers-reduced-motion:reduce){.comparison-toolbar .comparison-filters [data-room-filter]{transition:none}}

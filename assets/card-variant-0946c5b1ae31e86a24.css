@@ -1,0 +1,73 @@
+/* kislovodsk: independently owned day/night colours. Do not merge site palettes. */
+:root{--plaza-glow-line-color:#fff;--plaza-glow-blur-color:#fff;}
+body:is(.plaza-object-kislovodsk){--plaza-card-light-rgb:238,217,172}
+body:is(.plaza-object-kislovodsk){--plaza-service-link-color:var(--gold);--plaza-service-link-hover:var(--plaza-interaction)}
+body.plaza-object-kislovodsk{--plaza-glass-border:#917747;--plaza-glass-border-hover:#D1B579}
+html body.plaza-shell:is(.plaza-object-kislovodsk){--plaza-gold-deep:#917747;--plaza-gold-light:#D1B579;--plaza-gold-bright:#EED9AC;--plaza-ui-gold:var(--plaza-gold-deep);--plaza-ui-gold-hover:var(--plaza-gold-light);--plaza-service-link-color:var(--plaza-ui-gold);--plaza-service-link-hover:var(--plaza-ui-gold-hover);--icon-gold:var(--plaza-ui-gold);--icon-gold-hover:var(--plaza-ui-gold-hover)}
+html[data-theme="dark"] body.plaza-shell:is(.plaza-object-kislovodsk){--plaza-ui-gold:var(--plaza-gold-light);--plaza-ui-gold-hover:var(--plaza-gold-bright)}
+html body.plaza-shell:is(.plaza-object-kislovodsk){--plaza-preview-border-color:var(--line)}
+html body.plaza-shell:is(.plaza-object-kislovodsk){--plaza-preview-surface:#FCFBF8}
+:root[data-theme=dark] body.plaza-shell:is(.plaza-object-kislovodsk){--plaza-preview-surface:#171C1B}
+html body.plaza-shell{--plaza-footer-background:#e5decf;--plaza-footer-gradient-end:#d8cdbb;--plaza-footer-gradient-angle:180deg}
+html[data-theme=dark] body.plaza-shell{--plaza-footer-background:#121715;--plaza-footer-gradient-end:#0b100e;--plaza-footer-night:var(--plaza-footer-background) linear-gradient(180deg,var(--plaza-footer-background),var(--plaza-footer-gradient-end))}
+html body.plaza-shell{--plaza-primary-button-bg:var(--gold);--plaza-primary-button-ink:var(--plaza-button-ink,#fff)}
+html[data-theme=dark] body.plaza-shell{--plaza-primary-button-ink:var(--plaza-button-ink,var(--plaza-bg-night,#171c1b))}
+
+/* This site's accordion light: shared geometry, independent colour declarations. */
+html body.plaza-shell{--plaza-accordion-light-stops:rgba(255,255,255,.95),rgba(255,255,255,.35) 48%,transparent 85%}
+html[data-theme=dark] body.plaza-shell{--plaza-accordion-light-stops:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),.18),transparent 75%;--plaza-accordion-border-core:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),.65)}
+
+/* This site's sitemap surface and standard dialog controls. */
+html body.plaza-shell{--plaza-sitemap-background:linear-gradient(135deg,#f1eee6,#e7e1d5);--plaza-sitemap-control-bg:color-mix(in srgb,var(--surface) 65%,transparent);--plaza-sitemap-orbit-1:209,181,121;--plaza-sitemap-orbit-2:238,217,172;--plaza-sitemap-orbit-3:178,148,95;--plaza-sitemap-orbit-strength:.20;--plaza-dialog-close-bg:#fcfbf8;--plaza-dialog-close-ink:var(--plaza-service-link-color);--plaza-dialog-close-hover:var(--plaza-service-link-hover);--plaza-dialog-close-shadow:0 8px 24px #0006,0 2px 6px #0004;--plaza-sitemap-kislovodsk:#917747;--plaza-sitemap-zheleznovodsk:#917747;--plaza-sitemap-border:color-mix(in srgb,#917747 26%,transparent);--plaza-sitemap-shadow:0 24px 80px #0004,0 8px 24px #0002;}
+html[data-theme=dark] body.plaza-shell{--plaza-sitemap-background:linear-gradient(135deg,var(--surface),var(--bg));--plaza-sitemap-control-bg:color-mix(in srgb,var(--surface) 80%,transparent);--plaza-sitemap-orbit-strength:.13;--plaza-sitemap-kislovodsk:#D1B579;--plaza-sitemap-zheleznovodsk:#D1B579;--plaza-sitemap-border:color-mix(in srgb,#D1B579 28%,transparent);--plaza-sitemap-shadow:0 24px 80px #0007,0 8px 24px #0005;}
+
+/* Public footer action roles belong to this site's palette, for both themes. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-footer-action-color:var(--plaza-service-link-color);--plaza-footer-action-hover:var(--plaza-service-link-hover)}
+
+/* Fixed light brand outline for the shared 100px gallery preview, both themes. */
+body.plaza-object-kislovodsk{--plaza-cinema-preview-border:var(--plaza-gold-light)}
+
+/* Existing facts colours: the shared bottom-up fill consumes these independent stops. */
+body.plaza-object-kislovodsk{--plaza-fact-tint-start:rgba(178,148,95,.13);--plaza-fact-tint-middle:rgba(178,148,95,.035)}
+html[data-theme=dark] body.plaza-object-kislovodsk{--plaza-fact-tint-start:rgba(226,207,171,.14);--plaza-fact-tint-middle:rgba(212,171,104,.04)}
+/* Permanent facts tint + separate card flashlight; this property's own colour roles. */
+body.plaza-object-kislovodsk{--plaza-card-material-stops:var(--plaza-accordion-light-stops);--plaza-comparison-filter-selected-bg:linear-gradient(135deg,var(--plaza-fact-tint-start),var(--plaza-fact-tint-middle));--plaza-comparison-filter-selected-ink:var(--ink);--plaza-comparison-filter-selected-border:var(--line);--plaza-comparison-tab-idle-bg:linear-gradient(180deg,var(--plaza-fact-tint-middle),transparent);--plaza-comparison-tab-edge:color-mix(in srgb,var(--gold) 45%,transparent)}
+html[data-theme=dark] body.plaza-object-kislovodsk{--plaza-card-material-stops:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),var(--plaza-card-light-fill)),transparent 75%}
+
+/* Opaque sanatorium picker: independently owned day/night material, no glass. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-picker-surface:linear-gradient(135deg,#fcfbf8 0%,#f5f0e6 55%,#ece3d1 100%)}
+html[data-theme="dark"] body.plaza-shell.plaza-object-kislovodsk{--plaza-picker-surface:linear-gradient(135deg,#2b2d27 0%,#232923 55%,#19211f 100%)}
+
+/* Permanent home FAQ material; the white daytime Stripe remains a separate layer. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-home-faq-surface:linear-gradient(135deg,#eee8dc 0%,#e4dbc9 100%)}
+html[data-theme=dark] body.plaza-shell.plaza-object-kislovodsk{--plaza-home-faq-surface:linear-gradient(135deg,#2a2d28 0%,#202520 100%)}
+
+/* Tooltip colour only; shared geometry and theme alpha remain in tooltip.css. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-tooltip-shadow-rgb:92,72,37}
+
+/* Page overview only: separate contrast surface, requested 23 October 2026. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-page-menu-surface:#E7E1D5;--plaza-page-menu-caption:var(--pn-text,var(--text))}
+html[data-theme=dark] body.plaza-shell.plaza-object-kislovodsk{--plaza-page-menu-surface:#3C4037;--plaza-page-menu-caption:var(--pn-muted,var(--muted))}
+
+/* Page overview title roles remain the same in both themes; captions are unchanged. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-page-menu-title:#917747;--plaza-page-menu-title-hover:#D1B579}
+/* Page overview spots: two warm daytime golds and violet; night turquoise is retained. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-page-menu-spot-core-1:223,200,150;--plaza-page-menu-spot-rgb-1:178,148,95;--plaza-page-menu-spot-strength-1:.32;--plaza-page-menu-spot-core-2:238,217,172;--plaza-page-menu-spot-rgb-2:209,181,121;--plaza-page-menu-spot-strength-2:.24;--plaza-page-menu-spot-core-3:170,151,186;--plaza-page-menu-spot-rgb-3:125,105,150;--plaza-page-menu-spot-strength-3:.24}
+html[data-theme=dark] body.plaza-shell.plaza-object-kislovodsk{--plaza-page-menu-spot-core-1:79,62,35;--plaza-page-menu-spot-rgb-1:63,52,34;--plaza-page-menu-spot-strength-1:.60;--plaza-page-menu-spot-core-2:28,68,72;--plaza-page-menu-spot-rgb-2:24,57,62;--plaza-page-menu-spot-strength-2:.55;--plaza-page-menu-spot-core-3:67,51,80;--plaza-page-menu-spot-rgb-3:56,43,67;--plaza-page-menu-spot-strength-3:.55}
+
+/* Page-menu elevation follows this property's palette, independently of Stripe. */
+html body.plaza-object-kislovodsk{--plaza-page-menu-shadow:0 12px 22px -14px rgba(92,72,37,.32);--plaza-page-menu-shadow-hover:0 18px 30px -14px rgba(92,72,37,.44)}
+html[data-theme=dark] body.plaza-object-kislovodsk{--plaza-page-menu-shadow:0 8px 24px -14px rgba(209,181,121,.24);--plaza-page-menu-shadow-hover:0 12px 28px -12px rgba(209,181,121,.40)}
+
+/* Menu only: quieter depth and legible warm gold in each theme. */
+html body.plaza-shell.plaza-object-kislovodsk{--plaza-page-menu-title:#70542B;--plaza-page-menu-title-hover:#755B30;--plaza-page-menu-spot-strength-1:.14;--plaza-page-menu-spot-strength-2:.10;--plaza-page-menu-spot-strength-3:.06}
+html[data-theme=dark] body.plaza-shell.plaza-object-kislovodsk{--plaza-page-menu-surface:#353A32;--plaza-page-menu-title:#BDA06A;--plaza-page-menu-title-hover:#D1B579;--plaza-page-menu-spot-strength-1:.20;--plaza-page-menu-spot-strength-2:.14;--plaza-page-menu-spot-strength-3:.10}
+
+/* Kislovodsk H2 accent: one palette-owned gradient, shared heading motion intact. */
+body.plaza-object-kislovodsk {--plaza-heading-gold-gradient:linear-gradient(110deg,var(--plaza-ui-gold),var(--plaza-ui-gold-hover) 55%,var(--plaza-ui-gold));}
+@media screen {
+ body.plaza-object-kislovodsk h2.plaza-heading-medium>:is(span,em,strong):not(.pg-ink-word) {color:var(--plaza-ui-gold);background-image:var(--plaza-heading-gold-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+}
+
+/* User decision30.10.2026: details at the lower right, centrally controlled. */
+body.plaza-object-kislovodsk{--plaza-card-details-align:flex-end}

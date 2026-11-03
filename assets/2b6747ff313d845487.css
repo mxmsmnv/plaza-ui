@@ -1,0 +1,68 @@
+/* PLAZA GLASS: one material and one set of settings for network, both properties and future shared shells.
+   40% transparency = 60% background opacity. Text and controls keep opacity:1.
+   Palettes provide --glass; components must not override these settings. */
+:root{--plaza-glass-transparency:.4;--glass-opacity:calc(1 - var(--plaza-glass-transparency));--glass-blur:4px;--glass-panel-bg:rgb(from var(--glass) r g b / var(--glass-opacity));--header-glass-blur:var(--glass-blur);--header-glass-opacity:var(--glass-opacity);--plaza-glass-button-opacity:var(--glass-opacity);--plaza-glass-floating-opacity:var(--glass-opacity);--plaza-hero-dark-opacity:var(--glass-opacity);--plaza-hero-dark-blur:var(--glass-blur)}
+body .comparison-sticky-head,
+body .comparison-scroll .comparison-table thead th,
+body .plaza-glass-surface,
+body .plaza-glass-button,
+body .glass-panel,
+body .hero-glass,
+body .site-header,
+.plaza-net-lab #pn-panel,
+#main .wellness-photo-gallery .wellness-photo-all,
+body #rooms .room-panel-content,
+body.plaza-network .pn-booking-row :is(.pn-booking,.pn-social-panel),
+.plaza-brand-preview .pb-compare-head {
+ background:var(--glass);
+ background:rgb(from var(--glass) r g b / var(--glass-opacity));
+ -webkit-backdrop-filter:blur(var(--glass-blur));
+ backdrop-filter:blur(var(--glass-blur));
+}
+/* A button is an action, so its own opacity stays 1 and text remains sharp. */
+body .plaza-glass-button {
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:var(--plaza-button-min-height);padding:12px 20px;
+  border:1px solid var(--line);border-radius:var(--plaza-radius-ui);
+  color:var(--ink);font:400 13px/1.5 Montserrat,Arial,sans-serif;
+  box-shadow:var(--plaza-photo-shadow,var(--shadow));cursor:pointer;text-decoration:none;
+}
+body .plaza-glass-button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+body .plaza-glass-button:disabled{opacity:.5;cursor:default}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+body .comparison-sticky-head,
+body .comparison-scroll .comparison-table thead th,
+body .plaza-glass-surface,
+body .plaza-glass-button,
+body .glass-panel,
+body .hero-glass,
+body .site-header,
+.plaza-net-lab #pn-panel,
+#main .wellness-photo-gallery .wellness-photo-all,
+body #rooms .room-panel-content,
+body.plaza-network .pn-booking-row :is(.pn-booking,.pn-social-panel),
+.plaza-brand-preview .pb-compare-head {background:var(--surface)}
+}
+/* One quiet border interaction for glass actions; no SVG trace. */
+body .plaza-glass-button,#main .wellness-photo-gallery .wellness-photo-all{border-color:var(--plaza-glass-border,var(--accent));transition:border-color .3s ease}
+@media(hover:hover) and (pointer:fine){body .plaza-glass-button:hover,#main .wellness-photo-gallery .wellness-photo-all:hover{border-color:var(--plaza-glass-border-hover,var(--accent))}}
+body .plaza-glass-button:focus-visible,#main .wellness-photo-gallery .wellness-photo-all:focus-visible{border-color:var(--plaza-glass-border-hover,var(--accent))}
+@media(prefers-reduced-motion:reduce){body .plaza-glass-button,#main .wellness-photo-gallery .wellness-photo-all{transition:none}}
+
+@media(max-width:700px){
+ body .comparison-scroll .comparison-table tbody th{background:var(--glass);background:var(--glass-panel-bg);-webkit-backdrop-filter:blur(var(--glass-blur));backdrop-filter:blur(var(--glass-blur))}
+}
+
+/* Shared backdrop material: burger everywhere, both header panels on Zheleznovodsk and Kislovodsk. */
+.plaza-net-lab .pn-backdrop{-webkit-backdrop-filter:blur(0px);backdrop-filter:blur(0px)}
+.plaza-net-lab.pn-menu-open .pn-backdrop,
+.plaza-net-lab.pn-open:where(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .pn-backdrop{background:rgba(0,0,0,.2);-webkit-backdrop-filter:none;backdrop-filter:none}
+
+.plaza-net-lab:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk,.plaza-object-plaza) .pn-backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:none;backdrop-filter:none}
+
+/* Approved opaque picker material. Header glass and panel entrance animations stay unchanged. */
+.plaza-net-lab:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk,.plaza-object-plaza) #pn-panel{background:var(--plaza-picker-surface,var(--surface));-webkit-backdrop-filter:none;backdrop-filter:none}
+
+/* PSG/PSK hero top highlight: approved transfer, 22.10.2026. Network unchanged. */
+body.plaza-object-zheleznovodsk .hero-visual > .hero-glass,
+body.plaza-object-kislovodsk .hero-visual > .hero-glass{box-shadow:inset 0 1px 0 rgba(255,255,255,.8),var(--shadow)}

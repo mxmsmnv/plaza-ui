@@ -1,0 +1,21 @@
+body.plaza-object-kislovodsk .pg-sticky-head {
+  position: fixed;
+  z-index: var(--pg-sticky-head-z, 30);
+  overflow: hidden;
+  pointer-events: none;
+  background: rgb(from var(--glass) r g b / var(--glass-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  color: var(--ink, #45413b);
+  box-shadow: 0 4px 8px rgba(69, 65, 59, .09);
+  font: 400 .8125rem/1.4 Montserrat, Arial, sans-serif;
+}
+body.plaza-object-kislovodsk .pg-sticky-head[hidden] { display: none; }
+body.plaza-object-kislovodsk .pg-sticky-head table { border-collapse: separate; }
+body.plaza-object-kislovodsk .pg-sticky-head :is(a, button, input, select, textarea) { pointer-events: none; }
+
+body.plaza-object-kislovodsk main #sched thead :is(th,td){position:static!important}
+body.plaza-object-kislovodsk .pg-sticky-head :is(th,td){background:transparent!important;background-image:none!important}
+@media print{body.plaza-object-kislovodsk .pg-sticky-head{display:none!important}}
+
+body.plaza-object-kislovodsk .pg-sticky-head .comparison-places-note abbr{pointer-events:auto}

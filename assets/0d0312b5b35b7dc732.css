@@ -1,0 +1,133 @@
+/* Page 2649: approved journal composition (prototype 2). Shared owners retain
+   typography, colours, heading reveals, photo parallax, links and the lightbox. */
+body.page-id-2649 #main .resort-page-heading{display:none}
+body.page-id-2649 #main>.resort-page-content{max-width:none;width:100%;padding:0;margin:0}
+body.page-id-2649 #main .pd3{--pd3-gutter:32px;--pd3-chapter:112px;box-sizing:border-box;max-width:1344px;margin-inline:auto;padding:4px 32px 80px;overflow:visible;color:var(--ink);font:400 16px/1.6 Montserrat,Arial,sans-serif}
+body.page-id-2649 #main .pd3 :is(h1,h2,h3,p,figure,dl,dd){margin:0}
+body.page-id-2649 #main .pd3 :is(h1,h2,h3){font-family:Lora,Georgia,serif;font-weight:400;letter-spacing:-.025em;text-wrap:balance;color:var(--ink);text-transform:none}
+body.page-id-2649 #main .pd3 h1{font-size:clamp(40px,4.4vw,60px);line-height:1.18;margin-bottom:40px}
+body.page-id-2649 #main .pd3 h2{font-size:clamp(30px,3.1vw,42px);line-height:1.2}
+body.page-id-2649 #main .pd3 h3{font-size:clamp(26px,2.5vw,36px);line-height:1.25}
+body.page-id-2649 #main .pd3 p{max-width:62ch;color:var(--muted);font-size:16px;line-height:1.65}
+body.page-id-2649 #main .pd3 p+p{margin-top:16px}
+body.page-id-2649 #main .pd3 .pd3-copy>:is(h2,h3){margin-bottom:22px}
+body.page-id-2649 #main .pd3 .pd3-lead{color:var(--ink);font-size:18px;line-height:1.6}
+body.page-id-2649 #main .pd3 .pd3-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px var(--pd3-gutter);align-items:start}
+body.page-id-2649 #main .pd3 .pd3-grid>*{min-width:0}
+body.page-id-2649 #main .pd3 .pd3-chapter{margin-top:var(--pd3-chapter);scroll-margin-top:112px}
+body.page-id-2649 #main .pd3 [id]{scroll-margin-top:112px}
+body.page-id-2649 #main .pd3 .pd3-photo{display:block;position:relative;box-sizing:border-box;width:100%;max-width:100%;min-height:0;margin:0;padding:0;border:0;aspect-ratio:16/9;border-radius:var(--plaza-radius-ui,4px);background:var(--soft);box-shadow:var(--shadow);cursor:pointer;line-height:0;isolation:isolate;transform:none}
+body.page-id-2649 #main .pd3 .pd3-photo::before,body.page-id-2649 #main .pd3 .pd3-photo::after{content:none}
+body.page-id-2649 #main .pd3 .pg-image-depth{display:block}
+body.page-id-2649 #main .pd3 .pd3-photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:0;filter:none;opacity:1;transition:none}
+body.page-id-2649 #main .pd3 .pd3-photo:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+body.page-id-2649 #main .pd3 .pd3-opening-copy{grid-column:1/5}
+body.page-id-2649 #main .pd3 .pd3-opening-photo{grid-column:5/-1}
+body.page-id-2649 #main .pd3 .pd3-opening-photo .pd3-photo{aspect-ratio:1.28}
+body.page-id-2649 #main .pd3 .pd3-origin-copy{width:75%;margin:56px auto 0}
+body.page-id-2649 #main .pd3 .pd3-origin-copy p{max-width:78ch}
+body.page-id-2649 #main .pd3 :is(.pd3-trout-photo,.pd3-tea-shot,.pd3-panorama-photo,.pd3-music-photo){grid-column:1/9;grid-row:1}
+body.page-id-2649 #main .pd3 :is(.pd3-trout-copy,.pd3-tea-copy,.pd3-panorama-copy,.pd3-music-copy){grid-column:9/-1;grid-row:1}
+body.page-id-2649 #main .pd3 .pd3-trout-photo .pd3-photo{aspect-ratio:1.5}
+body.page-id-2649 #main .pd3 .pd3-local-intro{max-width:850px;margin-bottom:56px}
+body.page-id-2649 #main .pd3 .pd3-mosaic{row-gap:44px}
+body.page-id-2649 #main .pd3 .pd3-cheese-photo{grid-column:1/5;grid-row:1}
+body.page-id-2649 #main .pd3 .pd3-cheese-photo .pd3-photo{aspect-ratio:4/5}
+body.page-id-2649 #main .pd3 .pd3-cheese-copy{grid-column:1/5;grid-row:2}
+body.page-id-2649 #main .pd3 .pd3-dairy-copy{grid-column:5/9;grid-row:1}
+body.page-id-2649 #main .pd3 .pd3-dairy-copy h2{font-size:clamp(28px,2.5vw,36px)}
+body.page-id-2649 #main .pd3 .pd3-dairy-photo{grid-column:9/-1;grid-row:1}
+body.page-id-2649 #main .pd3 .pd3-dairy-photo .pd3-photo{aspect-ratio:1}
+body.page-id-2649 #main .pd3 .pd3-meat-photo{grid-column:5/9;grid-row:2}
+body.page-id-2649 #main .pd3 .pd3-meat-photo .pd3-photo{aspect-ratio:3/4}
+body.page-id-2649 #main .pd3 .pd3-meat-copy{grid-column:9/-1;grid-row:2;align-self:center}
+body.page-id-2649 #main .pd3 .pd3-grill-copy{grid-column:1/5;grid-row:3;align-self:center}
+body.page-id-2649 #main .pd3 .pd3-grill-photo{grid-column:5/-1;grid-row:3}
+body.page-id-2649 #main .pd3 .pd3-tea-shot img{object-position:right center}
+body.page-id-2649 #main .pd3 .pd3-venues-intro{max-width:850px;margin-bottom:64px}
+body.page-id-2649 #main .pd3 .pd3-panorama-photo .pd3-photo{aspect-ratio:1.55}
+body.page-id-2649 #main .pd3 .pd3-hours{max-width:440px;margin-top:24px;font-size:14px;line-height:1.5}
+body.page-id-2649 #main .pd3 .pd3-hours>div{display:flex;justify-content:space-between;gap:20px;padding-block:6px}
+body.page-id-2649 #main .pd3 .pd3-hours dt{color:var(--muted)}
+body.page-id-2649 #main .pd3 .pd3-hours dd{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink)}
+body.page-id-2649 #main .pd3 .pd3-buffet-story{margin-top:44px;row-gap:56px}
+body.page-id-2649 #main .pd3 .pd3-buffet-overview{grid-column:2/9;grid-row:1}
+body.page-id-2649 #main .pd3 .pd3-buffet-detail{grid-column:1/-1;grid-row:2}
+body.page-id-2649 #main .pd3 .pd3-children-story{margin-top:80px}
+body.page-id-2649 #main .pd3 :is(.pd3-children-copy,.pd3-practical-copy){grid-column:1/6;grid-row:1}
+body.page-id-2649 #main .pd3 :is(.pd3-children-photo,.pd3-chef-shot){grid-column:6/-1;grid-row:1}
+body.page-id-2649 #main .pd3 .pd3-royal-spread{margin-top:112px}
+body.page-id-2649 #main .pd3 .pd3-royal-copy{grid-column:1/8;grid-row:1}
+body.page-id-2649 #main .pd3 .pd3-royal-service{grid-column:1/9;grid-row:2}
+body.page-id-2649 #main .pd3 .pd3-royal-table{grid-column:9/-1;grid-row:1/3;align-self:start}
+body.page-id-2649 #main .pd3 .pd3-royal-table .pd3-photo{aspect-ratio:1}
+body.page-id-2649 #main .pd3 .pd3-bar-copy{grid-column:1/5}
+body.page-id-2649 #main .pd3 .pd3-coffee-photo{grid-column:5/-1}
+body.page-id-2649 #main .pd3 .pd3-coffee-photo .pd3-photo{aspect-ratio:1.6}
+body.page-id-2649 #main .pd3 .pd3-coffee-copy{margin-top:32px}
+body.page-id-2649 #main .pd3 .pd3-coffee-copy h3{font-size:26px}
+body.page-id-2649 #main .pd3 .pd3-music-spread{margin-top:80px}
+body.page-id-2649 #main .pd3 .text-link{font-size:inherit}
+/* The shared engine owns transforms. The page owns whitespace around moving groups. */
+body.page-id-2649 #main .pd3 [data-pg-pair]{padding-block:0}
+html body.page-id-2649.plaza-object-kislovodsk footer#contacts .plaza-footer-fineprint>p{color:inherit}
+@media(max-width:1050px){
+ body.page-id-2649 #main .pd3{--pd3-gutter:24px;--pd3-chapter:80px}
+ body.page-id-2649 #main .pd3 .pd3-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+ body.page-id-2649 #main .pd3 .pd3-grid>*{grid-column:auto;grid-row:auto}
+ body.page-id-2649 #main .pd3 .pd3-opening-copy{grid-column:1/-1;max-width:780px}
+ body.page-id-2649 #main .pd3 .pd3-opening-photo{grid-column:1/-1}
+ body.page-id-2649 #main .pd3 .pd3-opening-photo .pd3-photo{aspect-ratio:16/9}
+ body.page-id-2649 #main .pd3 .pd3-origin-copy{width:90%;margin-top:40px}
+ body.page-id-2649 #main .pd3 .pd3-mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.page-id-2649 #main .pd3 .pd3-cheese-photo{grid-column:1;grid-row:1}
+ body.page-id-2649 #main .pd3 .pd3-cheese-copy{grid-column:1;grid-row:2}
+ body.page-id-2649 #main .pd3 .pd3-dairy-photo{grid-column:2;grid-row:1}
+ body.page-id-2649 #main .pd3 .pd3-dairy-copy{grid-column:2;grid-row:2}
+ body.page-id-2649 #main .pd3 .pd3-meat-photo{grid-column:1;grid-row:3}
+ body.page-id-2649 #main .pd3 .pd3-meat-copy{grid-column:2;grid-row:3}
+ body.page-id-2649 #main .pd3 .pd3-grill-copy{grid-column:1;grid-row:4}
+ body.page-id-2649 #main .pd3 .pd3-grill-photo{grid-column:2;grid-row:4}
+ body.page-id-2649 #main .pd3 .pd3-buffet-overview{grid-column:1/-1;width:75%}
+ body.page-id-2649 #main .pd3 .pd3-buffet-detail{grid-column:1/-1}
+ body.page-id-2649 #main .pd3 .pd3-royal-copy{grid-column:1/-1}
+ body.page-id-2649 #main .pd3 .pd3-royal-service{grid-column:1;grid-row:2}
+ body.page-id-2649 #main .pd3 .pd3-royal-table{grid-column:2;grid-row:2}
+ body.page-id-2649 #main .pd3 .pd3-royal-spread{margin-top:80px}
+ body.page-id-2649 #main .pd3 .pd3-tea-shot{grid-column:1/-1}
+ body.page-id-2649 #main .pd3 .pd3-tea-copy{grid-column:1/-1;max-width:75ch}
+}
+@media(max-width:700px){
+ body.page-id-2649 #main .pd3{padding-inline:16px;padding-bottom:56px;--pd3-chapter:64px}
+ body.page-id-2649 #main .pd3 h1{margin-bottom:28px}
+ body.page-id-2649 #main .pd3 .pd3-grid,body.page-id-2649 #main .pd3 .pd3-mosaic{grid-template-columns:minmax(0,1fr);gap:26px}
+ body.page-id-2649 #main .pd3 .pd3-grid>*{grid-column:1;grid-row:auto;align-self:start}
+ body.page-id-2649 #main .pd3 .pd3-origin-copy{width:100%;margin-top:28px}
+ body.page-id-2649 #main .pd3 :is(.pd3-local-intro,.pd3-venues-intro){margin-bottom:32px}
+ body.page-id-2649 #main .pd3 .pd3-mosaic .pd3-copy{margin-bottom:30px}
+ body.page-id-2649 #main .pd3 .pd3-cheese-photo{grid-row:1}
+ body.page-id-2649 #main .pd3 .pd3-cheese-copy{grid-row:2}
+ body.page-id-2649 #main .pd3 .pd3-dairy-photo{grid-row:3}
+ body.page-id-2649 #main .pd3 .pd3-dairy-copy{grid-row:4}
+ body.page-id-2649 #main .pd3 .pd3-meat-photo{grid-row:5}
+ body.page-id-2649 #main .pd3 .pd3-meat-copy{grid-row:6}
+ body.page-id-2649 #main .pd3 .pd3-grill-photo{grid-row:7}
+ body.page-id-2649 #main .pd3 .pd3-grill-copy{grid-row:8}
+ body.page-id-2649 #main .pd3 .pd3-cheese-photo .pd3-photo{aspect-ratio:1}
+ body.page-id-2649 #main .pd3 .pd3-meat-photo{width:84%;justify-self:center}
+ body.page-id-2649 #main .pd3 .pd3-buffet-overview{width:100%}
+ body.page-id-2649 #main .pd3 :is(.pd3-children-story,.pd3-music-spread){margin-top:56px}
+ body.page-id-2649 #main .pd3 .pd3-royal-spread{margin-top:64px}
+ body.page-id-2649 #main .pd3 .pd3-royal-table{width:76%;justify-self:end}
+}
+@media(prefers-reduced-motion:reduce){body.page-id-2649 #main .pd3 .pg-image-depth{transform:none}}
+
+/* H1 and H3 accents use the same system gold token as medium headings. */
+body.page-id-2649 #main .pd3 :is(h1,h3)>.plaza-gold-text{color:var(--plaza-ui-gold);background-image:var(--plaza-heading-gold-gradient);background-clip:text;-webkit-text-fill-color:transparent}
+
+/* Mobile art direction: full-width 4:5 detail portraits. */
+@media(max-width:700px){
+ body.page-id-2649 #main .pd3 :is(.pd3-cheese-photo,.pd3-dairy-photo,.pd3-meat-photo,.pd3-royal-table,.pd3-coffee-photo) .pd3-photo{aspect-ratio:4/5}
+ body.page-id-2649 #main .pd3 :is(.pd3-meat-photo,.pd3-royal-table){width:100%;justify-self:stretch}
+ body.page-id-2649 #main .pd3 .pd3-coffee-photo img{object-position:78% center!important}
+}

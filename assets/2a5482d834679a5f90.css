@@ -1,0 +1,62 @@
+/* zheleznovodsk: independently owned day/night colours. Do not merge site palettes. */
+:root{--plaza-glow-line-color:#fff;--plaza-glow-blur-color:#fff;}
+body:is(.plaza-object-zheleznovodsk){--plaza-service-link-color:var(--gold);--plaza-service-link-hover:var(--plaza-interaction)}
+body.plaza-object-zheleznovodsk{--plaza-glass-border:#365947;--plaza-glass-border-hover:#9CA887}
+html body.plaza-shell.plaza-object-zheleznovodsk{--plaza-green-deep:#365947;--plaza-green-light:#9CA887;--plaza-green-bright:#C5D5B7;--plaza-ui-green:var(--plaza-green-deep);--plaza-ui-green-hover:var(--plaza-green-light);--plaza-service-link-color:var(--plaza-ui-green);--plaza-service-link-hover:var(--plaza-ui-green-hover);--gold:var(--plaza-ui-green);--accent:var(--plaza-ui-green);--plaza-brand:var(--plaza-ui-green);--plaza-icon:var(--plaza-ui-green);--plaza-accent-base:var(--plaza-ui-green);--icon-gold:var(--plaza-ui-green);--icon-gold-hover:var(--plaza-ui-green-hover);--plaza-hover:var(--plaza-ui-green-hover);--plaza-interaction:var(--plaza-ui-green-hover)}
+html[data-theme="dark"] body.plaza-shell.plaza-object-zheleznovodsk{--plaza-ui-green:var(--plaza-green-light);--plaza-ui-green-hover:var(--plaza-green-bright)}
+html body.plaza-shell:is(.plaza-object-zheleznovodsk){--plaza-preview-border-color:var(--line)}
+html body.plaza-shell:is(.plaza-object-zheleznovodsk){--plaza-preview-surface:#FCFBF8}
+:root[data-theme=dark] body.plaza-shell:is(.plaza-object-zheleznovodsk){--plaza-preview-surface:#171C1B}
+html body.plaza-shell{--plaza-footer-gradient-end:color-mix(in srgb,var(--bg) 94%,var(--plaza-service-link-color,var(--gold)) 6%)}
+html[data-theme=dark] body.plaza-shell{--plaza-footer-gradient-end:color-mix(in srgb,var(--bg) 86%,var(--plaza-service-link-color,var(--gold)) 14%)}
+html body.plaza-shell{--plaza-primary-button-bg:var(--gold);--plaza-primary-button-ink:var(--plaza-button-ink,#fff)}
+html[data-theme=dark] body.plaza-shell{--plaza-primary-button-ink:var(--plaza-button-ink,var(--plaza-bg-night,#171c1b))}
+
+/* Exclusive Zheleznovodsk 404 photographic surface and wayfinding signs. */
+html body.plaza-object-zheleznovodsk{--plaza-error-photo-base:#365947;--plaza-error-photo-ink:#fff;--plaza-error-photo-shade:linear-gradient(180deg,transparent 40%,rgba(12,33,22,.25));--plaza-error-sign-bg:#fcfbf8;--plaza-error-sign-ink:#365947;--plaza-error-sign-hover:#365947;--plaza-error-sign-hover-ink:#fff}
+html[data-theme=dark] body.plaza-object-zheleznovodsk{--plaza-error-sign-bg:#14231c;--plaza-error-sign-ink:#c5d5b7;--plaza-error-sign-hover:#9ca887;--plaza-error-sign-hover-ink:#14231c}
+
+/* This site's accordion light: shared geometry, independent colour declarations. */
+html body.plaza-shell{--plaza-accordion-light-stops:rgba(255,255,255,.95),rgba(255,255,255,.35) 48%,transparent 85%}
+html[data-theme=dark] body.plaza-shell{--plaza-accordion-light-stops:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),.18),transparent 75%;--plaza-accordion-border-core:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),.65)}
+
+/* Compact menu: one stable ink for label and icon.
+   Inherit the shared white daylight flashlight and the standard icon motion unchanged. */
+html body.plaza-shell.plaza-object-zheleznovodsk{--plaza-compact-menu-ink:var(--plaza-green-deep)}
+html[data-theme=dark] body.plaza-shell.plaza-object-zheleznovodsk{--plaza-compact-menu-ink:var(--plaza-green-bright)}
+html body.plaza-shell.plaza-object-zheleznovodsk .pn-menu-compact{--pn-text:var(--plaza-compact-menu-ink);--pn-gold:var(--plaza-compact-menu-ink);--plaza-interaction:var(--plaza-compact-menu-ink)}
+
+/* This site's sitemap surface and standard dialog controls. */
+html body.plaza-shell{--plaza-sitemap-background:linear-gradient(135deg,#e9ede4,#dde5d7);--plaza-sitemap-control-bg:color-mix(in srgb,var(--surface) 65%,transparent);--plaza-sitemap-orbit-1:156,168,135;--plaza-sitemap-orbit-2:197,213,183;--plaza-sitemap-orbit-3:120,168,106;--plaza-sitemap-orbit-strength:.20;--plaza-dialog-close-bg:#fcfbf8;--plaza-dialog-close-ink:var(--plaza-service-link-color);--plaza-dialog-close-hover:var(--plaza-service-link-hover);--plaza-dialog-close-shadow:0 8px 24px #0006,0 2px 6px #0004;--plaza-sitemap-kislovodsk:#365947;--plaza-sitemap-zheleznovodsk:#365947;--plaza-sitemap-border:color-mix(in srgb,#365947 26%,transparent);--plaza-sitemap-shadow:0 24px 80px #0004,0 8px 24px #0002;}
+html[data-theme=dark] body.plaza-shell{--plaza-sitemap-background:linear-gradient(135deg,var(--surface),var(--bg));--plaza-sitemap-control-bg:color-mix(in srgb,var(--surface) 80%,transparent);--plaza-sitemap-orbit-strength:.13;--plaza-sitemap-kislovodsk:#9CA887;--plaza-sitemap-zheleznovodsk:#9CA887;--plaza-sitemap-border:color-mix(in srgb,#9CA887 28%,transparent);--plaza-sitemap-shadow:0 24px 80px #0007,0 8px 24px #0005;}
+
+/* Public footer action roles belong to this site's palette, for both themes. */
+html body.plaza-shell.plaza-object-zheleznovodsk{--plaza-footer-action-color:var(--plaza-service-link-color);--plaza-footer-action-hover:var(--plaza-service-link-hover)}
+
+/* Fixed light brand outline for the shared 100px gallery preview, both themes. */
+body.plaza-object-zheleznovodsk{--plaza-cinema-preview-border:var(--plaza-green-light)}
+
+/* Existing facts colours: owned independently of every other property. */
+body.plaza-object-zheleznovodsk{--plaza-fact-tint-start:rgba(120,168,106,.20);--plaza-fact-tint-middle:rgba(120,168,106,.045)}
+/* Permanent facts tint + separate card flashlight; this property's own colour roles. */
+body.plaza-object-zheleznovodsk{--plaza-card-material-stops:var(--plaza-accordion-light-stops)}
+html[data-theme=dark] body.plaza-object-zheleznovodsk{--plaza-card-material-stops:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),var(--plaza-card-light-fill)),transparent 75%}
+
+/* Opaque sanatorium picker: independently owned day/night material, no glass. */
+html body.plaza-shell.plaza-object-zheleznovodsk{--plaza-picker-surface:linear-gradient(135deg,#fcfbf8 0%,#eff2e9 55%,#e0e8da 100%)}
+html[data-theme="dark"] body.plaza-shell.plaza-object-zheleznovodsk{--plaza-picker-surface:linear-gradient(135deg,#25312b 0%,#1c2923 55%,#14231c 100%)}
+
+/* Permanent home FAQ material; the white daytime Stripe remains a separate layer. */
+html body.plaza-shell.plaza-object-zheleznovodsk{--plaza-home-faq-surface:linear-gradient(135deg,#e8ede2 0%,#dce5d5 100%)}
+html[data-theme=dark] body.plaza-shell.plaza-object-zheleznovodsk{--plaza-home-faq-surface:linear-gradient(135deg,#28362e 0%,#1c2b23 100%)}
+
+/* Tooltip colour only; shared geometry and theme alpha remain in tooltip.css. */
+html body.plaza-shell.plaza-object-zheleznovodsk{--plaza-tooltip-shadow-rgb:20,35,28}
+
+/* Desktop page overview: this property's own green material and state roles. */
+html body.plaza-shell.plaza-object-zheleznovodsk{--plaza-page-menu-title:var(--plaza-green-deep);--plaza-page-menu-title-hover:var(--plaza-green-light);--plaza-page-menu-surface:#DFE5D5;--plaza-page-menu-caption:var(--pn-text,var(--text));--plaza-page-menu-spot-core-1:197,213,183;--plaza-page-menu-spot-rgb-1:156,168,135;--plaza-page-menu-spot-strength-1:.28;--plaza-page-menu-spot-core-2:238,217,172;--plaza-page-menu-spot-rgb-2:209,181,121;--plaza-page-menu-spot-strength-2:.24;--plaza-page-menu-spot-core-3:185,199,162;--plaza-page-menu-spot-rgb-3:143,162,115;--plaza-page-menu-spot-strength-3:.23}
+html[data-theme=dark] body.plaza-shell.plaza-object-zheleznovodsk{--plaza-page-menu-title:var(--plaza-green-light);--plaza-page-menu-title-hover:var(--plaza-green-bright);--plaza-page-menu-surface:#2D3B31;--plaza-page-menu-caption:var(--pn-muted,var(--muted));--plaza-page-menu-spot-core-1:34,62,39;--plaza-page-menu-spot-rgb-1:28,51,33;--plaza-page-menu-spot-strength-1:.60;--plaza-page-menu-spot-core-2:67,57,34;--plaza-page-menu-spot-rgb-2:54,47,29;--plaza-page-menu-spot-strength-2:.55;--plaza-page-menu-spot-core-3:40,61,47;--plaza-page-menu-spot-rgb-3:32,50,38;--plaza-page-menu-spot-strength-3:.55}
+
+/* Page-menu elevation: green daylight depth and soft sage night light. */
+html body.plaza-object-zheleznovodsk{--plaza-page-menu-shadow:0 12px 22px -14px rgba(20,54,35,.32);--plaza-page-menu-shadow-hover:0 18px 30px -14px rgba(20,54,35,.44)}
+html[data-theme=dark] body.plaza-object-zheleznovodsk{--plaza-page-menu-shadow:0 8px 24px -14px rgba(156,168,135,.24);--plaza-page-menu-shadow-hover:0 12px 28px -12px rgba(197,213,183,.40)}

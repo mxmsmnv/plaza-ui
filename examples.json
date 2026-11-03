@@ -1,0 +1,1405 @@
+{
+  "accordion": [
+    {
+      "path": "examples/accordion-0.json",
+      "profile": "kislovodsk",
+      "selector": "#accordion-variants",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "booking-panel": [
+    {
+      "path": "examples/booking-panel-0.json",
+      "profile": "network",
+      "selector": "[data-plaza-booking-component=\"stable\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/booking-panel-1.json",
+      "profile": "kislovodsk",
+      "selector": "[data-plaza-booking-component=\"stable\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/booking-panel-2.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-plaza-booking-component=\"stable\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-03.json",
+      "profile": "kislovodsk",
+      "label": "Предложение бронирования · Арт Плаза",
+      "selector": ".booking-highlight--art",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-04.json",
+      "profile": "kislovodsk",
+      "label": "Предложение бронирования · концерт",
+      "selector": ".booking-highlight--koldun",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-05.json",
+      "profile": "kislovodsk",
+      "label": "Предложение бронирования · афиша",
+      "selector": ".booking-highlight--vorobey",
+      "mode": "measured_original_component"
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "path": "examples/breadcrumbs-0.json",
+      "profile": "kislovodsk",
+      "selector": "nav.resort-breadcrumbs",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/breadcrumbs-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "nav.wellness-breadcrumbs",
+      "mode": "original_public_markup"
+    }
+  ],
+  "card-spotlight": [
+    {
+      "path": "examples/card-spotlight-0.json",
+      "profile": "kislovodsk",
+      "selector": "#stripe",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "consultant-portrait-gaze": [
+    {
+      "path": "examples/consultant-portrait-gaze-0.json",
+      "profile": "network",
+      "selector": "#booking",
+      "mode": "original_component_assembly"
+    },
+    {
+      "path": "examples/consultant-portrait-gaze-1.json",
+      "profile": "kislovodsk",
+      "selector": "#booking",
+      "mode": "original_component_assembly"
+    },
+    {
+      "path": "examples/consultant-portrait-gaze-2.json",
+      "profile": "zheleznovodsk",
+      "selector": "#booking",
+      "mode": "original_component_assembly"
+    }
+  ],
+  "dialog-close": [
+    {
+      "path": "examples/dialog-close-0.json",
+      "profile": "network",
+      "selector": "dialog:not(.plaza-map-modal)",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/dialog-close-1.json",
+      "profile": "kislovodsk",
+      "selector": "dialog:not(.plaza-map-modal)",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/dialog-close-2.json",
+      "profile": "zheleznovodsk",
+      "selector": "dialog:not(.plaza-map-modal)",
+      "mode": "original_public_markup"
+    }
+  ],
+  "editor-foundation": [
+    {
+      "path": "examples/editor-foundation-0.json",
+      "profile": "kislovodsk",
+      "selector": "#content-cards",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "elastic-headings": [
+    {
+      "path": "examples/elastic-headings-0.json",
+      "profile": "kislovodsk",
+      "selector": "#text-effects",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "font-foundation": [
+    {
+      "path": "examples/font-foundation-0.json",
+      "profile": "kislovodsk",
+      "selector": "#type",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "footer-meta": [
+    {
+      "path": "examples/footer-meta-0.json",
+      "profile": "kislovodsk",
+      "selector": "#shell",
+      "mode": "original_public_markup"
+    }
+  ],
+  "footer-shell": [
+    {
+      "path": "examples/footer-shell-0.json",
+      "profile": "network",
+      "selector": "[data-plaza-footer=\"edges\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/footer-shell-1.json",
+      "profile": "kislovodsk",
+      "selector": "[data-plaza-footer=\"edges\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/footer-shell-2.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-plaza-footer=\"edges\"]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "footer-sitemap": [
+    {
+      "path": "examples/footer-sitemap-0.json",
+      "profile": "network",
+      "selector": "[data-plaza-footer=\"edges\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/footer-sitemap-1.json",
+      "profile": "kislovodsk",
+      "selector": "[data-plaza-footer=\"edges\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/footer-sitemap-2.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-plaza-footer=\"edges\"]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "glass-surface": [
+    {
+      "path": "examples/glass-surface-0.json",
+      "profile": "kislovodsk",
+      "selector": "#glass-proof",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "guest-search": [
+    {
+      "path": "examples/guest-search-0.json",
+      "profile": "kislovodsk",
+      "selector": ".pks-form",
+      "mode": "original_renderer"
+    }
+  ],
+  "header-shell": [
+    {
+      "path": "examples/header-shell-0.json",
+      "profile": "network",
+      "selector": ".site-header[data-plaza-header=\"stable\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/header-shell-1.json",
+      "profile": "kislovodsk",
+      "selector": ".site-header[data-plaza-header=\"stable\"]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/header-shell-2.json",
+      "profile": "zheleznovodsk",
+      "selector": ".site-header[data-plaza-header=\"stable\"]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "heading-motion": [
+    {
+      "path": "examples/heading-motion-0.json",
+      "profile": "kislovodsk",
+      "selector": "#motion",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "hero-video": [
+    {
+      "path": "examples/hero-video-0.json",
+      "profile": "kislovodsk",
+      "selector": ".plaza-hero-video",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/hero-video-1.json",
+      "profile": "zheleznovodsk",
+      "selector": ".plaza-hero-video",
+      "mode": "original_public_markup"
+    }
+  ],
+  "home-booking-search": [
+    {
+      "path": "examples/home-booking-search-0.json",
+      "profile": "kislovodsk",
+      "selector": "[data-plaza-lazy-search]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/home-booking-search-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-plaza-lazy-search]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "home-gallery": [
+    {
+      "path": "examples/home-gallery-0.json",
+      "profile": "kislovodsk",
+      "selector": "[data-home-gallery]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/home-gallery-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-home-gallery]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "home-loading-choreography": [
+    {
+      "path": "examples/home-loading-choreography-0.json",
+      "profile": "kislovodsk",
+      "selector": ".wellness-search",
+      "mode": "original_composition_subset"
+    },
+    {
+      "path": "examples/home-loading-choreography-1.json",
+      "profile": "zheleznovodsk",
+      "selector": ".wellness-search",
+      "mode": "original_composition_subset"
+    }
+  ],
+  "icon-registry": [
+    {
+      "path": "examples/icon-registry-0.json",
+      "profile": "kislovodsk",
+      "selector": "#icons",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "inner-photo": [
+    {
+      "path": "examples/inner-photo-0.json",
+      "profile": "kislovodsk",
+      "selector": "[data-plaza-inner-photo]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "layout-and-controls": [
+    {
+      "path": "examples/layout-and-controls-0.json",
+      "profile": "kislovodsk",
+      "selector": "#actions",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "mobile-home-faq-wrapper": [
+    {
+      "path": "examples/mobile-home-faq-wrapper-0.json",
+      "profile": "kislovodsk",
+      "selector": "#plaza-home-faq",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/mobile-home-faq-wrapper-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "#plaza-home-faq",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-atlas-hero": [
+    {
+      "path": "examples/network-atlas-hero-0.json",
+      "profile": "network",
+      "selector": ".pn-hero",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-booking-social-layout": [
+    {
+      "path": "examples/network-booking-social-layout-0.json",
+      "profile": "network",
+      "selector": "#booking",
+      "mode": "original_renderer"
+    }
+  ],
+  "network-care": [
+    {
+      "path": "examples/network-care-0.json",
+      "profile": "network",
+      "selector": "#care",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-comparison": [
+    {
+      "path": "examples/network-comparison-0.json",
+      "profile": "network",
+      "selector": "#choice",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-faq": [
+    {
+      "path": "examples/network-faq-0.json",
+      "profile": "network",
+      "selector": "#brand-faq",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-home": [
+    {
+      "path": "examples/network-home-0.json",
+      "profile": "network",
+      "selector": "#sanatoriums",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-map-camera-dialogs": [
+    {
+      "path": "examples/network-map-camera-dialogs-0.json",
+      "profile": "network",
+      "selector": ".pn-map-below",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-principles-rail": [
+    {
+      "path": "examples/network-principles-rail-0.json",
+      "profile": "network",
+      "selector": ".pb-principles",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-print-booklet": [
+    {
+      "path": "examples/network-print-booklet-0.json",
+      "profile": "network",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "network-privacy-cookie": [
+    {
+      "path": "examples/network-privacy-cookie-0.json",
+      "profile": "network",
+      "selector": ".plaza-policy-modal",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-property-card": [
+    {
+      "path": "examples/network-property-card-0.json",
+      "profile": "network",
+      "selector": ".pn-property",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-rating": [
+    {
+      "path": "examples/network-rating-0.json",
+      "profile": "network",
+      "selector": ".pn-property",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-shell-adapter": [
+    {
+      "path": "examples/network-shell-adapter-0.json",
+      "profile": "network",
+      "selector": ".site-header",
+      "mode": "original_public_markup"
+    }
+  ],
+  "network-video-poster-pair": [
+    {
+      "path": "examples/network-video-poster-pair-0.json",
+      "profile": "network",
+      "selector": ".pn-property",
+      "mode": "original_public_markup"
+    }
+  ],
+  "night-background": [
+    {
+      "path": "examples/night-background-0.json",
+      "profile": "kislovodsk",
+      "selector": "#colors",
+      "mode": "live_renderer_markup"
+    }
+  ],
+  "page-menu": [
+    {
+      "path": "examples/page-menu-0.json",
+      "profile": "network",
+      "selector": ".site-header",
+      "mode": "original_renderer"
+    },
+    {
+      "path": "examples/page-menu-1.json",
+      "profile": "kislovodsk",
+      "selector": ".site-header",
+      "mode": "original_renderer"
+    },
+    {
+      "path": "examples/page-menu-2.json",
+      "profile": "zheleznovodsk",
+      "selector": ".site-header",
+      "mode": "original_renderer"
+    }
+  ],
+  "page-transition": [
+    {
+      "path": "examples/page-transition-0.json",
+      "profile": "kislovodsk",
+      "selector": "#motion",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "photo-gallery": [
+    {
+      "path": "examples/photo-gallery-0.json",
+      "profile": "kislovodsk",
+      "selector": "[data-room-gallery]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/photo-gallery-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-room-gallery]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-29.json",
+      "profile": "kislovodsk",
+      "label": "3D-план номера",
+      "selector": ".plaza-room-media-card:first-of-type",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-30.json",
+      "profile": "kislovodsk",
+      "label": "Виртуальный тур по номеру",
+      "selector": ".plaza-room-media-card:nth-of-type(2)",
+      "mode": "measured_original_component"
+    }
+  ],
+  "photo-material": [
+    {
+      "path": "examples/photo-material-0.json",
+      "profile": "kislovodsk",
+      "selector": "#photo-style",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "photo-story": [
+    {
+      "path": "examples/photo-story-0.json",
+      "profile": "kislovodsk",
+      "selector": "[data-pg-story]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/photo-story-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-pg-story]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "plaza-room-print-family": [
+    {
+      "path": "examples/plaza-room-print-family-0.json",
+      "profile": "kislovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    },
+    {
+      "path": "examples/plaza-room-print-family-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "privacy-contrast": [
+    {
+      "path": "examples/privacy-contrast-0.json",
+      "profile": "network",
+      "selector": "dialog.plaza-policy-modal",
+      "mode": "original_public_markup"
+    }
+  ],
+  "profile-tokens": [
+    {
+      "path": "examples/profile-tokens-0.json",
+      "profile": "kislovodsk",
+      "selector": "#colors",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "property-home-print-booklet": [
+    {
+      "path": "examples/property-home-print-booklet-0.json",
+      "profile": "kislovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    },
+    {
+      "path": "examples/property-home-print-booklet-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "property-not-found-recovery": [
+    {
+      "path": "examples/property-not-found-recovery-0.json",
+      "profile": "kislovodsk",
+      "selector": ".plaza404,.zhel404",
+      "mode": "original_renderer"
+    },
+    {
+      "path": "examples/property-not-found-recovery-1.json",
+      "profile": "zheleznovodsk",
+      "selector": ".plaza404,.zhel404",
+      "mode": "original_renderer"
+    }
+  ],
+  "property-picker": [
+    {
+      "path": "examples/property-picker-0.json",
+      "profile": "network",
+      "selector": ".site-header",
+      "mode": "original_renderer"
+    },
+    {
+      "path": "examples/property-picker-1.json",
+      "profile": "kislovodsk",
+      "selector": ".site-header",
+      "mode": "original_renderer"
+    },
+    {
+      "path": "examples/property-picker-2.json",
+      "profile": "zheleznovodsk",
+      "selector": ".site-header",
+      "mode": "original_renderer"
+    }
+  ],
+  "property-print-foundation": [
+    {
+      "path": "examples/property-print-foundation-0.json",
+      "profile": "kislovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    },
+    {
+      "path": "examples/property-print-foundation-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "psg-booking-page": [
+    {
+      "path": "examples/psg-booking-page-0.json",
+      "profile": "zheleznovodsk",
+      "selector": "main.wellness-page",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-contact-priority": [
+    {
+      "path": "examples/psg-contact-priority-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-contact-priority",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-data-table": [
+    {
+      "path": "examples/psg-data-table-0.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-guide-table]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-detail-page": [
+    {
+      "path": "examples/psg-detail-page-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".wellness-page-content",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-document-search": [
+    {
+      "path": "examples/psg-document-search-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-documents",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-editorial-refinement": [
+    {
+      "path": "examples/psg-editorial-refinement-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".wellness-section-nav",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-gallery-print": [
+    {
+      "path": "examples/psg-gallery-print-0.json",
+      "profile": "zheleznovodsk",
+      "selector": "#plaza-psk-gallery-print",
+      "mode": "original_source_template_export",
+      "variant_title": "Фотобуклет · 12 страниц",
+      "variant_id": "psg-print-photo"
+    },
+    {
+      "path": "examples/psg-gallery-print-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "#plaza-psk-gallery-print",
+      "mode": "original_source_template_export",
+      "variant_title": "Акварельный буклет · 12 страниц",
+      "variant_id": "psg-print-watercolor"
+    }
+  ],
+  "psg-guide-feature-card": [
+    {
+      "path": "examples/psg-guide-feature-card-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-feature",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-guide-feature-rail": [
+    {
+      "path": "examples/psg-guide-feature-rail-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-discover",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-guide-hero": [
+    {
+      "path": "examples/psg-guide-hero-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-hero",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-guide-navigation": [
+    {
+      "path": "examples/psg-guide-navigation-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-breadcrumb",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-guide-page": [
+    {
+      "path": "examples/psg-guide-page-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-page[data-guide-page]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-guide-prose-section": [
+    {
+      "path": "examples/psg-guide-prose-section-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".pg-section",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-photo-story": [
+    {
+      "path": "examples/psg-photo-story-0.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-pg-story]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-profile-shell-adapter": [
+    {
+      "path": "examples/psg-profile-shell-adapter-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".site-header",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-room-card-adapter": [
+    {
+      "path": "examples/psg-room-card-adapter-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".plaza-room-card",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-room-detail": [
+    {
+      "path": "examples/psg-room-detail-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".wellness-room-intro",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-15.json",
+      "profile": "kislovodsk",
+      "label": "Удобства внутри номера",
+      "selector": ".resort-amenities > article",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psg-room-photo-gallery": [
+    {
+      "path": "examples/psg-room-photo-gallery-0.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-room-gallery]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psg-wifi-welcome": [
+    {
+      "path": "examples/psg-wifi-welcome-0.json",
+      "profile": "zheleznovodsk",
+      "selector": ".welcome",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-about-award": [
+    {
+      "path": "examples/psk-about-award-0.json",
+      "profile": "kislovodsk",
+      "selector": ".al-award-lead",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-about-editorial": [
+    {
+      "path": "examples/psk-about-editorial-0.json",
+      "profile": "kislovodsk",
+      "selector": ".al-section-nav",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-26.json",
+      "profile": "kislovodsk",
+      "label": "Виртуальное знакомство",
+      "selector": ".al-rail .al-look",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-about-jobs-contacts": [
+    {
+      "path": "examples/psk-about-jobs-contacts-0.json",
+      "profile": "kislovodsk",
+      "selector": ".al-job-layout",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-27.json",
+      "profile": "kislovodsk",
+      "label": "Вакансии",
+      "selector": ".al-job-copy .job-card",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-28.json",
+      "profile": "kislovodsk",
+      "label": "Адрес и контакты",
+      "selector": ".address-card",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-about-print": [
+    {
+      "path": "examples/psk-about-print-0.json",
+      "profile": "kislovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "psk-candy-catalogue": [
+    {
+      "path": "examples/psk-candy-catalogue-0.json",
+      "profile": "kislovodsk",
+      "selector": ".cs-page",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-07.json",
+      "profile": "kislovodsk",
+      "label": "Десерт · карточка фотостопки",
+      "selector": ".cs-dessert",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-08.json",
+      "profile": "kislovodsk",
+      "label": "Десерт · карточка каталога",
+      "selector": ".cs-grid-item",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-channel-pages": [
+    {
+      "path": "examples/psk-channel-pages-0.json",
+      "profile": "kislovodsk",
+      "selector": "[data-accordion-group]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-06.json",
+      "profile": "kislovodsk",
+      "label": "Сотрудник в справочнике",
+      "selector": ".resort-book-person",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-dining-editorial": [
+    {
+      "path": "examples/psk-dining-editorial-0.json",
+      "profile": "kislovodsk",
+      "selector": ".pd3-journal",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-dining-gallery": [
+    {
+      "path": "examples/psk-dining-gallery-0.json",
+      "profile": "kislovodsk",
+      "selector": "[data-room-gallery]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-dining-print": [
+    {
+      "path": "examples/psk-dining-print-0.json",
+      "profile": "kislovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "psk-documents-browser": [
+    {
+      "path": "examples/psk-documents-browser-0.json",
+      "profile": "kislovodsk",
+      "selector": "#docs",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-ds-catalogue": [
+    {
+      "path": "examples/psk-ds-catalogue-0.json",
+      "profile": "kislovodsk",
+      "selector": ".ds-sidebar",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-ds-live-cards": [
+    {
+      "path": "examples/psk-ds-live-cards-0.json",
+      "profile": "kislovodsk",
+      "selector": "#cards",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "psk-ds-reference-tools": [
+    {
+      "path": "examples/psk-ds-reference-tools-0.json",
+      "profile": "kislovodsk",
+      "selector": "#page-templates",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-faq-packing": [
+    {
+      "path": "examples/psk-faq-packing-0.json",
+      "profile": "kislovodsk",
+      "selector": ".pg-faq-topics",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-feature-card": [
+    {
+      "path": "examples/psk-feature-card-0.json",
+      "profile": "kislovodsk",
+      "selector": "procedure",
+      "mode": "live_renderer_markup"
+    }
+  ],
+  "psk-guide-page": [
+    {
+      "path": "examples/psk-guide-page-0.json",
+      "profile": "kislovodsk",
+      "selector": ".pg-hero",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-medical-goal": [
+    {
+      "path": "examples/psk-medical-goal-0.json",
+      "profile": "kislovodsk",
+      "selector": ".ml-goal",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-19.json",
+      "profile": "kislovodsk",
+      "label": "Направление лечения",
+      "selector": ".ml-goal",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-medical-landing": [
+    {
+      "path": "examples/psk-medical-landing-0.json",
+      "profile": "kislovodsk",
+      "selector": ".psk-medical",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-13.json",
+      "profile": "kislovodsk",
+      "label": "Числовой факт о медицине",
+      "selector": ".ml-fact",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-20.json",
+      "profile": "kislovodsk",
+      "label": "Карточка врача",
+      "selector": ".ml-spot",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-medical-methods": [
+    {
+      "path": "examples/psk-medical-methods-0.json",
+      "profile": "kislovodsk",
+      "selector": ".pg-tech-grid",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-medical-print": [
+    {
+      "path": "examples/psk-medical-print-0.json",
+      "profile": "kislovodsk",
+      "selector": "#plaza-print",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "psk-medical-registry": [
+    {
+      "path": "examples/psk-medical-registry-0.json",
+      "profile": "kislovodsk",
+      "selector": ".medical-doctor-table",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-medical-sheet": [
+    {
+      "path": "examples/psk-medical-sheet-0.json",
+      "profile": "kislovodsk",
+      "selector": ".psk-medical",
+      "mode": "original_component_assembly"
+    }
+  ],
+  "psk-newyear-page": [
+    {
+      "path": "examples/psk-newyear-page-0.json",
+      "profile": "kislovodsk",
+      "selector": ".psk-ny",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-17.json",
+      "profile": "kislovodsk",
+      "label": "Блюдо праздничного меню",
+      "selector": ".ny-menu__courses > article",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-18.json",
+      "profile": "kislovodsk",
+      "label": "Коллекция праздничного меню",
+      "selector": ".ny-menu__collections > article",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-33.json",
+      "profile": "kislovodsk",
+      "label": "Праздничная площадка",
+      "selector": ".ny-venue",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-34.json",
+      "profile": "kislovodsk",
+      "label": "Новогодний семейный блок",
+      "selector": ".ny-family__card",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-35.json",
+      "profile": "kislovodsk",
+      "label": "Новогоднее предложение",
+      "selector": ".ny-offer-card--decision",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-newyear-plan": [
+    {
+      "path": "examples/psk-newyear-plan-0.json",
+      "profile": "kislovodsk",
+      "selector": ".psk-ny",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-newyear-print": [
+    {
+      "path": "examples/psk-newyear-print-0.json",
+      "profile": "kislovodsk",
+      "selector": ".np-book",
+      "mode": "original_public_print_markup"
+    }
+  ],
+  "psk-newyear-rails": [
+    {
+      "path": "examples/psk-newyear-rails-0.json",
+      "profile": "kislovodsk",
+      "selector": ".psk-ny",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-31.json",
+      "profile": "kislovodsk",
+      "label": "Ведущий праздничной программы",
+      "selector": ".ny-host",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-32.json",
+      "profile": "kislovodsk",
+      "label": "Артист праздничной программы",
+      "selector": ".ny-artist",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-program-card": [
+    {
+      "path": "examples/psk-program-card-0.json",
+      "profile": "kislovodsk",
+      "selector": "program",
+      "mode": "live_renderer_markup"
+    },
+    {
+      "path": "examples/card-variant-01.json",
+      "profile": "kislovodsk",
+      "label": "Программа в строке каталога",
+      "selector": ".pg-program",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-21.json",
+      "profile": "kislovodsk",
+      "label": "Программа на странице медицины",
+      "selector": "#railProg > article",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-service-card": [
+    {
+      "path": "examples/psk-service-card-0.json",
+      "profile": "kislovodsk",
+      "selector": "service",
+      "mode": "live_renderer_markup"
+    },
+    {
+      "path": "examples/card-variant-02.json",
+      "profile": "kislovodsk",
+      "label": "Горизонтальная карточка зала",
+      "selector": ".plaza-photo-row",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-25.json",
+      "profile": "kislovodsk",
+      "label": "Преимущество санатория",
+      "selector": ".card.svc-card:not(.al-look)",
+      "mode": "measured_original_component"
+    }
+  ],
+  "psk-services-page": [
+    {
+      "path": "examples/psk-services-page-0.json",
+      "profile": "kislovodsk",
+      "selector": ".pg-services",
+      "mode": "original_public_markup"
+    }
+  ],
+  "psk-services-transfer-business": [
+    {
+      "path": "examples/psk-services-transfer-business-0.json",
+      "profile": "kislovodsk",
+      "selector": ".svc-transfer-table",
+      "mode": "original_public_markup"
+    }
+  ],
+  "rail-carousel": [
+    {
+      "path": "examples/rail-carousel-0.json",
+      "profile": "network",
+      "selector": ".swipe-rail",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/rail-carousel-1.json",
+      "profile": "kislovodsk",
+      "selector": ".swipe-rail",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/rail-carousel-2.json",
+      "profile": "zheleznovodsk",
+      "selector": ".swipe-rail",
+      "mode": "original_public_markup"
+    }
+  ],
+  "resort-profile-shell-adapter": [
+    {
+      "path": "examples/resort-profile-shell-adapter-0.json",
+      "profile": "network",
+      "selector": ".site-header",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/resort-profile-shell-adapter-1.json",
+      "profile": "kislovodsk",
+      "selector": ".site-header",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/resort-profile-shell-adapter-2.json",
+      "profile": "zheleznovodsk",
+      "selector": ".site-header",
+      "mode": "original_public_markup"
+    }
+  ],
+  "room-card-interaction": [
+    {
+      "path": "examples/room-card-interaction-0.json",
+      "profile": "kislovodsk",
+      "selector": "room",
+      "mode": "live_renderer_markup"
+    },
+    {
+      "path": "examples/room-card-interaction-1.json",
+      "profile": "zheleznovodsk",
+      "selector": "#rooms .plaza-room-card",
+      "mode": "original_public_markup"
+    }
+  ],
+  "scroll-reveal": [
+    {
+      "path": "examples/scroll-reveal-0.json",
+      "profile": "kislovodsk",
+      "selector": "#motion",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "search-targets": [
+    {
+      "path": "examples/search-targets-0.json",
+      "profile": "kislovodsk",
+      "selector": "#accordion-variants",
+      "mode": "original_public_markup"
+    }
+  ],
+  "section-rhythm": [
+    {
+      "path": "examples/section-rhythm-0.json",
+      "profile": "kislovodsk",
+      "selector": "#layout",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "semantic-card-system": [
+    {
+      "path": "examples/semantic-card-system-0.json",
+      "profile": "kislovodsk",
+      "selector": ".plaza-card",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/card-variant-09.json",
+      "profile": "kislovodsk",
+      "label": "Факт на главной",
+      "selector": ".plaza-facts-rail > .wp-block-group",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-10.json",
+      "profile": "kislovodsk",
+      "label": "Текстовая карточка перед поездкой",
+      "selector": ".visit-grid > article",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-11.json",
+      "profile": "kislovodsk",
+      "label": "Награда на главной",
+      "selector": ".plaza-faq-award",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-12.json",
+      "profile": "kislovodsk",
+      "label": "Числовой факт о санатории",
+      "selector": ".facts > .fact",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-14.json",
+      "profile": "kislovodsk",
+      "label": "Факт об услуге",
+      "selector": ".svc-facts > .wp-block-group",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-23.json",
+      "profile": "kislovodsk",
+      "label": "Афиша на главной",
+      "selector": "#afisha .swipe-rail > a.card",
+      "mode": "measured_original_component"
+    },
+    {
+      "path": "examples/card-variant-24.json",
+      "profile": "kislovodsk",
+      "label": "Преимущество на главной",
+      "selector": ".wp-block-group.card:not(.catalog-card)",
+      "mode": "measured_original_component"
+    }
+  ],
+  "semantic-links": [
+    {
+      "path": "examples/semantic-links-0.json",
+      "profile": "network",
+      "selector": ".plaza-link-label",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/semantic-links-1.json",
+      "profile": "kislovodsk",
+      "selector": ".plaza-link-label",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/semantic-links-2.json",
+      "profile": "zheleznovodsk",
+      "selector": ".plaza-link-label",
+      "mode": "original_public_markup"
+    }
+  ],
+  "sticky-photo-copy": [
+    {
+      "path": "examples/sticky-photo-copy-0.json",
+      "profile": "kislovodsk",
+      "selector": "#photo-copy",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "sticky-table-head": [
+    {
+      "path": "examples/sticky-table-head-0.json",
+      "profile": "kislovodsk",
+      "selector": "#tables",
+      "mode": "original_public_markup"
+    }
+  ],
+  "sun-icon": [
+    {
+      "path": "examples/sun-icon-0.json",
+      "profile": "network",
+      "selector": ".plaza-sun-toggle",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/sun-icon-1.json",
+      "profile": "kislovodsk",
+      "selector": ".plaza-sun-toggle",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/sun-icon-2.json",
+      "profile": "zheleznovodsk",
+      "selector": ".plaza-sun-toggle",
+      "mode": "original_public_markup"
+    }
+  ],
+  "table-foundation": [
+    {
+      "path": "examples/table-foundation-0.json",
+      "profile": "kislovodsk",
+      "selector": "#tables",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "tabs": [
+    {
+      "path": "examples/tabs-0.json",
+      "profile": "kislovodsk",
+      "selector": "#tabs",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "theme-transition": [
+    {
+      "path": "examples/theme-transition-0.json",
+      "profile": "kislovodsk",
+      "selector": "#colors",
+      "mode": "design_system_specimen"
+    }
+  ],
+  "tooltips": [
+    {
+      "path": "examples/tooltips-0.json",
+      "profile": "network",
+      "selector": "[data-plaza-tooltip]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/tooltips-1.json",
+      "profile": "kislovodsk",
+      "selector": "[data-plaza-tooltip]",
+      "mode": "original_public_markup"
+    },
+    {
+      "path": "examples/tooltips-2.json",
+      "profile": "zheleznovodsk",
+      "selector": "[data-plaza-tooltip]",
+      "mode": "original_public_markup"
+    }
+  ],
+  "welcome-book-navigation": [
+    {
+      "path": "examples/welcome-book-navigation-0.json",
+      "profile": "kislovodsk",
+      "selector": ".resort-welcomebook",
+      "mode": "original_public_markup"
+    }
+  ]
+}

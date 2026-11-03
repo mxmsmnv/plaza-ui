@@ -1,0 +1,338 @@
+{
+  "files": [
+    {
+      "path": "runtime/compositions/print/gallery-print.css",
+      "source": "wp-content/themes/plaza-resort-migration/assets/kislovodsk-gallery-print.css",
+      "source_sha256": "4718ae1826dcd95f95e26dc9eca9227402147311f4d768367e2f2290fb2cbe77",
+      "sha256": "4718ae1826dcd95f95e26dc9eca9227402147311f4d768367e2f2290fb2cbe77",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/gallery-print.js",
+      "source": "wp-content/themes/plaza-resort-migration/assets/kislovodsk-gallery-print.js",
+      "source_sha256": "30bab04c81b046a2d09fcfb971e4717f7d0b2b17a0ea11d1db8181dc771eea2b",
+      "sha256": "30bab04c81b046a2d09fcfb971e4717f7d0b2b17a0ea11d1db8181dc771eea2b",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-01.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-01.svg",
+      "source_sha256": "785731e95f52ea9efed6af843e492df5c043e1bd18e09c106fa64078a6de00d3",
+      "sha256": "785731e95f52ea9efed6af843e492df5c043e1bd18e09c106fa64078a6de00d3",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-02.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-02.svg",
+      "source_sha256": "abdbd6b300b934f5074b37416a3ae089e582f1fdda2790e875f83a6abb0721df",
+      "sha256": "abdbd6b300b934f5074b37416a3ae089e582f1fdda2790e875f83a6abb0721df",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-03.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-03.svg",
+      "source_sha256": "14a27ce6ad635fa011bdc51fa8f102de1d74cc8ee64402fb227eb2f4e8eaa31d",
+      "sha256": "14a27ce6ad635fa011bdc51fa8f102de1d74cc8ee64402fb227eb2f4e8eaa31d",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-04.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-04.svg",
+      "source_sha256": "6d7ead7a9e2e34c5b42821a36d7903ee93696a37ae8e15dd3584cce4cd063e6d",
+      "sha256": "6d7ead7a9e2e34c5b42821a36d7903ee93696a37ae8e15dd3584cce4cd063e6d",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-05.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-05.svg",
+      "source_sha256": "3eed8cd6662622b29bd59aee2e54a9502cf1b928b46b6dda1eaaef83ea3010f7",
+      "sha256": "3eed8cd6662622b29bd59aee2e54a9502cf1b928b46b6dda1eaaef83ea3010f7",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-06.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-06.svg",
+      "source_sha256": "70d182d8bbd0a97e73bf2fb017cd5a1b0579a7e7f2463fb363bac5d72bfd971d",
+      "sha256": "70d182d8bbd0a97e73bf2fb017cd5a1b0579a7e7f2463fb363bac5d72bfd971d",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-07.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-07.svg",
+      "source_sha256": "9796f9b72c6704e8eecbe44189eda1d9766ccde3d5f85ed8aaf81613289a7f46",
+      "sha256": "9796f9b72c6704e8eecbe44189eda1d9766ccde3d5f85ed8aaf81613289a7f46",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-08.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-08.svg",
+      "source_sha256": "593647e72ebc959287495660b1e7338d951d3c50291e01fc8913b4f032941ed5",
+      "sha256": "593647e72ebc959287495660b1e7338d951d3c50291e01fc8913b4f032941ed5",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-09.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-09.svg",
+      "source_sha256": "95196c1522bcae77ddc572a30a9a86abceff37f6de056384559bcede7392428b",
+      "sha256": "95196c1522bcae77ddc572a30a9a86abceff37f6de056384559bcede7392428b",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-10.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-10.svg",
+      "source_sha256": "ca372961f03cf6215d53cd9c2d2346af5eda685a9c233ae4a9803fb84ed9334e",
+      "sha256": "ca372961f03cf6215d53cd9c2d2346af5eda685a9c233ae4a9803fb84ed9334e",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-11.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-11.svg",
+      "source_sha256": "bbac0c6690b70fe7758c9da9b90a67333643ca80adca9662a5b57f2f5e26ca18",
+      "sha256": "bbac0c6690b70fe7758c9da9b90a67333643ca80adca9662a5b57f2f5e26ca18",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/photo/page-12.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/page-12.svg",
+      "source_sha256": "01c60951776f22c462bda120f38b31f3d150e95d30df4b6b9856b074da0d24af",
+      "sha256": "01c60951776f22c462bda120f38b31f3d150e95d30df4b6b9856b074da0d24af",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-01.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-01.svg",
+      "source_sha256": "9022b16e42cb6989a5cac4427bb1b0b167218881164b59cd82cc2d8f758b32ca",
+      "sha256": "9022b16e42cb6989a5cac4427bb1b0b167218881164b59cd82cc2d8f758b32ca",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-02.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-02.svg",
+      "source_sha256": "c554129b3c2e0dc37046e9634795e8766d14758ae062d2c28df78ab079011505",
+      "sha256": "c554129b3c2e0dc37046e9634795e8766d14758ae062d2c28df78ab079011505",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-03.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-03.svg",
+      "source_sha256": "1e4b419c00b530140c0e132bdc7f03320c644565dca4e57bb77d816b0128ad32",
+      "sha256": "1e4b419c00b530140c0e132bdc7f03320c644565dca4e57bb77d816b0128ad32",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-04.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-04.svg",
+      "source_sha256": "b252f26529fff338f5551f912252fe213db1d0778ee4eaef60388848acd88aee",
+      "sha256": "b252f26529fff338f5551f912252fe213db1d0778ee4eaef60388848acd88aee",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-05.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-05.svg",
+      "source_sha256": "59471079adbe3d6294865aac8ad163b302a63c4bfa5e2b8a488b3c109848215b",
+      "sha256": "59471079adbe3d6294865aac8ad163b302a63c4bfa5e2b8a488b3c109848215b",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-06.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-06.svg",
+      "source_sha256": "b22fcb9c7ca8368813365e2346400f222ea7cee42e64820ba2e06ce2ce4128a0",
+      "sha256": "b22fcb9c7ca8368813365e2346400f222ea7cee42e64820ba2e06ce2ce4128a0",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-07.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-07.svg",
+      "source_sha256": "8853c135352888c9fc846f35701cb19ce5b0a439f4b454d83a8a33335f4f785e",
+      "sha256": "8853c135352888c9fc846f35701cb19ce5b0a439f4b454d83a8a33335f4f785e",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-08.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-08.svg",
+      "source_sha256": "bd9231bd73d4dac5d0eec6b342f3e91b010c28b7ccc2823a6c59e79a6dd40b59",
+      "sha256": "bd9231bd73d4dac5d0eec6b342f3e91b010c28b7ccc2823a6c59e79a6dd40b59",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-09.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-09.svg",
+      "source_sha256": "1554abfb22b893a760875c7659b7ed05c12ddcaa23d264e9cef46b7d65a296c8",
+      "sha256": "1554abfb22b893a760875c7659b7ed05c12ddcaa23d264e9cef46b7d65a296c8",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-10.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-10.svg",
+      "source_sha256": "025b475634840adf26728a3d172530c562dfe7114c1083beec0d0b506aea8267",
+      "sha256": "025b475634840adf26728a3d172530c562dfe7114c1083beec0d0b506aea8267",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-11.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-11.svg",
+      "source_sha256": "1c75d90694d4298693cd132469921bbc1ae69f455b131b9d25c459b4d6d238e7",
+      "sha256": "1c75d90694d4298693cd132469921bbc1ae69f455b131b9d25c459b4d6d238e7",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/print/psg/watercolor/page-12.svg",
+      "source": "wp-content/themes/plaza-wellness/assets/psg-gallery-print-20261025/watercolor/page-12.svg",
+      "source_sha256": "668e63212d7d4537a7ac9b38097148da07ae2061e078fde1d179d6b31f79c122",
+      "sha256": "668e63212d7d4537a7ac9b38097148da07ae2061e078fde1d179d6b31f79c122",
+      "mode": "byte_identical_original"
+    }
+  ],
+  "gallery_template": {
+    "source": "wp-content/themes/plaza-wellness/inc/zheleznovodsk-gallery-print.php",
+    "source_sha256": "82901b45704d7fce06ddbc4a23647336292f0c21e9dfcce00c54f7e0a894fd8f",
+    "editions": 2,
+    "pages_each": 12,
+    "PHP_executed": false
+  },
+  "other_print_audit": [
+    {
+      "id": "network-print-booklet",
+      "profile": "network",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/",
+      "selector": "#plaza-print",
+      "pages": 6,
+      "root_class": [
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "plaza-room-print-family",
+      "profile": "kislovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/kislovodsk/rooms/",
+      "selector": "#plaza-print",
+      "pages": 1,
+      "root_class": [
+        "pp-room",
+        "pp-catalog",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "plaza-room-print-family",
+      "profile": "zheleznovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/zheleznovodsk/rooms/",
+      "selector": "#plaza-print",
+      "pages": 1,
+      "root_class": [
+        "pp-room",
+        "pp-catalog",
+        "pp-wellness",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "property-home-print-booklet",
+      "profile": "kislovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/kislovodsk/",
+      "selector": "#plaza-print",
+      "pages": 9,
+      "root_class": [
+        "pp-property-booklet",
+        "pb-kislovodsk",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "property-home-print-booklet",
+      "profile": "zheleznovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/zheleznovodsk/",
+      "selector": "#plaza-print",
+      "pages": 9,
+      "root_class": [
+        "pp-property-booklet",
+        "pb-zheleznovodsk",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "property-print-foundation",
+      "profile": "kislovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/kislovodsk/",
+      "selector": "#plaza-print",
+      "pages": 9,
+      "root_class": [
+        "pp-property-booklet",
+        "pb-kislovodsk",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "property-print-foundation",
+      "profile": "zheleznovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/zheleznovodsk/",
+      "selector": "#plaza-print",
+      "pages": 9,
+      "root_class": [
+        "pp-property-booklet",
+        "pb-zheleznovodsk",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "psk-about-print",
+      "profile": "kislovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/kislovodsk/about/",
+      "selector": "#plaza-print",
+      "pages": 3,
+      "root_class": [
+        "al-print",
+        "ap-booklet",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "psk-dining-print",
+      "profile": "kislovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/kislovodsk/services/restaurants/",
+      "selector": "#plaza-print",
+      "pages": 8,
+      "root_class": [
+        "pp-dining",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "psk-medical-print",
+      "profile": "kislovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/kislovodsk/medical/",
+      "selector": "#plaza-print",
+      "pages": 8,
+      "root_class": [
+        "med-print",
+        "pp-preview"
+      ]
+    },
+    {
+      "id": "psk-newyear-print",
+      "profile": "kislovodsk",
+      "status": "canonical_original_root",
+      "source_url": "https://plaza.spa/kislovodsk/offers/newyear/",
+      "selector": ".np-book",
+      "pages": 9,
+      "root_class": [
+        "np-book"
+      ]
+    }
+  ],
+  "newyear_media_source": {
+    "source": "wp-content/mu-plugins/plaza-psk-newyear-2027/newyear-print.css",
+    "source_sha256": "5f71cc5108e605ef670cb16f8ca13fac6a9055f5b046c7241a8db0eb72577e15",
+    "adaptation": "Only @media print wrapper changed to @media screen; declaration values and selectors unchanged."
+  }
+}

@@ -1,0 +1,93 @@
+/* Extension of the approved white A4 brochure. Screen pages are untouched. */
+#plaza-print.pp-property-booklet { font-size:10pt; line-height:1.55; }
+#plaza-print.pp-property-booklet .pp-top>span { text-align:right; }
+#plaza-print.pp-property-booklet h1 { font-size:32pt; line-height:1.16; margin-bottom:5mm; }
+#plaza-print.pp-property-booklet h2 { font-size:27pt; line-height:1.2; margin-bottom:6mm; }
+#plaza-print.pp-property-booklet h3 { font-size:12pt; line-height:1.32; margin-bottom:2.5mm; }
+#plaza-print.pp-property-booklet p { margin:0 0 3mm; }
+#plaza-print.pp-property-booklet figure { margin:0; }
+#plaza-print.pp-property-booklet img { border-radius:0; object-fit:cover; }
+#plaza-print.pp-property-booklet .pb-content { padding-bottom:2mm; }
+#plaza-print .pb-cover-photo { margin-bottom:5mm; }
+#plaza-print .pb-cover-photo img { width:182mm; height:76mm; }
+#plaza-print .pb-cover-intro { font-size:10.5pt; line-height:1.6; margin-bottom:5mm; }
+#plaza-print .pb-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6mm; margin-bottom:6mm; }
+#plaza-print .pb-facts article { border-top:.25mm solid #b39560; padding-top:3mm; }
+#plaza-print .pb-facts h3 { font-size:11pt; }
+#plaza-print .pb-facts p { font-size:8.5pt; line-height:1.5; }
+#plaza-print .pp-video-note { gap:5mm; padding-top:4mm; }
+#plaza-print .pp-video-note>a { flex:none; }
+#plaza-print .pp-video-note .pb-video-qr { width:27mm; height:27mm; object-fit:contain; }
+#plaza-print .pb-intro { margin-bottom:6mm; max-width:170mm; }
+#plaza-print .pb-program { display:grid; grid-template-columns:48mm 1fr; gap:7mm; padding:4mm 0; border-bottom:.2mm solid #d8cdbb; break-inside:avoid; }
+#plaza-print .pb-program:first-child { padding-top:0; }
+#plaza-print .pb-program img { width:48mm; height:31mm; }
+#plaza-print .pb-program p { font-size:9.5pt; }
+#plaza-print .pb-medical-note { font-size:8pt; line-height:1.5; margin-top:5mm!important; color:#736a5a; }
+#plaza-print .pb-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5mm; margin-bottom:6mm; }
+#plaza-print .pb-pair img { width:100%; }
+#plaza-print .pb-medical-photos img { height:43mm; }
+#plaza-print .pb-room-photos img { height:43mm; }
+#plaza-print .pb-two-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:8mm; row-gap:4mm; }
+#plaza-print .pb-entry { break-inside:avoid; }
+#plaza-print .pb-two-columns .pb-entry { border-top:.2mm solid #d8cdbb; padding-top:3mm; }
+#plaza-print .pb-medicine .pb-entry h3 { font-size:11pt; }
+#plaza-print .pb-medicine .pb-entry p { font-size:8.5pt; line-height:1.5; }
+#plaza-print .pb-rooms h2 { margin-bottom:3mm; }
+#plaza-print .pb-room-summary { margin-bottom:4mm; font-size:11pt; color:#736a5a; }
+#plaza-print .pb-room-table { font-size:7pt; line-height:1.35; }
+#plaza-print .pb-room-table th,#plaza-print .pb-room-table td { padding:1.2mm 1mm; vertical-align:middle; text-align:center; line-height:1.35; }
+#plaza-print .pb-room-table th:first-child { width:auto; padding-left:0; text-align:left; }
+#plaza-print .pb-room-table thead th { font:500 6.5pt/1.35 Montserrat,sans-serif; color:#8c7041; }
+#plaza-print .pb-room-table tbody th { font-weight:500; }
+#plaza-print .pb-room-category { display:grid; grid-template-columns:20mm minmax(0,1fr); gap:2mm; align-items:center; }
+#plaza-print .pb-room-category picture,#plaza-print .pb-room-category img { display:block; width:20mm; height:13mm; object-fit:cover; }
+#plaza-print .pb-room-note { margin-top:4mm; font-size:7.5pt; line-height:1.5; }
+#plaza-print .pb-lifestyle-photos img { height:83mm; }
+#plaza-print .pb-spacious { row-gap:7mm; margin-top:8mm; }
+#plaza-print .pb-spacious p { font-size:10pt; line-height:1.6; }
+#plaza-print .pb-planning-list .pb-entry { margin-bottom:5mm; }
+#plaza-print .pb-included,#plaza-print .pb-review,#plaza-print .pb-afisha { border-top:.2mm solid #d8cdbb; padding-top:4mm; margin-top:5mm; }
+#plaza-print .pb-planning p { font-size:9pt; line-height:1.5; }
+#plaza-print .pb-afisha p { font-size:8.5pt; margin-bottom:1.5mm; }
+#plaza-print .pb-faq-list .pb-entry { border-bottom:.2mm solid #d8cdbb; padding-bottom:4mm; margin-bottom:5mm; }
+#plaza-print .pb-faq-list h3 { font-size:13pt; }
+#plaza-print .pb-faq-list p { font-size:10pt; line-height:1.6; margin-bottom:2.5mm; }
+#plaza-print .pb-final h2 { font-size:25pt; }
+#plaza-print .pb-final .pb-faq-list h3 { font-size:11.5pt; }
+#plaza-print .pb-final .pb-faq-list p { font-size:9pt; line-height:1.5; }
+#plaza-print .pb-final-contact { display:grid; grid-template-columns:1fr 47mm; gap:8mm; margin-top:6mm; padding-top:5mm; border-top:.3mm solid #b39560; }
+#plaza-print .pb-final-contact p { font-size:9pt; }
+#plaza-print .pb-final-contact .pb-phone { font-size:21pt; color:#8c7041; white-space:nowrap; margin:3mm 0; }
+#plaza-print .pb-site-qr > a { display:block; width:35mm; margin:0 auto; }
+#plaza-print .pb-site-qr .pp-qr { width:35mm; height:35mm; object-fit:contain; }
+#plaza-print .pb-site-qr p { font-size:7.5pt; overflow-wrap:anywhere; margin-top:2mm; text-align:center; }
+@media print {
+ html:has(#plaza-print.pp-property-booklet) { zoom:1!important; }
+ #plaza-print.pp-property-booklet { zoom:1!important; }
+}
+
+/* Keep every semantic leaf within the 267 mm A4 content area. */
+#plaza-print .pb-program img { height:28mm; }
+#plaza-print .pb-medical-photos img { height:32mm; }
+#plaza-print .pb-medicine .pb-entry p { margin-bottom:1.5mm; }
+#plaza-print .pb-medicine .pb-two-columns { row-gap:3mm; }
+#plaza-print .pb-medicine .pb-intro { margin-bottom:4mm; font-size:9.5pt; }
+#plaza-print .pb-final .pb-faq-list .pb-entry { margin-bottom:3mm; padding-bottom:3mm; }
+#plaza-print .pb-final .pb-faq-list p { font-size:8.8pt; line-height:1.45; margin-bottom:2mm; }
+
+#plaza-print .pb-planning p { margin-bottom:2mm; }
+
+#plaza-print .pb-planning h2 { margin-bottom:4mm; }
+#plaza-print.pb-zheleznovodsk .pb-program img { height:43mm; }
+#plaza-print.pb-zheleznovodsk .pb-medical-photos img { height:52mm; }
+#plaza-print.pb-zheleznovodsk .pb-medicine .pb-entry p { font-size:10pt; line-height:1.55; }
+
+/* Kislovodsk cover: preserve the rooftop name and use the available white space. */
+#plaza-print.pb-kislovodsk .pb-cover-photo img { height:96mm; object-position:center top; }
+
+/* The taller Zheleznovodsk cover retains the building sign and space above the footer. */
+#plaza-print.pb-zheleznovodsk .pb-cover-photo img { height:92mm; object-position:center top; }
+
+#plaza-print.pb-zheleznovodsk .pb-cover .pb-facts { margin-bottom:3mm; }
+#plaza-print.pb-zheleznovodsk .pb-cover .pb-cover-intro { margin-bottom:4mm; }

@@ -1,0 +1,8 @@
+/* Opt-in PLAZA photo/copy pairing. No effect on unmarked content. */
+[data-plaza-photo-copy]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
+[data-plaza-photo-copy]>[data-plaza-copy-body]{min-width:0;align-self:start;position:static}
+[data-plaza-photo-copy]>[data-plaza-copy-photo]{min-width:0;margin:0}
+[data-plaza-photo-copy]>[data-plaza-copy-photo] img{display:block;width:100%;height:auto}
+@media(min-width:1051px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){[data-plaza-photo-copy][data-plaza-copy-sticky=true]>[data-plaza-copy-body]{position:sticky;top:var(--plaza-copy-top,100px)}}
+@media(max-width:1050px){[data-plaza-photo-copy]{grid-template-columns:1fr;gap:24px}}
+@media print{[data-plaza-photo-copy]{display:block}[data-plaza-photo-copy]>[data-plaza-copy-body]{position:static}}

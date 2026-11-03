@@ -1,0 +1,315 @@
+{
+  "profile": "zheleznovodsk",
+  "source_url": "https://plaza.spa/zheleznovodsk/welcome/",
+  "selector": ".welcome",
+  "mode": "original_public_markup",
+  "markup": "<main class=\"welcome\" data-example-root=\"true\">\n<div class=\"welcome-identity\">\n<a aria-label=\"ПЛАЗА СПА — сайт сети санаториев\" class=\"welcome-logo\" href=\"https://plaza.spa/\"><svg aria-label=\"ПЛАЗА СПА — сеть санаториев\" class=\"pn-logo\" fill=\"none\" focusable=\"false\" height=\"40\" role=\"img\" viewbox=\"0 0 467 104\" width=\"180\" xmlns=\"http://www.w3.org/2000/svg\"><g class=\"pn-logo-orbit\"><path d=\"M19.1667 51.9868C19.1667 49.0974 16.8249 46.7556 13.9354 46.7556C11.046 46.7556 8.71143 49.0974 8.71143 51.9796C8.71143 54.869 11.0532 57.2036 13.9354 57.2036C16.8249 57.2036 19.1667 54.8618 19.1667 51.9796V51.9868Z\" fill=\"currentColor\"></path><path d=\"M93.9385 51.9868C93.9385 49.0974 91.5967 46.7556 88.7145 46.7556C85.8251 46.7556 83.4905 49.0974 83.4905 51.9868C83.4905 54.8763 85.8323 57.2108 88.7145 57.2108C91.6039 57.2108 93.9385 54.8691 93.9385 51.9868Z\" fill=\"currentColor\"></path><path d=\"M21.559 75.2103C24.0594 73.7692 24.9168 70.5699 23.4757 68.0696C22.0346 65.5693 18.8353 64.7118 16.335 66.1529C13.8347 67.594 12.9772 70.7933 14.4255 73.2936C15.8667 75.7939 19.0659 76.6514 21.5662 75.2031L21.559 75.2103Z\" fill=\"currentColor\"></path><path d=\"M81.0911 28.7634C78.5908 30.2045 77.7333 33.4038 79.1744 35.9041C80.6155 38.4044 83.8148 39.2619 86.3151 37.8136C88.8154 36.3725 89.6729 33.1732 88.2318 30.6729C86.7907 28.1726 83.5914 27.3151 81.0911 28.7562V28.7634Z\" fill=\"currentColor\"></path><path d=\"M30.0182 88.8938C32.5185 90.3349 35.7178 89.4774 37.1589 86.9843C38.6 84.484 37.7425 81.2847 35.2422 79.8436C32.7419 78.4025 29.5426 79.26 28.1015 81.7603C26.6604 84.2606 27.5107 87.4599 30.0182 88.901V88.8938Z\" fill=\"currentColor\"></path><path d=\"M65.4911 16.9967C64.05 19.4971 64.9074 22.6963 67.4006 24.1374C69.9009 25.5785 73.1001 24.7211 74.5412 22.2207C75.9823 19.7204 75.1321 16.5212 72.6318 15.0801C70.1315 13.639 66.9322 14.4892 65.4911 16.9895V16.9967Z\" fill=\"currentColor\"></path><path d=\"M51.3251 94.6004C54.2145 94.6004 56.5491 92.2586 56.5491 89.3764C56.5491 86.4869 54.2073 84.1523 51.3251 84.1523C48.4357 84.1523 46.1011 86.4941 46.1011 89.3764C46.1011 92.2658 48.4429 94.6004 51.3323 94.6004H51.3251Z\" fill=\"currentColor\"></path><path d=\"M51.3251 19.8285C54.2145 19.8285 56.5563 17.4867 56.5563 14.5973C56.5563 11.7151 54.2145 9.37329 51.3251 9.37329C48.4357 9.37329 46.1011 11.7151 46.1011 14.6045C46.1011 17.4939 48.4429 19.8285 51.3251 19.8285Z\" fill=\"currentColor\"></path><path d=\"M72.6319 88.8936C75.1322 87.4525 75.9897 84.2533 74.5414 81.753C73.1002 79.2526 69.901 78.3952 67.4007 79.8363C64.9003 81.2774 64.0429 84.4767 65.484 86.977C66.9251 89.4773 70.1244 90.3348 72.6247 88.8864L72.6319 88.8936Z\" fill=\"currentColor\"></path><path d=\"M35.2494 24.1376C37.7498 22.6965 38.6072 19.4972 37.1661 16.9969C35.725 14.4966 32.5257 13.6391 30.0254 15.0874C27.5251 16.5285 26.6676 19.7278 28.1087 22.2281C29.5499 24.7284 32.7491 25.5859 35.2494 24.1448V24.1376Z\" fill=\"currentColor\"></path><path d=\"M86.3223 66.1529C83.822 64.7118 80.6227 65.5693 79.1816 68.0696C77.7405 70.5699 78.5908 73.7692 81.0983 75.2103C83.5986 76.6514 86.7979 75.8012 88.239 73.3008C89.6801 70.8005 88.8226 67.6013 86.3223 66.1601V66.1529Z\" fill=\"currentColor\"></path><path d=\"M16.335 37.8209C18.8353 39.262 22.0346 38.4045 23.4757 35.9042C24.9168 33.4039 24.0593 30.2046 21.559 28.7635C19.0587 27.3224 15.8594 28.1799 14.4183 30.6802C12.9772 33.1805 13.8347 36.3798 16.3278 37.8209H16.335Z\" fill=\"currentColor\"></path><path d=\"M30.3569 67.8102C28.9374 69.2297 28.9374 71.5355 30.3569 72.955C31.7763 74.3745 34.0821 74.3745 35.5016 72.955C36.9211 71.5355 36.9211 69.2297 35.5016 67.8102C34.0821 66.3907 31.7763 66.3907 30.3569 67.8102Z\" fill=\"currentColor\"></path><path d=\"M72.2931 36.1635C73.7126 34.744 73.7126 32.4382 72.2931 31.0187C70.8736 29.5992 68.5678 29.5992 67.1484 31.0187C65.7289 32.4382 65.7289 34.744 67.1484 36.1635C68.5678 37.583 70.8736 37.583 72.2931 36.1635Z\" fill=\"currentColor\"></path><path d=\"M47.744 75.2968C46.7424 73.5603 44.5159 72.9622 42.7722 73.9638C41.0356 74.9654 40.4376 77.1919 41.4391 78.9356C42.4407 80.6722 44.6672 81.2702 46.4038 80.2687C48.1403 79.2671 48.7384 77.0406 47.7368 75.304L47.744 75.2968Z\" fill=\"currentColor\"></path><path d=\"M61.5713 27.798C62.0901 25.8597 60.9372 23.8638 58.9989 23.345C57.0607 22.8262 55.0647 23.9791 54.5459 25.9174C54.0271 27.8557 55.18 29.8516 57.1183 30.3704C59.0566 30.8892 61.0525 29.7435 61.5713 27.798Z\" fill=\"currentColor\"></path><path d=\"M58.9989 80.6289C60.9372 80.1101 62.0901 78.1142 61.5713 76.1759C61.0525 74.2376 59.0566 73.0847 57.1183 73.6035C55.18 74.1223 54.0271 76.1183 54.5459 78.0566C55.0647 79.9948 57.0607 81.1477 58.9989 80.6289Z\" fill=\"currentColor\"></path><path d=\"M43.6513 23.345C41.713 23.8638 40.5601 25.8597 41.0789 27.798C41.5977 29.7363 43.5936 30.8892 45.5319 30.3704C47.4702 29.8516 48.6231 27.8557 48.1043 25.9174C47.5855 23.9791 45.5895 22.8262 43.6513 23.345Z\" fill=\"currentColor\"></path><path d=\"M67.1484 72.955C68.5678 74.3745 70.8736 74.3745 72.2931 72.955C73.7126 71.5355 73.7126 69.2297 72.2931 67.8102C70.8736 66.3907 68.5678 66.3907 67.1484 67.8102C65.7289 69.2297 65.7289 71.5355 67.1484 72.955Z\" fill=\"currentColor\"></path><path d=\"M35.5016 31.0187C34.0821 29.5992 31.7763 29.5992 30.3569 31.0187C28.9374 32.4382 28.9374 34.744 30.3569 36.1635C31.7763 37.583 34.0821 37.583 35.5016 36.1635C36.9211 34.744 36.9211 32.4382 35.5016 31.0187Z\" fill=\"currentColor\"></path><path d=\"M22.6831 44.3131C22.1643 46.2514 23.3172 48.2473 25.2555 48.7661C27.1938 49.2849 29.1897 48.1321 29.7085 46.1938C30.2273 44.2555 29.0744 42.2595 27.1361 41.7407C25.1979 41.2219 23.2019 42.3748 22.6831 44.3131Z\" fill=\"currentColor\"></path><path d=\"M72.9417 46.1938C73.4605 48.1321 75.4564 49.2849 77.3947 48.7661C79.333 48.2473 80.4859 46.2514 79.9671 44.3131C79.4483 42.3748 77.4523 41.2219 75.514 41.7407C73.5758 42.2595 72.4229 44.2555 72.9417 46.1938Z\" fill=\"currentColor\"></path><path d=\"M27.1361 62.2332C29.0744 61.7144 30.2273 59.7185 29.7085 57.7802C29.1897 55.8419 27.1938 54.689 25.2555 55.2078C23.3172 55.7266 22.1643 57.7225 22.6831 59.6608C23.2019 61.5991 25.1979 62.752 27.1361 62.2332Z\" fill=\"currentColor\"></path><path d=\"M23.0938 80.2182C20.5575 77.6818 16.4503 77.6818 13.914 80.2182C11.3776 82.7545 11.3776 86.8617 13.914 89.398C16.4503 91.9344 20.5575 91.9344 23.0938 89.398C25.6302 86.8617 25.6302 82.7545 23.0938 80.2182Z\" fill=\"currentColor\"></path><path d=\"M88.7362 23.7557C91.2725 21.2193 91.2725 17.1122 88.7362 14.5758C86.1998 12.0395 82.0927 12.0395 79.5563 14.5758C77.02 17.1122 77.02 21.2193 79.5563 23.7557C82.0927 26.292 86.1998 26.292 88.7362 23.7557Z\" fill=\"currentColor\"></path><path d=\"M37.6345 103.089C41.0932 104.018 44.6527 101.965 45.5822 98.4987C46.5118 95.04 44.4582 91.4805 40.9923 90.551C37.5337 89.6214 33.9741 91.675 33.0446 95.1409C32.1151 98.5995 34.1687 102.159 37.6345 103.089Z\" fill=\"currentColor\"></path><path d=\"M61.6577 13.4228C65.1164 14.3523 68.6759 12.2988 69.6054 8.83289C70.5349 5.36703 68.4742 1.8147 65.0155 0.885183C61.5496 -0.0443308 57.9973 2.00925 57.0678 5.47511C56.1383 8.93377 58.1919 12.4933 61.6577 13.4228Z\" fill=\"currentColor\"></path><path d=\"M65.0228 103.089C68.4815 102.159 70.5423 98.5995 69.6128 95.1409C68.6833 91.675 65.1237 89.6214 61.6651 90.551C58.2064 91.4805 56.1456 95.04 57.0751 98.4987C58.0046 101.965 61.5642 104.018 65.0228 103.089Z\" fill=\"currentColor\"></path><path d=\"M40.9923 13.4228C44.451 12.4933 46.5118 8.93377 45.5822 5.47511C44.6527 2.00925 41.0932 -0.0443308 37.6345 0.885183C34.1759 1.8147 32.1151 5.37423 33.0446 8.83289C33.9741 12.2915 37.5265 14.3523 40.9923 13.4228Z\" fill=\"currentColor\"></path><path d=\"M88.7362 89.398C91.2725 86.8617 91.2725 82.7545 88.7362 80.2182C86.1998 77.6818 82.0927 77.6818 79.5563 80.2182C77.02 82.7545 77.02 86.8617 79.5563 89.398C82.0927 91.9344 86.1998 91.9344 88.7362 89.398Z\" fill=\"currentColor\"></path><path d=\"M23.0938 23.7557C25.6302 21.2193 25.6302 17.1122 23.0938 14.5758C20.5575 12.0395 16.4503 12.0395 13.914 14.5758C11.3776 17.1122 11.3776 21.2193 13.914 23.7557C16.4503 26.292 20.5575 26.292 23.0938 23.7557Z\" fill=\"currentColor\"></path><path d=\"M94.479 70.2673C97.9449 71.1968 101.497 69.1432 102.427 65.6774C103.356 62.2187 101.303 58.6592 97.8368 57.7297C94.3709 56.8002 90.8186 58.8537 89.8891 62.3196C88.9596 65.7783 91.0132 69.3378 94.479 70.2673Z\" fill=\"currentColor\"></path><path d=\"M4.81324 46.2441C8.2719 47.1736 11.8314 45.12 12.761 41.6542C13.6905 38.1955 11.6369 34.636 8.17102 33.7065C4.71237 32.777 1.15283 34.8305 0.223318 38.2964C-0.706196 41.7623 1.34738 45.3146 4.81324 46.2441Z\" fill=\"currentColor\"></path><path d=\"M89.8891 41.6542C90.8186 45.1128 94.3781 47.1736 97.8368 46.2441C101.295 45.3146 103.356 41.7623 102.427 38.2964C101.497 34.8378 97.9377 32.777 94.479 33.7065C91.0204 34.636 88.9596 38.1883 89.8891 41.6542Z\" fill=\"currentColor\"></path><path d=\"M4.81325 57.7297C1.3546 58.6592 -0.706186 62.2187 0.223328 65.6774C1.15284 69.136 4.71238 71.1968 8.17103 70.2673C11.6297 69.3378 13.6905 65.7783 12.761 62.3196C11.8314 58.8537 8.27191 56.8002 4.81325 57.7297Z\" fill=\"currentColor\"></path><path d=\"M79.0231 61.3109C80.4426 59.8914 80.4426 57.5857 79.0231 56.1662C77.6036 54.7467 75.2978 54.7467 73.8783 56.1662C72.4588 57.5857 72.4588 59.8914 73.8783 61.3109C75.2978 62.7304 77.6036 62.7304 79.0231 61.3109Z\" fill=\"currentColor\"></path></g><g class=\"pn-logo-letter\"><path d=\"M44.6888 40.8975C43.7665 40.8975 43.0171 41.6468 43.0171 42.5691V64.827C43.0171 66.3762 44.9698 67.0608 45.9353 65.843L50.9288 59.5238H53.5948C56.9886 59.5238 59.6907 58.6663 61.7155 56.9442C63.733 55.2221 64.749 52.9595 64.749 50.1422C64.749 47.1591 63.7546 44.8749 61.7731 43.2825C59.7844 41.6973 57.0607 40.8975 53.602 40.8975H44.696H44.6888Z\" fill=\"currentColor\"></path></g><g class=\"pn-logo-wordmark\"><path d=\"M283.61 12.5869H249.34L247.589 17.3714H269.855L245.017 50.6033H281.693L283.61 45.8188H258.78L283.61 12.5869Z\" fill=\"currentColor\"></path><path d=\"M180.03 45.8188V12.5869H171.355V50.6033H197.309L199.226 45.8188H180.03Z\" fill=\"currentColor\"></path><path d=\"M242.704 50.6033L227.457 12.5869H217.881L202.627 50.6033H207.952L221.052 18.5027L227.421 34.2323H220.828L217.067 39.0168H229.273L233.928 50.6033H242.704Z\" fill=\"currentColor\"></path><path d=\"M151.849 12.5869H129.058V50.6033H137.741V17.3714H146.726C149.666 17.3714 151.986 18.0487 153.672 19.3961C155.359 20.7436 156.202 22.6891 156.202 25.2254C156.202 27.6177 155.344 29.5415 153.629 31.0043C151.914 32.467 149.616 33.1947 146.734 33.1947H144.471L140.695 37.9792H151.864C158.846 37.9792 164.56 32.2652 164.56 25.2831C164.56 18.3009 158.846 12.5869 151.864 12.5869H151.849Z\" fill=\"currentColor\"></path><path d=\"M327.088 50.6033L311.841 12.5869H302.265L287.018 50.6033H292.343L305.435 18.5027L311.805 34.2323H305.212L301.458 39.0168H313.664L318.312 50.6033H327.088Z\" fill=\"currentColor\"></path><path d=\"M414.578 12.5869H391.787V50.6033H400.469V17.3714H409.455C412.394 17.3714 414.715 18.0487 416.401 19.3961C418.087 20.7436 418.93 22.6891 418.93 25.2254C418.93 27.6177 418.072 29.5415 416.358 31.0043C414.643 32.467 412.344 33.1947 409.462 33.1947H407.199L403.424 37.9792H414.592C421.574 37.9792 427.288 32.2652 427.288 25.2831C427.288 18.3009 421.574 12.5869 414.592 12.5869H414.578Z\" fill=\"currentColor\"></path><path d=\"M466.45 50.6033L451.203 12.5869H441.627L426.38 50.6033H431.698L444.798 18.5027L451.167 34.2323H444.574L440.813 39.0168H453.026L457.674 50.6033H466.45Z\" fill=\"currentColor\"></path><path d=\"M354.008 45.61H367.54C370.35 45.61 375.372 44.0968 375.372 40.5805C375.372 36.6535 368.116 35.5655 365.025 34.7224C361.667 33.8073 356.861 32.813 353.799 31.271C350.607 29.6642 347.703 26.5225 347.782 22.754C347.782 22.7396 347.782 22.7252 347.782 22.7108C347.782 18.229 351.515 14.9649 356.71 13.5886C359.405 12.8753 363.591 12.5942 366.351 12.5942H378.276L374.385 17.5877H364.953C362.453 17.5877 356.998 17.9552 356.977 21.4787C356.955 24.2456 362.9 25.4994 365.213 26.119C368.621 27.0413 374.256 28.2663 377.275 29.938C380.892 31.9483 383.284 35.2124 383.284 39.1755C383.284 43.2754 380.719 46.5467 376.878 48.5138C373.838 50.0774 368.722 50.6034 365.285 50.6034H350.11L354.022 45.61H354.008Z\" fill=\"currentColor\"></path><text fill=\"currentColor\" font-family=\"Montserrat,Arial,sans-serif\" font-size=\"26\" lengthadjust=\"spacing\" letter-spacing=\"1\" textlength=\"337\" x=\"130\" y=\"86\">СЕТЬ САНАТОРИЕВ</text></g></svg></a>\n</div>\n<div class=\"welcome-intro\">\n<h1>Добро пожаловать</h1>\n<p>Рады, что вы с нами. Желаем вам приятного отдыха в ПЛАЗА СПА!</p>\n</div>\n<section aria-labelledby=\"app-title\" class=\"welcome-app\">\n<h2 id=\"app-title\">Скачайте приложение</h2>\n<p>ПЛАЗА СПА — для удобного посещения процедур.</p>\n<div class=\"welcome-stores\">\n<a aria-label=\"Скачать приложение в App Store для iPhone\" class=\"welcome-store\" href=\"https://apps.apple.com/ru/app/plaza-medical-spa-hotels/id1597304431\"><svg aria-hidden=\"true\" fill=\"currentColor\" focusable=\"false\" viewbox=\"0 0 384 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M318.7 179.3c0 -1.89941 -3.5 -61.2002 61.7002 -91.8994c-12.2002 -36.8008 -54 -118.601 -102.601 -119.301c-28.0996 0 -44.5996 17.9004 -76.3994 17.9004c-32.8008 0 -50.6006 -17.2998 -75.8008 -17.9004c-48.1992 -1.5 -94.3994 88.5 -107.199 125.2 c-9.60059 27.9336 -14.4004 55 -14.4004 81.2002c0 88.7002 59.2998 132.3 115.1 133.2c27 0 61.4004 -19.7002 76.4004 -19.7002c14.2002 0 53 23.5 88.5 20.7002c37.5 -2.90039 65.9004 -17.7002 84.7002 -44.6006c-33.6006 -20.3994 -50.2002 -48.0996 -50 -84.7998z M262.1 343.5c-19.5996 -22.9004 -43.3994 -36.2998 -69.5 -34.2998c-2.19922 27.5996 8.10059 52.0996 25.6006 71.8994c15.8994 18.5 43.7998 33.5 67.8994 34.9004c0.800781 -10.5996 3.30078 -40.0996 -24 -72.5z\" transform=\"translate(0 448) scale(1 -1)\"></path></svg><span><strong>App Store</strong><small>для iPhone</small></span></a>\n<a aria-label=\"Скачать приложение в Google Play для Android\" class=\"welcome-store\" href=\"https://play.google.com/store/apps/details?id=com.quirco.sanatorium.mobile.plaza&amp;hl=ru&amp;gl=US\"><svg aria-hidden=\"true\" fill=\"currentColor\" focusable=\"false\" viewbox=\"0 0 512 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M325.3 213.7l-220.7 221.3l280.801 -161.2zM47 448l256.6 -255.9l-256.6 -256c-13 6.80078 -21.7002 19.2002 -21.7002 35.3008v441.3c0 16.0996 8.7002 28.5 21.7002 35.2998zM472.2 222.4c19.2002 -14.3008 19.2002 -46.5 1.2002 -60.8008l-60.1006 -34.0996 l-65.7002 64.5l65.7002 64.5zM104.6 -51l220.7 221.3l60.1006 -60.0996z\" transform=\"translate(0 448) scale(1 -1)\"></path></svg><span><strong>Google Play</strong><small>для Android</small></span></a>\n</div>\n</section>\n<section aria-labelledby=\"help-title\" class=\"welcome-reception\">\n<h2 id=\"help-title\">Мы рядом круглосуточно</h2>\n<a class=\"welcome-call\" href=\"tel:+78793232373\"><svg aria-hidden=\"true\" class=\"pb-lucide pn-icon\" data-lucide=\"phone\" fill=\"none\" focusable=\"false\" height=\"24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.35\" viewbox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384\"></path></svg><span>Позвонить на ресепшн</span></a>\n<p class=\"welcome-numbers\">8 (87932) 3-23-73<br/>С телефона в номере — <strong>160</strong></p>\n</section>\n<div class=\"welcome-links\">\n<a class=\"welcome-site\" href=\"https://plaza.spa/zheleznovodsk/\"><span>Сайт санатория</span><svg aria-hidden=\"true\" class=\"pn-icon pb-lucide\" data-lucide=\"external-link\" fill=\"none\" focusable=\"false\" height=\"24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.35\" viewbox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15 3h6v6\"></path><path d=\"M10 14 21 3\"></path><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\"></path></svg></a>\n<nav aria-label=\"Социальные сети ПЛАЗА СПА\" class=\"welcome-social\">\n<a aria-label=\"Telegram\" href=\"https://t.me/plazaspa\" title=\"Telegram\"><svg aria-hidden=\"true\" focusable=\"false\" viewbox=\"0 0 496 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z\"></path></svg></a>\n<a aria-label=\"ВКонтакте\" href=\"https://vk.com/plazaspahotels\" title=\"ВКонтакте\"><svg aria-hidden=\"true\" focusable=\"false\" viewbox=\"0 0 576 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z\"></path></svg></a>\n<a aria-label=\"RuTube\" href=\"https://rutube.ru/u/plazaspa/\" title=\"RuTube\"><svg aria-hidden=\"true\" fill=\"none\" focusable=\"false\" stroke=\"\" viewbox=\"0 0 192.00 192.00\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-width=\"0\" transform=\"translate(0,0), scale(1)\"></g><g stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g><path d=\"M128.689 47.57H20.396v116.843h30.141V126.4h57.756l26.352 38.013h33.75l-29.058-38.188c9.025-1.401 15.522-4.73 19.493-9.985 3.97-5.255 5.956-13.664 5.956-24.875v-8.759c0-6.657-.721-11.912-1.985-15.941-1.264-4.029-3.43-7.533-6.498-10.686-3.249-2.978-6.858-5.08-11.19-6.481-4.332-1.226-9.747-1.927-16.424-1.927zm-4.873 53.08H50.537V73.321h73.279c4.15 0 7.038.7 8.482 1.927 1.444 1.226 2.347 3.503 2.347 6.832v9.81c0 3.503-.903 5.78-2.347 7.006s-4.331 1.752-8.482 1.752z\" fill=\"currentColor\" transform=\"translate(1.605 -1.99)\"></path><path d=\"M162.324 45.568c5.52 0 9.998-4.477 9.998-10s-4.478-10-9.998-10c-5.524 0-10.002 4.477-10.002 10s4.478 10 10.002 10z\" fill=\"currentColor\" transform=\"translate(1.605 -1.99)\"></path></g></svg></a>\n<a aria-label=\"Дзен\" href=\"https://dzen.ru/plazaspa\" title=\"Дзен\"><svg aria-hidden=\"true\" focusable=\"false\" viewbox=\"0 0 24 24\"><path d=\"M2 2c8 0 9 1 9 9C3 11 2 10 2 2Zm20 0c0 8-1 9-9 9 0-8 1-9 9-9ZM2 22c0-8 1-9 9-9 0 8-1 9-9 9Zm20 0c-8 0-9-1-9-9 8 0 9 1 9 9Z\"></path></svg></a>\n<a aria-label=\"YouTube\" href=\"https://youtube.com/channel/UCr3sc3HYdTQ5AqxrXc84bNg\" title=\"YouTube\"><svg aria-hidden=\"true\" focusable=\"false\" viewbox=\"0 0 576 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z\"></path></svg></a>\n</nav>\n</div>\n</main>",
+  "body_class": [
+    "plaza-welcome"
+  ],
+  "inline_css": "",
+  "styles": [
+    "assets/a0ff7c02b73669eba0.css",
+    "assets/266a7570ca2c05ee50.css",
+    "assets/89557a59100e6ff67e.css",
+    "fonts.css"
+  ],
+  "component_id": "psg-wifi-welcome",
+  "runtime_context": {
+    "source_url": "https://plaza.spa/zheleznovodsk/",
+    "shell": {
+      "property": "zheleznovodsk",
+      "currentIndex": 1,
+      "hotels": [
+        {
+          "key": "kislovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Кисловодск",
+          "day": "https://plaza.spa/wp-content/uploads/plaza-kislovodsk-facade-20261024-v1/day-1672.webp",
+          "night": "https://plaza.spa/wp-content/uploads/plaza-kislovodsk-facade-20261024-v1/evening-1672.webp",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1254289318/",
+          "displayName": "Плаза Спа",
+          "url": "https://plaza.spa/kislovodsk/"
+        },
+        {
+          "key": "zheleznovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Железноводск",
+          "day": "https://plaza.spa/wp-content/uploads/wellness-20261014/prototype/2026/10/zheleznovodsk-den-adaptivnyj.webp",
+          "night": "https://plaza.spa/wp-content/uploads/wellness-20261014/prototype/2026/10/zheleznovodsk-vecher-adaptivnyj.webp",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1019902659/",
+          "displayName": "Плаза Спа",
+          "url": "https://plaza.spa/zheleznovodsk/"
+        }
+      ],
+      "home": "https://plaza.spa/zheleznovodsk/"
+    },
+    "pageMenu": {
+      "property": "zheleznovodsk",
+      "enabled": true,
+      "version": "20261023-page-menu-1",
+      "duration": 1050,
+      "basePath": "/zheleznovodsk/",
+      "pages": [
+        {
+          "id": "home",
+          "title": "Главная",
+          "subtitle": "Время для себя",
+          "href": "https://plaza.spa/zheleznovodsk/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/home-1440.webp?v=1792962118",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/home-640.webp?v=1792962098 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/home-1440.webp?v=1792962118 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/home-1440.webp?v=1792961738",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/home-640.webp?v=1792961717 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/home-1440.webp?v=1792961738 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "rooms",
+          "title": "Номера",
+          "subtitle": "Ваше место покоя",
+          "href": "https://plaza.spa/zheleznovodsk/rooms/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/rooms-1440.webp?v=1792962293",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/rooms-640.webp?v=1792962272 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/rooms-1440.webp?v=1792962293 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/rooms-1440.webp?v=1792961937",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/rooms-640.webp?v=1792961917 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/rooms-1440.webp?v=1792961937 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "medical",
+          "title": "Медицина",
+          "subtitle": "Забота о здоровье",
+          "href": "https://plaza.spa/zheleznovodsk/medical/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/medical-1440.webp?v=1792962159",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/medical-640.webp?v=1792962139 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/medical-1440.webp?v=1792962159 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/medical-1440.webp?v=1792961778",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/medical-640.webp?v=1792961758 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/medical-1440.webp?v=1792961778 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "restaurants",
+          "title": "Питание",
+          "subtitle": "Вкус вашего отдыха",
+          "href": "https://plaza.spa/zheleznovodsk/services/restaurants/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/restaurants-1440.webp?v=1792962240",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/restaurants-640.webp?v=1792962220 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/restaurants-1440.webp?v=1792962240 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/restaurants-1440.webp?v=1792961898",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/restaurants-640.webp?v=1792961877 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/restaurants-1440.webp?v=1792961898 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "about",
+          "title": "О санатории",
+          "subtitle": "Знакомство с Плазой",
+          "href": "https://plaza.spa/zheleznovodsk/about/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/about-1440.webp?v=1792962037",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/about-640.webp?v=1792962015 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/about-1440.webp?v=1792962037 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/about-1440.webp?v=1792961656",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/about-640.webp?v=1792961636 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/about-1440.webp?v=1792961656 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "services",
+          "title": "Услуги",
+          "subtitle": "Детали вашего отдыха",
+          "href": "https://plaza.spa/zheleznovodsk/services/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/services-1440.webp?v=1792962332",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/services-640.webp?v=1792962313 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/services-1440.webp?v=1792962332 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/services-1440.webp?v=1792961996",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/services-640.webp?v=1792961976 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/services-1440.webp?v=1792961996 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "photos",
+          "title": "Фотогалерея",
+          "subtitle": "Место будущих впечатлений",
+          "href": "https://plaza.spa/zheleznovodsk/about/photos/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/photos-1440.webp?v=1792962199",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/photos-640.webp?v=1792962179 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/photos-1440.webp?v=1792962199 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/photos-1440.webp?v=1792961858",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/photos-640.webp?v=1792961838 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/photos-1440.webp?v=1792961858 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "contacts",
+          "title": "Контакты",
+          "subtitle": "До встречи в Железноводске",
+          "href": "https://plaza.spa/zheleznovodsk/about/contacts/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/contacts-1440.webp?v=1792962077",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/contacts-640.webp?v=1792962057 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/contacts-1440.webp?v=1792962077 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/contacts-1440.webp?v=1792961696",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/contacts-640.webp?v=1792961676 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/contacts-1440.webp?v=1792961696 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        }
+      ],
+      "baseUrl": "https://plaza.spa/zheleznovodsk/",
+      "currentURL": "https://plaza.spa/zheleznovodsk/"
+    },
+    "search": {
+      "docs": [
+        {
+          "id": 2626,
+          "title": "Номера и цены",
+          "url": "https://plaza.spa/kislovodsk/rooms/",
+          "text": " "
+        },
+        {
+          "id": 2615,
+          "title": "Медицина",
+          "url": "https://plaza.spa/kislovodsk/medical/",
+          "text": "Медицинский центр «Плаза СПА» в г.Кисловодске — уникальная синергия современных методов лечения, природных и бальнеологических факторов и специалистов высокого уровня. Первый санаторий на Кавказских Минеральных Водах, работающий по европейским стандартам современной израильской и интегративной медицины более 19 лет . С нами сотрудничают ведущие специалисты известных клиник Израиля и Германии, которые осуществляют, в том числе, частные консультационные приемы, а также диагностику и лечение пациентов на базе «Плаза СПА». Ежегодно в «Плаза СПА» оздоравливаются более 20 тысяч гостей со всей страны и стран ближнего зарубежья, ведь именно здесь сочетается непревзойденный уровень технического оснащения с богатым опытом лечащих специалистов. Концепция санатория основывается на современной превентивной медицине, в которой успешно сочетаются принципы ревитализации, санаторно-курортных программ, аюрведической медицины и новейшие медицинские достижения. Лечение базируется также на применении природных факторов (лечебных грязей, минеральной воды, целебного климата), а потому, естественность, натуральность и безопасность являются его самыми важными принципами. Медицинский каталог Предлагаем ознакомиться с эксклюзивными услугами, передовыми методами лечения и высокотехнологичной диагностикой, доступными в санатории «Плаза СПА». Прочитать Скачать Цены на медицинские услуги Тип услуги Группа Наименование Цена Лаб. исследование Изосерологические исследования Группа крови, резус фактор на ID-карте 800 Лаб. исследование Исследования мочи Анализ мочи общий + микроскопия мочевого осадка 420 Лаб. исследование Исследования кала Кальпротектин (в кале) 3300 Лаб. исследование Химико-микроскопические исследования Микроскопическое исследование слизистой оболочки носа (риноцитограмма) 650 Лаб. исследование Цитологические исследования Цитологическое исслед. соскобов шейки матки и цервик.канала 1400 Лаб. исследование Цитологические исследования Цитологическое исследование отделяемого молочной железы (ЛМЖ, ПМЖ) (1 локализация) 1300 Лаб. исследование Коагулология АЧТВ 370 Лаб. исследование Коагулология Протромбиновый индекс (ПТИ) 450 Лаб. исследование Коагулология Фибриноген 420 Лаб. исследование Коагулология Д-димер 1300 Лаб. исследование Коагулограмма Коагулограмма-1 550 Лаб. исследование Коагулограмма Коагулограмма-2 1150 Лаб. исследование Субстраты Билирубин общий 400 Лаб. исследование Субстраты Билирубин прямой 400 Лаб. исследование Субстраты Билирубин непрямой 400 Лаб. исследование Субстраты Гомоцистеин 1680 Лаб. исследование Субстраты Креатинин 450 Лаб. исследование Субстраты Мочевина 300 Лаб. исследование Субстраты Мочевая кислота 300 Лаб. исследование Обмен белков Альбумин 400 Лаб. исследование Обмен углеводов Гемоглобин гликозилированный (HbA1C) 790 Лаб. исследование Обмен липидов Триглицериды 300 Лаб. исследование Обмен железа Железо сывороточное 300 Лаб. исследование Обмен железа Железосвязывающая способность общая (ОЖСС) 380 Лаб. исследование Обмен железа Ферритин 600 Лаб. исследование Ферменты АЛТ 360 Лаб. исследование Ферменты АСТ 360 Лаб. исследование Ферменты Амилаза общая 280 Лаб. исследование Ферменты Гамма-ГТП 260 Лаб. исследование Ферменты Креатинкиназа (КК, КФК) 340 Лаб. исследование Ферменты Липаза 470 Лаб. исследование Ферменты Лактатдегидрогеназа (ЛДГ) 630 Лаб. исследование Ферменты Фосфатаза щелочная 260 Лаб. исследование Ревматоидные маркеры  и спец.белки АСЛО (Антистрептолизин-О) 470 Лаб. исследование Ревматоидные маркеры  и спец.белки РФ (Ревматоидный фактор) 470 Лаб. исследование Ревматоидные маркеры  и спец.белки СРБ (С-реактивный белок) 450 Лаб. исследование Белки острой фазы и повреждения ткани Альфа-1-кислый гликопротеин (Серомукоид) 2000 Лаб. исследование Белки - маркёры инфекций Прокальцитонин (диагностика бак инфекций, сепсиса) 2700 Лаб. исследование Белки - маркёры сердечной деятельности NT-проBNP (N-терминальный мозговой натрийуретический пропептид) 3600 Лаб. исследование Электролиты и микроэлементы Кальций ионизированный (Ca2+) 500 Лаб. исследование Электролиты и микроэлементы Калий (K) 300 Лаб. исследование Электролиты и микроэлементы Кальций (Ca) 300 Лаб. исследование Электролиты и микроэлементы Магний (Mg) 300 Лаб. исследование Электролиты и микроэлементы Натрий (Na) 330 Лаб. исследование Электролиты и микроэлементы Хлор  (Cl) 300 Лаб. исследование Витамины и жирные кислоты Витамин D (25-гидрокальциферол) 2300 Лаб. исследование Иммуноглобулины Иммуноглобулин А общий 550 Лаб. исследование Иммуноглобулины Иммуноглобулин M общий 550 Лаб. исследование Иммуноглобулины Иммуноглобулин G общий 550 Лаб. исследование Иммуноглобулины Иммуноглобулин E общий 630 Лаб. исследование Функция щитовидной железы Антитела к тиреоглобулину (АТГ) 650 Лаб. исследование Функция щитовидной железы Антитела к тиреопероксидазе (АТПО) 650 Лаб. исследование Функция щитовидной железы Тиреотропный гормон (ТТГ) 490 Лаб. исследование Функция щитовидной железы Тироксин (Т4) 510 Лаб. исследование Функция щитовидной железы Тироксин свободный (свТ4) 510 Лаб. исследование Функция щитовидной железы Трийодтиронин (Т3) 510 Лаб. исследование Функция щитовидной железы Трийодтиронин свободный (свТ3) 510 Лаб. исследование Функция щитовидной железы Тиреоглобулин (ТГ) 870 Лаб. исследование Функция репродуктивной системы 17-ОН-Прогестерон ( 17-ОН-Прг) 750 Лаб. исследование Функция репродуктивной системы Андростендион 1400 Лаб. исследование Функция репродуктивной системы Глобулин связывающий половые гормоны (ГСПГ) 740 Лаб. исследование Функция репродуктивной системы Дегидроэпиандростерона сульфат (DHEAS) 740 Лаб. исследование Функция репродуктивной системы Лютеинизирующий гормон (ЛГ) 540 Лаб. исследование Функция репродуктивной системы Пролактин (Прл) 480 Лаб. исследование Функция репродуктивной системы Прогестерон (Прг) 520 Лаб. исследование Функция репродуктивной системы Тестостерон свободный: тестостерон общ, ГСПГ, альбумин, индексы свободного тестостерона) 1100 Лаб. исследование Функция репродуктивной системы Фолликулостимулирующий гормон (ФСГ) 520 Лаб. исследование Функция репродуктивной системы Эстрадиол (Е2) 520 Лаб. исследование Функция Паращитовидной железы и метаболизм костной ткани Кальцитонин (t= -20 С0)* 1300 Лаб. исследование Функция Паращитовидной железы и метаболизм костной ткани Паратгормон (ПТГ) 1050 Лаб. исследование Функция поджелудочной железы и диагностика диабета Инсулин (ИРИ) 1160 Лаб. исследование Функция поджелудочной железы и диагностика диабета HOMA-IR:  глюкоза, инсулин, индекс инсулинорезистентности 900 Лаб. исследование Функция поджелудочной железы и диагностика диабета С-пептид 1370 Лаб. исследование Функция гипофизарно-надпочечниковой системы Адренокортикотропный гормон (АКТГ) (t= -20 С0)* 1160 Лаб. исследование Функция гипофизарно-надпочечниковой системы Альдостерон 1300 Лаб. исследование Функция гипофизарно-надпочечниковой системы Кортизол (К) 740 Лаб. исследование Соматотропная функция гипофиза Соматотропный гормон (СТГ) 750 Лаб. исследование Гормоны жировой ткани Лептин 1250 Лаб. исследование Мониторинг беременности и фетомаркеры a-фетопротеин (АФП) 630 Лаб. исследование Мониторинг беременности и фетомаркеры в-Хорионический гонадотропин свободный (в-ХГЧ св.) 850 Лаб. исследование Мониторинг беременности и фетомаркеры Хорионический гонадотропин (ХГЧ) 600 Лаб. исследование Мониторинг беременности и фетомаркеры Эстриол свободный (св.Е3 ) 750 Лаб. исследование Онкологические маркеры различной локализации В2 -микроглобулин 1200 Лаб. исследование Онкологические маркеры различной локализации NSE 1800 Лаб. исследование Онкологические маркеры различной локализации SCC 2650 Лаб. исследование Онкологические маркеры различной локализации РЭА 800 Лаб. исследование Онкологические маркеры различной локализации СА- 15.3 850 Лаб. исследование Онкологические маркеры различной локализации СА-125 750 Лаб. исследование Онкологические маркеры различной локализации СА- 19.9 930 Лаб. исследование Онкологические маркеры различной локализации СА- 242 1160 Лаб. исследование Онкологические маркеры различной локализации СА- 72.4 1280 Лаб. исследование Онкологические маркеры различной локализации Фрагменты цитокератина 19 - CYFRA- 21.1 1250 Лаб. исследование Маркеры предстательной железы ПСА общий + ПСА свободный 1300 Лаб. исследование Маркеры предстательной железы Простатическая кислая фосфатаза (PAP) 750 Лаб. исследование ВИЧ (обязат. паспортные данные) ВИЧ - антитела1/2 + антиген р24 - (паспортные данные) 620 Лаб. исследование Гепатит В HBsAg (гепатит В) 410 Лаб. исследование Гепатит С Anti-HCV-IgM/IgG (гепатит С) 570 Лаб. исследование Герпесвирусная инфекция Вирус простого герпеса 1/2 типа - антитела Iq М 670 Лаб. исследование Герпесвирусная инфекция Вирус простого герпеса 1/2 типа - антитела Iq G 670 Лаб. исследование Цитомегаловирусная инфекция Цитомегаловирус - антитела Iq М 750 Лаб. исследование Цитомегаловирусная инфекция Цитомегаловирус - антитела Iq G 550 Лаб. исследование Цитомегаловирусная инфекция Цитомегаловирус - антитела Iq G авидность 1400 Лаб. исследование Вирус Эпштейна-Барр Вирус Эпштейна-Барр - антитела Ig G авидность 1270 Лаб. исследование Краснуха Вирус краснухи - антитела Iq М 720 Лаб. исследование Краснуха Вирус краснухи - антитела Iq G КОЛИЧЕСТВЕННО 700 Лаб. исследование Краснуха Вирус краснухи - антитела Iq G авидность 1300 Лаб. исследование Сифилис Сифилис (Трепонема паллидум)  - антитела Сумм 1150 Лаб. исследование Токсоплазмоз Токсоплазма Гонди - антитела Ig М 700 Лаб. исследование Токсоплазмоз Токсоплазма Гонди - антитела Ig G КОЛИЧЕСТВЕННО 600 Лаб. исследование Токсоплазмоз Токсоплазма Гонди - антитела Ig G авидность 1400 Лаб. исследование Хеликобактериоз Хеликобактер пилори - антитела Сумм 730 Лаб. исследование Хеликобактериоз Антиген Хеликобактер пилори (Helicobacter pylori) в кале 1850 Лаб. исследование Паразитарные инфекции Аскарида - антитела Ig G 860 Лаб. исследование Паразитарные инфекции Лямблия - антитела Iq M 780 Лаб. исследование Паразитарные инфекции Лямблия - антитела Сумм 780 Лаб. исследование Пар"
+        },
+        {
+          "id": 2617,
+          "title": "Услуги",
+          "url": "https://plaza.spa/kislovodsk/services/",
+          "text": "Консьерж Ваш личный ассистент, который освободит вас от забот по организации отдыха и создаст незабываемые впечатления. Ваш личный помощник Доступен круглосуточно по телефону или на ресепшн Подробнее Развлечения Дневная и вечерняя анимация, детский развлекательный центр, бильярд, прокат велосипедов и многое другое. Отдыхайте всей семьей Детская анимация\nИгровая площадка Подробнее Бизнес Большой конференц-зал, стильная переговорная комната, хорошо оснащенный бизнес-центр и тихая уютная библиотека. Деловой туризм Переговорная комната \nКонференц-зал Подробнее Трансфер Предлагаем безопасные и комфортабельные поездки в любое нужное вам место региона Кавказских Минеральных вод. Наши автомобили Mercedes Vito\n\nToyota Camry Подробнее Услуги и отдых в санатории"
+        },
+        {
+          "id": 2645,
+          "title": "Частые вопросы",
+          "url": "https://plaza.spa/kislovodsk/about/faq/",
+          "text": "01 Возможен ли ранний заезд? Возможен при наличии свободного номера на момент заезда, как правило в период высокого спроса все номера на стыках, поэтому рекомендуем заезжать в установленное время, либо бронировать номер на сутки раньше, для гарантированного раннего заезда. 02 Хотим оплатить проживание на месте, не хотим вносить предоплату Предоплата является гарантией бронирования номера, без предоплаты бронирование является негарантированным. 03 Если заехать без предварительного бронирования, вы заселите? Да, заселим при наличии свободного номера и при наличии необходимых документов для заселения. 04 Если не понравится забронированный номер, возможно ли на месте поменять категорию? При наличии свободных номеров, вы можете произвести замену категории номера за дополнительную оплату. 05 Есть ли в номерах санатория доступ в интернет? Безлимитный доступ в интернет есть в номерах и на всей территории санатория. Скорость до 50 Мбит/сек. Для подключения к беспроводному интернету (Wi-Fi) необходимо пройти авторизацию. При возникновении трудностей с подключением Вы можете обратиться за помощью к специалисту по информационным технологиям по номеру телефона «0». 06 От скольки дней осуществляете бронирование? Бронирование по оздоровительной программе (без процедур) осуществляется от 3-х ночей, с санаторно-курортным лечением от 7-ми ночей. 07 В какие дни возможен заезд? Заезд возможем в любой день круглый год. 08 В санаторно-курортную путевку входит 3-х разовое питание, а я не хочу три раза есть, делаете ли вы перерасчет? Нет, перерасчет не делается. Путевка в санатории предполагает только трехразовое питание. 09 Что входить в стоимость путевки? проживание в номере; трехразовое питание по системе «Шведский стол»; развлекательные программы для взрослых и детей; услуги «Детского клуба»; посещение СПА-комплекса (сауна, хаммам, бассейн, тренажерный зал); безлимитный доступ к беспроводному интернету (Wi-Fi); лечение по назначению врача (если санаторно-курортная путевка). 10 Могу ли я забронировать конкретный номер? Мы бронируем для вас желаемую категорию номера, но не конкретный номер комнаты. На основании ваших пожеланий служба приема и размещения присваивает уже номер комнаты. 11 Чем «Стандарт» отличается от «Делюкса»? «Стандарт» и «Делюкс» одинаковы по площади и основному оснащению. Разница — в этаже и виде из окна. «Стандарт» стоит дешевле: номера расположены ниже, окна выходят во двор, на крыши. «Делюкс» находится на более высоких этажах, поэтому вид из окна более открытый. Если важнее сэкономить — выбирайте «Стандарт». Если хочется более приятного вида — «Делюкс». 12 Есть ли чайник, утюг в номере? В номере имеется электрический чайник и чайный набор. Гладильные центры (гладильная доска и утюг) предоставлены в номерах следующих категорий: «Люкс», «Люкс премиум», «Люкс премиум с балконом», «Апартаменты». Для Гостей, проживающих в номерах категорий: «Стандарт» и «Делюкс», гладильные центры предоставляются при обращении по номеру телефона 100. Кроме того, в санатории имеются гладильные комнаты. 13 Есть ли ванные принадлежности? (А также халаты, тапочки, фен и т.д.) Да, в номере имеются: фен для сушки волос, халат, тапочки, шампунь, гель для душа, мыло, шапочка для душа. 14 Есть ли в санатории банкомат? Принимают ли в санатории к оплате карты? На территории санатория банкомат («Сбербанк»). К оплате принимаются пластиковые карты МИР, MasterCard, Visa, Maestro и другие. 15 Можно ли смотреть онлайн-кинотеатры и стриминг-сервисы на телевизоре? Да, в номерах возможно подключить устройство для доступа к онлайн-кинотеатрам и стриминг-сервисам. Для подключения обратитесь на ресепшен по номеру телефона «0». Администраторы подскажут наличие дополнительных устройств и пригласят специалиста по информационным технологиям для установки. 16 Как можно оплатить путевку? Наличным платежом. Принимаются рубли РФ; безналичным платежом, по онлайн-ссылке, по банковским реквизитам санатория, которые можно найти в разделе «Контакты»; при заезде -пластиковой картой. К оплате принимаются МИР, MasterCard, Visa, Maestro и другие. 17 Если есть противопоказания возможно ли получить взамен другие процедуры без доплаты? Замена видов и количества медицинских услуг осуществляется с учетом наличия показаний и противопоказаний к ним исключительно по решению врачебной комиссии санатория из числа медицинских услуг, включенных в утвержденные санаторием программы санаторно-курортного лечения. 18 Возможно ли приобрести процедуры без назначения врача? Санаторно-курортное лечение назначается после консультации с врачом-терапевтом, но есть ряд процедур, которые можно приобрести без консультации врача. 19 Можно ли приобрести процедуры за дополнительную оплату и как их можно оплатить? Вы можете приобрести любые процедуры. Для этого вам необходимо обратиться к медрегистратору, пройти консультацию терапевта для выявления показаний и противопоказаний. Если противопоказаний не имеется, вы производите оплату выбранной процедуры у медрегистратора и получаете расписание процедур. 20 Нужна ли предварительная запись к врачам? Запись к врачу вы можете осуществить и по прибытию, но в период высокого спроса желательно оформлять заранее. 21 Что входит в оздоровительную путевку? Программа включает врачебное сопровождение, современную диагностику, дозированную ходьбу по терренкурам в Курортном парке, бассейн, сауну или хаммам, климатотерапию, занятия в тренажёрном зале, нарзанные или искусственные ванны, ингаляции, питьевое лечение и восстановительные процедуры минеральными водами, фиточаи и сбалансированное диетическое питание. 22 Что входит в путевку с лечением для взрослых и для детей? Санаторно-курортная программа лечения 23 Есть ли детская кроватка, горшок, ванночка, коляски на прокат? Да, для комфортного отдыха с детьми в санатории «Плаза СПА» предусмотрено всё необходимое. По запросу гостям предоставляются детская кроватка, бортики, ванночка и горка для купания, стульчик для кормления, манеж, горшок, сиденье на унитаз и подставка для ног. Также доступна услуга проката детских колясок, чтобы прогулки по Кисловодску и Национальному парку были удобными и приятными для всей семьи. 24 Есть ли питание для детей от 0 до 4-х? Какое? Диетическое питание 5-разовое по системе «шведский стол». 25 Есть ли анимация? Да, в санатории «Плаза СПА» действует насыщенная анимационная программа для гостей всех возрастов. Ежедневно с 10:00 до 22:00 команда профессиональных аниматоров проводит игры, спортивные активности, шоу-программы и творческие мероприятия, создавая атмосферу живого курортного отдыха. Детский клуб Для самых маленьких гостей с 09:00 до 22:00 открыт детский клуб, где каждый день наполнен играми, квестами, мастер-классами и весёлыми конкурсами. Здесь дети отправляются в пиратские путешествия, участвуют в тематических играх, знакомятся с новыми друзьями и празднуют дни рождения с любимыми героями. Для дополнительного комфорта родителей в клубе также предусмотрена услуга няни . Подростковый клуб Подростки могут провести время в современном игровом пространстве, где проходят турниры по настольным играм, интерактивные соревнования и видеоигры. Это место общения, азарта и дружеских соревнований. Анимация и активности для взрослых Для взрослых гостей также подготовлена разнообразная программа активностей. Утро можно начать с дыхательной гимнастики и аквааэробики, днём – отправиться на скандинавскую ходьбу или занятия фитнесом: зумба, стретчинг, «здоровая спина», кавказские танцы и бачата. В течение дня проходят творческие мастер-классы и интеллектуальные игры, включая популярную «Мафию». Вечерние мероприятия Каждый вечер в санатории проходят концертные и развлекательные программы: живая музыка, тематические шоу и выступления артистов. На сцене «Плаза СПА» регулярно выступают звёзды российской и зарубежной эстрады, создавая атмосферу настоящего курортного праздника. Благодаря такой программе отдых в «Плаза СПА» становится ярким, интересным и насыщенным для всей семьи. 26 Есть ли услуга няни? Да, стоимость необходимо уточнять. 27 Какие справки и анализы нужны? Для совершеннолетних гостей: полис ОМС и ДМС (при наличии); медицинские документы, содержащие сведения о проведенном ранее обследовании и лечении Для гостей, не достигших 14-летнего возраста, в обязательном порядке предоставить следующие документы: справка врача-педиатра или врача-эпидемиолога об отсутствии контакта с больными инфекционными заболеваниями. медицинские документы, содержащие сведения о проведенном ранее обследовании и лечении Для гостей, не достигших 14-летнего возраста, рекомендуем предоставить следующие документы: медицинские документы, содержащие сведения о проведенном ранее обследовании и лечении 28 С какого возраста возможно получать процедуры ребенку? С 4-х лет 29 Вы принимаете с детьми? С какого возраста? Мы принимаем детей от 0 лет. 30 Нужна ли доверенность от родителей для несовершеннолетних детей? Необходимо письменное согласие законного представителя (одного из них) в случае, если дети заезжают не со своими родителями (усыновителями, опекунами). Это условие распространяется даже на близких родственников, бабушек и дедушек. 31 Мы планируем поехать на экскурсию, вы даете сух.паек с собой? Да, конечно. Вам необходимо предварительно уведомить службу приема и размещения. 32 Заезжаем после ужина, возможно ли оставить ужин? Да, позвонив заранее и уведомив службу приема размещения или отдел бронирования. 33 Возможно ли перенести завтрак со дня выезда на день заезда? Да,позвонив заранее и уведомив службу приема размещения или отдел бронирования. 34 С которого часа завтрак, обед, ужин? Завтрак 7:30-10:00 Детский завтрак 10:30-11:00 Обед 12:30-14:30 Полдник 16:00-16:45 Ужин 18:00-20:00 35 На какие экскурсии рекомендуете поехать? Наши опытные экскурсоводы смогут подобрать подходящую для вас экскурсию. Самостоятельно можете посмотреть список рекомендуемых нами мест на карте . 36 Есть ли у вас экскурсионное агентство? По вопросам организации индивидуальных и групповых экскурсий обращайтесь, пожалуйста, к сотруднику экскурсион"
+        },
+        {
+          "id": 2652,
+          "title": "Контакты",
+          "url": "https://plaza.spa/kislovodsk/about/contacts/",
+          "text": "ООО «Санаторий Плаза» 357700, Россия, Кисловодск, проспект Ленина 26-28 Информация для партнеров: Наши реквизиты, лицензии и сертификаты. Отдел бронирования +7 (87932) 2-60-88 bron@plaza.spa Бухгалтерия 8 (87937) 6-59-04 yurina@plazaspa.ru Клиентский сервис 8 (87932) 2-60-00 Доб. номер — 209 feedback@plazaspa.ru Трансфер 8 (87932) 2-60-00 Доб. номер — 100 bron@plaza.spa Корпоративным клиентам 8 (87932) 2-60-00 Доб. номер — 284, 283 agency@plazaspa.ru Мед регистратура 8 (87932) 2-60-00 Доб. номер — 800 medicalreception@plazaspa.ru Департамент маркетинга 8 (87932) 2-60-00 Доб. номер — 400 azarov@plazaspa.ru Снабжение 8 (87932) 2-60-00 Доб. номер — 250 aushev@plazaspa.ru Служба приема и размещения 8 (87932) 2-60-00\nДоб. номер — 210 petrushin@plazaspa.ru Отдел управления персоналом 8 (87932) 2-60-00 Доб. номер — 271 hr.manager@plazaspa.ru Департамент IT 8 (87932) 2-60-00\nДоб. номер — 777 aslihosherst@plazaspa.ru Плаза СПА Санаторий в Кисловодске Онлайн-камера Кисловодска"
+        }
+      ],
+      "groups": [
+        [
+          "парковка",
+          "стоянка",
+          "автостоянка",
+          "паркинг"
+        ],
+        [
+          "вайфай",
+          "wifi",
+          "интернет"
+        ],
+        [
+          "бассейн",
+          "плавание"
+        ],
+        [
+          "питание",
+          "еда"
+        ],
+        [
+          "ребенок",
+          "дети",
+          "детский"
+        ],
+        [
+          "трансфер",
+          "такси"
+        ],
+        [
+          "стоимость",
+          "цена",
+          "цены"
+        ],
+        [
+          "бронирование",
+          "забронировать",
+          "бронь"
+        ],
+        [
+          "спа",
+          "spa"
+        ],
+        [
+          "заезд",
+          "заселение"
+        ],
+        [
+          "выезд",
+          "выселение"
+        ]
+      ],
+      "specimen_subset": true
+    }
+  },
+  "runtime_scripts": [
+    "runtime/shared/ui-core.js",
+    "runtime/shared/specimen-boot.js",
+    "runtime/shared/plaza-tabs.js",
+    "runtime/shared/button-cursor.js",
+    "runtime/shared/assets/cards/card-spotlight.js",
+    "runtime/shared/assets/surfaces/glass-button-glow.js",
+    "runtime/shared/assets/links/content-links.js",
+    "runtime/shared/assets/tooltips/tooltip.js",
+    "runtime/shared/assets/headings/heading-motion.js",
+    "runtime/shared/assets/header/logo-orbit.js"
+  ],
+  "layout": {
+    "viewport": {
+      "width": 1280,
+      "height": 800,
+      "autosize": true
+    },
+    "stage_tag": "main",
+    "wrappers": [],
+    "card": false,
+    "content_width": null,
+    "placement": "stage"
+  },
+  "ancestors": []
+}

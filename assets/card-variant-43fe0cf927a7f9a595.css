@@ -1,0 +1,193 @@
+/* Resort detail pages. The page owns the footer gap; sections own their leading gap. */
+.resort-page{
+ --resort-section-gap:48px;
+ --resort-heading-gap:24px;
+ --resort-title-gap:32px;
+ --resort-copy-gap:20px;
+ --resort-footer-gap:64px;
+ padding-bottom:var(--resort-footer-gap);
+}
+.resort-page-navigation{padding-block:24px 20px}
+.resort-breadcrumbs ol{display:flex;flex-wrap:wrap;gap:8px 16px;list-style:none;margin:0;padding:0;font-size:12px;line-height:1.6;color:var(--muted)}
+.resort-breadcrumbs li{display:flex;align-items:center;gap:12px;min-width:0;min-height:44px}
+.resort-breadcrumbs li::after,.resort-breadcrumbs li::before{content:none}
+.resort-breadcrumbs li+li::before{content:'›';padding-right:12px}
+.resort-breadcrumbs a{color:inherit;display:inline-flex;align-items:center;min-height:44px}
+.resort-breadcrumbs [aria-current]{color:var(--ink)}
+body.plaza-shell .resort-breadcrumbs a.plaza-text-link>.plaza-link-label{padding-bottom:0}
+.resort-page .resort-page-heading{padding:0 0 var(--resort-title-gap)}
+.resort-page-heading h1{max-width:22ch;font-size:clamp(32px,4.5vw,60px);margin:0;overflow-wrap:anywhere}
+.resort-page-heading .intro{max-width:65ch;margin:16px 0 0}
+/* Text height follows its content, never viewport height. Special New Year markup is separate. */
+.resort-page .resort-page-content>#generic-groups{margin:0}
+.resort-page .resort-page-content,.resort-page .resort-room-section.prose{min-height:0;padding:0}
+.resort-page-content>p,.resort-page-content>ul,.resort-page-content>ol{max-width:72ch}
+.resort-page .resort-page-content h2,.resort-room-section h2{font-size:clamp(27px,3vw,40px);margin:var(--resort-section-gap) 0 var(--resort-heading-gap)}
+.resort-page .resort-page-content h3,.resort-room-section h3{margin:32px 0 16px}
+.resort-page .resort-page-content :is(p,ul,ol),.resort-room-section.prose :is(p,ul,ol){margin-block:0 var(--resort-copy-gap)}
+.resort-page .resort-page-content :is(p,ul,ol):last-child,.resort-room-section.prose :last-child{margin-bottom:0}
+.resort-page .resort-page-content>:first-child,.resort-page .resort-page-content #generic-groups>:first-child{margin-top:0}
+.resort-page-content img{display:block;width:100%;max-width:100%;height:auto;border-radius:var(--plaza-radius-ui,4px)}
+.resort-page-content .wp-block-image{margin-block:var(--resort-heading-gap);max-width:920px}
+.resort-page-content iframe{width:100%;max-width:100%;min-height:360px;border:0;border-radius:var(--plaza-radius-ui,4px)}
+.resort-page-content a{overflow-wrap:anywhere}
+.resort-table{overflow:auto;border:1px solid var(--line);padding:16px 16px 24px;border-radius:var(--plaza-radius-ui,4px);margin-block:var(--resort-heading-gap)}
+.resort-page-content table{width:100%;min-width:560px;border-collapse:collapse}
+.resort-page-content td,.resort-page-content th{padding:16px;text-align:left;border-bottom:1px solid var(--line)}
+.resort-page-booking{border-top:1px solid var(--line);margin-top:var(--resort-section-gap);padding-top:var(--resort-heading-gap);padding-bottom:0}
+.resort-page-booking h2{font-size:clamp(30px,3.6vw,48px)}
+.resort-page-booking .detail-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.resort-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-block:var(--resort-title-gap)}
+.resort-directory article{padding:24px;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px)}
+.resort-page .resort-directory h2{font-size:26px;margin:0 0 16px}
+.resort-directory a{display:inline-flex;align-items:center;min-height:44px}
+.resort-detail .resort-page-content>div:empty{display:none}
+/* Catalog is an embedded section, not a second page/container. */
+body.resort-migration.resort-detail .resort-page .resort-page-content .plaza-block-home #rooms.section{width:100%;max-width:none;padding:0;margin:0}
+.resort-page-content .plaza-block-home .wrap{width:100%;max-width:none;margin-inline:0}
+.resort-page-content .plaza-block-home #rooms .section-heading{max-width:none;margin-top:0}
+.resort-page .resort-page-content .plaza-block-home #rooms .section-heading h2{margin-top:0}
+.resort-page .resort-page-content .plaza-block-home #rooms .eyebrow{margin-top:0}
+/* Retain shared gallery mechanics and its controls. */
+.resort-page-content .resort-gallery{margin-block:var(--resort-heading-gap)}
+.resort-gallery .card{min-width:0;padding:0}
+.resort-gallery .swipe-rail{min-width:0}
+.resort-gallery .photo-frame{height:clamp(220px,30vw,420px)}
+.resort-gallery .photo-frame img{width:100%;height:100%;object-fit:cover}
+.resort-page-content .resort-photo-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:0}
+.resort-page-content .resort-photo-gallery figure.wp-block-image{width:100%!important;max-width:none;margin:0;overflow:hidden;border-radius:var(--plaza-radius-ui,4px)}
+.resort-page-content .resort-photo-gallery img{height:100%;aspect-ratio:3/2;object-fit:cover}
+.resort-page-content .resort-photo-gallery .wp-lightbox-container{width:100%;height:100%}
+.resort-migration .wellness-photo-gallery{--photo-control-ink:#45413b}
+[data-theme=dark] .resort-migration .wellness-photo-gallery{--photo-control-ink:#f1eee6}
+.resort-room .wellness-photo-gallery button:focus-visible{outline-color:var(--accent)}
+/* Shared PlazaUI controls open/close; CSS only defines the resting geometry. */
+.resort-page-content .faq-group{margin-block:var(--resort-heading-gap)}
+.resort-page-content .faq-group details{border-bottom:1px solid var(--line);padding:0}
+.resort-page-content .faq-group summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:44px;cursor:pointer;font-size:18px;line-height:1.5;list-style:none;color:var(--ink);transition:color .35s ease}
+.resort-page-content .faq-group summary::-webkit-details-marker,.resort-room .resort-accordion summary::-webkit-details-marker{display:none}
+.resort-page-content .faq-group summary::marker,.resort-room .resort-accordion summary::marker{content:''}
+.resort-page-content .faq-group summary::after{content:'+';flex:0 0 24px;text-align:center;color:var(--gold);font-size:24px;line-height:1}
+.resort-page-content .faq-group summary[aria-expanded=true]::after,.resort-page-content .faq-group details[open]>summary::after{content:'−'}
+.resort-page-content .faq-group summary:is(:hover,:focus-visible){color:var(--gold)}
+.resort-page-content .faq-group summary:focus-visible{outline:1px solid var(--gold);outline-offset:6px}
+.resort-page-content .faq-group details>div{padding-block:16px}
+.resort-page-content .resort-accordion summary{display:grid;grid-template-columns:44px minmax(0,1fr) 24px;gap:16px;padding:20px 0;min-height:72px;font-size:15px;line-height:1.6}
+.resort-page-content .resort-accordion summary::before{content:none}
+.resort-accordion-marker{color:var(--accent);line-height:1;align-self:center}
+.resort-accordion-marker[data-kind=number]{font:400 var(--plaza-faq-number-size,36px)/1 Lora,Georgia,serif;opacity:var(--plaza-faq-number-opacity,.3)}
+.resort-accordion-marker svg,.resort-accordion summary svg{width:28px;height:28px;display:block;flex:none}
+.resort-accordion-label{min-width:0;overflow-wrap:anywhere}
+.resort-page-content .resort-accordion details>div{padding:0 0 24px 60px}
+.resort-page-content .resort-accordion details>div .resort-table{margin-left:-60px;width:calc(100% + 60px)}
+.resort-anchor{display:block;scroll-margin-top:104px}
+.resort-accordion details,.resort-accordion summary{scroll-margin-top:104px}
+.resort-page-content iframe[src*='/3Dplan/']{height:clamp(360px,60vh,640px);min-height:360px}
+.resort-fact{display:flex;align-items:baseline;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.resort-fact strong{font:400 32px/1.2 Lora,Georgia,serif;color:var(--accent);min-width:5ch}
+.resort-page-content .plaza-hero-video{margin-block:var(--resort-heading-gap)}
+.resort-page-content .plaza-hero-video .plaza-video-poster{height:100%;object-fit:cover}
+.resort-portrait-video{max-width:420px;margin-block:var(--resort-heading-gap)}
+.resort-page-content .resort-portrait-video .plaza-hero-video{aspect-ratio:9/16}
+.resort-portrait-video .plaza-hero-video video{object-fit:contain}
+/* Current room shortcode: intro, shared gallery, facts, semantic sections. */
+.resort-room-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 40px;align-items:center;margin-bottom:var(--resort-title-gap)}
+.resort-room-intro h1{grid-column:1;max-width:32ch;font-size:clamp(28px,3vw,44px);line-height:1.25;margin:0;overflow-wrap:anywhere}
+.resort-room-intro .intro{grid-column:1;margin:0;max-width:70ch}
+.resort-room-intro .button{grid-column:2;grid-row:1/3;margin:0;white-space:nowrap}
+/* Kislovodsk rooms: the booking action shares the description row, below the heading. */
+.plaza-object-kislovodsk .resort-room-intro .button{grid-row:2}
+.resort-room-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:24px 0 0;padding:32px 0;border-block:1px solid var(--line)}
+.resort-room-facts dt{font:500 22px/1.4 Lora,serif;color:var(--accent)}
+.resort-room-facts dd{margin:8px 0 0;font-size:13px}
+.resort-room-section{margin-top:var(--resort-section-gap)}
+.resort-room .resort-room-section>h2:first-child,.resort-room .resort-room-section.prose>h2:first-child{margin-top:0;margin-bottom:var(--resort-heading-gap)}
+.resort-room .resort-room-section>:last-child{margin-bottom:0}
+.resort-amenities{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.resort-amenities article{padding:24px var(--plaza-card-padding-inline);background:var(--surface);border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px)}
+.resort-amenities article>:first-child{margin-top:0}.resort-amenities article>:last-child{margin-bottom:0}
+
+.resort-room iframe{width:100%;height:70svh;min-height:360px;border:0}
+.resort-room-booking{padding-bottom:0}
+.resort-room .resort-accordion{margin:0}
+.resort-room .resort-accordion details{border-bottom:1px solid var(--line);padding:0;margin:0}
+.resort-room .resort-accordion summary{display:grid;grid-template-columns:36px minmax(0,1fr) 24px;gap:16px;align-items:center;min-height:64px;padding:18px 0;cursor:pointer;list-style:none;color:var(--ink);font:500 16px/1.6 Montserrat,Arial,sans-serif}
+.resort-room .resort-accordion summary::after{content:'+';grid-column:3;color:var(--accent);font-size:24px;line-height:1}
+.resort-room .resort-accordion details[open]>summary::after{content:'−'}
+.resort-room .resort-accordion summary svg{color:var(--accent)}
+.resort-room .resort-accordion summary .resort-accordion-marker{display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.resort-room .resort-accordion details>div{padding:0 0 24px 52px}
+.resort-room .resort-accordion summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+/* Booking keeps its integration's intrinsic dimensions. */
+.resort-booking-offer{display:flex;gap:32px;justify-content:space-between;align-items:center;padding:24px 28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);margin-bottom:20px}
+.resort-page .resort-booking-offer h2{font-size:26px;margin:0 0 12px}
+.resort-booking-offer p{margin:0;max-width:75ch}
+.resort-booking-offer>a{flex-shrink:0;display:inline-flex;align-items:center;gap:12px;min-height:44px}
+.resort-booking-help{margin-bottom:28px}
+.resort-booking-help>details{border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px)}
+.resort-booking-help>details>summary{display:flex;align-items:center;gap:16px;min-height:64px;padding:16px 24px;list-style:none;cursor:pointer}
+.resort-booking-help>details>summary::after{content:'+';margin-left:auto;color:var(--accent);font-size:24px}
+.resort-booking-help>details[open]>summary::after{content:'−'}
+.resort-booking-help>details>summary::-webkit-details-marker{display:none}
+.resort-booking-help>details>summary svg{width:24px;height:24px}
+.resort-booking-help>details>div{padding:0 24px 20px}
+.resort-booking-help .faq-group{margin-block:0}
+.resort-booking-help summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.resort-booking-form{scroll-margin-top:104px}
+.resort-page #tl-booking-form{width:100%;min-height:520px}
+.resort-page #tl-booking-form iframe{min-height:1px}
+.resort-page-content #tl-booking-cart iframe{min-height:0;border-radius:0}
+.resort-offers{margin-block:var(--resort-title-gap)}
+.resort-page-content h2+.resort-offers{margin-top:0}
+.resort-offers .swipe-rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory}
+.resort-offers .card{scroll-snap-align:start;min-width:0}
+.resort-offers .photo-frame{aspect-ratio:4/3;overflow:hidden}
+.resort-offers .photo-frame img{width:100%;height:100%;object-fit:cover}
+.resort-page .resort-offers h3{margin-top:20px}
+@media(max-width:1050px){
+ .resort-page{--resort-footer-gap:48px}
+ .resort-directory{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .resort-page-content .resort-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ .resort-room-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .resort-amenities{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .resort-offers .swipe-rail{grid-auto-columns:calc((100% - 24px)/2)}
+}
+@media(max-width:767px){
+ .resort-page{--resort-section-gap:32px;--resort-heading-gap:20px;--resort-title-gap:24px;--resort-footer-gap:40px}
+ .resort-page-navigation{padding-block:16px 20px}
+ .resort-breadcrumbs ol{gap:6px 12px;font-size:11px}
+ .resort-directory{grid-template-columns:1fr;gap:16px}
+ .resort-page-content iframe{min-height:280px}
+ .resort-table{margin-inline:0}
+ .resort-page-content .resort-photo-gallery{gap:12px}
+ .resort-page-content .resort-accordion details>div,.resort-room .resort-accordion details>div{padding-left:0}
+ .resort-page-content .resort-accordion details>div .resort-table{margin-left:0;width:100%}
+ .resort-room-intro{display:block}
+ .resort-room-intro .intro{margin:20px 0}
+ .resort-room-intro .button{display:inline-flex}
+ .resort-room-facts{gap:20px 16px}
+ .resort-room-facts dt{font-size:19px}
+ .resort-amenities{grid-template-columns:1fr}
+ .resort-room .resort-accordion summary{font-size:14px;gap:12px;grid-template-columns:32px minmax(0,1fr) 20px}
+ .resort-booking-offer{display:block;padding:20px}
+ .resort-booking-offer>a{margin-top:12px}
+ .resort-booking-help>details>summary{padding:16px;gap:12px}
+ .resort-booking-help>details>div{padding-inline:16px}
+ .resort-offers .swipe-rail{grid-auto-columns:82%}
+}
+@media(hover:hover) and (pointer:fine){.resort-room .resort-accordion summary:hover{color:var(--accent)}}
+@media(prefers-reduced-motion:reduce){.resort-page-content .faq-group summary{transition:none}}
+
+/* Migrated catalog cards and compact booking events use the page rhythm. */
+.resort-directory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-block:32px}.resort-directory-grid>.card{min-width:0;overflow:hidden}.resort-directory-grid .photo-frame{margin:0;aspect-ratio:3/2;overflow:hidden}.resort-directory-grid .photo-frame img{width:100%;height:100%;object-fit:cover}.resort-directory-grid .card-body{padding:24px var(--plaza-card-padding-inline)}.resort-page .resort-page-content .resort-directory-grid h3{font-size:24px;line-height:1.2;margin:0 0 12px}.resort-directory-grid .resort-directory-subtitle{font-weight:600}.resort-directory-grid .card-body p:last-child{margin-bottom:0}@media(max-width:1050px){.resort-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.resort-directory-grid{grid-template-columns:1fr;gap:24px}.resort-directory-grid .card-body{padding:20px var(--plaza-card-padding-inline)}}
+.resort-booking-events{margin:24px 0 32px}.resort-booking-events .pb-events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.resort-booking-events .pb-event{display:flex;align-items:center;gap:20px;min-width:0;padding:20px;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);background:var(--panel)}.resort-booking-events .pb-event-photo{display:block;flex:0 0 144px;width:144px;overflow:hidden;border-radius:var(--plaza-radius-ui,4px);min-height:44px}.resort-booking-events .pb-event-photo img{display:block;width:144px!important;height:96px!important;max-width:none;object-fit:cover;border-radius:var(--plaza-radius-ui,4px)}.resort-page .resort-page-content .resort-booking-events .pb-event h3{font-size:20px;line-height:1.3;margin:0 0 8px}.resort-page .resort-page-content .resort-booking-events .pb-event p{font-size:13px;line-height:1.6;margin:0}.resort-page .resort-page-content .resort-booking-events .pb-event .pb-event-date{color:var(--accent);margin-bottom:6px}@media(max-width:1050px){.resort-booking-events .pb-events{grid-template-columns:1fr}}@media(max-width:600px){.resort-booking-events .pb-event{gap:16px;padding:16px}.resort-booking-events .pb-event-photo{flex-basis:112px;width:112px}.resort-booking-events .pb-event-photo img{width:112px!important;height:84px!important}.resort-page .resort-page-content .resort-booking-events .pb-event h3{font-size:17px}}
+
+.resort-page .resort-page-content .resort-programs-grid .card-body h2{font-size:24px;line-height:1.2;margin:0 0 12px}.resort-programs-grid ul{padding-inline-start:20px}.resort-programs-grid li{margin-block:8px}.resort-programs-grid .resort-program-excluded{opacity:.72}.resort-programs-grid .resort-program-excluded s{text-decoration-thickness:1px}
+.resort-phone-controls{display:block}
+.resort-phone-table{overflow-x:auto;scroll-margin-top:104px}
+.resort-page-content .resort-phone-table table{min-width:1560px;table-layout:auto}
+.resort-page-content .resort-phone-table :is(td,th){padding:16px;overflow-wrap:normal;word-break:normal}
+.resort-page-content .resort-phone-table :is(td,th):nth-child(5){min-width:240px;white-space:nowrap}
+.resort-page-content .resort-phone-table :is(td,th):nth-child(n+6){min-width:132px;white-space:nowrap}
+.resort-page-content .resort-phone-table tr[hidden]{display:none}
+.resort-phone-table:focus-visible{outline:2px solid var(--accent);outline-offset:4px}

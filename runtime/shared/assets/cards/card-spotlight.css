@@ -1,0 +1,193 @@
+/* One light material for grids, sliders, room amenities, contacts and native booking. */
+@media (any-pointer: fine), (any-pointer: coarse) {
+  html[data-theme="dark"] [data-plaza-spotlight] {
+    position: relative;
+    isolation: isolate;
+    --plaza-card-light-x: 50%;
+    --plaza-card-light-y: 50%;
+    --plaza-spotlight-tint: radial-gradient(circle var(--plaza-card-light-radius) at var(--plaza-card-light-origin-x, var(--plaza-card-light-x)) var(--plaza-card-light-origin-y, var(--plaza-card-light-y)), rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)), var(--plaza-card-light-fill)), transparent 75%);
+  }
+  html[data-theme="dark"] :is(.plaza-card-border-light, .plaza-card-surface-light) {
+    position: absolute;
+    inset: 0;
+    display: block;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--plaza-card-light-out) ease-out;
+  }
+  html[data-theme="dark"] .plaza-card-border-light {
+    z-index: 5;
+    padding: var(--plaza-card-light-border);
+    background: radial-gradient(circle var(--plaza-card-light-radius) at var(--plaza-card-light-origin-x, var(--plaza-card-light-x)) var(--plaza-card-light-origin-y, var(--plaza-card-light-y)), rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)), var(--plaza-card-light-strength)), transparent 75%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+  html[data-theme="dark"] .plaza-card-surface-light {
+    z-index: -1;
+    background: var(--plaza-spotlight-tint);
+  }
+  html[data-theme="dark"] [data-spotlight-active] > [data-plaza-spotlight]:not(.card) > .plaza-card-border-light,
+  html[data-theme="dark"] .comparison-filters[data-spotlight-active] .comparison-view-filter > [data-plaza-spotlight] > .plaza-card-border-light,
+  html[data-theme="dark"] [data-plaza-spotlight][data-spotlight-active] > .plaza-card-border-light,
+  html[data-theme="dark"] [data-plaza-spotlight]:is(:hover, :has(:focus-visible), [data-spotlight-frame-focus]) > .plaza-card-border-light {
+    opacity: 1;
+    transition-duration: var(--plaza-card-light-in);
+  }
+  html[data-theme="dark"] [data-plaza-spotlight]:is(:hover, :has(:focus-visible), [data-spotlight-frame-focus]) > .plaza-card-surface-light {
+    opacity: 1;
+    transition-duration: var(--plaza-card-light-in);
+  }
+  html[data-theme="dark"] [data-plaza-spotlight]:is(:has(:focus-visible), [data-spotlight-frame-focus]) {
+    --plaza-card-light-origin-x: 50%;
+    --plaza-card-light-origin-y: 0%;
+  }
+  html[data-theme="dark"] [data-plaza-spotlight]:is(:has(:focus-visible), [data-spotlight-frame-focus]) > .plaza-card-border-light {
+    background: rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)), .7);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="dark"] [data-plaza-spotlight] {
+    --plaza-card-light-origin-x: 50%;
+    --plaza-card-light-origin-y: 0%;
+  }
+  html[data-theme="dark"] :is(.plaza-card-border-light, .plaza-card-surface-light) { transition: none; }
+  html[data-theme="dark"] [data-plaza-spotlight]:hover > .plaza-card-border-light { opacity: 1; }
+}
+@supports not ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
+  .plaza-card-border-light { display: none !important; }
+}
+
+/* One accordion surface, on every Plaza shell and every page. Site palettes own all colours. */
+body.plaza-shell details[data-plaza-accordion-item]{position:relative;box-sizing:border-box;padding-inline:var(--plaza-card-padding-inline,16px)}
+body.plaza-shell details[data-plaza-accordion-item]>summary[data-plaza-accordion-trigger]{
+ position:relative;isolation:isolate;box-sizing:border-box;width:auto;border-radius:0;
+ margin-inline:calc(-1 * var(--plaza-card-padding-inline,16px));padding-inline:var(--plaza-card-padding-inline,16px);
+ background:transparent;--plaza-card-light-radius:480px;
+ --plaza-card-light-origin-y:var(--plaza-accordion-light-y,50%);
+ transition:color 200ms ease;
+}
+body.plaza-shell details[data-plaza-accordion-item]>div{padding-inline:0}
+/* Legacy accordion tables used -60px to cancel the old answer indent. */
+body.plaza-shell details[data-plaza-accordion-item]>div :is(.wellness-table,.resort-table,.comparison-scroll){margin-inline:0;width:100%;max-width:100%;box-sizing:border-box}
+
+body.plaza-shell [data-plaza-accordion-trigger]>.plaza-card-border-light,
+body.plaza-shell [data-plaza-accordion-trigger]>.plaza-card-surface-light{
+ position:absolute;top:var(--plaza-accordion-light-top,0px);right:0;bottom:auto;left:0;
+ height:var(--plaza-accordion-light-height,calc(100% - 1px));border-radius:0;pointer-events:none;
+}
+body.plaza-shell [data-plaza-accordion-item]:focus-within>[data-plaza-accordion-trigger]{color:var(--ink)}
+@media (any-pointer: fine), (any-pointer: coarse){
+ body.plaza-shell [data-plaza-accordion-item]:is(:hover,:focus-within)>summary[data-plaza-accordion-trigger]{background:transparent;color:var(--ink)}
+ body.plaza-shell [data-plaza-accordion-item]:is(:hover,:focus-within)>summary :is(.wellness-accordion-label,.resort-accordion-label){color:var(--ink)}
+ body.plaza-shell [data-plaza-accordion-item]:is(:hover,:focus-within)>summary::after{color:var(--ink)}
+ body.plaza-shell [data-plaza-accordion-trigger][data-plaza-spotlight]>.plaza-card-surface-light{
+  display:block;z-index:-1;opacity:0;background:radial-gradient(circle var(--plaza-card-light-radius) at var(--plaza-card-light-x,50%) var(--plaza-accordion-light-y,50%),var(--plaza-accordion-light-stops));
+  transition:opacity var(--plaza-card-light-out) ease-out;
+ }
+ body.plaza-shell [data-plaza-accordion-item]:is(:hover,:focus-within)>summary>.plaza-card-surface-light{opacity:1;transition-duration:var(--plaza-card-light-in)}
+ html[data-theme=dark] body.plaza-shell [data-plaza-accordion-trigger]>.plaza-card-border-light{background:radial-gradient(circle var(--plaza-card-light-radius) at var(--plaza-card-light-x,50%) var(--plaza-accordion-light-y,50%),var(--plaza-accordion-border-core),transparent 75%)}
+ html[data-theme=dark] body.plaza-shell [data-plaza-accordion-item]:is([data-spotlight-active],:focus-within)>summary>.plaza-card-border-light{opacity:1;transition-duration:var(--plaza-card-light-in)}
+ html:not([data-theme=dark]) body.plaza-shell [data-plaza-accordion-trigger]>.plaza-card-border-light{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ body.plaza-shell [data-plaza-accordion-trigger],body.plaza-shell [data-plaza-accordion-trigger]>.plaza-card-surface-light{transition:none!important;--plaza-card-light-x:50%!important;--plaza-accordion-light-y:50%!important}
+}
+
+/* In nested accordions, only the innermost hovered/focused item owns the light. */
+body.plaza-shell [data-plaza-accordion-item]:has(:is([data-plaza-accordion-item],[data-plaza-navigation-row]):is(:hover,:focus-within))>summary>:is(.plaza-card-surface-light,.plaza-card-border-light){opacity:0}
+
+/* Thin navigation adapter: same engine, coordinate roles and site palette as accordions. */
+body.plaza-shell [data-plaza-navigation-row]{position:relative;isolation:isolate}
+@media (any-pointer: fine), (any-pointer: coarse){
+ body.plaza-shell [data-plaza-navigation-row]>.plaza-card-surface-light{display:block;position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background:radial-gradient(circle var(--plaza-card-light-radius,480px) at var(--plaza-card-light-x,50%) var(--plaza-card-light-y,50%),var(--plaza-accordion-light-stops));transition:opacity var(--plaza-card-light-out) ease-out}
+ body.plaza-shell [data-plaza-navigation-row]:is(:hover,:focus-visible)>.plaza-card-surface-light{opacity:1;transition-duration:var(--plaza-card-light-in)}
+ html:not([data-theme=dark]) body.plaza-shell [data-plaza-navigation-row]>.plaza-card-border-light{display:none}
+}
+@media(prefers-reduced-motion:reduce){body.plaza-shell [data-plaza-navigation-row]>.plaza-card-surface-light{transition:none;--plaza-card-light-x:50%;--plaza-card-light-y:50%}}
+
+/* Zheleznovodsk compact menu: clip both lights to each row and paint content above them.
+   Keep this in the shared navigation adapter; other profiles retain their current contract. */
+body.plaza-shell.plaza-object-zheleznovodsk .pn-menu-compact>[data-plaza-navigation-row]{overflow:hidden;box-sizing:border-box}
+body.plaza-shell.plaza-object-zheleznovodsk .pn-menu-compact>[data-plaza-navigation-row]>:is(svg,span:not(:where(.plaza-card-border-light,.plaza-card-surface-light))){position:relative;z-index:1}
+body.plaza-shell.plaza-object-zheleznovodsk .pn-menu-compact>[data-plaza-navigation-row]>:is(.plaza-card-border-light,.plaza-card-surface-light){inset:0;width:auto;height:auto;min-height:0;margin:0;box-sizing:border-box;z-index:0}
+
+/* Property card material: persistent colour below, one moving flashlight above it. */
+:where(body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk)) :is(.facts>div,.carousel .card,.visit-grid>article){--plaza-card-base-tint-opacity:1}
+html[data-theme=dark] :where(body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk)) :is(.facts>div,.carousel .card,.visit-grid>article){--plaza-card-base-tint-opacity:0}
+body [data-plaza-card-material]{position:relative;isolation:isolate;--plaza-card-material-radius:480px}
+html[data-theme=dark] [data-plaza-card-material]{--plaza-card-material-radius:var(--plaza-card-light-radius)}
+@media (any-pointer: fine), (any-pointer: coarse){
+ body [data-plaza-card-material]>.plaza-card-surface-light{
+  position:absolute;inset:0;display:block;border-radius:inherit;z-index:-1;pointer-events:none;opacity:0;
+  background:radial-gradient(circle var(--plaza-card-material-radius) at var(--plaza-card-light-origin-x,var(--plaza-card-light-x,50%)) var(--plaza-card-light-origin-y,var(--plaza-card-light-y,50%)),var(--plaza-card-material-stops));
+  transition:opacity var(--plaza-card-light-out) ease-out;
+ }
+ body [data-plaza-card-material]:is(:hover,:has(:focus-visible),[data-spotlight-frame-focus])>.plaza-card-surface-light{opacity:1;transition-duration:var(--plaza-card-light-in)}
+ body [data-plaza-card-material]:is(:has(:focus-visible),[data-spotlight-frame-focus]){--plaza-card-light-origin-x:50%;--plaza-card-light-origin-y:0%}
+ html:not([data-theme=dark]) [data-plaza-card-material]>.plaza-card-border-light{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ body [data-plaza-card-material]{--plaza-card-light-origin-x:50%;--plaza-card-light-origin-y:50%}
+ body [data-plaza-card-material]>.plaza-card-surface-light{transition:none}
+}
+/* TravelLine keeps a transparent base in both themes; its moving light is independent. */
+/* The opening copy stays a lighter, plain surface above the coloured facts. */
+html:not([data-theme=dark]) body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main#main .hero-copy{background:var(--surface);background-image:none}
+
+/* Semantic benefit/directory groups: one light, independent of theme and page. */
+body.plaza-shell [data-plaza-shared-surface]:not([data-plaza-card-material]){position:relative;isolation:isolate}
+@media (any-pointer: fine), (any-pointer: coarse){
+ body.plaza-shell [data-plaza-shared-surface]:not([data-plaza-card-material])>.plaza-card-surface-light{display:block;position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;opacity:0;background:radial-gradient(circle var(--plaza-card-light-radius,480px) at var(--plaza-card-light-x,50%) var(--plaza-card-light-y,50%),var(--plaza-accordion-light-stops));transition:opacity var(--plaza-card-light-out) ease-out}
+ body.plaza-shell [data-plaza-shared-surface]:not([data-plaza-card-material]):is(:hover,:focus-within)>.plaza-card-surface-light{opacity:1;transition-duration:var(--plaza-card-light-in)}
+ html:not([data-theme=dark]) body.plaza-shell [data-plaza-shared-surface]>.plaza-card-border-light{display:none}
+ /* Paint in cells, below their content, preserving sticky positioning and native borders. */
+ body.plaza-shell table[data-plaza-table]:not([data-plaza-table-rows]):is(:hover,:focus-within) [data-plaza-table-cell]{background-image:radial-gradient(circle var(--plaza-card-light-radius,480px) at var(--plaza-card-light-x,50%) var(--plaza-card-light-y,50%),var(--plaza-accordion-light-stops))}
+ body.plaza-shell table[data-plaza-table]:not([data-plaza-table-rows]):focus-within [data-plaza-table-cell]{--plaza-card-light-x:50%;--plaza-card-light-y:0%}
+}
+/* Nested tables/groups own the light instead of their containing accordion. */
+body.plaza-shell [data-plaza-accordion-item]:has(:is([data-plaza-shared-group],[data-plaza-table]):is(:hover,:focus-within))>summary>:is(.plaza-card-surface-light,.plaza-card-border-light){opacity:0}
+@media(prefers-reduced-motion:reduce){body.plaza-shell [data-plaza-shared-surface]>.plaza-card-surface-light{transition:none}}
+
+/* The visible public footer is a surface too; the map retains its own nested lights. */
+html body.plaza-shell footer[data-plaza-footer=edges][data-plaza-shared-surface]>.plaza-card-surface-light{border-radius:0}
+html body.plaza-shell footer[data-plaza-footer=edges]:has(dialog[open])>:is(.plaza-card-surface-light,.plaza-card-border-light){opacity:0}
+html body.plaza-shell footer[data-plaza-footer=edges]>.plaza-card-border-light{display:none}
+/* Any nested component owns the pointer instead of a containing surface. */
+body.plaza-shell [data-plaza-shared-surface]:has([data-plaza-spotlight-owner]:is(:hover,:focus-within))>.plaza-card-surface-light{opacity:0}
+/* Touch/pen illuminate on contact without intercepting native page or rail gestures. */
+body.plaza-shell [data-spotlight-active]>.plaza-card-surface-light,
+body.plaza-shell [data-spotlight-active]>[data-plaza-spotlight]:not(.card)>.plaza-card-surface-light{opacity:1;transition-duration:var(--plaza-card-light-in)}
+@media(any-pointer:coarse){
+ body.plaza-shell [data-plaza-spotlight-group]:not([data-spotlight-active]):not(:focus-within)>.plaza-card-surface-light,
+ body.plaza-shell [data-plaza-spotlight-group]:not([data-spotlight-active]):not(:focus-within)>[data-plaza-spotlight]>.plaza-card-surface-light{opacity:0}
+ body.plaza-shell table[data-plaza-table]:not([data-plaza-table-rows])[data-spotlight-active] [data-plaza-table-cell]{background-image:radial-gradient(circle var(--plaza-card-light-radius,480px) at var(--plaza-card-light-x,50%) var(--plaza-card-light-y,50%),var(--plaza-accordion-light-stops))}
+ body.plaza-shell table[data-plaza-table]:not([data-plaza-table-rows]):not([data-spotlight-active]):not(:focus-within) [data-plaza-table-cell]{background-image:none}
+}
+/* Network benefit cards: the row supplies coordinates, only the current card lights up. */
+html body.plaza-shell.plaza-network main :is(.pb-principles,.pb-trust)>[data-plaza-spotlight]:not(:hover):not(:has(:focus-visible))>:is(.plaza-card-surface-light,.plaza-card-border-light){opacity:0;transition-duration:var(--plaza-card-light-out)}
+/* Home booking: plain daytime base; moving white Stripe remains a separate layer. */
+html:not([data-theme=dark]) body.plaza-mobile-home:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-booking-panel{background:transparent;background-image:none}
+html:not([data-theme=dark]) body.plaza-mobile-home:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-booking-panel::before{background:none}
+/* Row adapter for Kislovodsk comparisons: one active row, same cell light and palette. */
+@media(any-pointer:fine),(any-pointer:coarse){
+ body.plaza-shell table[data-plaza-table-rows] tr[data-spotlight-active]>[data-plaza-table-cell],
+ body.plaza-shell table[data-plaza-table-rows]:not(:has(tr[data-spotlight-active])) tr:focus-within>[data-plaza-table-cell]{background-image:radial-gradient(circle var(--plaza-card-light-radius,480px) at var(--plaza-card-light-x,50%) var(--plaza-card-light-y,50%),var(--plaza-accordion-light-stops))}
+ body.plaza-shell table[data-plaza-table-rows] tr:focus-within:not([data-spotlight-active])>[data-plaza-table-cell]{--plaza-card-light-x:50%;--plaza-card-light-y:0%}
+}
+
+/* Accordion light spans the open answer; isolate the whole item, not just its title.
+   Keep its negative surface below both title text and answer content in every shell. */
+body.plaza-shell details[data-plaza-accordion-item]{isolation:isolate}
+body.plaza-shell details[data-plaza-accordion-item]>summary[data-plaza-accordion-trigger]{isolation:auto}
+
+/* Home inclusions and FAQ: shared geometry; each property owns its material. */
+body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main .inclusions>div[data-plaza-shared-surface]{padding-inline:var(--plaza-card-padding-inline,16px);border-radius:var(--plaza-radius-ui,4px)}
+/* The existing FAQ material also identifies FAQ actions across Kislovodsk pages. */
+body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #faq .faq-list>details[data-plaza-accordion-item],
+body.plaza-shell.plaza-object-kislovodsk :is(.faq-group,.faq-list)>details[data-plaza-accordion-item]{background:var(--plaza-home-faq-surface);border-radius:var(--plaza-radius-ui,4px)}
+@media screen and (prefers-reduced-motion:no-preference){
+ body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .inclusions .check[data-plaza-home-check-motion]{opacity:var(--plaza-check-opacity,1);scale:var(--plaza-check-scale,1);translate:0 var(--plaza-check-offset,0px);filter:blur(var(--plaza-check-blur,0px));transform-origin:center;pointer-events:none}
+}

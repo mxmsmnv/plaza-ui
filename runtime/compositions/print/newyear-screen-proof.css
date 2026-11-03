@@ -1,0 +1,13 @@
+/* Exact original print media rules activated for isolated screen preview only. */
+@media screen{
+
+  html,body.page-id-2582 { margin:0!important; padding:0!important; width:auto!important; min-width:0!important; min-height:0!important; background:#fff!important; background-image:none!important; color:#302d28!important; color-scheme:light!important; }
+  body.page-id-2582 :is(.site-header,.site-footer,#contacts,.breadcrumbs,.resort-breadcrumbs,.skip-link,.screen-reader-text,.psk-ny,.plaza-tooltip,.plaza-page-transition,.plaza-transition-overlay,dialog) { display:none!important; }
+  body.page-id-2582 :is(main.resort-page,article.resort-special) { display:block!important; width:100%!important; max-width:none!important; min-height:0!important; margin:0!important; padding:0!important; background:#fff!important; border:0!important; }
+  body.page-id-2582 .np-book { display:block!important; position:static!important; width:210mm!important; height:auto!important; margin:0!important; padding:0!important; background:#fff!important; }
+  body.page-id-2582 .np-book .np-page { margin:0!important; box-shadow:none!important; }
+  body.page-id-2582 .np-book,body.page-id-2582 .np-book * { visibility:visible!important; }
+  body.page-id-2582 .np-book a[href]::after { content:none!important; }
+
+body.page-id-2582>:not(.np-book){display:none!important;}body.page-id-2582>.np-book{display:block!important;}
+}

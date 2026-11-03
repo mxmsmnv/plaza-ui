@@ -1,0 +1,4 @@
+main .plaza-section-divider{grid-column:1/-1;display:flex!important;align-items:center;justify-content:center;gap:28px;max-width:100%;margin:0 0 36px!important;text-align:center;font:400 18px/1.5 Lora,Georgia,serif!important;letter-spacing:5px!important;text-transform:uppercase;color:var(--gold,#917747);white-space:normal}
+main .plaza-section-divider::before,main .plaza-section-divider::after{content:'';height:1px;flex:1 1 0;min-width:20px;background:var(--line,rgba(147,119,71,.22))}
+main .plaza-section-divider span{flex:0 1 auto;min-width:0}
+@media(max-width:700px){main .plaza-section-divider{font-size:13px!important;line-height:1.5!important;letter-spacing:3px!important;gap:14px;margin-bottom:24px!important}main .plaza-section-divider::before,main .plaza-section-divider::after{min-width:12px}}

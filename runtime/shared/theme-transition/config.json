@@ -1,0 +1,15 @@
+{
+  "effect": "circle",
+  "durationMs": 2000,
+  "easing": "cubic-bezier(.2,.55,.35,1)",
+  "featherPx": 90,
+  "overscanPx": 100,
+  "stars": {
+    "staggerMs": 180,
+    "easing": "cubic-bezier(.45,0,.3,1)",
+    "innerRatio": 0.44,
+    "blurSvgUnits": 1.2,
+    "coverageOverscan": 1.08
+  },
+  "storageKey": "plaza-color-mode"
+}

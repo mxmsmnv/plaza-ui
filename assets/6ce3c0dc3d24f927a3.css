@@ -1,0 +1,7 @@
+/* Shared component geometry, no content or colour variants. */
+html body.plaza-shell :is(.button,.wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link){min-height:var(--plaza-button-min-height);border-radius:var(--plaza-radius-ui)}
+html body.plaza-shell .comparison-scroll .comparison-table tr>:is(th,td){padding-inline:var(--plaza-table-inset) var(--plaza-table-cell-end,var(--plaza-table-inset))!important}
+html body.plaza-shell .comparison-scroll .comparison-table tbody tr:last-child>:is(th,td){padding-bottom:var(--plaza-comparison-cell-padding-block,var(--plaza-table-inset))!important}
+html body.plaza-shell .comparison-scroll{max-width:100%;min-width:0;overscroll-behavior-x:contain}
+html body.plaza-shell .comparison-table{font-variant-numeric:tabular-nums}
+html body.plaza-shell .comparison-table caption{overflow-wrap:break-word}

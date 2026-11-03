@@ -1,0 +1,127 @@
+/* Approved points 1–13. Kislovodsk only; production component owners remain intact. */
+
+/* A single first-screen contract for medicine, services, dining and contacts. */
+body.plaza-psk-section-standard #main :is(.pg-hero,.svc-hero,.pd3-opening){display:grid!important;grid-template-columns:var(--plaza-hero-columns,repeat(2,minmax(0,1fr)))!important;gap:var(--plaza-hero-gap,3rem)!important;align-items:center!important;margin-block:0 4rem!important;padding-block:0!important}
+body.plaza-psk-section-standard #main :is(.pg-hero-copy,.svc-hero-copy,.pd3-opening-copy){padding:var(--plaza-hero-copy-padding,0)!important;min-width:0!important}
+body.plaza-psk-section-standard #main :is(.pg-hero,.svc-hero,.pd3-opening) h1{font:500 var(--plaza-hero-title-size,clamp(2.1875rem,4.6vw,3.875rem))/1.18 Lora,Georgia,serif!important;letter-spacing:-.025em!important;margin:0 0 1.5rem!important}
+body.plaza-psk-section-standard #main :is(.pg-hero,.svc-hero,.pd3-opening) p{font:400 var(--plaza-hero-lead-size,1rem)/var(--plaza-hero-lead-leading,1.75) Montserrat,Arial,sans-serif!important;color:var(--muted)!important;margin:0!important;max-width:65ch!important}
+body.plaza-psk-section-standard #main :is(.pg-hero,.svc-hero,.pd3-opening) p+p{margin-top:1.25rem!important}
+body.plaza-psk-section-standard #main :is(.pg-hero-photo,.svc-hero-photo){margin:0!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important}
+body.plaza-psk-section-standard #main .pg-actions{margin-top:1.5rem!important}
+body.plaza-psk-section-standard #main .pd3{padding-inline:0!important;max-width:none!important}
+body.plaza-psk-section-standard #main .pg-breadcrumb{display:flex!important;flex-wrap:wrap!important;gap:.625rem!important;font-size:.75rem!important;line-height:1.7!important;margin-block:1.75rem 2rem!important}
+@media(max-width:1050px){body.plaza-psk-section-standard #main :is(.pg-hero,.svc-hero,.pd3-opening){grid-template-columns:1fr!important;gap:2rem!important}}
+@media(max-width:700px){body.plaza-psk-section-standard #main :is(.pg-hero,.svc-hero,.pd3-opening){margin-bottom:2.25rem!important}}
+/* Mobile section heroes: heading, photograph, then introductory copy. */
+@media(max-width:700px){
+ body.plaza-object-kislovodsk #main :is(.pg-hero,.svc-hero,.pd3-opening):has(> :is(.pg-hero-copy,.svc-hero-copy,.pd3-opening-copy)>h1):has(> :is(.pg-hero-photo,.svc-hero-photo,figure.pg-photo)){display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+ body.plaza-object-kislovodsk #main :is(.pg-hero,.svc-hero,.pd3-opening):has(> :is(.pg-hero-photo,.svc-hero-photo,figure.pg-photo)) > :is(.pg-hero-copy,.svc-hero-copy,.pd3-opening-copy){display:contents!important}
+ body.plaza-object-kislovodsk #main :is(.pg-hero,.svc-hero,.pd3-opening) > :is(.pg-hero-copy,.svc-hero-copy,.pd3-opening-copy)>h1{order:0;margin-bottom:1.25rem!important}
+ body.plaza-object-kislovodsk #main :is(.pg-hero,.svc-hero,.pd3-opening) > :is(.pg-hero-photo,.svc-hero-photo,figure.pg-photo){order:1;margin:0 0 1.25rem!important}
+ body.plaza-object-kislovodsk #main :is(.pg-hero,.svc-hero,.pd3-opening) > :is(.pg-hero-copy,.svc-hero-copy,.pd3-opening-copy)>:not(h1){order:2}
+ body.plaza-design-system .ds-template-hero{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+ body.plaza-design-system .ds-template-copy{display:contents}
+ body.plaza-design-system .ds-template-copy>.ds-spec-label{order:0}
+ body.plaza-design-system .ds-template-copy>.ds-template-h1{order:1;margin-bottom:1.25rem}
+ body.plaza-design-system .ds-template-photo{order:2;margin:0 0 1.25rem}
+ body.plaza-design-system .ds-template-copy>:not(.ds-spec-label):not(.ds-template-h1){order:3}
+
+}
+
+
+body.plaza-psk-section-standard #main{box-sizing:border-box;width:calc(100% - 4rem)!important;max-width:80rem!important;margin-inline:auto!important;padding-inline:0!important}
+@media(max-width:700px){body.plaza-psk-section-standard #main{width:calc(100% - 2.5rem)!important}}
+body.plaza-psk-section-standard #main :is(.pg-hero,.svc-hero,.pd3-opening){width:100%!important;max-width:none!important;margin-inline:0!important}
+
+/* Approved inner pages: existing roles, without new visual effects. */
+body.plaza-psk-inner-type #main .pg-hero h1{font:500 var(--plaza-hero-title-size,clamp(2.1875rem,4.6vw,3.875rem))/1.18 Lora,Georgia,serif!important;letter-spacing:-.025em!important;margin:0 0 1.5rem!important}
+body.plaza-object-kislovodsk main a.psk-approved-phone{display:inline-flex!important;align-items:center;justify-content:flex-start;gap:.5rem;min-height:2.75rem;min-width:0;width:auto;padding:0!important;background:none!important;background-image:none!important;border:0!important;text-decoration:none!important;white-space:normal}
+body.plaza-object-kislovodsk main a.psk-approved-phone>span{display:inline!important;font-size:inherit!important;white-space:normal;background:none!important;text-decoration:none!important}
+body.plaza-object-kislovodsk main a.psk-approved-phone::after,body.plaza-object-kislovodsk main a.psk-approved-phone>span::after{content:none!important}
+body.plaza-object-kislovodsk .psk-frozen-column{isolation:isolate}
+body.plaza-object-kislovodsk .psk-frozen-column table{border-collapse:separate;border-spacing:0}
+body.plaza-object-kislovodsk .psk-frozen-column tr>:first-child{position:sticky!important;left:0!important;z-index:2;background:rgb(from var(--glass) r g b / var(--glass-opacity));backdrop-filter:blur(var(--glass-blur));-webkit-backdrop-filter:blur(var(--glass-blur))}
+body.plaza-object-kislovodsk .psk-frozen-column thead tr>:first-child{z-index:3}
+body.plaza-object-kislovodsk .pg-sticky-head[data-first-column-sticky] tr>:first-child{left:0!important;z-index:3;background:rgb(from var(--glass) r g b / var(--glass-opacity))!important;backdrop-filter:blur(var(--glass-blur))}
+@media print{body.plaza-object-kislovodsk .psk-frozen-column tr>:first-child{position:static!important;backdrop-filter:none}}
+
+body.plaza-psk-inner-tables .pg-sticky-head {
+  position: fixed;
+  z-index: var(--pg-sticky-head-z, 30);
+  overflow: hidden;
+  pointer-events: none;
+  background: rgb(from var(--glass) r g b / var(--glass-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  color: var(--ink, #45413b);
+  box-shadow: 0 4px 8px rgba(69, 65, 59, .09);
+  font: 400 .8125rem/1.4 Montserrat, Arial, sans-serif;
+}
+body.plaza-psk-inner-tables .pg-sticky-head[hidden] { display: none; }
+body.plaza-psk-inner-tables .pg-sticky-head table { border-collapse: separate; }
+body.plaza-psk-inner-tables .pg-sticky-head :is(a, button, input, select, textarea) { pointer-events: none; }
+
+@media print{body.plaza-psk-inner-tables .pg-sticky-head{display:none}}
+body.plaza-object-kislovodsk.page-id-2591 #rooms>.swipe-rail{display:flex!important;gap:1.5rem!important;align-items:stretch;grid-template-columns:none!important}
+
+/* Kislovodsk photographic cards: one geometry, copy rhythm and action axis.
+   Renderers keep real content; room, program, medical and service roles inherit here. */
+body.plaza-object-kislovodsk main#main .hero>.plaza-section-divider .stars{display:inline-block;margin:0;font-size:22px;vertical-align:middle;line-height:1;position:relative;top:-3px}
+@media(max-width:599px){body.plaza-object-kislovodsk main#main .hero>.plaza-section-divider .stars{display:block;margin-top:16px;font-size:1.7em;top:0}}
+@media(max-width:360px){body.plaza-object-kislovodsk main#main .hero-actions a[href^="tel:"]::after{display:none!important;content:none!important}}
+@media(max-width:700px){
+ body.plaza-object-kislovodsk #pn-full-menu{border-bottom:0;box-shadow:0 16px 32px rgba(145,119,71,.35)}
+ body.plaza-object-kislovodsk #pn-full-menu .pn-menu-compact a{transition:color .3s ease,background-color .3s ease}
+ body.plaza-object-kislovodsk #pn-full-menu .pn-menu-compact a:not([href$="/booking/"]):is(:hover,:focus-visible,:active){color:var(--pn-gold,#917747)!important}
+ body.plaza-object-kislovodsk #pn-full-menu .pn-menu-compact a[href$="/booking/"]{background:var(--pn-gold,#b2945f)!important;color:#fff!important}
+ body.plaza-object-kislovodsk #pn-full-menu .pn-menu-compact a[href$="/booking/"] .pn-menu-icon{color:inherit!important}
+ body.plaza-object-kislovodsk #pn-full-menu .pn-menu-compact a[href$="/booking/"]:is(:hover,:focus-visible,:active){background:#f8f6f1!important;color:#806438!important}
+ html[data-theme="dark"] body.plaza-object-kislovodsk #pn-full-menu .pn-menu-compact a[href$="/booking/"]:is(:hover,:focus-visible,:active){background:#292820!important;color:#e3c78e!important}
+}
+@media(min-width:701px){body.plaza-object-kislovodsk #pn-full-menu .pn-menu-compact a[href$="/booking/"]{display:none!important}}
+/* Medical landing cards and their design-system specimen share one geometry. */
+
+body.plaza-object-kislovodsk main#main .card>.pg-tech-link{display:grid;grid-template-rows:repeat(2,minmax(0,1fr));height:100%;min-height:0}
+
+/* The divider and 48px action row are shared, including the native room footer. */
+
+/* Medical labels share the action row; their baseline sits above price/details. */
+
+/* Preserve full long equipment copy above the enlarged footer. */
+
+/* Homepage first-screen profile; opted into by the About landing only. */
+body.plaza-psk-home-hero{--plaza-hero-columns:.9fr 1.1fr;--plaza-hero-gap:4rem;--plaza-hero-copy-padding:2rem;--plaza-hero-copy-bg:var(--surface);--plaza-hero-title-size:clamp(35px,4.1vw,58px);--plaza-hero-lead-size:15px;--plaza-hero-lead-leading:1.85}
+body.plaza-psk-home-hero #main .pg-hero-copy{background:var(--plaza-hero-copy-bg)}
+@media(max-width:700px){body.plaza-psk-home-hero{--plaza-hero-copy-padding:24px 20px}}
+
+/* The homepage profile keeps the shared heading weight. */
+body.plaza-psk-home-hero #main :is(h2,h3,h4){font-weight:500}
+body.plaza-psk-home-hero #main .pg-hero h1{letter-spacing:-.035em!important}
+
+/* Desktop: three cards fit the available carousel and are centred as a group. */
+@media(min-width:1200px){
+}
+
+
+
+/* Compact typography preserves the approved 16px bottom padding at narrower desktop card widths. */
+@media(min-width:1200px){
+ body.plaza-object-kislovodsk main#main .carousel .plaza-program-card .card-body{gap:6px!important}
+ body.plaza-object-kislovodsk main#main .carousel .plaza-program-card .card-body>h3{font-size:23px!important}
+ body.plaza-object-kislovodsk main#main .carousel .plaza-program-card .card-body>p:not(.eyebrow):not(.text-link){font-size:12px!important;line-height:18px!important}
+}
+@media(min-width:1200px) and (max-width:1279px){
+ body.plaza-object-kislovodsk:not(.plaza-design-system) main#main .carousel .plaza-program-card .card-body{gap:3px!important}
+ body.plaza-object-kislovodsk:not(.plaza-design-system) main#main .carousel .plaza-program-card .card-body>h3{font-size:22px!important}
+ body.plaza-object-kislovodsk:not(.plaza-design-system) main#main .carousel .plaza-program-card .card-body>p:not(.eyebrow):not(.text-link){font-size:11px!important;line-height:16px!important}
+}
+
+
+/* Card geometry, copy, surfaces and actions: shared/psk-cards.css. */
+
+/* Homepage inclusions follow body and subsection typography, not legacy microcopy. */
+body.plaza-object-kislovodsk #main .included-band .inclusions p:not(.check){font-size:15px;line-height:1.8}
+body.plaza-object-kislovodsk #main .included-band .inclusions p>strong{display:block;font:400 22px/1.35 Lora,Georgia,serif}
+body.plaza-object-kislovodsk #main .included-band .inclusions p>span{font-size:inherit;line-height:inherit}
+body.plaza-object-kislovodsk #main .call-trip-button .wp-block-button__link{color:var(--accent)}
+body.plaza-object-kislovodsk #main .call-trip-button .wp-block-button__link:is(:hover,:focus-visible){color:var(--accent-deep,var(--accent))}

@@ -1,0 +1,583 @@
+
+
+
+
+
+
+
+
+/* PLAZA — ОБЩИЕ ЭФФЕКТЫ: менять значения только здесь.
+   Стеклянный контейнер: класс glass-panel на блоке «Группа».
+   Иконка внутри него: класс glass-icon.
+   Фотографии Gutenberg подключаются автоматически.
+   Для другой обёртки фотографии: класс photo-frame.
+   Для исключения фотографии: класс no-photo-effect на блоке. */
+:root {
+  /* Glass material tokens live in shared/tokens.css. */
+
+
+
+
+
+  --photo-hover-scale: 1.035;
+  --photo-hover-brightness: 1.1;
+  --photo-hover-saturation: 1;
+  --photo-effect-duration: 1s;
+  --photo-rest-saturation: 1;
+}
+
+/* Стекло — существующий контейнер и все будущие glass-panel */
+body :is(.hero-glass, .glass-panel) {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+body :is(.plaza-icon-motion, .hero-glass, .glass-panel, .facts > div, .visit-grid > article) :is(.glass-icon, .plaza-icon, .wp-block-image.icon) {
+  display: inline-block;
+  transform-origin: center;
+  transition: transform .35s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  body :is(.plaza-icon-motion, .hero-glass, .glass-panel, .facts > div, .visit-grid > article):is(:hover,:focus-within) :is(.glass-icon, .plaza-icon, .wp-block-image.icon) {
+    transform: var(--plaza-icon-transform);
+  }
+}
+
+/* Все фотографии контента; логотипы и иконки не затрагиваются */
+body main :is(.photo-frame, .wp-block-image):where(:not(.no-photo-effect):not(.icon):not(.glass-icon)) {
+  overflow: hidden;
+}
+body main :is(.photo-frame, .wp-block-image):where(:not(.no-photo-effect):not(.icon):not(.glass-icon)) img {
+  transform: scale(1);
+  filter: none;
+  transition: transform var(--photo-effect-duration) ease, filter var(--photo-effect-duration) ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  body main :is(.photo-frame, .wp-block-image):where(:not(.no-photo-effect):not(.icon):not(.glass-icon)):hover img,
+  body main .card:is(:hover,:focus-within) .photo-frame img {
+    transform: scale(var(--photo-hover-scale));
+    filter: brightness(var(--photo-hover-brightness));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body :is(.plaza-icon-motion, .hero-glass, .glass-panel, .facts > div, .visit-grid > article) :is(.glass-icon, .plaza-icon, .wp-block-image.icon),
+  body main :is(.photo-frame, .wp-block-image):where(:not(.no-photo-effect):not(.icon):not(.glass-icon)):hover img {
+    transform: none;
+  }
+}
+
+/* PLAZA — общие стили кнопок. Тип 1: подсветка снизу и живые искры.
+   Тип 2: стекло, однократный перелив и живые частицы (вариант 15).
+   Gutenberg: button-type-1 / button-type-2. */
+:root { --button-radius:4px; --button-metal:#b2945f; }
+body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link) {
+  position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--button-metal);border-radius:var(--button-radius);text-decoration:none;
+  font-family:Montserrat,Arial,sans-serif;
+  transition:background-color .35s ease,color .3s ease,box-shadow .35s ease,transform .3s ease;
+}
+body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link)::before {content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s ease;}
+body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link)::after {content:none;}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link) {
+  --button-metal:var(--plaza-primary-button-bg);background:var(--plaza-primary-button-bg);color:var(--plaza-primary-button-ink);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),0 2px 6px rgba(69,65,59,.1),0 6px 16px rgba(178,148,95,.12);
+}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link)::before {
+  background:radial-gradient(ellipse at 50% 130%,rgba(255,235,172,.36) 0%,rgba(244,199,104,.18) 44%,transparent 78%),linear-gradient(0deg,rgba(255,225,156,.12),transparent 65%);
+}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link):is(:hover,:focus-visible) {
+  color:var(--plaza-primary-button-ink);background-color:var(--plaza-primary-button-bg);
+  box-shadow:inset 0 -7px 13px rgba(255,220,135,.16),inset 0 0 0 1px rgba(255,238,192,.32),0 5px 15px rgba(225,177,75,.18),0 8px 24px rgba(222,173,73,.08);
+}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link):is(:hover,:focus-visible)::before {opacity:1;}
+body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link){backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);background:transparent;color:var(--ink);box-shadow:none;--plaza-gradient-slide:0px;transition:transform .4s ease,box-shadow .35s ease,background .35s ease,--plaza-gradient-slide .18s ease-out;}
+body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link)::before{opacity:0;clip-path:none;background:var(--plaza-button2-gradient);background-size:280% 100%;background-repeat:repeat;background-position:calc(100% + var(--plaza-gradient-slide)) 50%;}
+body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link):is(:hover,:focus-visible){color:var(--ink);background:var(--plaza-button2-hover-bg);border-color:var(--button-metal);transform:translateY(-2px);box-shadow:inset 0 1px 0 var(--plaza-button2-edge),0 4px 12px rgba(106,86,43,.1),0 0 15px rgba(206,166,76,.09);}
+body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link):is(:hover,:focus-visible)::before{opacity:1;clip-path:none;animation:plaza-gradient-pass 1.9s cubic-bezier(.22,.65,.3,1) 1 forwards;}
+body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link):focus-visible {outline:2px solid var(--accent);outline-offset:3px;}
+body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link):active {transform:scale(.98);}
+.plaza-button-sparks {
+  position:absolute;inset:0;border-radius:inherit;z-index:1;pointer-events:none;visibility:hidden;opacity:0;
+  transform:translate(var(--spark-dx,0px),var(--spark-dy,0px));transition:transform .10s ease-out;
+}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link):hover .plaza-button-sparks {visibility:visible;opacity:1;}
+.plaza-button-spark {
+  position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;background:#fff0bf;
+  box-shadow:0 0 2px rgba(255,236,172,.6);opacity:0;
+  animation:plaza-spark-flight var(--duration) linear infinite;animation-delay:var(--delay);animation-play-state:paused;
+}
+.plaza-button-spark.star4 {border-radius:0;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);}
+.plaza-button-spark.star5 {border-radius:0;clip-path:polygon(50% 0,64% 35%,100% 38%,73% 62%,82% 100%,50% 80%,18% 100%,27% 62%,0 38%,36% 35%);}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link):hover .plaza-button-spark {animation-play-state:running;}
+@keyframes plaza-spark-flight {
+  0% {opacity:0;transform:translate(0,6px) scale(.55) rotate(0deg);}
+  15% {opacity:.85;}
+  48% {opacity:.35;transform:translate(calc(var(--drift)*.3),calc(var(--rise)*-.45)) scale(1) rotate(20deg);}
+  67% {opacity:.9;}
+  100% {opacity:0;transform:translate(var(--drift),calc(var(--rise)*-1)) scale(.3) rotate(55deg);}
+}
+@media(prefers-reduced-motion:reduce) {
+  body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link),body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link)::before,.plaza-button-sparks {transition:none;}
+  body :is(.button, .wp-block-button:is(.plaza-button,.button-type-1,.button-type-2) .wp-block-button__link):is(:hover,:active) {transform:none;}
+  .plaza-button-spark {animation:none;opacity:.6;}
+}
+@supports not ((backdrop-filter:blur(4px)) or (-webkit-backdrop-filter:blur(4px))) {body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link) {background-color:var(--plaza-primary-button-bg);}}
+
+/* Общая пара №15: подъём и движения за курсором. */
+@property --plaza-glow-x{syntax:'<percentage>';inherits:true;initial-value:50%;}
+@property --plaza-gradient-slide{syntax:'<length>';inherits:true;initial-value:0px;}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link){--plaza-glow-x:50%;transition:background-color .35s ease,color .3s ease,box-shadow .35s ease,transform .4s ease,--plaza-glow-x .18s ease-out;}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link)::before{background:radial-gradient(ellipse at var(--plaza-glow-x,50%) 130%,rgba(255,235,172,.36) 0%,rgba(244,199,104,.18) 44%,transparent 78%),linear-gradient(0deg,rgba(255,225,156,.12),transparent 65%);}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link):is(:hover,:focus-visible){transform:translateY(-2px);}
+@keyframes plaza-gradient-pass{from{background-position:calc(100% + var(--plaza-gradient-slide)) 50%}to{background-position:calc(0% + var(--plaza-gradient-slide)) 50%}}
+.plaza-secondary-sparks{position:absolute;inset:0;border-radius:inherit;pointer-events:none;visibility:hidden;opacity:0;transform:translate(var(--secondary-dx,0px),var(--secondary-dy,0px));transition:opacity .2s ease,transform .12s ease-out;}
+body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link):is(:hover,:focus-visible) .plaza-secondary-sparks{visibility:visible;opacity:1;}
+.plaza-secondary-spark{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;background:#c7a251;box-shadow:0 0 2px rgba(214,175,88,.2);opacity:0;animation:plaza-secondary-flight var(--dur) ease-in-out infinite;animation-delay:var(--delay);animation-play-state:paused;}
+.plaza-secondary-spark.star{background:#c09b47;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);border-radius:0;animation-name:plaza-secondary-stars;}
+body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link):is(:hover,:focus-visible) .plaza-secondary-spark{animation-play-state:running;}
+@keyframes plaza-secondary-flight{0%{opacity:0;transform:translate(0,4px) scale(.5)}20%{opacity:.75}70%{opacity:.38}100%{opacity:0;transform:translate(var(--travel),var(--escape)) scale(.25)}}
+@keyframes plaza-secondary-stars{0%,100%{opacity:.1;transform:translate(0,3px) rotate(-10deg) scale(.45)}45%{opacity:.86;transform:translate(var(--travel),-5px) rotate(25deg) scale(1)}70%{opacity:.3;transform:translate(1px,-2px) rotate(40deg) scale(.6)}}
+body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link):active,body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link):active{transform:scale(.98);}
+@media(prefers-reduced-motion:reduce){body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link),body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link),.plaza-secondary-sparks{transition:none!important;}body :is(.button:not(.button-outline), .wp-block-button.plaza-button:not(.plaza-outline) .wp-block-button__link, .wp-block-button.button-type-1 .wp-block-button__link):is(:hover,:focus-visible,:active),body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link):is(:hover,:focus-visible,:active){transform:none;}body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link)::before,.plaza-secondary-spark{animation:none!important;}body :is(.button.button-outline, .wp-block-button.plaza-outline .wp-block-button__link, .wp-block-button.button-type-2 .wp-block-button__link):is(:hover,:focus-visible)::before{background-position:0% 50%;}.plaza-secondary-spark{opacity:.5;}}
+
+/* ШАПКА: по умолчанию то же стекло, что у карточки.
+   Можно задать свои значения вместо var(...): например 4px и 0.9. */
+/* Header and default panel material: shared/assets/surfaces/glass.css. */
+/* Телефон — иконка перед надписью, текст остаётся редактируемым в Gutenberg. */
+body .wp-block-button.plaza-phone .wp-block-button__link::after{content:'';display:inline-block;flex:none;width:16px;height:16px;order:-1;margin-right:8px;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z'/%3E%3C/svg%3E") center/contain no-repeat}
+/* PLAZA — баланс первого экрана, 06.10.2026 */@media (min-width: 1024px) {  body.page-id-9 .hero-visual:has(.plaza-hero-video) { padding-bottom:54px; }  body.page-id-9 .hero-visual:has(.plaza-hero-video) > .hero-glass {    bottom:calc(54px - var(--video-caption-height,110px) + 74px);  }}
+
+/* PLAZA — общая реакция карточек и иконок, 06.10.2026.
+   Для новой группы иконок: plaza-icon-motion на контейнере. */
+body .plaza-hero-video{--plaza-poster-saturation:.75;box-shadow:0 3px 8px rgba(55,75,65,.08),0 20px 42px rgba(55,75,65,.16);transition:box-shadow .4s ease;}
+@media(hover:hover) and (pointer:fine){body .plaza-hero-video:is(:hover,:focus-within){--plaza-poster-saturation:1;box-shadow:0 5px 12px rgba(55,75,65,.1),0 24px 48px rgba(55,75,65,.2);}}
+body main .card{background:var(--surface);border-color:var(--line);box-shadow:0 2px 4px rgba(92,72,37,.035),0 12px 28px rgba(92,72,37,.065);transition:transform .35s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease;}
+body main .card:is(:hover,:focus-within){transform:translateY(-4px);background:color-mix(in srgb,var(--surface) 97%,var(--accent) 3%);border-color:rgba(178,148,95,.3);box-shadow:0 4px 8px rgba(92,72,37,.04),0 16px 32px rgba(92,72,37,.1);}
+body main .swipe-rail{padding-top:8px;padding-bottom:32px;}
+body .swipe-hint,body .theme-auto{display:none!important;}
+body .room-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start;}
+body .room-group-card .card-body{padding:26px var(--plaza-card-padding-inline);display:flex;flex-direction:column;gap:14px;}
+body .room-group-card .card-body>p,body .room-group-card h3{margin:0;}
+body .room-details{margin-top:8px;border:0;}
+body .room-details summary{display:flex;justify-content:space-between;gap:12px;color:var(--accent);cursor:pointer;font-size:14px;list-style:none;padding:12px 0;border-top:1px solid var(--line);}
+body .room-details summary::-webkit-details-marker{display:none;}
+body .room-details summary::after{content:'+';font-size:20px;line-height:1;}
+body .room-details[open] summary::after{content:'−';}
+body .room-preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px;padding-top:12px;}
+body .room-preview-grid .room-preview{display:block;min-width:0;}
+body .room-preview .photo-frame{margin:0 0 10px;border-radius:var(--plaza-radius-ui,4px);}
+body .room-preview img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;}
+body .room-preview p{margin:0 0 5px;font-size:12px;line-height:1.5;}
+body .room-preview-name a{color:var(--ink);text-decoration:none;}
+body .room-preview-name a:is(:hover,:focus-visible){color:var(--accent);}
+body .room-details summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
+body .social-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+body .social-links a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;padding:7px;border:0;border-radius:0;background:transparent;color:#a78a55;transition:transform .3s ease,color .3s ease,background-color .3s ease,border-color .3s ease;}
+body .social-links svg{width:22px;height:22px;display:block;fill:currentColor;}
+body .social-links a:is(:hover,:focus-visible){color:#cfab61;background:transparent;border-color:transparent;}
+@media(max-width:900px){body .room-groups{grid-template-columns:1fr;}body .room-group-card{display:grid;grid-template-columns:38% minmax(0,1fr);}body .room-group-card>.photo-frame{height:100%;}body .room-group-card>.photo-frame img{height:100%;object-fit:cover;}}
+@media(max-width:600px){body .room-group-card{display:flex;}body .room-group-card>.photo-frame{height:auto;}body .room-group-card>.photo-frame img{height:auto;aspect-ratio:3/2;}body .room-group-card .card-body{padding:22px var(--plaza-card-padding-inline);}}
+@media(prefers-reduced-motion:reduce){body .card,body .social-links a,body .plaza-hero-video,body main .photo-frame img,body main .wp-block-image img{transition:none!important;}body main .card:is(:hover,:focus-within),body .social-links a:is(:hover,:focus-visible),body :is(.plaza-icon-motion,.hero-glass,.glass-panel,.facts>div,.visit-grid>article):is(:hover,:focus-within) :is(.glass-icon,.plaza-icon,.wp-block-image.icon){transform:none!important;}}
+
+/* Совместимость с серверной обёрткой блоков WordPress. */
+body .room-groups>.wp-block-group__inner-container,body .room-preview-grid>.wp-block-group__inner-container,body .room-group-card>.wp-block-group__inner-container,body .room-group-card .card-body>.wp-block-group__inner-container{display:contents;}
+
+body .room-group-card .card-body>.wp-block-group__inner-container>*{margin-block-start:0;margin-block-end:0;}
+body .room-preview>.wp-block-group__inner-container>p{margin-block-start:0;margin-block-end:5px;}
+@media(prefers-reduced-motion:reduce){body main .card:is(:hover,:focus-within) img{transform:none!important;}}
+
+
+/* PLAZA — уточнения общего дизайна, 06.10.2026. */
+:root{--icon-gold:#a78a55;--icon-gold-hover:#cfab61;}
+body .nav-links a{position:relative;text-decoration:none;padding-block:8px;}
+@media(min-width:1024px){body .nav-links a,body .header-call{font-size:15px;}body.page-id-9 .hero-visual.video-active:has(.plaza-hero-video)>.hero-glass{transform:translateY(86px);}}
+body .header-call svg{transition:transform .35s ease,color .35s ease;}
+body .header-call:is(:hover,:focus-visible) svg{transform:var(--plaza-icon-transform);color:var(--icon-gold-hover);}
+body.page-id-9 .plaza-hero-video .plaza-video-poster{filter:brightness(var(--plaza-poster-brightness,1)) !important;transition:filter .33s ease,opacity 1s ease;}
+@media(hover:hover) and (pointer:fine){body.page-id-9 .plaza-hero-video:is(:hover,:focus-within) .plaza-video-poster{filter:brightness(var(--plaza-poster-brightness,1)) !important;}}
+body .room-card-intro{display:flex;flex-direction:column;gap:14px;}
+body .room-card-intro>.wp-block-group__inner-container{display:contents;}
+body .room-card-intro :is(p,h3){margin:0;}
+body .room-group-card .card-body{gap:0;}
+body .room-group-card .room-card-action{margin-top:8px;border-top:1px solid var(--line);padding:12px 0;font-size:14px;}
+body .room-details{margin-top:8px;}
+body .room-preview-grid{gap:14px 12px;}
+body .room-preview .room-preview-name{min-height:3em;margin:0;font-size:12px;line-height:1.5;}
+@media(min-width:901px){body .room-card-intro{min-height:220px;}body .room-card-intro .eyebrow{min-height:36px;}body .room-card-intro h3{min-height:64px;}}
+body main .warm-photo{--photo-warmth:.12;}
+
+body :is(.map-link,.directions-link,.faq-phone-link),body .yandex-map-link a{display:inline-flex;align-items:center;gap:9px;color:var(--icon-gold);}
+body .yandex-map-link a::before,body .google-map-link::before,body .directions-link::before,body .faq-phone-link::before{content:''!important;position:static;inset:auto;display:block;flex:none;width:21px;height:25px;border:0;border-radius:0;margin:0;opacity:1!important;z-index:auto;background:currentColor!important;transition:transform var(--plaza-icon-duration) var(--plaza-icon-easing),color var(--plaza-icon-duration) var(--plaza-icon-easing);animation:none!important;}
+body .yandex-map-link a::before,body .directions-link::before{mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20799.9943848%201000%22%3E%3Cpath%20fill%3D%22black%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0.0003631%2C399.9822083C0.0003631%2C179.087204%2C179.0875397%2C0%2C400.0122375%2C0%0D%0A%09c220.894989%2C0%2C399.9821472%2C179.087204%2C399.9821472%2C399.9822083c0%2C110.4474792-44.7495117%2C210.4059143-117.0736694%2C282.7895813%0D%0A%09c-18.8982544%2C18.8981934-44.4821777%2C39.9952393-72.1460571%2C62.845459%0D%0A%09c-78.3264771%2C64.6282349-173.382019%2C143.0736084-180.7808533%2C224.371521C428.5081177%2C986.4801025%2C416.5630188%2C1000%2C399.9824829%2C1000%0D%0A%09c-16.5507507%2C0-28.4958496-13.5200195-29.9815979-30.0112305c-7.3988342-81.2979126-102.4543762-159.7432861-180.7808838-224.371521%0D%0A%09c-27.6341705-22.8502197-53.2180634-43.9472656-72.1162491-62.845459%0D%0A%09C42.0009155%2C607.8423462-0.1427135%2C506.0710144%2C0.0003631%2C399.9822083z%20M540.0253906%2C400.0119019%0D%0A%09c1.1262207%2C77.3188782-60.6400757%2C140.9112549-137.9590149%2C142.0374756%0D%0A%09c-77.3188477%2C1.1262207-140.9111938-60.6400757-142.0374451-137.9589539c-0.0197754-1.3594055-0.0197754-2.7190857%2C0-4.0785217%0D%0A%09c1.1262512-77.3188477%2C64.7185974-139.0851746%2C142.0374451-137.9589233%0D%0A%09C477.7974243%2C263.1560364%2C538.9222412%2C324.2809143%2C540.0253906%2C400.0119019z%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;}
+body .google-map-link::before{mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2092.3%20132.3%22%3E%3Cpath%20fill%3D%22black%22%20d%3D%22M60.2%202.2C55.8.8%2051%200%2046.1%200%2032%200%2019.3%206.4%2010.8%2016.5l21.8%2018.3L60.2%202.2z%22%2F%3E%3Cpath%20fill%3D%22black%22%20d%3D%22M10.8%2016.5C4.1%2024.5%200%2034.9%200%2046.1c0%208.7%201.7%2015.7%204.6%2022l28-33.3-21.8-18.3z%22%2F%3E%3Cpath%20fill%3D%22black%22%20d%3D%22M46.2%2028.5c9.8%200%2017.7%207.9%2017.7%2017.7%200%204.3-1.6%208.3-4.2%2011.4%200%200%2013.9-16.6%2027.5-32.7-5.6-10.8-15.3-19-27-22.7L32.6%2034.8c3.3-3.8%208.1-6.3%2013.6-6.3%22%2F%3E%3Cpath%20fill%3D%22black%22%20d%3D%22M46.2%2063.8c-9.8%200-17.7-7.9-17.7-17.7%200-4.3%201.5-8.3%204.1-11.3l-28%2033.3c4.8%2010.6%2012.8%2019.2%2021%2029.9l34.1-40.5c-3.3%203.9-8.1%206.3-13.5%206.3%22%2F%3E%3Cpath%20fill%3D%22black%22%20d%3D%22M59.1%20109.2c15.4-24.1%2033.3-35%2033.3-63%200-7.7-1.9-14.9-5.2-21.3L25.6%2098c2.6%203.4%205.3%207.3%207.9%2011.3%209.4%2014.5%206.8%2023.1%2012.8%2023.1s3.4-8.7%2012.8-23.2%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;}
+body .faq-phone-link::before{width:18px;height:18px;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z'/%3E%3C/svg%3E") center/contain no-repeat;}
+body :is(.map-link,.directions-link,.faq-phone-link):is(:hover,:focus-visible),body .yandex-map-link a:is(:hover,:focus-visible){color:var(--icon-gold-hover);}
+body :is(.map-link,.directions-link,.faq-phone-link):is(:hover,:focus-visible)::before,body .yandex-map-link a:is(:hover,:focus-visible)::before{transform:var(--plaza-icon-transform);}
+body .medical-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;}
+body .medical-choice-grid>.wp-block-group__inner-container{display:contents;}
+body .medical-choice-grid .photo-frame{aspect-ratio:5/4;margin:0;}
+body .medical-choice-grid img{width:100%;height:100%;object-fit:cover;}
+body .medical-choice-grid .card-body{padding:24px var(--plaza-card-padding-inline);}
+@media(max-width:700px){body .medical-choice-grid{grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce){body .nav-links a::after,body .header-call svg,body .plaza-video-poster,body :is(.map-link,.directions-link,.faq-phone-link)::before,body .yandex-map-link a::before{transition:none!important;}body .header-call:is(:hover,:focus-visible) svg,body :is(.map-link,.directions-link,.faq-phone-link):is(:hover,:focus-visible)::before,body .yandex-map-link a:is(:hover,:focus-visible)::before{transform:none!important;}}
+
+body .room-group-card .room-card-action{height:50px;display:flex;align-items:center;box-sizing:border-box;margin-top:8px!important;}
+body .room-group-card .room-card-action a{font-size:14px;line-height:25px;}
+
+body .room-group-card .room-details{margin-top:8px!important;}
+body .medical-choice>.wp-block-group__inner-container{display:contents;}
+
+@media(min-width:1024px){body .header-call span{font-size:15px;}}
+
+body .medical-photo-selection{width:100%;padding:24px 0 0;}
+body .medical-photo-selection>.wp-block-group__inner-container{display:contents;}
+body .medical-photo-selection .medical-choice-grid{margin-top:36px;}
+body .medical-choice .card-body>.wp-block-group__inner-container{display:flex;flex-direction:column;gap:12px;}
+body .medical-choice .card-body :is(h3,p){margin:0;}
+
+body .yandex-map-link a::before,body .google-map-link::before,body .directions-link::before{color:var(--icon-gold);}
+body .yandex-map-link a:is(:hover,:focus-visible)::before,body .google-map-link:is(:hover,:focus-visible)::before,body .directions-link:is(:hover,:focus-visible)::before{color:var(--icon-gold-hover);}
+
+
+body .medical-photo-selection{margin-top:28px!important;padding-top:0;}
+
+
+/* PLAZA — уточнения по комментариям, вариант 3, 06.10.2026. */
+body.page-id-9 .hero{padding-bottom:0;transition:none;}
+/* Карточка поверх нижнего ряда; сам ряд остаётся неподвижным. */
+body.page-id-9 .hero-glass{z-index:3;}
+body .review-links .yandex-map-link a::before{content:none!important;display:none!important;mask:none;}
+body .review-links .google-map-link::before{content:none!important;display:none!important;mask:none;}
+
+/* Превью отдыха: единый тёплый оттенок, исходные цвета при наведении. */
+body main #experience .card .photo-frame img{filter:none;transition:transform .33s ease,filter .33s ease;}
+@media(hover:hover) and (pointer:fine){body main #experience .card:is(:hover,:focus-within) .photo-frame img,body main #experience .photo-frame:hover img{filter:brightness(var(--photo-hover-brightness));}}
+/* Точный цвет и тень карточек удобств Deluxe, официальный старый сайт. */
+body main #programs .card{background:radial-gradient(ellipse at 0 0,rgba(212,171,104,.09),transparent 78%),var(--surface);border-color:rgba(178,148,95,.16);box-shadow:0 2px 4px rgba(92,72,37,.025),0 12px 24px rgba(92,72,37,.035);transition:box-shadow .35s ease,border-color .35s ease;}
+body main #programs .card:is(:hover,:focus-within){transform:none;background:radial-gradient(ellipse at 0 0,rgba(212,171,104,.09),transparent 78%),var(--surface);border-color:rgba(178,148,95,.32);box-shadow:0 3px 8px rgba(92,72,37,.04),0 16px 32px rgba(92,72,37,.08);}
+@media(prefers-reduced-motion:reduce){body main #experience .card .photo-frame img,body main #programs .card{transition:none!important;}}
+
+
+/* Programs: the light Deluxe palette with a visible, gentle lift. */
+body main #programs .card{transition:transform .33s ease,box-shadow .33s ease,border-color .33s ease;}
+body main #programs .card:is(:hover,:focus-within){transform:translateY(-4px);box-shadow:0 3px 8px rgba(92,72,37,.04),0 16px 32px rgba(92,72,37,.08);}
+/* Original photographic colours, without sepia. */
+body main #experience .card .photo-frame img{filter:none;}
+/* Same left-to-right underline as the navigation. */
+body .review-links .google-map-link{position:relative;padding-block:8px;text-decoration:none;}
+/* The photography itself supplies the common warmth of the room covers. */
+body main #rooms .room-group-card>.wp-block-group__inner-container>.photo-frame img{filter:none;}
+@media(hover:hover) and (pointer:fine){body main #rooms .room-group-card:is(:hover,:focus-within)>.wp-block-group__inner-container>.photo-frame img{filter:brightness(var(--photo-hover-brightness));}}
+/* Medical slideshow: a quiet dissolve, a very small camera movement. */
+body #medicine .feature-photo.medical-slideshow{position:relative;aspect-ratio:5/4;height:auto;margin:0;overflow:hidden;align-self:start;isolation:isolate;background:var(--surface);touch-action:pan-y;}
+body .medical-slideshow>.wp-block-group__inner-container{display:contents;}
+body .medical-slideshow .medical-slide{position:absolute;inset:0;margin:0!important;opacity:0;z-index:0;transition:opacity .9s ease;pointer-events:none;}
+body .medical-slideshow:not(.is-ready) .medical-slide:first-of-type,body .medical-slideshow .medical-slide.is-active{opacity:1;z-index:1;}
+body #medicine .medical-slideshow .medical-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1);filter:none;transition:transform 7.4s linear,filter .33s ease;}
+body #medicine .medical-slideshow .medical-slide.is-active img{transform:scale(1.035);}
+body #medicine .medical-slideshow:is(:hover,:focus-within) .medical-slide img{filter:brightness(var(--photo-hover-brightness));}
+body .medical-slide-controls{position:absolute;z-index:3;left:16px;right:16px;bottom:16px;display:flex;align-items:center;gap:16px;padding:4px 10px;background:rgba(252,251,248,.92);backdrop-filter:blur(12px);border:1px solid rgba(178,148,95,.18);border-radius:3px;}
+body .medical-slide-dots,body .medical-slide-actions{display:flex;align-items:center;gap:3px;}
+body .medical-slide-actions{margin-left:auto;}
+body .medical-slide-count{font-size:11px;letter-spacing:.1em;color:#766749;white-space:nowrap;}
+body .medical-slide-button,body .medical-slide-dot{display:grid;place-items:center;min-width:36px;height:36px;padding:0;border:0;background:transparent;box-shadow:none;color:#917747;cursor:pointer;}
+body .medical-slide-button svg{width:19px;height:19px;transition:transform .33s ease,color .33s ease;}
+body .medical-slide-button:is(:hover,:focus-visible) svg{transform:scale(1.08);color:#bfa273;}
+body .medical-slide-dot{min-width:28px;position:relative;}
+body .medical-slide-dot::after{content:'';width:21px;height:2px;background:#917747;opacity:.3;transition:opacity .33s ease,transform .33s ease;}
+body .medical-slide-dot[aria-pressed=true]::after{opacity:1;transform:scaleY(1.5);}
+body .medical-slide-dot:is(:hover,:focus-visible)::after{opacity:.8;}
+body .medical-slide-controls button:focus-visible{outline:2px solid #917747;outline-offset:1px;border-radius:2px;}
+@media(max-width:480px){body .medical-slide-controls{left:10px;right:10px;bottom:10px;gap:8px;padding-inline:6px;}body .medical-slide-dot{min-width:23px;}body .medical-slide-dot::after{width:17px;}body .medical-slide-button{min-width:32px;height:36px;}body .medical-slide-count{font-size:10px;}}
+@media(prefers-reduced-motion:reduce){body main #programs .card,body .review-links .google-map-link::after,body .medical-slideshow .medical-slide,body #medicine .medical-slideshow .medical-slide img,body .medical-slide-button svg,body .medical-slide-dot::after{transition:none!important;}body main #programs .card:is(:hover,:focus-within),body #medicine .medical-slideshow .medical-slide.is-active img{transform:none;}}
+
+
+/* ЕДИНЫЕ ПОДЧЁРКИВАНИЯ. Скорость, толщина и отступ меняются только здесь.
+   Для новой ссылки: plaza-underline на ссылке или на её блоке. */
+:root{--link-underline-duration:.35s;--link-underline-thickness:1px;--link-underline-offset:3px;}
+body :is(.text-link,.text-link:hover,.text-link:focus-within){text-decoration:none!important;}
+body :is(a.plaza-underline,.plaza-underline a,.nav-links a,a.text-link,.text-link a,.room-preview-name a,.prose a:not(.wp-block-button__link):not(:has(img))){text-decoration:none!important;border-bottom:0;background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-position:left calc(100% - var(--link-underline-offset));background-size:0 var(--link-underline-thickness);transition:background-size var(--link-underline-duration) ease,color .3s ease;}
+body :is(a.plaza-underline,.plaza-underline a,.nav-links a,a.text-link,.text-link a,.room-preview-name a,.prose a:not(.wp-block-button__link):not(:has(img))):is(:hover,:focus-visible){text-decoration:none!important;background-size:100% var(--link-underline-thickness);}
+/* The old pseudo-elements cannot add a second line. */
+body .nav-links a::after,body .review-links .google-map-link::after{content:none!important;}
+@media(prefers-reduced-motion:reduce){body :is(a.plaza-underline,.plaza-underline a,.nav-links a,a.text-link,.text-link a,.room-preview-name a,.prose a:not(.wp-block-button__link):not(:has(img))){transition:none!important;}}
+
+/* Single, mirrored medical photograph. Preserve the mirror during zoom. */
+body main #medicine .mirror-photo img{transform:scaleX(-1);transition:transform .33s ease,filter .33s ease;}
+body main #medicine .mirror-photo:is(:hover,:focus-within) img{transform:scale(-1.035,1.035);}
+/* The photo is a native image link, with a clear keyboard focus. */
+body .room-preview .photo-frame a{display:block;width:100%;height:100%;}
+body .room-preview .photo-frame a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;position:relative;z-index:1;}
+body .room-preview .photo-frame a img{width:100%;height:100%;object-fit:cover;}
+@media(max-width:700px){body .room-preview .room-preview-name,body .room-preview-name a{font-size:14px;line-height:1.5;}}
+/* Explicit call action, styled like the other secondary buttons. */
+body .wp-block-button.call-trip-button .wp-block-button__link{display:inline-flex;align-items:center;gap:10px;}
+body .wp-block-button.plaza-phone.call-trip-button a::after{width:18px;height:18px;margin:0;background:var(--icon-gold,var(--accent));transition:transform var(--plaza-icon-duration) var(--plaza-icon-easing),background-color var(--plaza-icon-duration) var(--plaza-icon-easing);}
+body .wp-block-button.plaza-phone.call-trip-button a:is(:hover,:focus-visible)::after{transform:var(--plaza-icon-transform);background:var(--icon-gold-hover,#bfa273);}
+@media(prefers-reduced-motion:reduce){body main #medicine .mirror-photo img,body .wp-block-button.plaza-phone.call-trip-button a::after{transition:none!important;}body main #medicine .mirror-photo:is(:hover,:focus-within) img{transform:scaleX(-1);}body .wp-block-button.plaza-phone.call-trip-button a:is(:hover,:focus-visible)::after{transform:none;}}
+
+/* PLAZA — мобильная компоновка и FAQ, раунд 8 */
+.mobile-label{display:none}
+body .faq-list{counter-reset:plaza-faq}
+body .faq-list details{counter-increment:plaza-faq;scroll-margin-top:100px}
+body .faq-list summary{display:grid;grid-template-columns:28px minmax(0,1fr) 16px;gap:16px}
+body .faq-list summary::before{content:counter(plaza-faq,decimal-leading-zero);color:var(--accent);font-size:12px;font-weight:500;align-self:start;padding-top:3px}
+body .faq-list summary::after{justify-self:end}
+body .faq-list details>p{padding-left:44px}
+body .faq-list details>p a{color:var(--accent);text-decoration:none;background:linear-gradient(currentColor,currentColor) left calc(100% - var(--link-underline-offset,3px))/0 var(--link-underline-thickness,1px) no-repeat;transition:background-size var(--link-underline-duration,.35s)}
+body .faq-list details>p a:is(:hover,:focus-visible){background-size:100% var(--link-underline-thickness,1px)}
+.visit-toggle{font:inherit;color:inherit;text-align:left;background:none;border:0;padding:0;display:block;width:100%}
+.room-mobile-controls{display:none}
+@media(max-width:700px){
+ body .hero-actions .wp-block-buttons{display:flex;flex-wrap:nowrap;gap:8px;width:100%}
+ body .hero-actions .wp-block-button{flex:1 1 0;min-width:0}
+ body .hero-actions .wp-block-button a{width:100%;min-width:0;padding:12px 9px;font-size:12px;white-space:nowrap;gap:7px}
+ body .hero-actions .desktop-label{display:none}body .hero-actions .mobile-label{display:inline}
+ body .site-header .brand img{width:145px;max-width:none}body .header-inner{gap:8px}body .header-actions{gap:5px}
+ body.page-id-9 .hero-visual:has(.plaza-hero-video){padding-bottom:0;overflow:hidden}
+ body.page-id-9 .hero-visual:has(.plaza-hero-video)>.hero-glass{top:50%;bottom:auto;left:16px;right:16px;min-width:0;transform:translateY(-50%);transition:transform .4s ease,opacity .4s ease;pointer-events:none}
+ body.page-id-9 .hero-visual.video-active:has(.plaza-hero-video)>.hero-glass{transform:translate(-125%,-50%);opacity:0}
+ body.page-id-9 .facts{margin-top:20px}
+ body #rooms .room-groups{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 16px;overscroll-behavior-x:contain;align-items:stretch}
+ body #rooms .room-groups::-webkit-scrollbar{display:none}
+ body #rooms .room-group-card{position:relative;display:flex;flex:0 0 92%;scroll-snap-align:start;scroll-margin-top:90px;min-height:580px}
+ body #rooms .room-group-card>.wp-block-group__inner-container{display:contents}
+ body #rooms .room-group-card .card-body{display:flex;flex:1;padding:22px var(--plaza-card-padding-inline)}
+ body #rooms .room-group-card .room-card-intro{flex:1}
+ body #rooms .room-details[open]{position:absolute;inset:0;z-index:5;background:var(--surface);padding:20px;display:flex;flex-direction:column;height:auto!important;overflow:hidden!important;border:0}
+ body #rooms .room-details[open]>summary{flex:none;margin:0 0 16px;padding:0 0 14px;border-bottom:1px solid var(--line)}
+ body #rooms .room-details[open] .room-preview-grid{overflow-y:auto;min-height:0;flex:1;align-content:start;gap:16px 12px;padding-bottom:4px;overscroll-behavior-y:contain}
+ body #rooms .room-preview-name,body #rooms .room-preview-name a{line-height:1.5;font-size:13px}
+ 
+ body #rooms .room-preview-grid img{aspect-ratio:3/2}
+ .room-mobile-controls{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px}
+ .room-mobile-controls button{border:1px solid var(--line);background:transparent;color:var(--accent);width:44px;height:44px;border-radius:var(--plaza-radius-ui,4px)}
+ .room-mobile-controls .room-position{font-variant-numeric:tabular-nums}
+ body .visit-grid{gap:0}body .visit-grid article{padding:18px var(--plaza-card-padding-inline);display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px 16px}
+ body .visit-grid .visit-icon{margin:0;align-self:start;padding-top:4px}
+ body .visit-grid h3{font-size:21px;margin:0}body .visit-grid p{grid-column:2;margin:0;font-size:14px}
+ body .visit-toggle{display:flex;gap:12px;align-items:center;justify-content:space-between;cursor:pointer;min-height:44px}
+ body .visit-toggle::after{content:'+';font:400 22px Montserrat,sans-serif;color:var(--accent)}body .visit-toggle[aria-expanded=true]::after{content:'−'}
+ body .visit-grid article:not(.visit-open) p{display:none}
+ body .faq-list summary{gap:12px;grid-template-columns:24px minmax(0,1fr) 14px;font-size:14px;padding:16px 0;line-height:1.6}
+ body .faq-list details>p{padding-left:36px}
+ body .booking-intro{gap:12px}body .booking-actions>p:first-child{margin-top:0}
+}
+@media(max-width:360px){body .site-header .brand img{width:125px}body .hero-actions .wp-block-button a{font-size:11px;padding-inline:7px}}
+@media(prefers-reduced-motion:reduce){body.page-id-9 .hero-visual>.hero-glass{transition:none!important}}
+
+body .footer-bottom p{display:flex;align-items:center;flex-wrap:wrap;gap:.35em}body .footer-bottom p a{display:inline;min-height:0}
+@media(max-width:700px){body #rooms .room-details[open]{margin:0!important}}
+
+body .visit-toggle:disabled{opacity:1;color:var(--ink);cursor:default;-webkit-text-fill-color:var(--ink)}
+
+/* Shared PLAZA components — single settings, not per-section variants. */
+:root{--plaza-accordion-duration:1s;--plaza-glass-duration:2s;--plaza-motion-easing:cubic-bezier(.22,.61,.36,1);--plaza-faq-number-size:36px;--plaza-faq-number-opacity:.3;--plaza-slider-dot-size:6px;--link-underline-offset:4px}
+body.page-id-9 .hero-visual:has(.plaza-hero-video)>.hero-glass{transition:transform var(--plaza-glass-duration) var(--plaza-motion-easing),opacity var(--plaza-glass-duration) var(--plaza-motion-easing)}
+body .faq-list summary{grid-template-columns:44px minmax(0,1fr) 24px;align-items:center;gap:16px;padding:20px 0;font-size:15px;line-height:1.6}
+body .faq-list summary::before{font-family:Lora,Georgia,serif;font-size:var(--plaza-faq-number-size);font-weight:400;line-height:1;color:var(--accent);opacity:var(--plaza-faq-number-opacity);align-self:center;padding:0}
+body .faq-list summary::after{font-size:24px;line-height:1;justify-self:center}
+body :is(.faq-list,.footer-nav,.room-details) summary[aria-expanded=false]::after{content:'+'}
+body :is(.faq-list,.footer-nav,.room-details) summary[aria-expanded=true]::after{content:'−'}
+body .faq-list details>p{padding-left:60px}
+body :is(a.plaza-underline,.plaza-underline a,.nav-links a,a.text-link,.text-link a,.room-preview-name a,.prose a:not(.wp-block-button__link):not(:has(img)),.faq-list details>p a){background-position:left bottom}
+body .faq-list details>p a{padding-bottom:var(--link-underline-offset);box-decoration-break:clone;-webkit-box-decoration-break:clone;text-decoration:none!important}
+body .plaza-slider-controls{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;min-height:44px}
+body .plaza-slider-controls[hidden]{display:none!important}
+body .plaza-slider-controls .rail-dots{display:flex;align-items:center;gap:0;flex-wrap:nowrap;min-width:0;max-width:100%;overflow:hidden}
+body .plaza-slider-controls .rail-dots button{display:grid;place-items:center;width:44px;height:44px;min-width:44px;padding:0;border:0;background:none;box-shadow:none;position:relative;opacity:1}
+body .plaza-slider-controls .rail-dots button::before{content:none}
+body .plaza-slider-controls .rail-dots button::after{content:'';display:block;position:static;width:var(--plaza-slider-dot-size);height:var(--plaza-slider-dot-size);border-radius:50%;background:var(--accent);opacity:.3;transform:none;transition:opacity .35s ease}
+body .plaza-slider-controls .rail-dots button[aria-pressed=true]::after{width:var(--plaza-slider-dot-size);height:var(--plaza-slider-dot-size);opacity:1;transform:none}
+body .plaza-slider-controls .rail-arrows{display:flex;gap:8px;flex:none}
+body .plaza-slider-controls .icon-button{width:44px;height:44px;padding:0;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);background:transparent;box-shadow:none;color:var(--accent);font-size:18px}
+body .plaza-slider-controls button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+body .swipe-hint{display:none!important}
+body .medical-slide-dot::after{width:var(--plaza-slider-dot-size);height:var(--plaza-slider-dot-size);border-radius:50%;transform:none!important}
+body .visit-toggle{display:block}
+body .visit-toggle .visit-icon{display:block;margin-bottom:18px}
+body .visit-answer[hidden]{display:none!important}
+body .room-panel-content{display:contents}
+body .visit-answer p{margin:0}
+@media(max-width:700px){
+ :root{--plaza-faq-number-size:32px}
+ body .faq-list summary{grid-template-columns:36px minmax(0,1fr) 20px;gap:12px;font-size:14px;padding:20px 0;line-height:1.6}
+ body .faq-list details>p{padding-left:48px}
+ body #first-visit .visit-grid article{display:block;padding:0 var(--plaza-card-padding-inline);border-bottom:1px solid var(--line)}
+ body #first-visit .visit-grid h3{font:inherit;font-size:14px;line-height:1.6;margin:0}
+ body #first-visit .visit-toggle{display:grid;grid-template-columns:36px minmax(0,1fr) 20px;gap:12px;align-items:center;min-height:76px;padding:20px 0;font:inherit;color:var(--ink);text-align:left}
+ body #first-visit .visit-toggle .visit-icon{display:flex;margin:0;padding:0;align-items:center;justify-content:flex-start;width:32px;height:32px}
+ body #first-visit .visit-toggle .visit-icon svg{width:30px;height:30px}
+ body #first-visit .visit-toggle::after{justify-self:center;font-size:24px;line-height:1}
+ body #first-visit .visit-answer{margin:0;padding:0}
+ body #first-visit .visit-answer p{display:block!important;padding:0 0 20px 48px;margin:0;font-size:14px;line-height:1.8}
+ body #rooms .room-group-card{overflow:hidden}
+ body #rooms .room-details,body #rooms .room-details[open]{position:static;display:block;inset:auto;padding:0;border:0;background:none;}
+ body #rooms .room-details>summary,body #rooms .room-details[open]>summary{position:relative;z-index:7;margin:0;padding:14px 0;border-top:1px solid var(--line);border-bottom:0;background:var(--surface);min-height:48px}
+ body #rooms .room-panel-content{position:absolute;z-index:6;inset:0 0 var(--room-panel-bottom,80px);display:block;background:var(--surface);padding:20px 22px 0;clip-path:inset(100% 0 0)}
+ body #rooms .room-panel-open .room-panel-content{clip-path:inset(0% 0 0)}
+ body #rooms .room-details[open] .room-preview-grid{height:100%;overflow-y:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:20px 12px;padding-bottom:4px}
+ 
+ body #rooms .room-preview-name,body #rooms .room-preview-name a{font-size:12px;line-height:1.5;min-height:0!important}
+ body #rooms .room-preview .photo-frame{aspect-ratio:3/2;margin:0}
+ body #rooms .room-preview img{width:100%;height:100%;object-fit:cover}
+ body .footer-top{display:block;text-align:center;gap:0;padding-bottom:0}
+ body .footer-top>div:first-child{padding:0 8px 24px}
+ body .footer-top .brand{display:inline-flex;margin:0 auto}
+ body .footer-top .brand img{width:180px;height:auto}
+ body .footer-top>div:first-child p:first-of-type{font-size:12px;line-height:1.6;margin:12px 0 20px}
+ body .footer-top>div:first-child p:nth-of-type(2){font-size:13px;line-height:1.7;margin:0 0 6px}
+ body .footer-top .directions-link{font-size:12px;min-height:36px}
+ body .footer-top .directions-link::before{width:15px;height:19px}
+ body .footer-contact{padding:24px 0 0;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:12px}
+ body .footer-contact .eyebrow{font-size:10px;letter-spacing:.12em;margin:0}
+ body .footer-contact .footer-phone{font-size:23px;line-height:1.4;margin:0}
+ body .footer-contact>a:not(.footer-phone){font-size:12px;min-height:24px}
+ body .footer-contact .social-links{justify-content:center;margin:6px 0 0;gap:7px}
+ body .footer-contact .social-links a{width:36px;height:44px}
+ body .footer-nav{margin-top:28px}
+}
+@media(prefers-reduced-motion:reduce){body.page-id-9 .hero-visual:has(.plaza-hero-video)>.hero-glass{transition:none!important}}
+
+@media(max-width:700px){}
+
+/* Round 10: desktop icons and upward room panels on every viewport. */
+@media(min-width:701px){
+ body #first-visit .visit-toggle{display:flex;flex-direction:column;align-items:flex-start;gap:16px;}
+ body #first-visit .visit-toggle .visit-icon{margin:0;width:32px;height:32px;flex:none;}
+ body #first-visit .visit-toggle .visit-icon svg{width:30px;height:30px;}
+ body #first-visit .visit-question{display:block;}
+}
+body #rooms .room-group-card{position:relative;overflow:hidden;}
+body #rooms .room-group-card:is(:hover,:focus-within){transform:none!important;}
+body #rooms .room-details,body #rooms .room-details[open]{position:static;display:block;inset:auto;padding:0;border:0;background:none;height:auto!important;overflow:visible!important;margin:8px 0 0!important;}
+body #rooms .room-details summary{position:relative;z-index:7;margin:0;padding:14px 0;border-top:1px solid var(--line);border-bottom:0;background:var(--surface);min-height:48px;}
+body #rooms .room-panel-content{position:absolute;z-index:6;inset:0 0 var(--room-panel-bottom,80px);display:block;background:var(--surface);padding:24px 26px 0;clip-path:inset(100% 0px 0px);}
+body #rooms .room-panel-open .room-panel-content{clip-path:inset(0% 0px 0px);}
+body #rooms .room-details[open] .room-preview-grid{height:100%;overflow-y:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:20px 12px;padding-bottom:4px;}
+body #rooms .room-preview-grid figcaption{margin-top:8px;font-size:12px;line-height:1.5;min-height:0!important;}
+body #rooms .room-preview-grid .photo-frame{aspect-ratio:3/2;}
+body #rooms .room-preview-grid img{width:100%;height:100%;object-fit:cover;}
+@media(max-width:700px){body #rooms .room-panel-content{padding:20px 22px 0;}}
+
+body #rooms .room-details[open] .room-preview-grid{padding:0 0 4px;}
+body #rooms .room-preview-name{font-size:12px;line-height:1.5;}
+
+
+/* Room products: three fitted rows, no internal scrollbars. */
+body #rooms .room-panel-content{padding:16px 18px 0;}
+body #rooms .room-details[open] .room-preview-grid{height:100%;min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:10px;padding:0;overflow:visible;align-content:stretch;align-items:stretch;}
+body #rooms .room-preview-grid>.wp-block-group__inner-container{display:contents;}
+body #rooms .room-preview{display:flex!important;flex-direction:column;min-width:0;min-height:0;height:100%;margin:0!important;padding:0!important;border:1px solid var(--line);border-radius:6px;background:var(--surface);overflow:hidden;}
+body #rooms .room-preview>.wp-block-group__inner-container{display:contents;}
+body #rooms .room-preview .photo-frame{position:relative;flex:1 1 0;min-height:0;height:auto!important;aspect-ratio:auto!important;margin:0!important;border-radius:0;overflow:hidden;}
+body #rooms .room-preview .photo-frame>a{display:block;height:100%;padding:0;background:none;}
+body #rooms .room-preview .photo-frame img{display:block;width:100%;height:100%;max-height:none;object-fit:cover;}
+body #rooms .room-preview-name{flex:0 0 auto;margin:0!important;padding:7px 8px 8px;font-size:12px;line-height:1.4;min-height:0!important;}
+body #rooms .room-preview-name a{display:block;color:var(--ink);background:none;padding:0;text-decoration:none;border:0;}
+body #rooms .room-preview .photo-frame figcaption{position:absolute;inset:0;pointer-events:none;margin:0!important;padding:0!important;min-height:0!important;max-width:none;}
+body #rooms .room-area,body #rooms .room-price{position:absolute;display:block;white-space:nowrap;border-radius:var(--plaza-radius-ui,4px);padding:4px 6px;font-family:Montserrat,Arial,sans-serif;font-size:10px;line-height:1.25;letter-spacing:0;color:#40392e;background:rgba(255,253,247,.88);backdrop-filter:blur(8px);box-shadow:0 1px 5px #00000012;}
+body #rooms .room-area{top:6px;left:6px;}
+body #rooms .room-price{bottom:6px;right:6px;font-weight:600;}
+body #rooms .room-preview:focus-within{outline:2px solid var(--gold);outline-offset:-2px;}
+@media(max-width:700px){body #rooms .room-panel-content{padding:14px 16px 0;}body #rooms .room-details[open] .room-preview-grid{gap:8px;}body #rooms .room-preview-name{font-size:11px;padding:6px 7px 7px;}}
+
+/* Theme-consistent hero glass; light parameters remain unchanged. */
+
+
+body #rooms .room-details summary,body #rooms .room-details[open] summary{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;}
+body .external-link-icon{display:inline-block;width:12px;height:12px;vertical-align:-1px;color:var(--gold);flex:none;}
+body .medical-topic-icon{display:none;}
+body .medical-topic-arrow{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-left:5px;}
+body .footer-sitemap{border:0;margin:0;padding:0;}
+body .footer-sitemap>summary{list-style:none;cursor:pointer;}
+body .footer-sitemap>summary::-webkit-details-marker{display:none;}
+body .footer-nav-group h3{font-family:Montserrat,Arial,sans-serif;font-size:14px;font-weight:500;line-height:1.5;margin:0 0 18px;color:var(--ink);}
+body .footer-nav-group ul{list-style:none;padding:0;margin:0;display:grid;gap:14px;}
+@media(min-width:701px){body .footer-sitemap>summary{display:none;}}
+@media(max-width:700px){
+ body.page-id-9 #programs{margin-top:40px;}
+ body #medicine .topic-links{display:grid;gap:0;}
+ body #medicine .topic-links p{margin:0!important;}
+ body #medicine .medical-topic-link{display:grid;grid-template-columns:28px minmax(0,1fr) 20px;align-items:center;gap:14px;min-height:58px;padding:13px 0;border-bottom:1px solid var(--line);background:none;text-decoration:none;}
+ body #medicine .medical-topic-icon{display:block;width:26px;height:26px;}
+ body #medicine .medical-topic-arrow{display:block;width:19px;height:19px;margin:0;}
+ body #medicine .medical-topic-link:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+ body .footer-sitemap{margin-top:28px;}
+ body .footer-sitemap>summary{position:relative;display:flex;justify-content:space-between;align-items:center;min-height:60px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:Montserrat,Arial,sans-serif;font-size:14px;color:var(--ink);}
+ body .footer-sitemap>summary::after{content:'+';color:var(--gold);font-size:20px;font-weight:400;}
+ body .footer-sitemap>summary[aria-expanded=true]::after{content:'−';}
+ body .footer-sitemap .footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px;margin:0;padding:24px 0;}
+ body .footer-nav-group h3{font-size:13px;margin-bottom:14px;}
+ body .footer-nav-group a{font-size:12px;line-height:1.7;}
+}
+
+@media(max-width:700px){body #medicine .topic-links,body #medicine .topic-links p,body #medicine .medical-topic-link{width:100%;max-width:none;}}
+
+
+/* 07.10.2026: точки без подложки и компактный переход к номерам */
+@media(max-width:700px){
+ body #medicine .medical-mobile-gallery .plaza-slider-controls{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+ body #medicine .medical-mobile-gallery .rail-dots{background:transparent!important;border:0!important;box-shadow:none!important}
+ body #medicine + #rooms{margin-top:40px!important}
+}
+.trust-panel .tour-links{margin-top:16px;display:flex;flex-wrap:wrap;gap:16px 32px}
+.trust-panel .tour-links p{margin:0}
+.trust-panel .tour-link{display:inline-flex;align-items:center;gap:8px}
+.trust-panel .tour-link svg{width:22px;height:22px;flex:none;color:var(--accent)}
+
+
+/* 09.10.2026 — единые цвета отзывов и панорам. */
+body .trust-panel .tour-link{color:var(--icon-gold)}body .trust-panel .tour-link svg{color:currentColor}body .trust-panel .tour-link:is(:hover,:focus-visible){color:var(--icon-gold-hover)}
+body #first-visit .visit-call a{display:inline-flex;gap:14px;align-items:center;padding:8px 0;color:var(--icon-gold);font-size:14px;text-decoration:none;border:0;background:none}body #first-visit .visit-call a:is(:hover,:focus-visible){color:var(--icon-gold-hover)}body #first-visit .visit-call a::before,body #first-visit .visit-call a::after{content:none!important}body #first-visit .visit-call svg{width:30px;height:30px;flex:none;stroke:currentColor}body #first-visit .visit-call .visit-call-copy{display:flex;flex-direction:column;gap:4px;line-height:1.6}body #first-visit .visit-call .visit-call-number{font-size:14px;white-space:nowrap}
+
+
+/* Button 2: светлая тема — прежнее бело-золотое стекло; тёмная — золото с прозрачным центром. */
+:root{--plaza-button2-gradient:linear-gradient(100deg,rgba(178,148,95,.26) 0%,rgba(219,195,142,.18) 10%,rgba(255,248,227,.5) 22%,rgba(255,255,255,.72) 36%,rgba(255,249,229,.6) 45%,rgba(219,185,113,.16) 60%,rgba(255,255,255,.42) 78%,rgba(178,148,95,.26) 100%);--plaza-button2-hover-bg:rgba(255,255,255,.18);--plaza-button2-edge:rgba(255,255,255,.72);}
+:root[data-theme="dark"]{--plaza-button2-gradient:linear-gradient(100deg,rgba(178,148,95,.56) 0%,rgba(212,171,104,.55) 22%,rgba(212,171,104,.15) 38%,rgba(212,171,104,0) 50%,rgba(219,185,113,.15) 62%,rgba(219,185,113,.5) 78%,rgba(178,148,95,.56) 100%);--plaza-button2-hover-bg:transparent;--plaza-button2-edge:rgba(212,171,104,.5);}
+
+
+/* Единое движение смысловых иконок ссылок: телефоны подключаются автоматически, остальные — plaza-icon-motion. */
+body :is(a[href^="tel:"],.map-link,.tour-link,.plaza-icon-motion) > svg:not(.external-link-icon){transform-origin:center;transition:transform var(--plaza-icon-duration) ease,color var(--plaza-icon-duration) ease;}
+@media(hover:hover) and (pointer:fine){body :is(a[href^="tel:"],.map-link,.tour-link,.plaza-icon-motion):is(:hover,:focus-visible) > svg:not(.external-link-icon){transform:var(--plaza-icon-transform);}}
+@media(prefers-reduced-motion:reduce){body :is(a[href^="tel:"],.map-link,.tour-link,.plaza-icon-motion) > svg:not(.external-link-icon){transform:none!important;transition:none!important;}}
+
+
+
+/* PLAZA 10.10.2026 — кнопки первого экрана рядом на горизонтальном планшете */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  body .plaza-block-home .hero-actions .wp-block-buttons {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+/* Compact shared mobile indicators: nine dots fit even at 320px. */
+@media(max-width:767px){
+body .plaza-slider-controls{justify-content:center;gap:0;min-width:0;max-width:100%;min-height:44px;margin-top:4px;}
+body .plaza-slider-controls .rail-dots{min-width:0;max-width:100%;flex-wrap:nowrap;gap:0;justify-content:safe center;}
+body .plaza-slider-controls .rail-dots button{flex:0 0 24px;width:24px;min-width:24px;height:44px;min-height:44px;}
+body .plaza-slider-controls .rail-arrows{display:none;}
+}
+
+/* PSK: one hover/focus border for cards, including nested selections. */
+body.plaza-object-kislovodsk{--plaza-card-hover-border:var(--gold);--plaza-card-border-duration:0ms}
+body.plaza-object-kislovodsk main#main .card:is(:hover,:focus-within){border-color:var(--plaza-card-hover-border)}
+/* Slider cards: 1px gold at rest, growing inward to 2px over 650ms without reflow. */
+body.plaza-shell main#main .carousel .swipe-rail>.card{border-color:var(--plaza-card-hover-border,var(--gold));outline:0 solid transparent;outline-offset:-1px;transition:transform .35s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease,outline-width var(--plaza-card-border-duration,650ms) ease,outline-offset var(--plaza-card-border-duration,650ms) ease,outline-color var(--plaza-card-border-duration,650ms) ease}
+body.plaza-shell main#main .carousel .swipe-rail>.card:is(:hover,:focus-within){outline-width:1px;outline-offset:-2px;outline-color:var(--plaza-card-hover-border,var(--gold))}
+@media(prefers-reduced-motion:reduce){body.plaza-shell main#main .carousel .swipe-rail>.card{transition:none!important}}
+
+/* Shared carousel shadow gutter: keep cards on the content edge without clipping their shadows. */
+body main .carousel{--plaza-rail-shadow-space:min(32px,5vw)}
+body main#main .carousel .swipe-rail{margin-inline:calc(-1 * var(--plaza-rail-shadow-space));padding-inline:var(--plaza-rail-shadow-space);scroll-padding-inline:var(--plaza-rail-shadow-space)}
+/* One price/details axis for all room-card consumers on plaza.spa. */
+body.plaza-shell main#main .room-catalog-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
+body.plaza-shell main#main .room-catalog-footer .catalog-price-button{position:static!important;inset:auto!important;transform:none!important;margin:0!important;flex:none}
+body.plaza-shell main#main .room-catalog-footer .catalog-price{min-height:48px;padding:13px 16px;font-size:13px;line-height:1.5;white-space:nowrap}
+body.plaza-shell main#main .room-catalog-footer>.text-link{margin:0!important;padding:0!important}
+body.plaza-shell main#main .room-catalog-footer>.text-link a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;gap:8px;font-size:13px;line-height:1.5}
+body.plaza-shell main#main .room-catalog-footer .plaza-link-label{padding-block:0;font:inherit}
+body.plaza-shell main#main .room-catalog-footer .plaza-link-chevron{display:block;flex:0 0 18px;width:18px;height:18px;margin:0;transform:none}

@@ -1,0 +1,62 @@
+/* Scoped to the application and QR document shell. */
+body.plaza-embedded-page{padding-top:0;--header-height:0px;--plaza-header-height:0px}
+body.plaza-embedded-page .resort-page{padding-block:28px 48px;min-height:100svh}
+body.plaza-embedded-page .resort-page>.wrap{width:calc(100% - 40px);max-width:760px;margin-inline:auto}
+body.plaza-embedded-page .resort-page-heading{margin-bottom:24px}
+body.plaza-embedded-page .resort-page-heading h1{font-size:clamp(28px,5vw,42px);line-height:1.2;text-wrap:balance;margin:0}
+body.plaza-embedded-page .resort-page-content{font-size:16px;line-height:1.65;font-weight:400;overflow-wrap:break-word}
+body.plaza-embedded-page .resort-page-content :is(p,li,dt,dd){font-size:inherit;line-height:inherit;font-weight:400}
+body.plaza-embedded-page .resort-page-content p{margin-block:0 16px}
+body.plaza-embedded-page .resort-page-content :is(h2,h3){text-wrap:balance;line-height:1.3;letter-spacing:normal}
+body.plaza-embedded-page .resort-page-content h2{font-size:24px;margin-block:32px 12px}
+body.plaza-embedded-page .resort-page-content h3{font-size:20px;margin-block:24px 10px}
+body.plaza-embedded-page .resort-page-content img{max-width:100%;height:auto}
+body.plaza-embedded-page .resort-page-content li{margin-block:10px}
+body.plaza-embedded-page .resort-page-content :is(ul,ol){padding-inline-start:24px}
+body.plaza-embedded-page .resort-page-content dl{margin:12px 0 24px;font-variant-numeric:tabular-nums}
+body.plaza-embedded-page .resort-page-content dd{margin:0 0 12px}
+body.plaza-embedded-page .resort-page-content table{width:100%;min-width:0;table-layout:fixed;font-size:14px;font-variant-numeric:tabular-nums}
+body.plaza-embedded-page .resort-page-content :is(th,td){padding:10px 6px;white-space:normal;overflow-wrap:anywhere;vertical-align:top}
+body.plaza-embedded-page .resort-page-content :is(summary,.plaza-accordion-trigger){min-height:48px;padding-block:14px}
+body.plaza-embedded-page :is(a,summary,button):focus-visible{outline:2px solid currentColor;outline-offset:4px}
+body.plaza-embedded-page .pc-hours section{padding-block:0 20px;margin-bottom:20px;border-bottom:1px solid var(--line,rgba(145,119,71,.3))}
+body.plaza-embedded-page .pc-hours section:first-child h2{margin-top:0}
+body.plaza-embedded-page .pc-hours dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;margin:12px 0 0}
+body.plaza-embedded-page .pc-hours dd{margin:0;text-align:right;max-width:14ch;white-space:normal}
+body.plaza-embedded-page .pc-social-links{display:flex;flex-wrap:wrap;gap:8px;margin-block:16px 28px}
+body.plaza-embedded-page .pc-brand{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:10px 12px;border:1px solid var(--line,rgba(145,119,71,.3));border-radius:4px;text-decoration:none;color:var(--ink,#45413b);font-size:15px;font-weight:500}
+body.plaza-embedded-page .pc-brand svg{flex:none;width:24px;height:24px;fill:currentColor;color:var(--gold,#917747);transition:transform .35s}
+body.plaza-embedded-page.page-id-3495 .resort-page-content a[href^="tel:"]{display:inline-flex;align-items:center;min-height:44px;font-variant-numeric:tabular-nums}
+body.plaza-embedded-page .resort-welcomebook nav a{display:inline-flex;align-items:center;min-height:44px;padding-block:8px}
+body.plaza-embedded-page .resort-manual-symbol{vertical-align:middle;margin-inline:4px;max-height:28px;width:auto}
+body.plaza-embedded-page.page-id-2589 .resort-page-content img:first-of-type{max-height:220px;width:auto;object-fit:contain;margin-inline:auto;display:block}
+@media(hover:hover) and (pointer:fine){body.plaza-embedded-page .pc-brand:is(:hover,:focus-visible) svg{transform:translate(3px,-2px) rotate(-3deg) scale(1.04)}}
+@media(prefers-reduced-motion:reduce){body.plaza-embedded-page .pc-brand svg{transition:none;transform:none}}
+@media(max-width:359px){body.plaza-embedded-page .resort-page>.wrap{width:calc(100% - 32px)}body.plaza-embedded-page .resort-page-content h2{font-size:22px}body.plaza-embedded-page .pc-brand{font-size:14px;padding-inline:10px}}
+
+body.plaza-embedded-page .resort-page-content p.pc-social-links{display:grid;grid-template-columns:1fr;gap:8px}
+body.plaza-embedded-page .resort-page-content a.pc-brand{color:var(--ink,#45413b)!important;width:100%;box-sizing:border-box}
+body.plaza-embedded-page.page-id-3495 .resort-page-content>div>h2:first-of-type{margin-top:0}
+
+html body.plaza-shell.plaza-object-kislovodsk.plaza-embedded-page .resort-page-content a.pc-brand:is(:link,:visited,:hover,:focus-visible){color:var(--ink,#45413b)!important}
+
+/* Review 29 October 2026: addressed application and handbook corrections. */
+body.plaza-embedded-page.page-id-2590 #e-n-accordion-item-1545{margin-block-start:24px!important}
+html body.plaza-embedded-page.page-id-3495 .resort-page-content a.pc-brand{display:flex!important;align-items:center;min-width:0;max-width:100%;width:100%;box-sizing:border-box;border:1px solid var(--line,rgba(145,119,71,.3))!important;border-radius:4px;padding:10px 12px;overflow:visible;background-clip:padding-box;text-decoration:none}
+html body.plaza-embedded-page.page-id-3495 .resort-page-content a.pc-brand::before,html body.plaza-embedded-page.page-id-3495 .resort-page-content a.pc-brand::after{display:none!important}
+body.plaza-embedded-page :is(.pc-point-list,.pc-value-title) .pc-point-icon{width:22px;height:22px;flex:none;color:var(--gold,#917747);fill:none;stroke:currentColor}
+body.plaza-embedded-page .resort-page-content ul.pc-point-list{display:grid;gap:16px;list-style:none;padding:0;margin:24px 0 32px}
+body.plaza-embedded-page .resort-page-content ul.pc-point-list>li{display:flex;align-items:flex-start;gap:12px;margin:0;padding:0;min-width:0}
+body.plaza-embedded-page .resort-page-content ul.pc-point-list>li::before{content:none!important}
+body.plaza-embedded-page .pc-point-list .pc-point-icon{margin-top:2px}
+body.plaza-embedded-page .pc-point-list>li>span{min-width:0;flex:1}
+body.plaza-embedded-page .resort-page-content h4.pc-value-title{display:flex;align-items:flex-start;gap:12px;margin-block:24px 12px;font-weight:500;line-height:1.4}
+body.plaza-embedded-page .pc-value-title .pc-point-icon{margin-top:2px}
+body.plaza-embedded-page .resort-book-person .pc-staff-photo{width:160px!important;height:160px!important;max-height:none;object-fit:cover;object-position:50% 28%;border-radius:4px}
+@media(max-width:600px){body.plaza-embedded-page .resort-book-person .pc-staff-photo{width:96px!important;height:96px!important}}
+
+/* Handbook portraits: match the existing square headshot frame. */
+body.plaza-embedded-page .resort-book-person .pc-staff-portrait{display:block;width:160px;height:160px;overflow:hidden;border-radius:4px}
+body.plaza-embedded-page .resort-book-person .pc-staff-portrait .pc-staff-photo{display:block;object-fit:cover;transform:scale(1.2);transform-origin:50% 0;object-position:50% 12%}
+body.plaza-embedded-page .resort-book-person .pc-staff-portrait img[alt="Мирзоева Диана Бениаминовна"]{object-position:50% 42%}
+@media(max-width:600px){body.plaza-embedded-page .resort-book-person .pc-staff-portrait{width:96px;height:96px}}

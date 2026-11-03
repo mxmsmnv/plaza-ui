@@ -1,0 +1,88 @@
+/* Page 2621: shared typography, theme, image radius and viewer. */
+body.plaza-psk-guide .cs-page{--cs-top:88px;max-width:80rem;width:calc(100% - 4rem);padding-inline:0;overflow:visible}
+@media screen and (max-width:700px) and (prefers-reduced-motion:no-preference){html[data-theme=dark] body.plaza-object-kislovodsk main#main.cs-page::before{top:-16px}}
+body.plaza-psk-guide .cs-page .cs-hero{grid-template-columns:repeat(2,minmax(0,1fr));gap:3rem;margin-bottom:var(--plaza-section-before,64px)}
+body.plaza-psk-guide .cs-page .pg-hero-copy{padding:0}
+body.plaza-psk-guide .cs-page .pg-hero-photo > picture > img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;border-radius:var(--plaza-radius-ui,4px);box-shadow:var(--shadow)}
+body.plaza-psk-guide .cs-page h1{font-weight:500;line-height:1.18}
+body.plaza-psk-guide .cs-page h2{font-size:clamp(1.875rem,3vw,2.5rem);font-weight:500;line-height:1.2;margin:0}
+body.plaza-psk-guide .cs-page p{font-size:1rem;line-height:1.75;color:var(--muted)}
+body.plaza-psk-guide .cs-page p+p{margin-top:1.25rem}
+body.plaza-psk-guide .cs-heading{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;margin-bottom:2rem;align-items:start}
+body.plaza-psk-guide .cs-stack{position:relative;isolation:isolate;padding-bottom:1px}
+body.plaza-psk-guide .cs-page .cs-dessert{position:sticky;top:calc(var(--cs-top) + var(--cs-order)*5px);z-index:calc(var(--cs-order) + 1);width:min(100%,100svh,860px);margin:0 auto clamp(28px,6vh,54px);padding:clamp(10px,1.2vw,16px);background:var(--surface);border-radius:var(--plaza-radius-ui,4px);box-shadow:var(--shadow);box-sizing:border-box}
+body.plaza-psk-guide .cs-page .cs-dessert:last-child{margin-bottom:0}
+body.plaza-psk-guide .cs-photo{width:100%;aspect-ratio:3/2;overflow:hidden;border-radius:var(--plaza-radius-ui,4px);background:var(--surface)}
+body.plaza-psk-guide .cs-photo img{display:block;width:100%;height:100%;object-fit:contain;filter:none}
+body.plaza-psk-guide .cs-more{margin-top:clamp(5rem,8vw,7rem);text-align:center}
+body.plaza-psk-guide .cs-mobile-title{display:none}
+@media(max-width:700px){
+ body.plaza-psk-guide .cs-more>summary{display:none!important}
+ body.plaza-psk-guide .cs-more>.cs-mobile-title{display:block;text-align:left}
+ body.plaza-psk-guide .cs-more>.cs-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none}
+ body.plaza-psk-guide .cs-more>.cs-grid::-webkit-scrollbar{display:none}
+ body.plaza-psk-guide .cs-grid>.cs-grid-item{flex:0 0 100%;scroll-snap-align:start}
+ body.plaza-psk-guide .cs-more .rail-arrows{display:none}
+ body.plaza-psk-guide .cs-more .rail-dots{display:flex;flex-wrap:nowrap;justify-content:center;gap:0;width:100%}
+ body.plaza-psk-guide .cs-more .rail-dots>button{flex:1 1 0!important;width:auto!important;min-width:0!important;max-width:none!important;padding:0!important}
+ body.plaza-psk-guide .cs-grid-photo img{aspect-ratio:4/5!important;object-fit:cover!important;object-position:50% 50%}
+}
+
+body.plaza-psk-guide .cs-more summary{width:max-content;max-width:100%;margin-inline:auto;list-style:none;cursor:pointer}
+body.plaza-psk-guide .cs-more summary::-webkit-details-marker{display:none}
+body.plaza-psk-guide .cs-more .cs-hide,body.plaza-psk-guide .cs-more[open] .cs-show{display:none}
+body.plaza-psk-guide .cs-more[open] .cs-hide{display:inline}
+body.plaza-psk-guide .cs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem 1.5rem;margin-top:2rem;text-align:left}
+body.plaza-psk-guide .cs-grid-item{min-width:0}
+body.plaza-psk-guide .cs-grid-photo{display:block;width:100%;padding:0;border:0;background:var(--surface);overflow:hidden;border-radius:var(--plaza-radius-ui,4px)}
+body.plaza-psk-guide .cs-grid-photo img{display:block;width:100%;aspect-ratio:3/2;object-fit:contain}
+body.plaza-psk-guide .cs-grid-item h3{display:flex;align-items:baseline;gap:.75rem;font-size:1.35rem;line-height:1.3;margin:1rem 0 .4rem}
+body.plaza-psk-guide .cs-number{flex:none;color:var(--accent);font-family:Montserrat,Arial,sans-serif;font-size:inherit;font-variant-numeric:tabular-nums}
+body.plaza-psk-guide .cs-grid-item p{font-size:.875rem;line-height:1.6}
+body.plaza-psk-guide .cs-page :is(.cs-order,.cs-plan){display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;margin-top:var(--plaza-section-before,64px);scroll-margin-top:120px}
+body.plaza-psk-guide .cs-order-body{display:grid;gap:2rem;min-width:0}
+body.plaza-psk-guide .cs-phone{display:inline-flex;align-items:center;gap:.65rem;white-space:nowrap;font-size:clamp(1.2rem,2vw,1.65rem)}
+body.plaza-psk-guide .cs-phone svg{width:24px;height:24px;flex:none}
+body.plaza-psk-guide .cs-order-body>div>p{margin-top:.75rem}
+@media(max-width:1050px){body.plaza-psk-guide .cs-page .cs-hero{grid-template-columns:1fr;gap:2rem}body.plaza-psk-guide .cs-heading,body.plaza-psk-guide .cs-page :is(.cs-order,.cs-plan){grid-template-columns:1fr;gap:1.25rem}body.plaza-psk-guide .cs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){body.plaza-psk-guide .cs-page{width:calc(100% - 2.5rem);--cs-top:70px}body.plaza-psk-guide .cs-page .cs-dessert{margin-bottom:28px}body.plaza-psk-guide .cs-page .cs-hero{margin-bottom:2.5rem}body.plaza-psk-guide .cs-grid{gap:1.5rem 1rem}}
+@media(max-width:420px){body.plaza-psk-guide .cs-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce),(max-height:420px){body.plaza-psk-guide .cs-page .cs-dessert{position:relative;top:auto;margin-bottom:2rem}}
+@media print{body.plaza-psk-guide .cs-page .cs-dessert{position:static;break-inside:avoid;margin-bottom:1rem;box-shadow:none}body.plaza-psk-guide .cs-stack{padding:0}}
+body.plaza-object-kislovodsk main a.cs-phone{width:max-content!important;max-width:100%;white-space:nowrap!important;font-size:clamp(1.15rem,2vw,1.65rem)!important}
+body.plaza-object-kislovodsk main a.cs-phone>span{display:inline!important;white-space:nowrap!important;font-size:inherit!important}
+
+/* Use the shared photo viewer for the portrait and the selected theme's photographs. */
+html:not([data-theme=dark]) body.plaza-psk-guide .cs-night,html[data-theme=dark] body.plaza-psk-guide .cs-day{display:none}
+
+/* Approved fan: photographs settle along a gentle arc while retaining sticky scrolling. */
+body.plaza-psk-guide .cs-page .cs-dessert{width:min(70%,calc((100svh - var(--cs-top) - 135px)*1.25),880px);box-shadow:0 12px 35px rgba(0,0,0,.22),0 3px 10px rgba(0,0,0,.12);transform:translate(var(--fan-x),var(--fan-y)) rotate(var(--fan-angle));transform-origin:50% 80%}
+body.plaza-psk-guide .cs-stack>.cs-dessert:nth-child(1){--fan-x:-20%;--fan-y:4%;--fan-angle:-4deg}
+body.plaza-psk-guide .cs-stack>.cs-dessert:nth-child(2){--fan-x:-10%;--fan-y:2%;--fan-angle:-2deg}
+body.plaza-psk-guide .cs-stack>.cs-dessert:nth-child(3){--fan-x:0%;--fan-y:0%;--fan-angle:0deg}
+body.plaza-psk-guide .cs-stack>.cs-dessert:nth-child(4){--fan-x:10%;--fan-y:2%;--fan-angle:2deg}
+body.plaza-psk-guide .cs-stack>.cs-dessert:nth-child(5){--fan-x:20%;--fan-y:4%;--fan-angle:4deg}
+@media(prefers-reduced-motion:reduce),(max-height:420px),print{body.plaza-psk-guide .cs-page .cs-dessert{width:min(100%,100svh,860px);transform:none}}
+
+@media(max-width:700px){body.plaza-psk-guide .cs-page .cs-dessert{width:min(70%,calc((100svh - var(--cs-top) - 120px)*1.25));}}
+@font-face{font-family:PlazaDessertHand;src:url("https://plaza.spa/wp-content/uploads/plaza-polaroid-20261020/Caveat.ttf") format("truetype");font-weight:400 700;font-display:swap}
+body.plaza-psk-guide .cs-caption{display:flex;align-items:center;justify-content:center;min-height:clamp(50px,8vw,105px);padding:8px 4px 0;color:var(--ink);font:400 clamp(24px,3vw,38px)/1.1 PlazaDessertHand,cursive;text-align:center}
+@media(max-width:700px){
+ body.plaza-psk-guide .cs-page .cs-hero{display:grid;gap:0}
+ body.plaza-psk-guide .cs-page .pg-hero-copy{display:contents}
+ html body.plaza-psk-guide.plaza-psk-inner-type #main.cs-page .cs-hero h1{order:1;font-size:clamp(1.45rem,7vw,2.1875rem)!important;margin-bottom:1.25rem!important}
+ body.plaza-psk-guide .cs-page .pg-hero-photo{order:2;margin-bottom:1.25rem!important;aspect-ratio:4/5!important;overflow:hidden}
+ body.plaza-psk-guide .cs-page .pg-hero-photo>picture>img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;object-position:50% 50%}
+ body.plaza-psk-guide .cs-page .pg-hero-copy>p{order:3}
+ body.plaza-psk-guide .cs-page .pg-hero-copy>p+p{order:4}
+}
+
+
+/* Mobile-specific photographs use the site's selected theme. */
+body.plaza-psk-guide .cs-mobile-generated{display:none!important}
+@media(max-width:700px){
+ body.plaza-psk-guide .cs-source-desktop{display:none!important}
+ html:not([data-theme=dark]) body.plaza-psk-guide .cs-mobile-light,html[data-theme=dark] body.plaza-psk-guide .cs-mobile-dark{display:block!important}
+ body.plaza-psk-guide .cs-photo{aspect-ratio:4/5}
+ body.plaza-psk-guide .cs-page .cs-dessert{width:min(70%,calc((100svh - var(--cs-top) - 125px)*.68))}
+}

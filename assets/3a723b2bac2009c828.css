@@ -1,0 +1,92 @@
+/* This profile opt-in never changes the compact menu or sanatorium picker. */
+.pn-page-menu-grid[hidden]{display:none!important}
+.pn-page-menu-grid{display:none}
+@media(min-width:1024px){
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active{left:0!important;right:0!important;top:var(--pn-top,76px)!important;bottom:0!important;width:100%!important;max-width:none!important;height:calc(100dvh - var(--pn-top,76px))!important;max-height:calc(100dvh - var(--pn-top,76px))!important;padding:28px 5% 40px!important;box-sizing:border-box;isolation:isolate;display:flex!important;align-items:flex-start;justify-content:center;overflow:auto;overscroll-behavior:contain;border:0!important;border-radius:0!important;background:var(--plaza-page-menu-surface,var(--pn-bg,var(--bg)))!important;color:var(--pn-text,var(--text));box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transform:none!important;transition:none!important}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active>.pn-menu-compact{display:none!important}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-grid{width:min(1600px,100%);margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.5vw,38px) 24px;align-items:start}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-tile{display:block;min-width:0;margin:0;padding:0;border:0;background:none;background-image:none!important;box-shadow:none;color:var(--pn-text,var(--text));text-decoration:none!important;isolation:isolate;container-type:inline-size;outline-offset:6px}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-tile::before,html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-tile::after{content:none!important}
+ .pn-page-menu-active .pn-page-menu-preview{position:relative;display:block;width:100%;aspect-ratio:1.6;overflow:hidden;border:1px solid var(--pn-line,rgba(145,119,71,.25));border-radius:var(--plaza-radius-ui,4px);background:var(--pn-bg,var(--bg));transition:border-color .35s ease,box-shadow .35s ease}
+ .pn-page-menu-active .pn-page-menu-picture{position:absolute;inset:0;display:block}
+ .pn-page-menu-active .pn-page-menu-picture img{display:block;width:100%;height:100%;max-width:none;object-fit:contain;object-position:center}
+ .pn-page-menu-active .pn-page-menu-dark{visibility:hidden}
+ html[data-theme=dark] .pn-page-menu-active .pn-page-menu-dark{visibility:visible}
+ html[data-theme=dark] .pn-page-menu-active .pn-page-menu-light{visibility:hidden}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-title{display:block;padding:12px 0 0;min-height:38px;font-family:var(--plaza-page-menu-label-font,inherit);font-size:clamp(1.625rem,2.5vw,2.5rem);font-size:clamp(1.625rem,12cqi,2.5rem);font-weight:500;line-height:1.2;letter-spacing:0;color:var(--plaza-page-menu-title,var(--pn-gold,var(--gold)));background:none!important;text-decoration:none!important;transition:color .35s ease}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-subtitle{display:block;padding:0;font-family:var(--plaza-page-menu-label-font,inherit);font-size:clamp(9px,.72vw,11px);font-weight:400;line-height:1.7;letter-spacing:0;color:var(--plaza-page-menu-caption,var(--pn-muted,var(--muted)));background:none!important;text-decoration:none!important}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-tile[aria-current=page] .pn-page-menu-preview{border-color:var(--plaza-ui-gold,var(--pn-gold,var(--gold)));outline:1px solid var(--plaza-ui-gold,var(--pn-gold,var(--gold)));outline-offset:0}
+ .pn-page-menu-active .pn-page-menu-tile:is(:hover,:focus-visible) .pn-page-menu-preview{border-color:var(--pn-gold,var(--gold));box-shadow:var(--plaza-page-menu-shadow-hover,none)}
+ html body.plaza-shell #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:not([aria-current=page]):is(:hover,:focus-visible) .pn-page-menu-title{color:var(--plaza-page-menu-title-hover,var(--pn-gold,var(--gold)))}
+ .pn-page-menu-active.pn-page-menu-navigation{position:fixed;inset:0;z-index:1095;display:flex;align-items:center;justify-content:center;pointer-events:none;background:transparent}
+ .pn-page-menu-active.pn-page-menu-navigation img{display:block;width:min(100vw,160vh);height:min(100vh,62.5vw);max-width:none;max-height:none;object-fit:contain;transform-origin:0 0;will-change:transform}
+ .pn-page-menu-active.pn-page-menu-navigation.pn-page-menu-expanded{background:var(--pn-bg,var(--bg))}
+}
+/* The overview ends after its cards, leaving the existing page veil available for dismissal. */
+@media(min-width:1024px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active{bottom:auto!important;height:auto!important;max-height:calc(100dvh - var(--pn-top,76px) - 96px)!important}
+}
+/* Root snapshot rules are isolated from theme reveal and document Card stack. */
+html[data-plaza-page-menu-transition]::view-transition{background:var(--plaza-page-menu-canvas,Canvas);overflow:clip;pointer-events:none}
+html[data-plaza-page-menu-transition]::view-transition-group(*){animation:none}
+html[data-plaza-page-menu-transition]::view-transition-image-pair(*){isolation:auto}
+html[data-plaza-page-menu-transition]::view-transition-old(*),html[data-plaza-page-menu-transition]::view-transition-new(*){animation:none;mix-blend-mode:normal}
+html[data-plaza-page-menu-transition]::view-transition-old(root),html[data-plaza-page-menu-transition]::view-transition-new(root){transform-origin:0 0}
+html[data-plaza-page-menu-transition]::view-transition-group(root){z-index:3}
+html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-canvas){z-index:1}
+html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-header){z-index:5}
+html[data-plaza-page-menu-transition=opening]::view-transition-old(root){z-index:3}
+html[data-plaza-page-menu-transition=opening]::view-transition-new(root){z-index:1}
+html[data-plaza-page-menu-transition=closing]::view-transition-old(root){z-index:1}
+html[data-plaza-page-menu-transition=closing]::view-transition-new(root){z-index:3}
+html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-home),html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-rooms),html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-medical),html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-restaurants),html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-about),html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-services),html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-photos),html[data-plaza-page-menu-transition]::view-transition-group(plaza-page-menu-contacts){z-index:2}
+@media(prefers-reduced-motion:reduce){.pn-page-menu-active .pn-page-menu-preview,.pn-page-menu-active .pn-page-menu-title{transition:none!important}}
+
+/* Kislovodsk: navigation labels sit between the header and page headings. */
+@media(min-width:1024px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-title{display:table;min-height:0;padding:12px 0 3px;font-size:clamp(1.25rem,8.5cqi,1.75rem);line-height:1.3;background-image:linear-gradient(currentColor,currentColor)!important;background-position:left bottom!important;background-size:0 1px!important;background-repeat:no-repeat!important;transition:color .35s ease,background-size .35s ease}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-subtitle{font-size:clamp(.6875rem,.82vw,.75rem);line-height:1.6;padding-top:3px}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-preview{box-sizing:border-box;border-width:2px;border-color:color-mix(in srgb,var(--plaza-page-menu-title) 48%,transparent)}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile[aria-current=page] .pn-page-menu-preview{border-color:var(--plaza-ui-gold,var(--pn-gold));outline-width:1px}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:not([aria-current=page]):is(:hover,:focus-visible) .pn-page-menu-title{background-size:100% 1px!important;color:var(--plaza-page-menu-title-hover)}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:is(:hover,:focus-visible) .pn-page-menu-preview{border-color:var(--plaza-page-menu-title-hover)}
+}
+@media(prefers-reduced-motion:reduce){html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-title{transition:none!important}}
+
+/* One shared card Stripe below text and outside the opaque screenshot. */
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile{border-radius:var(--plaza-radius-ui,4px)}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-preview{box-shadow:var(--plaza-page-menu-shadow)}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:is(:hover,:focus-visible) .pn-page-menu-preview{box-shadow:var(--plaza-page-menu-shadow-hover)}
+
+/* Both properties: quiet titles; captions retained for a reversible return. */
+@media(min-width:1024px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-title{background-image:none!important;background-size:0!important;text-decoration:none!important;transition:color .35s ease,opacity .35s ease}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-subtitle{display:var(--plaza-page-menu-trial-captions,none)}
+}
+
+/* Both properties: common header grid, calm labels and distinct current/focus states. */
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk).pn-menu-open .site-header{--header-glass-blur:16px;-webkit-backdrop-filter:blur(16px)!important;backdrop-filter:blur(16px)!important}
+@media(min-width:1024px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active{padding:28px 0 40px!important}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-grid{width:min(calc(100% - 64px),var(--max,1280px));gap:clamp(24px,2.2vw,32px) 24px}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-title{position:relative;opacity:.5}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile[aria-current=page] .pn-page-menu-title{font-weight:500;opacity:.5}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile[aria-current=page]:is(:hover,:focus-visible) .pn-page-menu-preview{border-color:var(--plaza-ui-gold,var(--pn-gold))}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:focus-visible{outline:2px solid var(--plaza-page-menu-title-hover);outline-offset:6px}
+}
+
+/* Shared whole-card feedback, with image scaling clipped inside its frame. */
+@media(min-width:1024px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:is(:hover,:focus-visible) .pn-page-menu-title{opacity:1}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-picture img{transform:scale(1);transform-origin:top left;transition:transform .6s cubic-bezier(.2,.65,.3,1)}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:focus-visible .pn-page-menu-picture img{transform:scale(1.2)}
+}
+@media(min-width:1024px) and (hover:hover) and (pointer:fine){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:hover .pn-page-menu-picture img{transform:scale(1.2)}
+}
+@media(prefers-reduced-motion:reduce){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #pn-full-menu.pn-page-menu-active .pn-page-menu-tile .pn-page-menu-picture img{transform:none!important;transition:none!important}
+}
+
+/* PSG text feedback changes opacity, keeping its theme-specific green ink. */
+@media(min-width:1024px){html body.plaza-shell.plaza-object-zheleznovodsk #pn-full-menu.pn-page-menu-active .pn-page-menu-tile:is(:hover,:focus-visible) .pn-page-menu-title{color:var(--plaza-page-menu-title)}}

@@ -1,0 +1,24 @@
+/* Only motion: never set heading fonts, dimensions, text colors, or gradients here. */
+.plaza-heading-large,.plaza-heading-medium{animation:none!important}
+.plaza-heading-large .plaza-motion-word{display:inline-block!important;vertical-align:top;white-space:nowrap;overflow:hidden;padding-top:.08em;margin-top:-.08em;padding-bottom:.08em;margin-bottom:-.08em;color:inherit!important;animation:none!important}
+.plaza-heading-large .plaza-motion-letter{display:inline-block!important;color:inherit!important;animation:none!important;transform:translate3d(0,0,0);filter:blur(0)}
+.plaza-heading-large.plaza-heading-armed:not(.plaza-heading-revealed) .plaza-motion-letter{transform:translate3d(0,110%,0);filter:blur(var(--plaza-heading-blur,5px));will-change:transform,filter}
+.plaza-heading-large.plaza-heading-armed.plaza-heading-revealed .plaza-motion-letter{transform:translate3d(0,0,0);filter:blur(0);transition:transform var(--plaza-heading-duration,1600ms) cubic-bezier(.19,1,.22,1),filter var(--plaza-heading-duration,1600ms) cubic-bezier(.19,1,.22,1);transition-delay:var(--plaza-heading-delay,0ms)}
+.plaza-heading-large.pg-title-done .plaza-motion-word{overflow:visible}
+.plaza-heading-medium .pg-ink-word{display:inline-block;opacity:var(--pg-ink-opacity,1)}
+@media(prefers-reduced-motion:reduce){.plaza-heading-large .plaza-motion-letter{transform:none!important;filter:none!important;transition:none!important}.plaza-heading-large .plaza-motion-word{overflow:visible}.plaza-heading-medium .pg-ink-word{opacity:1!important}}
+@media print{.plaza-heading-large .plaza-motion-letter{transform:none!important;filter:none!important}.plaza-heading-medium .pg-ink-word{opacity:1!important}}
+
+.plaza-heading-large>span{animation:none!important}
+.plaza-heading-large.pg-title-done .pg-city-line{overflow:visible}
+
+/* Repaint inherited gradients on generated glyphs; keep the original palette and continuous gradient coordinates. */
+.plaza-heading-gradient .plaza-motion-word,.plaza-heading-gradient .plaza-motion-letter,.plaza-heading-gradient .pg-ink-word{background-image:inherit;background-size:var(--plaza-heading-bg-width) var(--plaza-heading-bg-height);background-position:var(--plaza-heading-bg-x,0px) var(--plaza-heading-bg-y,0px);background-repeat:no-repeat;background-clip:text;-webkit-background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent}
+
+/* Only animated glyphs paint the gradient; prevent an opaque duplicate on their original parent/mask. */
+.plaza-heading-gradient,.plaza-heading-gradient .plaza-motion-word{background-size:0 0!important;background-repeat:no-repeat!important}
+
+/* The hero enters once; never flash the unprepared heading while fonts load. */
+@media(prefers-reduced-motion:no-preference){
+ html.plaza-heading-js body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .hero-copy h1.plaza-heading-large:not(.plaza-heading-revealed){visibility:hidden}
+}

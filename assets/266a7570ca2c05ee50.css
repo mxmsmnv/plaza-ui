@@ -1,0 +1,56 @@
+/* Compact Wi-Fi welcome. Existing PLAZA typography, colors and SVG icons. */
+:root{color-scheme:light;--bg:#f0f0e5;--ink:#293e33;--muted:#626e62;--accent:#365947;--gold:#9ca887;--line:rgba(54,89,71,.25);--soft:#e6eadf;--hover:#365947}
+:root[data-theme=dark]{color-scheme:dark;--bg:#121f19;--ink:#eef2e8;--muted:#c4d0bf;--accent:#9ca887;--line:rgba(156,168,135,.28);--soft:#1e3328;--hover:#78a86a}
+*{box-sizing:border-box}
+html{scrollbar-color:var(--gold) var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.65 Montserrat,Arial,sans-serif}
+::selection{background:var(--gold);color:#121f19}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+svg{display:block;flex-shrink:0;width:20px;height:20px}
+.welcome{width:min(calc(100% - 40px),480px);margin-inline:auto;padding:24px 0 max(24px,env(safe-area-inset-bottom));text-align:center}
+.welcome-identity{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px}
+.welcome-logo{display:flex;align-items:center;min-height:44px}
+.welcome-logo img{display:block;width:180px;height:40px;max-width:100%;object-fit:contain}
+.welcome-intro h1{font:400 clamp(28px,7.7vw,36px)/1.22 Lora,Georgia,serif;letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance;color:var(--ink)}
+.welcome-intro p{margin:0 auto;color:var(--muted);font-size:14px;line-height:1.7;max-width:42ch}
+.welcome section{margin-top:28px}
+.welcome h2{font:400 20px/1.35 Lora,Georgia,serif;margin:0 0 8px;text-wrap:balance;color:var(--ink)}
+.welcome-app>p{margin:0 0 12px;color:var(--muted);font-size:13px}
+.welcome-stores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.welcome-store,.welcome-call{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--gold);border-radius:var(--plaza-radius-ui,4px);background:transparent;color:var(--accent);transition:color .35s,border-color .35s,box-shadow .35s}
+.welcome-store{display:flex;justify-content:center;align-items:center;gap:10px;min-height:64px;padding:10px 12px}
+.welcome-store>span,.welcome-store strong,.welcome-store small{display:block}
+.welcome-store strong{font-size:14px;font-weight:500;line-height:1.45;white-space:nowrap}
+.welcome-store small{font-size:11px;line-height:1.5;margin-top:2px;color:var(--muted)}
+.welcome-store svg{width:22px;height:24px}
+.welcome-store::before,.welcome-call::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(120,168,106,.18),rgba(255,255,255,.7) 36%,rgba(120,168,106,.32) 60%,rgba(120,168,106,.18));background-size:280% 100%;background-position:100% 0;opacity:0;transition:opacity .35s,background-position 1.9s cubic-bezier(.22,.65,.3,1)}
+[data-theme=dark] .welcome-store::before,[data-theme=dark] .welcome-call::before{background-image:linear-gradient(100deg,rgba(120,168,106,.26),rgba(120,168,106,.16) 22%,transparent 50%,rgba(120,168,106,.15) 78%,rgba(120,168,106,.26))}
+.welcome-store:is(:hover,:focus-visible),.welcome-call:is(:hover,:focus-visible){color:var(--hover);box-shadow:0 4px 12px rgba(120,168,106,.1)}
+.welcome-store:is(:hover,:focus-visible)::before,.welcome-call:is(:hover,:focus-visible)::before{opacity:1;background-position:0 0}
+.welcome-store:active,.welcome-call:active{background:var(--soft)}
+.welcome-reception{border-top:1px solid var(--line);padding-top:24px}
+.welcome-reception h2{margin-bottom:12px}
+.welcome-call{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 16px;font-size:13px;font-weight:500}
+.welcome-call svg{width:19px;height:19px}
+.welcome-numbers{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.85;font-variant-numeric:tabular-nums}
+.welcome-numbers strong{font-weight:500;color:var(--ink)}
+.welcome-links{margin-top:20px}
+.welcome-site{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:13px;font-weight:500;color:var(--accent);transition:color .35s}
+.welcome-site>span{background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;padding-bottom:4px;transition:background-size .35s}
+.welcome-site svg{width:17px;height:17px;transition:transform .35s}
+.welcome-site:is(:hover,:focus-visible){color:var(--hover)}
+.welcome-site:is(:hover,:focus-visible)>span{background-size:100% 1px}
+.welcome-site:is(:hover,:focus-visible) svg{transform:translate(2px,-2px)}
+.welcome-social{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+.welcome-social>a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--plaza-radius-ui,4px);color:var(--accent);transition:color .35s}
+.welcome-social svg{width:24px;height:24px;fill:currentColor;stroke:none;transition:transform .35s}
+.welcome-social>a:is(:hover,:focus-visible){color:var(--hover)}
+.welcome-social>a:is(:hover,:focus-visible) svg{transform:translate(3px,-2px) rotate(-3deg) scale(1.04)}
+@media(min-width:700px){.welcome{padding-top:40px;padding-bottom:40px}.welcome-identity{margin-bottom:28px}.welcome-intro h1{font-size:36px}.welcome-intro p{font-size:15px}}
+@media(max-width:359px){.welcome{width:calc(100% - 32px);padding-top:20px}.welcome-identity{margin-bottom:20px}.welcome-logo img{width:164px;height:37px}.welcome-store{padding-inline:8px;gap:7px}.welcome-store strong{font-size:13px}.welcome-store svg{width:18px;height:22px}}
+@media(prefers-reduced-motion:reduce){.welcome *,.welcome *::before{transition:none!important}.welcome-social>a:is(:hover,:focus-visible) svg,.welcome-site:is(:hover,:focus-visible) svg{transform:none}}
+@media(forced-colors:active){.welcome-store,.welcome-call{border-color:ButtonText}.welcome-store::before,.welcome-call::before{display:none}}
+
+.welcome-logo{color:var(--accent)}.welcome-logo>svg{width:180px;height:40px;max-width:100%}

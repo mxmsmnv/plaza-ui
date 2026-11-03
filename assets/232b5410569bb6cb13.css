@@ -1,0 +1,112 @@
+/* Fullscreen video fit: contain preserves the source frame; cover restores edge-to-edge crop. */
+:root{--plaza-video-fullscreen-fit:contain}
+.plaza-hero-video{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;border-radius:var(--radius,4px);background:#18312e;color:#fff;margin:0;isolation:isolate;cursor:pointer}
+.plaza-hero-video video,.plaza-hero-video .plaza-video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:none!important;filter:none!important}
+.plaza-hero-video .plaza-video-poster{z-index:1;pointer-events:none;transition:opacity .2s}
+.plaza-hero-video.started .plaza-video-poster{opacity:0}
+.plaza-video-controls{position:absolute;z-index:3;right:16px;bottom:16px;display:flex;gap:10px;cursor:default}
+.plaza-hero-video button.plaza-glass{position:relative;display:flex;align-items:center;justify-content:center;width:50px;height:50px;padding:0;border:1px solid rgba(255,255,255,.45);border-radius:50%;color:#fff;background:rgba(28,43,42,.35);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 16px rgba(0,0,0,.16);cursor:pointer}
+.plaza-hero-video button.plaza-glass:hover{background:rgba(255,255,255,.28)}
+.plaza-hero-video button.plaza-glass:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.plaza-hero-video button svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.plaza-hero-video [hidden]{display:none!important}
+.plaza-hero-video svg.plaza-video-progress{position:absolute;inset:0;width:100%;height:100%;stroke:#d4ab68;stroke-width:3;transform:rotate(-90deg)}
+.plaza-video-progress circle{transition:stroke-dashoffset .2s linear}
+.plaza-video-status{position:absolute;z-index:4;left:16px;right:16px;bottom:80px;text-align:center;font:13px/1.4 Arial,sans-serif;text-shadow:0 1px 4px #000;pointer-events:none}
+.plaza-hero-video:fullscreen{width:100vw;height:100vh;aspect-ratio:auto;border-radius:0;background:#000}
+.plaza-hero-video:fullscreen :is(video,.plaza-video-poster){object-fit:var(--plaza-video-fullscreen-fit,contain)}
+.plaza-hero-video:fullscreen .plaza-video-controls{bottom:24px;right:24px}
+.hero-visual:has(.plaza-hero-video){padding-bottom:54px}
+@media(max-width:767px){.plaza-hero-video{aspect-ratio:9/16}.hero-visual:has(.plaza-hero-video){padding-bottom:54px}}
+.plaza-video-editor{position:relative;aspect-ratio:16/9;overflow:hidden;background:#18312e;border-radius:var(--plaza-radius-ui,4px)}
+.plaza-video-editor img{width:100%;height:100%;object-fit:cover}
+.plaza-video-editor span{position:absolute;bottom:12px;left:12px;padding:8px 12px;color:#fff;background:rgba(0,0,0,.6);font:13px Arial}
+@media(prefers-reduced-motion:reduce){.plaza-hero-video .plaza-video-poster,.plaza-video-progress circle{transition:none}}
+
+/* Постер Эльбруса возвращается после окончания видео. */
+/* Подпись оставляет место под видео и отъезжает за 2,5 секунды. */
+body .hero-visual:has(.plaza-hero-video){padding-bottom:calc(var(--video-caption-height,110px) + 12px)}
+body .hero-visual:has(.plaza-hero-video)>.hero-glass{bottom:calc(var(--video-caption-height,110px) - 37px);transition:transform var(--video-caption-return,2s) ease;transition-delay:0s}
+body .hero-visual.video-active:has(.plaza-hero-video)>.hero-glass{transform:translateY(calc(var(--video-caption-height,110px) - 37px));transition-duration:var(--video-caption-depart,2s);transition-delay:var(--video-caption-depart-delay,2s)}
+@media(prefers-reduced-motion:reduce){.plaza-video-brand,body .hero-visual:has(.plaza-hero-video)>.hero-glass{transition:none}}
+
+/* Общие настройки видеоблока. */
+.plaza-hero-video{--video-controls-fade:1s;--video-caption-depart:2s;--video-caption-return:2s;user-select:none;-webkit-user-select:none}
+.hero-visual:has(.plaza-hero-video){--video-caption-depart:2s;--video-caption-return:2s}
+ .plaza-video-controls{opacity:1;pointer-events:auto}
+.plaza-hero-video.speeding::after{content:'×3';position:absolute;z-index:4;top:16px;right:16px;padding:0;border:0;border-radius:0;background:none;color:rgba(255,255,255,.85);font:400 13px/1.4 Montserrat,Arial,sans-serif;text-shadow:0 1px 3px rgba(0,0,0,.45);pointer-events:none}
+@media(prefers-reduced-motion:reduce){.plaza-video-controls{transition:none}}
+
+/* Постер: постоянный слой, без изменения резкости при наведении. */
+@property --plaza-poster-brightness{syntax:'<number>';inherits:false;initial-value:1}
+body .plaza-hero-video .plaza-video-poster{transform:translateZ(0)!important;filter:brightness(var(--plaza-poster-brightness,1))!important;backface-visibility:hidden;will-change:opacity;image-rendering:auto}
+body .plaza-hero-video.poster-returning .plaza-video-poster{animation:plaza-poster-return 1s ease-out both;transition:none}
+@keyframes plaza-poster-return{from{opacity:0;--plaza-poster-brightness:0}to{opacity:1;--plaza-poster-brightness:1}}
+@media(prefers-reduced-motion:reduce){body .plaza-hero-video.poster-returning .plaza-video-poster{animation:none}body .hero-visual.video-active:has(.plaza-hero-video)>.hero-glass{transition-delay:0s}}
+
+.plaza-hero-video button svg.plaza-video-load-progress{position:absolute;inset:0;width:100%;height:100%;stroke:#fff;stroke-width:2;transform:rotate(-90deg);overflow:visible}
+.plaza-video-load-progress circle{transition:stroke-dashoffset .15s linear}
+.plaza-hero-video[data-play-ready="true"] .plaza-video-load-progress{opacity:0;transition:opacity .4s ease}
+.plaza-hero-video:not([data-play-ready="true"]) .plaza-play-icon{opacity:.4}
+.plaza-hero-video button.plaza-video-toggle:disabled{cursor:pointer}
+.plaza-hero-video:not([data-play-ready="true"]) .plaza-video-progress{opacity:0}
+@media(prefers-reduced-motion:reduce){.plaza-video-load-progress circle{transition:none}}
+
+
+/* 08.10.2026: room glass matches the hero caption in both themes. */
+
+
+/* Controls remain visible in fullscreen. */
+body .plaza-hero-video:fullscreen .plaza-video-controls{opacity:1;pointer-events:auto}
+
+body .hero-visual.video-active:has(.plaza-hero-video)>.hero-glass{transition-delay:0s!important}
+
+html[data-theme] body #rooms .room-panel-content:not(.room-panel-settled){backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+
+/* Loading draws the single 1px button outline; the completed outline stays. */
+.plaza-hero-video button.plaza-video-toggle{border-color:transparent;box-shadow:0 4px 16px rgba(0,0,0,.16)}
+.plaza-hero-video button svg.plaza-video-load-progress{inset:-1px;width:calc(100% + 2px);height:calc(100% + 2px);stroke:rgba(255,255,255,.45);stroke-width:1;stroke-linecap:butt}
+.plaza-hero-video[data-play-ready="true"] .plaza-video-load-progress{opacity:1;transition:none}
+.plaza-hero-video:not([data-play-ready="true"]) .plaza-play-icon{opacity:1}
+
+/* 09.10.2026 — shared full-download control sequence. */
+body .plaza-hero-video button:is(.plaza-video-sound,.plaza-video-fullscreen){opacity:0;visibility:hidden;pointer-events:none;transition:opacity 1s ease,visibility 0s linear 1s}
+body .plaza-hero-video[data-controls-stage="sound"] button.plaza-video-sound,body .plaza-hero-video[data-controls-stage="complete"] button:is(.plaza-video-sound,.plaza-video-fullscreen){opacity:1;visibility:visible;pointer-events:auto;transition:opacity 1s ease,visibility 0s}
+@media(prefers-reduced-motion:reduce){body .plaza-hero-video button:is(.plaza-video-sound,.plaza-video-fullscreen){transition:none}}
+
+/* Shared centred poster controls, 11.10.2026. */
+body .plaza-hero-video .plaza-video-controls,body .plaza-hero-video:fullscreen .plaza-video-controls{inset:0!important;display:block;pointer-events:none;opacity:1}
+body .plaza-hero-video .plaza-video-controls button.plaza-glass{position:absolute;pointer-events:auto}
+body .plaza-hero-video .plaza-video-controls .plaza-video-toggle{left:50%;top:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);transition:opacity 1s ease,visibility 0s;opacity:1;visibility:visible}
+body .plaza-hero-video.controls-fading .plaza-video-controls .plaza-video-toggle{opacity:0;visibility:hidden;pointer-events:none;transition:opacity 2s ease,visibility 0s linear 2s}
+body .plaza-hero-video .plaza-video-controls .plaza-video-sound{left:16px;bottom:20px;right:auto;top:auto}
+body .plaza-hero-video .plaza-video-controls .plaza-video-fullscreen{right:16px;bottom:20px;left:auto;top:auto;display:flex}
+body .plaza-hero-video:fullscreen .plaza-video-controls .plaza-video-sound{left:24px;bottom:28px}
+body .plaza-hero-video:fullscreen .plaza-video-controls .plaza-video-fullscreen{right:24px;bottom:28px}
+body .plaza-hero-video .plaza-video-progress{display:none!important}
+body .plaza-hero-video .plaza-video-seek{position:absolute;z-index:2;left:0;bottom:0;width:100%;height:44px;margin:0;padding:0;border:0;border-radius:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;--video-progress:0%;transition:opacity .5s ease}
+body .plaza-hero-video[data-play-ready="true"] .plaza-video-seek{opacity:1;visibility:visible;pointer-events:auto}
+.plaza-video-seek::-webkit-slider-runnable-track{transform:translateY(18px);height:2px;background:linear-gradient(to right,#d4ab68 0 var(--video-progress),rgba(255,255,255,.32) var(--video-progress) 100%)}
+.plaza-video-seek::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:8px;height:8px;margin-top:-3px;border-radius:50%;border:0;background:#d4ab68}
+.plaza-video-seek::-moz-range-track{transform:translateY(18px);height:2px;background:rgba(255,255,255,.32)}
+.plaza-video-seek::-moz-range-progress{height:2px;background:#d4ab68}
+.plaza-video-seek::-moz-range-thumb{width:8px;height:8px;border:0;border-radius:50%;background:#d4ab68}
+body .plaza-hero-video .plaza-video-seek:focus-visible{outline:none!important;filter:drop-shadow(0 0 2px #d4ab68)}
+@media(prefers-reduced-motion:reduce){body .plaza-hero-video .plaza-video-controls .plaza-video-toggle,body .plaza-hero-video.controls-fading .plaza-video-controls .plaza-video-toggle,body .plaza-hero-video .plaza-video-seek{transition:none}}
+
+body .plaza-hero-video input.plaza-video-seek{left:0!important;margin:0!important;transform:none!important;background:linear-gradient(to right,#d4ab68 0 var(--video-progress),rgba(255,255,255,.32) var(--video-progress) 100%) left bottom/100% 2px no-repeat!important}body .plaza-hero-video input.plaza-video-seek::-webkit-slider-runnable-track{background:transparent;transform:none}body .plaza-hero-video input.plaza-video-seek::-webkit-slider-thumb{opacity:0}
+
+/* Clear corner icons and a visible mobile loading ring. */
+body .plaza-hero-video button:is(.plaza-video-sound,.plaza-video-fullscreen){border:0!important;background:none!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;color:#fff!important}
+body .plaza-hero-video button:is(.plaza-video-sound,.plaza-video-fullscreen) svg{width:24px;height:24px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.85))}
+body .plaza-hero-video.controls-fading button:is(.plaza-video-sound,.plaza-video-fullscreen){opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity 2s ease,visibility 0s linear 2s}
+@media(max-width:767px){body .plaza-hero-video button svg.plaza-video-load-progress{stroke-width:2;stroke:rgba(255,255,255,.9);filter:drop-shadow(0 1px 2px rgba(0,0,0,.6))}}
+body .plaza-hero-video[data-load-indeterminate="true"] .plaza-video-load-progress{animation:plaza-loading-turn 1.2s linear infinite}body .plaza-hero-video[data-load-indeterminate="true"] .plaza-video-load-progress circle{stroke-dasharray:24 76;stroke-dashoffset:0}
+@keyframes plaza-loading-turn{to{transform:rotate(270deg)}}
+@media(prefers-reduced-motion:reduce){body .plaza-hero-video.controls-fading button:is(.plaza-video-sound,.plaza-video-fullscreen){transition:none}body .plaza-hero-video[data-load-indeterminate="true"] .plaza-video-load-progress{animation:none}}
+
+/* Shared mobile caption sits inside the video; all controls use the same fade. */
+@media(max-width:767px){body main .hero-visual:has(.plaza-hero-video)>.hero-glass{top:calc(var(--video-frame-height) - var(--video-caption-height) - 16px)!important;bottom:auto!important;left:16px!important;right:16px!important;transform:none!important;pointer-events:none}body main .hero-visual.video-active:has(.plaza-hero-video)>.hero-glass{transform:translateX(-125%)!important;opacity:0}}
+
+/* Progress is an overlay, flush with the bottom video edge, drawn over the frame. */
+body .plaza-hero-video input.plaza-video-seek{position:absolute!important;box-sizing:border-box!important;bottom:0!important;height:44px!important;border:0!important;border-radius:0!important;box-shadow:none!important;background-size:100% 2px!important;z-index:3}

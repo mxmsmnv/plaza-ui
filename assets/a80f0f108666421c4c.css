@@ -1,0 +1,42 @@
+/* Kislovodsk comparison preview: one portrait, two equal media/copy halves. */
+.comparison-room-preview{--comparison-flip-duration:650ms;position:fixed;z-index:80;width:min(384px,calc(var(--room-preview-available-height,calc(100svh - 120px)) * .8888889));max-width:calc(100vw - 32px);height:auto;aspect-ratio:8/9;perspective:1200px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .5s ease,visibility 0s linear .5s;color:var(--ink)}
+.comparison-room-preview[data-open]{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .5s ease,visibility 0s}
+.comparison-room-preview .room-preview-inner{position:relative;width:100%;height:100%;min-height:0;transform-style:preserve-3d;transition:transform var(--comparison-flip-duration) cubic-bezier(.22,.61,.36,1)}
+.comparison-room-preview[data-flipped] .room-preview-inner{transform:rotateY(180deg)}
+.comparison-room-preview .room-preview-face{position:absolute;inset:0;display:grid;grid-template-rows:repeat(2,minmax(0,1fr));min-width:0;min-height:0;overflow:hidden;border-radius:var(--plaza-radius-ui,4px);background:var(--plaza-preview-surface,var(--surface));backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 18px 38px -12px rgb(0 0 0 / .3)}
+.comparison-room-preview .comparison-flip-back{transform:rotateY(180deg)}
+.comparison-room-preview .room-preview-image{position:relative;min-height:0;margin:0;overflow:hidden}
+.comparison-room-preview .room-preview-image img{display:block;width:100%;height:100%;object-fit:cover}
+.comparison-room-preview .room-preview-photo img+img{position:absolute;inset:0;opacity:0}
+:root[data-theme=dark] .comparison-room-preview .room-preview-photo img+img{opacity:1}
+.comparison-room-preview .room-preview-plan{background:#FCFBF8}
+.comparison-room-preview .room-preview-plan img{object-fit:contain;padding:0}
+.comparison-room-preview .room-preview-copy{display:flex;flex-direction:column;gap:12px;min-height:0;padding:18px}
+.comparison-room-preview .room-preview-title{margin:0;font:400 22px/1.15 Lora,Georgia,serif;text-wrap:balance;color:var(--ink)}
+.comparison-room-preview .room-preview-specs{display:grid;gap:3px;margin:0;font:500 12px/1.4 Montserrat,Arial,sans-serif;color:var(--gold)}
+.comparison-room-preview .room-preview-specs span,.comparison-room-preview .room-preview-specs small{font:inherit;color:inherit}
+.comparison-room-preview .room-preview-description{margin:0;font:400 13px/1.5 Montserrat,Arial,sans-serif;color:var(--ink)}
+.comparison-room-preview .room-preview-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:auto;padding-top:4px}
+.comparison-room-preview .room-preview-actions .wp-block-button{min-width:0;margin:0}
+.comparison-room-preview .room-preview-actions .wp-block-button__link{display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;margin:0;padding:10px 8px;font:500 12px/1.3 Montserrat,Arial,sans-serif;white-space:nowrap}
+.comparison-room-preview:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.comparison-room-preview,.comparison-room-preview .room-preview-inner{transition:none}}
+@media(hover:none),(pointer:coarse){.comparison-room-preview{display:none}}
+
+.comparison-room-preview .room-preview-spec-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+
+.comparison-room-preview .room-preview-capacity{margin:0;font:500 12px/1.4 Montserrat,Arial,sans-serif;color:var(--gold)}
+
+.comparison-room-preview .comparison-flip-front .room-preview-description{margin:0}
+.comparison-room-preview .comparison-flip-front .room-preview-copy{justify-content:flex-start;gap:12px}
+
+/* Night copy: three quiet pools of light above the page background. */
+:root[data-theme=dark] .comparison-room-preview .room-preview-copy{background:radial-gradient(ellipse at 10% 10%,rgb(209 181 121 / .22),transparent 68%),radial-gradient(ellipse at 96% 36%,rgb(79 119 158 / .23),transparent 66%),radial-gradient(ellipse at 52% 105%,rgb(136 83 124 / .2),transparent 65%),#20252d}
+.comparison-room-preview .room-preview-plan-night{position:absolute;inset:0;opacity:0}
+:root[data-theme=dark] .comparison-room-preview .room-preview-plan{background:#121715}
+:root[data-theme=dark] .comparison-room-preview .room-preview-plan-day{opacity:0}
+:root[data-theme=dark] .comparison-room-preview .room-preview-plan-night{opacity:1}
+
+/* A quiet one-pixel gold frame around both sides of the comparison card. */
+.comparison-room-preview .room-preview-face{box-sizing:border-box;border:1px solid var(--plaza-gold-deep,#917747)}
+:root[data-theme=dark] .comparison-room-preview .room-preview-face{border-color:var(--plaza-gold-light,#D1B579)}

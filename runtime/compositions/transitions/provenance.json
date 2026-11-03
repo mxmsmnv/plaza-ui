@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "path": "runtime/compositions/transitions/controller.js",
+      "source": "wp-content/mu-plugins/plaza-property-ui/shared/page-transition/controller.js",
+      "source_sha256": "9b325de93f2dc467f25c6ba0d99696ce0bd2eb866ffe55e7ecd59ce7dbb5fad9",
+      "sha256": "9b325de93f2dc467f25c6ba0d99696ce0bd2eb866ffe55e7ecd59ce7dbb5fad9",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/transitions/transition.css",
+      "source": "wp-content/mu-plugins/plaza-property-ui/shared/page-transition/transition.css",
+      "source_sha256": "465e3a723ec2b16daf71087b87b37c43758f37bf602402f13987b963eed92103",
+      "sha256": "465e3a723ec2b16daf71087b87b37c43758f37bf602402f13987b963eed92103",
+      "mode": "byte_identical_original"
+    },
+    {
+      "path": "runtime/compositions/transitions/one.html",
+      "specimen_source": "site/examples/psk-program-card-0.json",
+      "component_id": "psk-program-card",
+      "source_url": "https://plaza.spa/kislovodsk/ui/",
+      "markup_sha256": "619623e7e76501a058003a1490ad4a71f89f2cb05a2392d24c0187370a524939",
+      "adaptations": [
+        "Real sanitized component markup unchanged; original ancestors retained.",
+        "Dedicated local lab headings/navigation, not a complete production page.",
+        "Original specimen styles and approved shared runtime referenced from same static site.",
+        "Controlled demo CSP connect-src is self only; original engine unchanged."
+      ],
+      "output_sha256": "3ecc2e08dbd38fc29544682038bc2e01d79e9bfa6778c3490037a5916909a87e"
+    },
+    {
+      "path": "runtime/compositions/transitions/two.html",
+      "specimen_source": "site/examples/psk-feature-card-0.json",
+      "component_id": "psk-feature-card",
+      "source_url": "https://plaza.spa/kislovodsk/ui/",
+      "markup_sha256": "2afb4f72baa0db2e2ad5c59aadd1655f7a14d91b3e3c184a735acb2b0b70a496",
+      "adaptations": [
+        "Real sanitized component markup unchanged; original ancestors retained.",
+        "Dedicated local lab headings/navigation, not a complete production page.",
+        "Original specimen styles and approved shared runtime referenced from same static site.",
+        "Controlled demo CSP connect-src is self only; original engine unchanged."
+      ],
+      "output_sha256": "2600fdeb62251fb8620577c645d5dab5f1662f4d7a81571861c60871b63c509d"
+    }
+  ],
+  "effect": "Original Card stack",
+  "durationMs": 1500,
+  "easing": "cubic-bezier(.42,0,.18,1)",
+  "controller_changed": false,
+  "scope": "Only local transition-demo directory; no production site route enabled.",
+  "demo_csp": {
+    "script-src": "'self'",
+    "connect-src": "'self'",
+    "form-action": "'none'",
+    "frame-src": "'none'",
+    "object-src": "'none'",
+    "media-src": "'none'"
+  }
+}

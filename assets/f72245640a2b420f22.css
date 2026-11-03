@@ -1,0 +1,22 @@
+.editor-styles-wrapper{--bg:#f8f6f1;--surface:#fcfbf8;--ink:#45413b;--muted:#67645e;--gold:#b2945f;--accent:#917747;--line:rgba(147,119,71,.22);--soft:#efece4;--radius:var(--plaza-radius-ui,4px);background:var(--bg);color:var(--ink);font:400 15px/1.8 Montserrat,Arial,sans-serif}
+.editor-styles-wrapper .wp-block{max-width:1280px}
+.editor-styles-wrapper .wp-block-group__inner-container{display:contents}
+.editor-styles-wrapper h1,.editor-styles-wrapper h2,.editor-styles-wrapper h3{font-family:Lora,Georgia,serif;font-weight:500;line-height:1.2}
+.editor-styles-wrapper h1{font-size:48px}.editor-styles-wrapper h2{font-size:36px}.editor-styles-wrapper h3{font-size:25px}
+.editor-styles-wrapper em{color:var(--accent);font-style:normal}
+.editor-styles-wrapper .eyebrow{font-size:10px;letter-spacing:.12em;color:var(--accent)}
+.editor-styles-wrapper .small-muted{font-size:12px;color:var(--muted)}
+.editor-styles-wrapper .section,.editor-styles-wrapper .hero{padding:24px;margin-top:32px;border:1px dashed var(--line)}
+.editor-styles-wrapper .card{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px)}
+.editor-styles-wrapper .card-featured,.editor-styles-wrapper .booking-panel,.editor-styles-wrapper .included-band{background:var(--soft)}
+.editor-styles-wrapper .photo-frame img{border-radius:var(--plaza-radius-ui,4px);object-fit:cover;max-height:420px}
+.editor-styles-wrapper .swipe-rail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.editor-styles-wrapper .hero,.editor-styles-wrapper .feature,.editor-styles-wrapper .section-heading,.editor-styles-wrapper .included-grid,.editor-styles-wrapper .trust-panel,.editor-styles-wrapper .faq-grid,.editor-styles-wrapper .booking-intro{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.editor-styles-wrapper .facts,.editor-styles-wrapper .visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.editor-styles-wrapper .hero-glass{padding:16px;border:1px solid var(--line)}
+.editor-styles-wrapper .plaza-button .wp-block-button__link{background:var(--gold);border:1px solid var(--gold);border-radius:var(--plaza-radius-ui,4px);color:#171c1b;font-size:13px;padding:13px 20px}
+.editor-styles-wrapper .plaza-outline .wp-block-button__link{background:transparent;color:var(--ink)}
+.editor-styles-wrapper .text-link a,.editor-styles-wrapper .booking-phone a{color:var(--accent)}
+.editor-styles-wrapper .plaza-editor-icon{color:var(--accent);font-size:24px}
+.editor-styles-wrapper .plaza-editor-booking{border:1px dashed var(--accent);padding:16px;color:var(--muted);font-size:12px}
+@media(max-width:800px){.editor-styles-wrapper .hero,.editor-styles-wrapper .feature,.editor-styles-wrapper .section-heading,.editor-styles-wrapper .included-grid,.editor-styles-wrapper .trust-panel,.editor-styles-wrapper .faq-grid,.editor-styles-wrapper .booking-intro,.editor-styles-wrapper .swipe-rail{grid-template-columns:1fr}}

@@ -1,0 +1,16 @@
+.resort-price-controls{display:grid;grid-template-columns:2fr 1fr 1.4fr;gap:16px;margin-block:24px 16px}
+.resort-price-controls label{display:flex;flex-direction:column;gap:8px;font-size:13px;min-width:0}
+.resort-price-controls :is(input,select){width:100%;min-height:48px;padding:12px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);font:inherit}
+.resort-price-controls :is(input,select):focus-visible,.resort-price-navigation button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.resort-price-navigation{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-block:16px 32px}
+.resort-price-navigation p{margin:0;font-size:13px;color:var(--muted)}
+.resort-price-navigation>div{display:flex;gap:12px}
+.resort-price-navigation button{min-height:44px;padding:10px 16px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);font:inherit;cursor:pointer}
+.resort-price-navigation button:disabled{opacity:.45;cursor:default}
+.resort-table:has(+.resort-price-navigation){margin-block:0;scroll-margin-top:104px}
+.resort-table tr[hidden]{display:none}
+@media(max-width:1050px){.resort-price-controls{grid-template-columns:1fr 1fr}.resort-price-controls label:first-child{grid-column:1/-1}}
+@media(max-width:767px){.resort-price-controls{grid-template-columns:1fr}.resort-price-controls label:first-child{grid-column:auto}.resort-price-navigation>div{width:100%}.resort-price-navigation button{flex:1}}
+.resort-page-content .resort-service-directory{grid-template-columns:repeat(2,minmax(0,1fr));margin:0}.resort-page .resort-service-directory h2{margin:0 0 20px;font-size:clamp(26px,2.5vw,34px)}.resort-service-directory article{display:flex;flex-direction:column;gap:16px}.resort-page .resort-service-directory p{margin:0}.resort-service-directory article>p:last-child{margin-top:auto;padding-top:8px}.resort-service-directory a{min-height:44px}@media(max-width:767px){.resort-page-content .resort-service-directory{grid-template-columns:1fr}}
+.resort-page-content img.resort-manual-symbol{display:inline-block;width:24px;height:24px;max-width:none;vertical-align:middle;margin-inline:4px;border-radius:0}[data-theme=light] .resort-page-content img.resort-manual-symbol{filter:brightness(.7)}
+.resort-price-controls input::placeholder{color:var(--muted);opacity:1}

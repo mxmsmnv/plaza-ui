@@ -1,0 +1,169 @@
+/* Kislovodsk cards: tokens -> base -> semantic variant -> slots.
+ * Legacy selector names are adapted once by plaza-psk-cards.php.
+ * Layout pages may arrange cards, but do not own their typography or material.
+ */
+body.plaza-object-kislovodsk{
+ --plaza-card-radius:var(--plaza-radius-ui,4px);
+ --plaza-card-inset:16px;--plaza-card-gap:8px;
+ --plaza-card-heading-size:22px;--plaza-card-heading-leading:1.2;
+ --plaza-card-text-size:13px;--plaza-card-text-leading:1.5;
+ --plaza-card-caption-size:9px;--plaza-card-caption-leading:1.5;
+ --plaza-card-action-height:48px;--plaza-card-divider-gap:16px;
+ --plaza-card-copy-gap:var(--plaza-card-gap);
+ --plaza-photo-card-width:min(440px,calc(100vw - 40px));
+ --plaza-photo-card-ratio:440/494.75;--plaza-card-photo-ratio:16/9;
+ --plaza-card-surface:var(--surface);--plaza-card-edge:var(--line);
+ --plaza-card-shadow:0 2px 4px rgba(92,72,37,.035),0 12px 28px rgba(92,72,37,.065);
+ --plaza-card-hover-shadow:0 4px 8px rgba(92,72,37,.04),0 16px 32px rgba(92,72,37,.1);
+ --plaza-card-lift-duration:350ms;--plaza-card-lift:-4px;--plaza-card-easing:ease;
+ --plaza-card-border-duration:0ms;
+}
+html[data-theme="dark"] body.plaza-object-kislovodsk{--plaza-card-lift-duration:400ms}
+body.plaza-object-kislovodsk main#main .plaza-card{
+ box-sizing:border-box;min-width:0;color:var(--ink);border-radius:var(--plaza-card-radius);
+ font:400 var(--plaza-card-text-size)/var(--plaza-card-text-leading) Montserrat,Arial,sans-serif;
+}
+body.plaza-object-kislovodsk main#main .plaza-card:not(.plaza-card--stack):not(.plaza-card--editorial):not(.plaza-card--fact){
+ border:1px solid var(--plaza-card-edge);background:var(--plaza-card-surface);box-shadow:var(--plaza-card-shadow);
+}
+body.plaza-object-kislovodsk main#main .plaza-card :is(h3,h4){
+ font:500 var(--plaza-card-heading-size)/var(--plaza-card-heading-leading) Lora,Georgia,serif;
+ margin:0;min-height:0;letter-spacing:normal;
+}
+body.plaza-object-kislovodsk main#main .plaza-card p{font-size:var(--plaza-card-text-size);line-height:var(--plaza-card-text-leading)}
+/* A photo card always has the same two equal tracks; wrapping links span both. */
+body.plaza-object-kislovodsk main#main .plaza-card--photo{
+ --plaza-card-heading-size:22px;--plaza-card-heading-leading:1.2;--plaza-card-text-size:12px;--plaza-card-text-leading:1.45;--plaza-card-copy-gap:3px;
+ display:grid!important;grid-template-rows:repeat(2,minmax(0,1fr))!important;
+ width:var(--plaza-photo-card-width)!important;inline-size:var(--plaza-photo-card-width)!important;
+ flex:0 0 var(--plaza-photo-card-width)!important;max-width:min(100%,calc(100vw - 40px))!important;
+ height:auto!important;block-size:auto!important;min-height:0!important;max-height:none!important;
+ aspect-ratio:var(--plaza-photo-card-ratio)!important;align-self:start;overflow:hidden;padding:0!important;
+ transition:transform var(--plaza-card-lift-duration) var(--plaza-card-easing),background-color .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo>.pg-tech-link{
+ display:grid!important;grid-template-rows:repeat(2,minmax(0,1fr))!important;grid-row:1/-1;
+ min-height:0!important;height:100%!important;margin:0;padding:0;color:inherit;text-decoration:none;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="photo"]{
+ display:block!important;position:relative;box-sizing:border-box;margin:0!important;padding:0!important;
+ width:100%!important;height:100%!important;min-height:0!important;aspect-ratio:auto!important;
+ border-radius:0!important;overflow:hidden;flex:none!important;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="photo"] img{
+ display:block;width:100%;height:100%!important;object-fit:cover;aspect-ratio:auto!important;transform:none!important;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="body"]{
+ box-sizing:border-box;display:flex!important;flex-direction:column;gap:var(--plaza-card-copy-gap)!important;
+ margin:0!important;padding:var(--plaza-card-inset)!important;min-height:0!important;min-width:0;
+ height:100%!important;block-size:100%!important;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="body"]>*{flex-shrink:0}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="body"] :is(h3,h4){
+ font:500 var(--plaza-card-heading-size)/var(--plaza-card-heading-leading) Lora,Georgia,serif!important;
+ margin:0!important;min-height:0!important;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="body"]>p:not(.eyebrow):not(.text-link){
+ display:block!important;margin:0!important;font:400 var(--plaza-card-text-size)/var(--plaza-card-text-leading) Montserrat,Arial,sans-serif!important;min-height:0!important;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="body"]>.eyebrow{
+ font:500 var(--plaza-card-caption-size)/var(--plaza-card-caption-leading) Montserrat,Arial,sans-serif!important;
+ margin:0!important;min-height:0!important;color:var(--plaza-ui-gold);
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo:is(:hover,:focus-within){
+ transform:translateY(var(--plaza-card-lift));box-shadow:var(--plaza-card-hover-shadow);
+}
+/* The existing 1 -> 2px inset border and Stripe engines remain the motion owners. */
+body.plaza-object-kislovodsk main#main .plaza-card--photo .room-catalog-specs{margin:0!important;padding:0!important;border:0!important}
+body.plaza-object-kislovodsk main#main .plaza-card--photo .room-catalog-area{font:400 30px/1.2 Lora,Georgia,serif}
+body.plaza-object-kislovodsk main#main .plaza-card--photo .room-photo-link{position:absolute;inset:0;width:100%;height:100%}
+body.plaza-object-kislovodsk main#main .plaza-card--photo .plaza-room-media-visual.is-plan img{object-fit:contain;background:var(--surface)}
+/* One footer, divider and action baseline for every photo renderer. */
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="footer"]{
+ box-sizing:border-box;position:relative;display:flex!important;align-items:center;justify-content:space-between;gap:12px;
+ min-height:calc(var(--plaza-card-action-height) + var(--plaza-card-divider-gap) + 1px);
+ margin:auto 0 0!important;padding:var(--plaza-card-divider-gap) 0 0!important;border:0;border-top:1px solid var(--plaza-card-edge);
+ font:500 13px/1.5 Montserrat,Arial,sans-serif!important;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="footer"]>.wp-block-button{margin:0!important;flex:none}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="footer"] :is(.catalog-price,.plaza-program-price){
+ box-sizing:border-box;width:var(--plaza-room-price-width,8rem);min-height:var(--plaza-card-action-height);padding:13px 12px;font-size:13px;line-height:1.5;white-space:nowrap;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo :is(.plaza-card-more,.ml-more,.booking-highlight-link){
+ display:inline-flex!important;align-items:center;justify-content:flex-end;gap:8px;min-height:var(--plaza-card-action-height);min-width:0;
+ margin:0 0 0 auto!important;padding:0!important;white-space:nowrap;
+ font:500 13px/1.5 Montserrat,Arial,sans-serif!important;color:var(--plaza-service-link-color,var(--plaza-ui-gold));text-decoration:none;transition:color .35s ease;
+}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="footer"]>.text-link{margin:0 0 0 auto!important;padding:0!important}
+body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="footer"] .plaza-link-chevron{display:block;flex:0 0 18px;width:18px;height:18px;transform:none}
+body.plaza-object-kislovodsk main#main .plaza-card-more>.plaza-link-label{font:inherit}
+body.plaza-object-kislovodsk main#main .plaza-card-price{display:flex;align-items:center;min-height:var(--plaza-card-action-height);font:500 13px/1.5 Montserrat,Arial,sans-serif;color:var(--ink)}
+body.plaza-object-kislovodsk main#main .plaza-card-meta{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0;padding:0;font:400 12px/1.5 Montserrat,Arial,sans-serif;color:var(--muted)}
+body.plaza-object-kislovodsk main#main .plaza-card-footer--medical>.plaza-card-meta{position:absolute;inset:3px 0 auto}
+body.plaza-object-kislovodsk main#main .plaza-card-footer>.svc-meta{margin:0!important;min-width:0;font:400 13px/1.5 Montserrat,Arial,sans-serif;color:var(--muted)}
+body.plaza-object-kislovodsk main#main .pg-tech-link .plaza-card-more>.plaza-link-label{background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .35s ease}
+body.plaza-object-kislovodsk main#main .pg-tech-link:is(:hover,:focus-visible) .plaza-card-more{color:var(--plaza-service-link-hover)}
+body.plaza-object-kislovodsk main#main .pg-tech-link:is(:hover,:focus-visible) .plaza-card-more>.plaza-link-label{background-size:100% 1px}
+body.plaza-object-kislovodsk main#main .plaza-program-list-price{color:var(--plaza-ui-gold);font-weight:500}
+body.plaza-object-kislovodsk main#main .plaza-card--photo.pg-med-feature:has(.plaza-card-meta){--plaza-card-copy-gap:4px}
+/* Non-photo variants inherit the same surface, type scale and insets, without fake photo tracks. */
+body.plaza-object-kislovodsk main#main :is(.plaza-card--text,.plaza-card--person,.plaza-card--list){padding:var(--plaza-card-inset);height:100%;display:flex;flex-direction:column;gap:var(--plaza-card-gap)}
+body.plaza-object-kislovodsk main#main .plaza-card--text>.al-card-content>.card-body{padding:0;gap:var(--plaza-card-gap)}
+body.plaza-object-kislovodsk main#main .plaza-card--text p{margin:0}
+body.plaza-object-kislovodsk main#main .plaza-card--text p+p{margin-top:var(--plaza-card-gap)}
+body.plaza-object-kislovodsk main#main .plaza-card--fact{padding:var(--plaza-card-inset);box-shadow:none;border-radius:0;min-width:0}
+body.plaza-object-kislovodsk main#main .plaza-card--person{--plaza-card-heading-size:22px;align-self:stretch}
+body.plaza-object-kislovodsk main#main .plaza-card--person :is(.ny-host__copy,.ml-doc-copy){padding:0;display:flex;flex-direction:column;gap:var(--plaza-card-gap);flex:1}
+body.plaza-object-kislovodsk main#main .plaza-card--list{height:auto;flex-direction:row;align-items:center;gap:24px}
+/* Editorial split panels and the dessert stack retain their deliberate composition and motion. */
+body.plaza-object-kislovodsk main#main .plaza-card--editorial{--plaza-card-heading-size:24px}
+body.plaza-object-kislovodsk main#main .plaza-card--stack{--plaza-card-heading-size:24px}
+/* A container arranges cards; it does not give every page its own card width. */
+body.plaza-object-kislovodsk main#main .swipe-rail:has(>.plaza-card--photo){grid-auto-columns:var(--plaza-photo-card-width)!important;grid-template-columns:none!important;gap:24px}
+@media(min-width:1200px){
+ body.plaza-object-kislovodsk:not(.plaza-design-system) main#main .carousel:has(>.swipe-rail>.plaza-card--photo){container-type:inline-size;--plaza-photo-card-width:min(380px,calc((100cqw - 48px)/3))}
+ body.plaza-object-kislovodsk:not(.plaza-design-system) main#main .carousel:has(>.swipe-rail>.plaza-card--photo)>.swipe-rail{padding-inline:calc(var(--plaza-rail-shadow-space,32px) + max(0px,(100cqw - 3 * var(--plaza-photo-card-width) - 48px)/2))!important;scroll-padding-inline:calc(var(--plaza-rail-shadow-space,32px) + max(0px,(100cqw - 3 * var(--plaza-photo-card-width) - 48px)/2))!important;clip-path:inset(0 max(0px,calc(var(--plaza-rail-shadow-space,32px) + max(0px,(100cqw - 3 * var(--plaza-photo-card-width) - 48px)/2) - 24px)) 0 max(0px,calc(var(--plaza-rail-shadow-space,32px) + max(0px,(100cqw - 3 * var(--plaza-photo-card-width) - 48px)/2) - 24px)))}
+ body.plaza-object-kislovodsk.plaza-design-system{--plaza-photo-card-width:380px}
+ body.plaza-object-kislovodsk main#main .pg-tech-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;--plaza-photo-card-width:380px}
+ body.plaza-object-kislovodsk main#main .plaza-card--photo{--plaza-card-heading-size:22px;--plaza-card-text-size:12px;--plaza-card-text-leading:1.45;--plaza-card-copy-gap:3px}
+ body.plaza-object-kislovodsk main#main .plaza-card--photo .room-catalog-area{font-size:24px}
+}
+@media(min-width:1200px) and (max-width:1279px){
+ body.plaza-object-kislovodsk:not(.plaza-design-system) main#main .plaza-card--photo{--plaza-card-heading-size:22px;--plaza-card-copy-gap:3px}
+ body.plaza-object-kislovodsk:not(.plaza-design-system) main#main .plaza-card--photo.plaza-program-card{--plaza-card-text-size:11px;--plaza-card-text-leading:1.45}
+}
+@media(max-width:700px){body.plaza-object-kislovodsk main#main .plaza-card--list{flex-direction:column;align-items:stretch;gap:var(--plaza-card-gap)}}
+@media(prefers-reduced-motion:reduce){body.plaza-object-kislovodsk main#main .plaza-card--photo,body.plaza-object-kislovodsk main#main .plaza-card-more{transition:none!important}body.plaza-object-kislovodsk main#main .plaza-card--photo:is(:hover,:focus-within){transform:none}}
+@media print{body.plaza-object-kislovodsk main#main .plaza-card{break-inside:avoid;box-shadow:none;transform:none!important}body.plaza-object-kislovodsk main#main .plaza-card--photo{width:100%!important;max-width:100%!important;aspect-ratio:auto!important;height:auto!important;display:block!important}body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="photo"]{aspect-ratio:16/9!important;height:auto!important}}
+
+body.plaza-object-kislovodsk main#main .plaza-card--text>.al-card-content{display:flex;flex-direction:column;flex:1}
+body.plaza-object-kislovodsk main#main .plaza-card--text>.al-card-content>.card-body{display:flex;flex-direction:column;flex:1}
+body.plaza-object-kislovodsk main#main .plaza-card--photo.ml-goal .ml-more[data-plaza-card-part="footer"]{min-height:calc(var(--plaza-card-action-height) + var(--plaza-card-divider-gap) + 1px);margin:auto 0 0!important;padding:var(--plaza-card-divider-gap) 0 0!important;justify-content:flex-end}
+
+/* Narrow cards need a common readable body rather than clipping facts to force a desktop ratio. */
+@media(max-width:700px){
+ body.plaza-object-kislovodsk{--plaza-card-mobile-body-height:280px}
+ body.plaza-object-kislovodsk main#main .plaza-card--photo{--plaza-card-heading-size:22px;--plaza-card-heading-leading:1.2;--plaza-card-text-size:12px;--plaza-card-text-leading:1.5;--plaza-card-copy-gap:4px;aspect-ratio:auto!important;height:auto!important;grid-template-rows:auto var(--plaza-card-mobile-body-height)!important}
+ body.plaza-object-kislovodsk main#main .plaza-card--photo>.pg-tech-link{height:auto!important;grid-template-rows:auto var(--plaza-card-mobile-body-height)!important}
+ body.plaza-object-kislovodsk main#main .plaza-card--photo [data-plaza-card-part="photo"]{height:auto!important;aspect-ratio:16/9!important}
+}
+
+html[data-theme="dark"] body.plaza-object-kislovodsk main#main .plaza-card--photo{transition:transform var(--plaza-card-lift-duration) var(--plaza-card-easing),background-color .45s ease,border-color .45s ease,box-shadow .45s ease}
+
+/* Anatomy is an explicit photo-card variant: full-bleed image and a real, shared footer. */
+body.plaza-object-kislovodsk main#main .plaza-card--photo.plaza-card--anatomy{--plaza-card-copy-gap:8px;--plaza-card-text-size:13px;--plaza-card-text-leading:1.5}
+body.plaza-object-kislovodsk main#main .plaza-card--anatomy [data-plaza-card-part="photo"] img{object-fit:cover;object-position:center top;background:none}
+body.plaza-object-kislovodsk main#main .plaza-card--anatomy .ml-goal-toggle{appearance:none;border:0;box-shadow:none;cursor:pointer;color:inherit;background:var(--surface)}
+body.plaza-object-kislovodsk main#main .plaza-card--anatomy .plaza-card-more{appearance:none;border:0;background:none;box-shadow:none;border-radius:0;cursor:pointer;color:var(--plaza-ui-gold)}
+body.plaza-object-kislovodsk main#main .plaza-card--anatomy .plaza-card-more:is(:hover,:focus-visible){color:var(--plaza-service-link-hover,var(--ui-gold-hover))}
+@media(max-width:700px){
+ body.plaza-object-kislovodsk main#main .plaza-card--photo.plaza-card--anatomy{--plaza-card-mobile-body-height:192px;--plaza-card-heading-size:18px;--plaza-card-text-size:12px;--plaza-card-inset:12px;--plaza-card-action-height:44px;--plaza-card-divider-gap:8px}
+}
+
+/* Medical text is one vertically balanced group above the unchanged shared footer. */
+body.plaza-object-kislovodsk main#main :is(.plaza-card--anatomy,.pg-med-feature--landing) .plaza-card-copy{display:flex;flex:1 1 auto;min-height:0;flex-direction:column;justify-content:safe center;gap:12px}
+body.plaza-object-kislovodsk main#main :is(.plaza-card--anatomy,.pg-med-feature--landing) .plaza-card-copy>p{margin:0!important;font:400 var(--plaza-card-text-size)/var(--plaza-card-text-leading) Montserrat,Arial,sans-serif;color:var(--muted)}
+body.plaza-object-kislovodsk main#main .pg-med-feature--landing .plaza-card-copy>.pg-procedure-cadence{font-size:11px;line-height:1.5}
+
+/* Event copy uses the standard 8px rhythm above the common footer. */
+body.plaza-object-kislovodsk main#main .plaza-card--photo.plaza-event-card{--plaza-card-copy-gap:8px}

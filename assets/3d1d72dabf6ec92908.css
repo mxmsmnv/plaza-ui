@@ -1,0 +1,46 @@
+/* Content-only service icons; the common motion module owns the animation. */
+body.plaza-shell main a[data-plaza-content-icon]{display:inline-flex;align-items:center;gap:6px}
+body.plaza-shell main a>svg.plaza-content-link-icon{display:block;width:24px;height:24px;min-width:24px;margin:0;color:currentColor;fill:none;flex:0 0 24px}
+body.plaza-shell a>svg.plaza-link-chevron{display:block;width:16px;height:16px;flex:0 0 16px;margin:0;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media(min-width:701px){
+ html body.plaza-shell main :is(.section-heading,.included-grid,.trust-panel){align-items:start}
+ html body.plaza-shell main :is(.section-heading,.included-grid,.trust-panel)>:is(div:has(>h2),h2){position:sticky;top:calc(var(--plaza-header-height,80px) + 24px);align-self:start}
+}
+/* iPad booking CTA retains the layout but takes 12.5% breathing room on each side. */
+@media(min-width:701px) and (max-width:1366px) and (any-pointer:coarse){
+ html body.plaza-shell main #booking.plaza-booking-panel .plaza-booking-actions>.wp-block-buttons{width:75%;margin-inline:auto}
+ html body.plaza-shell main #booking.plaza-booking-panel .plaza-booking-actions .wp-block-button{width:100%;min-width:0}
+ html body.plaza-shell main #booking.plaza-booking-panel .plaza-booking-actions .wp-block-button__link{box-sizing:border-box;width:100%;min-width:0;white-space:normal;padding-inline:12px}
+}
+html body.plaza-shell main #booking .plaza-booking-price-lines>span,
+html body.plaza-shell main #booking .plaza-booking-price-tail{display:block}
+
+/* Real photographs in clean, complete Polaroid frames. The upper silhouette stays open. */
+@font-face{font-family:PlazaMapHand;src:url("https://plaza.spa/wp-content/uploads/plaza-polaroid-20261020/Caveat.ttf") format('truetype');font-weight:400 700;font-display:swap}
+body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band{position:absolute;z-index:2;inset:auto 0 0;height:var(--plaza-map-ad-cover);overflow:visible;background:var(--surface);pointer-events:none}
+body.plaza-network .plaza-map-polaroids{position:absolute;inset:-30px 12px auto;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));align-items:start;pointer-events:none}
+body.plaza-network .plaza-map-polaroid{box-sizing:border-box;display:flex;flex-direction:column;width:calc(100% + 8px);height:126px;margin:0 0 0 -4px;padding:6px 6px 8px;background:var(--plaza-map-paper);color:var(--plaza-map-paper-ink);box-shadow:var(--plaza-map-paper-shadow);transform:translateY(var(--polaroid-shift)) rotate(var(--polaroid-angle));transform-origin:center bottom}
+body.plaza-network .plaza-map-polaroid>img{display:block;flex:none;width:100%;height:80px;min-height:0;object-fit:contain;background:var(--plaza-map-paper);filter:none}
+body.plaza-network .plaza-map-polaroid>figcaption{display:grid;place-items:center;flex:1;margin:2px 0 0;padding:0;text-align:center;font:400 clamp(16px,1.2vw,18px)/.85 PlazaMapHand,cursive;font-synthesis:none;overflow-wrap:normal;color:var(--plaza-map-paper-ink)}
+body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band>.plaza-map-external{box-sizing:border-box;position:absolute;z-index:5;inset:auto auto 4px 50%;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:max-content;max-width:calc(100% - 104px);height:44px;min-height:44px;margin:0;padding:10px 18px;border:1px solid var(--plaza-map-cta-border);border-radius:var(--plaza-radius-ui,4px);background:var(--plaza-map-cta-bg);color:var(--plaza-map-cta-ink);box-shadow:var(--plaza-map-cta-shadow);font:400 14px/1.25 Montserrat,Arial,sans-serif;text-decoration:none;white-space:nowrap;pointer-events:auto;transform:translateX(-50%);transition:color .25s ease,transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band>.plaza-map-external:is(:hover,:focus-visible){color:var(--plaza-map-cta-ink);transform:translateX(-50%)}
+body.plaza-network .plaza-map-polaroid-band>.plaza-map-external:focus-visible{outline:2px solid var(--plaza-map-cta-ink);outline-offset:3px}
+body.plaza-network .plaza-map-photo-credits{position:absolute;z-index:6;right:4px;bottom:0;display:grid;place-items:center;width:44px;height:44px;color:var(--plaza-map-paper-ink);background:var(--plaza-map-paper);font:18px/1 Montserrat,Arial,sans-serif;border-radius:var(--plaza-radius-ui,4px);pointer-events:auto;text-decoration:none}
+@media(max-width:700px){body.plaza-network .plaza-map-polaroids{inset-inline:12px;grid-template-columns:repeat(5,minmax(0,1fr))}body.plaza-network .plaza-map-polaroid:nth-child(n+6){display:none}body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band>.plaza-map-external{font-size:12px;padding-inline:10px;max-width:calc(100% - 88px)}}
+@media(prefers-reduced-motion:reduce){body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band>.plaza-map-external{transition:none}}
+
+/* The Yandex word retains its red hover; night glass action moves as one unit. */
+body.plaza-network .plaza-map-external .plaza-map-yandex-word{color:inherit;transition:color .25s ease}
+body.plaza-network .plaza-map-external:is(:hover,:focus-visible) .plaza-map-yandex-word{color:var(--plaza-map-yandex-hover)}
+@media(prefers-reduced-motion:reduce){body.plaza-network .plaza-map-external .plaza-map-yandex-word{transition:none}}
+
+/* Marker ink varies gently across the real Caveat glyphs; paper stays white. */
+@supports ((background-clip:text) or (-webkit-background-clip:text)){
+ body.plaza-network .plaza-map-polaroid>figcaption{background-image:var(--plaza-map-marker-ink);background-clip:text;-webkit-background-clip:text;color:transparent}
+}
+@media(forced-colors:active){body.plaza-network .plaza-map-polaroid>figcaption{background:none;color:CanvasText}}
+
+/* Night map action: one quiet lift/glow, with the common glass material unchanged. */
+html[data-theme=dark] body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band>.plaza-map-external:focus-visible{transform:translate(-50%,-2px);box-shadow:var(--plaza-map-cta-hover-shadow);border-color:var(--plaza-map-cta-hover-border)}
+@media(hover:hover) and (pointer:fine){html[data-theme=dark] body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band>.plaza-map-external:hover{transform:translate(-50%,-2px);box-shadow:var(--plaza-map-cta-hover-shadow);border-color:var(--plaza-map-cta-hover-border)}}
+@media(prefers-reduced-motion:reduce){html[data-theme=dark] body.plaza-network .plaza-map-modal>.plaza-map-polaroid-band>.plaza-map-external:is(:hover,:focus-visible){transform:translateX(-50%)}}

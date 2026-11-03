@@ -1,0 +1,172 @@
+/* Network page only. Buttons, fonts, player and theme colours use Resort modules. */
+html:has(body.plaza-network){scroll-behavior:smooth;scroll-padding-top:32px}
+body.plaza-network{--gold:#b2945f;--bronze:var(--accent);--paper:var(--surface);margin:0;background:var(--paper)!important;color:var(--ink)!important;font:400 16px/1.6 Montserrat,Arial,sans-serif}
+body.plaza-network *{box-sizing:border-box}
+body.plaza-network a{color:inherit;text-decoration:none}
+body.plaza-network :is(h1,h2,h3,p){margin:0}
+body.plaza-network :is(h1,h2,h3){font-family:Lora,Georgia,serif;font-weight:500;color:var(--ink)}
+.pn-wrap{width:min(1280px,calc(100% - 96px));margin-inline:auto}
+.pn-header{border-bottom:1px solid var(--line);background:var(--glass)}
+.pn-header-inner{min-height:96px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.pn-brand{display:flex;align-items:center;min-height:48px}.pn-brand :is(img,.pn-logo){width:252px;height:auto;display:block}
+.pn-nav{display:flex;gap:40px}.pn-link{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:48px;width:fit-content;transition:color .3s ease}.pn-link:after{content:none!important}.pn-link:is(:hover,:focus-visible){color:var(--accent)}
+.pn-phone{white-space:nowrap;font-size:18px}
+.pn-icon{width:26px;height:26px;flex:none;fill:none;stroke:var(--bronze);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* Layer 1: ivory. Layer 2: atlas. Layer 3: watercolor panorama. Live copy above. */
+.pn-hero{position:relative;min-height:660px;isolation:isolate;overflow:hidden}
+.pn-hero-inner{position:relative;min-height:660px;padding-top:72px}
+.pn-hero-art{position:absolute;left:max(-48px,calc((100vw - 1430px)/2));bottom:10px;width:min(850px,62vw);height:auto;z-index:1;pointer-events:none;mask-image:linear-gradient(to right,#000 68%,transparent 100%),linear-gradient(to bottom,#000 76%,transparent 100%);mask-composite:intersect;opacity:.86}
+.pn-reveal{position:relative;z-index:4;pointer-events:none;width:fit-content}
+.pn-eyebrow{font:400 13px/1.5 Lora,Georgia,serif;letter-spacing:3px;color:var(--bronze)}
+.pn-title{margin-top:24px!important;max-width:760px;font-size:clamp(36px,4.1vw,58px);line-height:1.16;letter-spacing:-1.5px}
+.pn-title span{display:block;color:var(--gold)}.pn-title .pn-title-nature{color:var(--ink)}
+.pn-quiet{position:absolute;left:0;bottom:30px;z-index:3;font:400 10px/1.8 Lora,Georgia,serif;letter-spacing:3.5px;color:var(--bronze)}
+.pn-map{position:absolute;right:-30px;top:-20px;width:57%;aspect-ratio:1;height:auto;z-index:2;transform:translateY(var(--map-shift,0px));scroll-margin-top:32px}
+.pn-map-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;mask-image:linear-gradient(to right,transparent 0%,#000 22%,#000 92%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 10%,#000 75%,transparent 100%);mask-composite:intersect;opacity:.82}
+.pn-roads{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.92}
+.pn-route-casing path{fill:none;stroke:var(--paper);stroke-width:6;stroke-linejoin:round}
+.pn-route-lines path{fill:none;stroke:var(--gold);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
+.pn-pin{position:absolute;display:flex;align-items:center;gap:10px;min-height:48px;white-space:nowrap;font-size:17px;font-weight:500;transform:translate(-22px,-24px);color:var(--ink);z-index:3;text-shadow:0 0 8px var(--paper),0 1px 5px var(--paper);transition:color .3s}
+.pn-pin .pn-dot{display:grid;place-items:center;width:44px;height:44px;flex:none;border:4px solid var(--paper);border-radius:50%;background:var(--gold);box-shadow:0 4px 12px #91774740;transition:box-shadow .35s,background .35s,transform .35s}
+.pn-pin .pn-dot:before{content:'';width:10px;height:10px;background:#fff;border-radius:50%}
+.pn-pin:is(:hover,:focus-visible) .pn-dot{background:var(--bronze);box-shadow:0 4px 20px #91774770;transform:scale(1.06)}
+.pn-pin-k{left:12.31%;top:83.85%}.pn-pin-z{left:66.15%;top:36.15%}
+.pn-small-city{position:absolute;display:flex;align-items:center;gap:7px;font-size:13px;background:color-mix(in srgb,var(--paper) 72%,transparent);padding:2px 6px;border-radius:var(--plaza-radius-ui,4px);transform:translate(-10px,-10px);white-space:nowrap;z-index:2}
+.pn-city-e{left:33.54%;top:56%}.pn-city-p{left:72.31%;top:56.92%}.pn-city-m{left:84.92%;top:18.77%;transform:translate(-100%,10px)}
+.pn-small-city:before{content:'';width:7px;height:7px;border:1px solid var(--gold);border-radius:50%;flex:none}
+.pn-airport{position:absolute;left:72.31%;top:11.54%;display:flex;align-items:center;gap:7px;min-height:44px;transform:translate(-15px,-22px);font-size:12px;white-space:nowrap;z-index:3;text-shadow:0 0 8px var(--paper)}.pn-airport .pn-icon{width:25px;height:25px}
+.pn-section-label{display:flex;align-items:center;gap:28px;font:400 18px/1.5 Lora,Georgia,serif;letter-spacing:5px;text-align:center;padding:24px 0 34px;color:var(--bronze)}.pn-section-label:before,.pn-section-label:after{content:'';height:1px;flex:1;background:var(--line)}
+.pn-property{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);align-items:center;gap:56px;padding:0 0 32px;scroll-margin-top:32px}.pn-property+.pn-property{border-top:1px solid var(--line);padding-top:32px}
+.pn-video-frame{min-width:0;border-radius:var(--plaza-radius-ui,4px);box-shadow:0 6px 24px #45413b1b;transition:box-shadow .4s}.pn-video-frame:hover{box-shadow:0 8px 30px #45413b25}
+.pn-property-copy h2{font-size:46px;line-height:1.12;letter-spacing:-1px}.pn-property-copy h2 span{display:block;color:var(--bronze);font-size:34px;letter-spacing:-.5px;margin-top:4px}.pn-property-copy h2:after{content:'';display:block;width:40px;height:1px;background:var(--bronze);margin:26px 0}
+.pn-description{font-size:20px;line-height:1.55;max-width:330px}.pn-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 16px;margin-top:32px}
+.pn-button{min-height:56px;padding:14px 20px;font-size:15px;font-weight:500;white-space:nowrap;gap:10px}.pn-external svg{width:18px;height:18px;transition:transform .35s ease}.pn-external:is(:hover,:focus-visible) .pn-icon{transform:translate(2px,-2px)}
+.pn-booking{display:flex;align-items:center;gap:28px;border:1px solid var(--line);padding:24px var(--plaza-card-padding-inline);margin-top:24px;margin-bottom:32px;background:var(--glass);position:relative;isolation:isolate}
+.pn-portrait{width:128px;height:128px;border-radius:50%;overflow:hidden;flex:none;display:block;box-shadow:0 4px 18px #45413b20}.pn-portrait img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.pn-booking h2{font-size:27px;line-height:1.4;text-transform:uppercase}.pn-contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:12px}.pn-contact-row .pn-link{font-size:19px}
+.pn-booking-content{min-width:0}.pn-booking-claim{position:relative;display:flex;align-items:center;gap:12px;margin-left:auto;flex:none;color:var(--bronze)}.pn-booking-claim p{font:italic 400 21px/1.4 Lora,Georgia,serif}.pn-water-art{width:124px;height:100px;opacity:.62;flex:none}
+.pn-privacy:is(:hover,:focus-visible){background-size:100% 1px}
+body.plaza-network :is(a[href^="tel:"],a[href^="mailto:"]){background-image:none!important;border-bottom:0!important;text-decoration:none!important}body.plaza-network :is(a[href^="tel:"],a[href^="mailto:"])::after{content:none!important}
+body.plaza-network .pn-theme{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;min-width:44px;flex:none;padding:10px;border:0;border-radius:50%;background:none;color:var(--gold);transition:color .25s,background .25s,transform .25s}.pn-theme svg{width:22px;height:22px}.pn-theme:not(.pn-header-sun):hover{background:rgba(178,148,95,.1);transform:rotate(-12deg)}
+.pn-skip{position:fixed;top:8px;left:8px;z-index:99999;padding:12px 20px;background:var(--paper);transform:translateY(-150%)}.pn-skip:focus{transform:none}body.plaza-network a:focus-visible{outline:2px solid var(--bronze);outline-offset:5px}
+body.plaza-network .pn-video-frame .plaza-hero-video{aspect-ratio:16/9}body.plaza-network .pn-video-frame .plaza-video-fullscreen{display:flex}body.plaza-network .plaza-hero-video:fullscreen{aspect-ratio:auto;height:100vh;width:100vw}
+body.plaza-network #zheleznovodsk .plaza-video-poster{object-position:50% 15%}body.plaza-network #kislovodsk .plaza-video-poster{object-position:50% 35%}
+.pn-reveal .pn-eyebrow{animation:pn-arrive 1.25s both;animation-delay:.08s}
+@keyframes pn-arrive{0%{opacity:0;transform:translateY(64px)}48%{opacity:1;transform:translateY(-9px)}69%{transform:translateY(4px)}85%{transform:translateY(-1.5px)}100%{opacity:1;transform:translateY(0)}}
+html[data-theme=dark] body.plaza-network{--paper:#171c1b;--bronze:var(--accent)}html[data-theme=dark] .pn-route-casing path{stroke:#202725}html[data-theme=dark] .pn-small-city{background:rgba(23,28,27,.7)}
+html[data-theme=dark] .pn-video-frame{box-shadow:0 0 0 1px rgba(226,207,171,.16),0 4px 22px rgba(212,171,104,.12)}html[data-theme=dark] .pn-video-frame:hover{box-shadow:0 0 0 1px rgba(226,207,171,.24),0 4px 26px rgba(212,171,104,.2)}
+@media(hover:hover) and (pointer:fine){.pn-portrait:hover img{transform:scale(1.035)}}
+@media(max-width:1180px){.pn-wrap{width:calc(100% - 64px)}.pn-header-inner{gap:24px;min-height:88px}.pn-brand :is(img,.pn-logo){width:222px}.pn-nav{gap:24px}.pn-phone{font-size:16px}.pn-hero,.pn-hero-inner{min-height:610px}.pn-hero-inner{padding-top:64px}.pn-title{font-size:46px}.pn-map{top:30px;right:-18px;width:56%}.pn-hero-art{width:66vw;bottom:0}.pn-pin{font-size:15px}.pn-property{gap:40px}.pn-property-copy h2{font-size:40px}.pn-property-copy h2 span{font-size:30px}.pn-description{font-size:18px}.pn-actions{gap:12px;margin-top:24px}.pn-button{font-size:14px;padding-inline:18px}.pn-booking{gap:24px;padding:24px var(--plaza-card-padding-inline)}.pn-booking h2{font-size:24px}.pn-booking-claim{gap:0}.pn-water-art{width:70px}.pn-booking-claim p{font-size:18px}.pn-contact-row .pn-link{font-size:17px}}
+@media(max-width:1023px){.pn-wrap{width:calc(100% - 48px)}.pn-header-inner{flex-wrap:wrap;gap:4px 16px;padding-block:16px;min-height:96px}.pn-nav{order:3;width:100%;justify-content:center;gap:40px}.pn-nav a{min-height:44px}.pn-phone{margin-left:auto}.pn-title{font-size:40px;max-width:600px}.pn-hero,.pn-hero-inner{min-height:590px}.pn-map{top:115px;width:53%;right:-8px}.pn-hero-art{width:68vw;left:-26px;bottom:0}.pn-quiet{font-size:9px;letter-spacing:3px;bottom:22px}.pn-pin{font-size:13px;gap:7px}.pn-pin-z{flex-direction:column;gap:2px;transform:translate(-50%,-24px)}.pn-small-city{font-size:11px}.pn-airport{font-size:11px}.pn-property{gap:28px;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}.pn-property-copy h2{font-size:34px}.pn-property-copy h2 span{font-size:25px}.pn-property-copy h2:after{margin:18px 0}.pn-description{font-size:16px}.pn-button{font-size:14px;padding-inline:18px;min-height:52px}.pn-booking h2{font-size:21px}.pn-contact-row .pn-link{font-size:16px}.pn-booking{flex-wrap:wrap;gap:20px}.pn-portrait{width:110px;height:110px}.pn-booking-claim{width:100%;justify-content:flex-end;border-top:1px solid var(--line);padding-top:12px;gap:16px}.pn-water-art{width:90px;height:62px}.pn-booking-claim p{font-size:19px}}
+@media(max-width:767px){.pn-wrap{width:calc(100% - 40px)}.pn-header-inner{padding-block:12px;gap:8px}.pn-brand :is(img,.pn-logo){width:184px}.pn-phone{font-size:0;min-width:44px;justify-content:center}.pn-phone .pn-icon{width:27px;height:27px}.pn-nav{gap:28px;font-size:13px;justify-content:flex-start}.pn-nav a{min-height:44px}.pn-hero,.pn-hero-inner{min-height:790px}.pn-hero-inner{padding-top:36px}.pn-eyebrow{font-size:10px;letter-spacing:2px}.pn-title{font-size:35px;line-height:1.18;letter-spacing:-1px;margin-top:18px!important}.pn-hero-art{top:180px;bottom:auto;left:-42px;width:calc(100% + 50px);max-width:none;opacity:.9;mask-image:linear-gradient(to right,#000 76%,transparent),linear-gradient(to bottom,#000 70%,transparent);mask-composite:intersect}.pn-map{top:420px;right:0;width:100%;transform:none}.pn-map-art{inset:0;width:100%;height:100%;mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 85%,transparent 100%),linear-gradient(to right,transparent,#000 10%,#000 90%,transparent 100%);mask-composite:intersect}.pn-pin{font-size:12px;gap:6px}.pn-small-city{font-size:10px}.pn-airport{font-size:10px}.pn-quiet{display:none}.pn-section-label{font-size:13px;letter-spacing:3px;gap:14px;padding:24px 0}.pn-property{grid-template-columns:1fr;gap:28px;padding-bottom:32px}.pn-property+.pn-property{padding-top:32px}.pn-property-copy h2{font-size:36px}.pn-property-copy h2 span{font-size:28px}.pn-property-copy h2:after{margin:20px 0}.pn-description{font-size:17px;max-width:100%}.pn-actions{gap:12px;margin-top:24px}.pn-button{min-height:52px;font-size:14px;padding-inline:16px}.pn-booking{align-items:flex-start;flex-wrap:wrap;padding:24px var(--plaza-card-padding-inline);gap:20px;margin-top:8px;margin-bottom:24px}.pn-portrait{width:88px;height:88px}.pn-booking-content{display:contents}.pn-booking h2{width:calc(100% - 108px);align-self:center;font-size:20px;line-height:1.45}.pn-contact-row{width:100%;gap:4px;margin-top:0}.pn-contact-row .pn-link{font-size:16px;min-height:48px;width:100%;gap:12px}.pn-booking-claim{justify-content:center;padding-top:16px}.pn-booking-claim p{font-size:18px}body.plaza-network .plaza-video-controls{right:12px;bottom:12px}body.plaza-network .plaza-hero-video button.plaza-glass{width:44px;height:44px}}
+@media(min-width:600px) and (max-width:767px){.pn-hero,.pn-hero-inner{min-height:1000px}.pn-hero-art{width:90%;left:-30px;top:190px}.pn-map{width:80%;top:470px;right:0}}
+@media(prefers-reduced-motion:reduce){html:has(body.plaza-network){scroll-behavior:auto}body.plaza-network *,body.plaza-network *:before,body.plaza-network *:after{animation:none!important;transition:none!important}.pn-reveal :is(.pn-eyebrow,.pn-title span){opacity:1;transform:none}.pn-pin .pn-dot,.pn-external .pn-icon{transform:none!important}.pn-map{transform:none}}
+@media print{body.plaza-network .pm-pending,body.plaza-network .pm-running{opacity:1!important;translate:none!important;will-change:auto!important}}
+
+/* All content remains visible until the homepage enables the module. */
+@media (min-width:1024px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  body.plaza-network.pm-enabled .pm-pending {
+    opacity: 0;
+    translate: 0 20px;
+  }
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="heading"],
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="copy"] { translate: 0 24px; }
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="card"] { translate: 0 30px; }
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="photo"] { translate: -24px 18px; }
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="pairedCopy"] { translate: 24px 12px; }
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="row"] { translate: 0 16px; }
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="opacity"] { translate: none; }
+  body.plaza-network.pm-enabled .pm-pending[data-pm-kind="social"] { translate: 0 12px; scale: .78; }
+  body.plaza-network.pm-enabled .pm-running { will-change: opacity, translate; }
+  body.plaza-network.pm-enabled .pm-running[data-pm-kind="opacity"] { will-change: opacity; }
+  body.plaza-network.pm-enabled .pm-running[data-pm-kind="social"] { will-change: opacity, translate, scale; }
+}
+
+@media print {
+  body.plaza-network :is(.pm-pending,.pm-running) { opacity: 1 !important; translate: none !important; scale: none !important; will-change: auto !important; }
+}
+
+
+
+/* Real theme-specific watercolor assets; never invert the daylight artwork. */
+body.plaza-network .pn-night-art{display:none}
+html[data-theme=dark] body.plaza-network .pn-day-art{display:none}
+html[data-theme=dark] body.plaza-network .pn-night-art{display:block;filter:none;mix-blend-mode:normal;opacity:1}
+html[data-theme=dark] body.plaza-network .pn-hero-art{mask-image:linear-gradient(to right,#000 82%,transparent 100%),linear-gradient(to bottom,#000 65%,transparent 100%);mask-composite:intersect}
+
+/* Night Elbrus: feather independently on all four sides. */
+html[data-theme=dark] body.plaza-network .pn-hero-art{opacity:.78;mask-image:linear-gradient(to right,transparent 0%,#000 12%,#000 72%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 26%,#000 58%,transparent 100%);mask-composite:intersect}
+
+.pn-footer-social{display:flex;justify-content:center;padding:18px 0 0}.pn-social{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}.pn-social a{min-width:44px;min-height:44px;color:var(--bronze);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:color .35s,border-color .35s,background .35s;text-decoration:none!important}.pn-social svg{width:22px;height:22px;fill:currentColor;transition:transform var(--plaza-icon-duration,.35s) ease}.pn-social a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+@media(hover:hover) and (pointer:fine){.pn-social a:hover{color:var(--gold);border-color:var(--gold);background:rgba(178,148,95,.08)}.pn-social a:hover svg{transform:var(--plaza-icon-transform,translate(3px,-2px) rotate(-3deg) scale(1.04))}}
+.pn-map-light{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;mix-blend-mode:screen;background:radial-gradient(circle 92px at var(--light-x,50%) var(--light-y,50%),rgba(236,200,139,.22),rgba(220,186,125,.07) 46%,transparent 100%);transition:opacity .45s ease;mask-image:linear-gradient(to right,transparent 0%,#000 18%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 10%,#000 83%,transparent 100%);mask-composite:intersect}
+@media(min-width:1024px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){html[data-theme=dark] .pn-map.pn-light-on .pn-map-light{opacity:1}}
+@media(prefers-reduced-motion:reduce){.pn-social svg,.pn-map-light{transition:none}}
+
+/* Geographic anchors projected from real OSM coordinates; same projection as both PNG maps. */
+.pn-pin-k{left:10.55646%;top:79.90455%;}
+.pn-pin-z{left:57.45854%;top:32.83076%;}
+.pn-city-e{left:31.73993%;top:50.56242%;}
+.pn-city-p{left:63.53237%;top:52.06348%;}
+.pn-city-m{left:73.1297%;top:16.51576%;}
+.pn-airport{left:65.76282%;top:13.7799%;}
+.pn-small-city{transform:none;background:none;padding:0;display:block;z-index:5}.pn-small-city:before{position:absolute;left:0;top:0;transform:translate(-50%,-50%)}.pn-small-city>span{display:block;transform:translate(12px,-50%);padding:2px 5px;border-radius:3px;background:color-mix(in srgb,var(--paper) 74%,transparent)}.pn-city-m>span{transform:translate(-50%,10px)}.pn-pin,.pn-airport{z-index:5}.pn-map-credit{margin:0 0 18px;text-align:center;font-size:10px;color:var(--muted)}.pn-map-credit a{color:inherit;text-decoration:none}.pn-map-credit a:hover{color:var(--gold)}
+html[data-theme=dark] .pn-small-city{background:none}html[data-theme=dark] .pn-small-city>span{background:rgba(23,28,27,.65)}
+body.plaza-network .pn-social{gap:14px}body.plaza-network .pn-social a{display:grid!important;min-width:44px;min-height:44px}
+.pn-privacy{margin:0;font-size:12px;color:var(--muted);background-position:left calc(100% - 9px)!important;background-size:0 1px}
+.pn-privacy:is(:hover,:focus-visible){background-size:100% 1px}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){}
+@media(max-width:700px){
+ .pn-privacy{font-size:11px;line-height:1.4;justify-content:center;text-align:center;min-height:44px}
+ 
+}
+
+/* Keep the wordmark still; allow the orbit its full circular bounds. */
+.pn-brand .pn-logo{overflow:visible;flex:none}.pn-logo-orbit{transition:none!important}.pn-brand:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:2px}
+
+/* Network-page experiment: theme-paired posters and distributed shared controls. */
+body.plaza-network .pn-property .plaza-hero-video[data-pn-experiment] {--pn-control-size:50px;--pn-control-inset:18px}
+body.plaza-network .pn-property .plaza-hero-video[data-pn-experiment] .pn-poster-layers {position:absolute;inset:0;z-index:1;pointer-events:none;opacity:1;transition:opacity 1s ease}
+body.plaza-network .pn-property .plaza-hero-video[data-pn-experiment].started .pn-poster-layers {opacity:0;transition-duration:.2s}
+body.plaza-network .pn-property .plaza-hero-video[data-pn-experiment] .pn-poster-layers .plaza-video-poster {opacity:1;animation:none!important}
+body.plaza-network .pn-property .plaza-hero-video[data-pn-experiment] .pn-video-poster-alt {position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:cover;object-position:center;display:block;opacity:0;pointer-events:none;transition:opacity 1s ease;transform:none!important;filter:none!important}
+@media(hover:hover) and (pointer:fine) {
+ body.plaza-network .pn-property .plaza-hero-video[data-pn-experiment]:is(:hover,:focus-visible,:has(button:focus-visible)) .pn-video-poster-alt {opacity:1;transition-duration:1s}
+}
+@media(prefers-reduced-motion:reduce){body.plaza-network .pn-property .plaza-hero-video[data-pn-experiment] :is(.pn-poster-layers,.pn-video-poster-alt){transition:none}}
+/* Both poster layers must use identical crop origins. */
+body.plaza-network #kislovodsk .pn-video-poster-alt{object-position:50% 35%}
+body.plaza-network #zheleznovodsk .pn-video-poster-alt{object-position:50% 15%}
+
+/* Manual theme reveal: soft wave from the footer switch, 2 seconds. */
+
+/* Six social links in the booking card: three columns, two rows. */
+body.plaza-network .pn-booking > .pn-booking-social {display:grid!important;grid-template-columns:repeat(3,44px);gap:8px 14px;flex:none;margin-left:auto;align-self:center;width:max-content}
+@media(max-width:1023px){body.plaza-network .pn-booking > .pn-booking-social{margin-left:0;margin-right:0}}
+@media(max-width:767px){body.plaza-network .pn-booking > .pn-booking-social{margin-inline:auto}}
+
+/* Booking columns align with the video and property-copy columns. */
+body.plaza-network .pn-booking-row{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:56px;align-items:stretch;margin:24px 0 32px}
+body.plaza-network .pn-booking-row .pn-booking{margin:0;min-width:0}
+body.plaza-network .pn-social-panel{display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:var(--glass);padding:24px var(--plaza-card-padding-inline);min-width:0}
+body.plaza-network .pn-social-panel .pn-booking-social{display:grid!important;grid-template-columns:repeat(3,44px);gap:8px 14px;margin:0;width:max-content}
+@media(max-width:1180px){body.plaza-network .pn-booking-row{gap:40px}}
+@media(max-width:1023px){body.plaza-network .pn-booking-row{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px}}
+@media(max-width:767px){body.plaza-network .pn-booking-row{grid-template-columns:1fr;gap:16px;margin:8px 0 24px}body.plaza-network .pn-social-panel{border:0;background:none;padding:0 var(--plaza-card-padding-inline)}body.plaza-network .pn-social-panel .pn-booking-social{grid-template-columns:repeat(6,44px);gap:clamp(0px,1vw,8px)}}
+
+/* Social symbols doubled from 22px to 44px; retain mobile six-column layout. */
+body.plaza-network .pn-social-panel .pn-booking-social svg{width:44px;height:44px}
+
+/* Light footer panels: champagne and sage, echoing the existing watercolor. */
+html:not([data-theme="dark"]) body.plaza-network .pn-booking-row :is(.pn-booking,.pn-social-panel){
+ --glass-panel-bg:radial-gradient(ellipse at 0% 0%,rgba(207,184,139,.085),transparent 72%),radial-gradient(ellipse at 100% 100%,rgba(163,183,166,.075),transparent 74%),linear-gradient(125deg,#faf8f2,#f7f9f4);
+}
+
+
+/* Balance the contact and social panels using the approved social-link gold. */
+body.plaza-network .pn-social-panel .social-links svg{width:30px;height:30px}
+body.plaza-network .pn-booking .pn-contact-row a{color:#a78a55;transition:color .3s}
+body.plaza-network .pn-booking .pn-contact-row a:focus-visible{color:#cfab61}
+@media(hover:hover) and (pointer:fine){body.plaza-network .pn-booking .pn-contact-row a:hover{color:#cfab61}}
+@media(prefers-reduced-motion:reduce){body.plaza-network .pn-booking .pn-contact-row a{transition:none}}
+

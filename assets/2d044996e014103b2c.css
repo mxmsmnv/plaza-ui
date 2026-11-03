@@ -1,0 +1,164 @@
+/* Narrow !important overrides are needed because the legacy footer and video snippet
+
+   still emit stronger !important geometry. Remove these exceptions when those owners
+
+   adopt this first-paint contract; do not extend them beyond the two home layouts. */
+
+/* Both homes: stable flow and one inter-section rhythm from the first paint. */
+
+/* Width-matched system fallback, measured against the real Cyrillic Montserrat. */
+
+@font-face{font-family:"Plaza Home Text Fallback";src:local("Arial"),local("ArialMT"),local("Liberation Sans"),local("Arimo");font-weight:400;font-style:normal;size-adjust:111.9577%;line-gap-override:0%}
+
+@font-face{font-family:"Plaza Home Title Fallback";src:local("Georgia"),local("Liberation Serif"),local("Times New Roman");font-weight:400 500;font-style:normal;size-adjust:106.3628%;line-gap-override:0%}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-copy .lead,
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .facts .fact-detail{font-family:Montserrat,"Plaza Home Text Fallback",Arial,sans-serif}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-copy h1,
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-glass p{font-family:Lora,"Plaza Home Title Fallback",Georgia,serif}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home{--plaza-home-gap:var(--plaza-section-after);--plaza-divider-before:var(--plaza-home-gap);display:flex;flex-direction:column;align-items:stretch}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section,
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>.facts{flex:none}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section.plaza-divider-section{margin-top:var(--plaza-home-gap)!important;margin-bottom:0!important;row-gap:0!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section.hero.plaza-divider-section{margin-top:0!important;padding-top:var(--plaza-home-gap)!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>.facts{margin-top:var(--plaza-home-gap)!important;margin-bottom:0!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section:is(.included-band,.trust-panel).plaza-divider-section{padding-top:0!important;padding-bottom:0!important}
+
+/* The included surface owns its internal breathing room, independently of the gap between sections. */
+html body.plaza-shell:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section.included-band.plaza-divider-section{padding-block:var(--plaza-section-after,36px)!important}
+
+html body.plaza-shell:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section#rooms+section.included-band.plaza-divider-section{margin-top:var(--plaza-home-gap)!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section#booking.plaza-divider-section{margin-bottom:var(--plaza-home-gap)!important}
+
+@media(max-width:900px){body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>section.hero.plaza-divider-section{row-gap:var(--plaza-section-after)!important}}
+
+
+
+/* Both homes: the quiet initial plaque position does not depend on JS measurement. */
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-visual{align-self:end!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-visual:has(.plaza-hero-video)>.hero-glass{top:auto!important;bottom:0!important;animation:none!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-visual:not(.video-active)>.hero-glass{transform:none!important;opacity:1!important}
+
+@media(max-width:767px){
+
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-visual:has(.plaza-hero-video)>.hero-glass{bottom:70px!important}
+
+}
+
+/* More breathing room, without forcing a third desktop headline line. */
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-copy{padding:32px!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-copy h1{font-size:clamp(35px,4.1vw,58px)}
+
+@media(min-width:701px) and (max-width:1050px){body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-copy{padding:28px!important}}
+
+@media(max-width:700px){body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-copy{padding:24px!important}}
+
+/* One continuous diagonal tint. Shared white Stripe and icon hover stay intact. */
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>.facts,
+body.page-id-2649 main#main .pd2>.facts.plaza-specific-facts{background:linear-gradient(135deg,rgba(var(--plaza-highlight-rgb),.015),rgba(var(--plaza-highlight-rgb),.055) 55%,rgba(var(--plaza-highlight-rgb),.20))}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>.facts>div,
+body.page-id-2649 main#main .pd2>.facts.plaza-specific-facts>div{--plaza-fact-tint:none;--plaza-slider-tint:none}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>.facts .plaza-icon,
+body.page-id-2649 main#main .pd2>.facts.plaza-specific-facts .plaza-icon{width:32px;height:32px;flex:0 0 32px}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home>.facts .plaza-icon svg,
+body.page-id-2649 main#main .pd2>.facts.plaza-specific-facts .plaza-icon svg{width:32px;height:32px}
+
+
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-actions .wp-block-buttons{flex-wrap:wrap!important}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-actions .wp-block-button__link{white-space:nowrap}
+
+
+
+/* Two media actions stack in narrow columns. Reserve both 44px rows from the
+
+   server-provided count, before the tour link is attached by the shared handler. */
+
+@media(max-width:375px){
+
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-visual:has(>.hero-media-links[data-plaza-links-count="2"]){padding-bottom:98px!important}
+
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-media-links[data-plaza-links-count="2"]{top:auto;bottom:0;flex-direction:column;align-items:flex-end;gap:0;flex-wrap:nowrap}
+
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main.plaza-block-home .hero-visual:has(>.hero-media-links[data-plaza-links-count="2"])>.hero-glass{bottom:114px!important}
+
+}
+
+
+/* PSK only: correct the legacy two-action tablet row, 901..1250px.
+   Override its old column/top positioning; keep the established right alignment.
+   Other breakpoints retain the exact pre-rejection geometry above. */
+@media(min-width:901px) and (max-width:1250px){
+ body.plaza-object-kislovodsk main#main.plaza-block-home .hero-visual:has(>.hero-media-links[data-plaza-links-count="2"]){padding-bottom:54px!important}
+ body.plaza-object-kislovodsk main#main.plaza-block-home .hero-media-links[data-plaza-links-count="2"]{top:auto;bottom:0;right:8px;flex-direction:row;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:nowrap}
+ body.plaza-object-kislovodsk main#main.plaza-block-home .hero-visual:has(>.hero-media-links[data-plaza-links-count="2"])>.hero-glass{bottom:70px!important}
+}
+
+/* PSK phone only: a stable 70% of the small viewport leaves room for header
+   and media actions, including the two action rows on the narrowest phones.
+   Desktop/tablet geometry and fullscreen continue to use their original owners. */
+@media(max-width:767px){
+ body.plaza-object-kislovodsk main#main.plaza-block-home .plaza-hero-video:not(:fullscreen){aspect-ratio:auto;height:70vh;height:min(70svh,calc(100svh - 180px))}
+ body.plaza-object-kislovodsk main#main.plaza-block-home .plaza-hero-video>picture[data-plaza-mobile-poster]{position:absolute;inset:0;display:block;width:100%;height:100%}
+}
+@media(max-width:375px){
+ body.plaza-object-kislovodsk main#main.plaza-block-home .plaza-hero-video:not(:fullscreen){height:min(70svh,calc(100svh - 210px))}
+}
+
+/* PSG phone: retain its existing square preview whenever it fits, and cap
+   only oversized frames. 136px reserves its header, one media action and inset.
+   The portrait phone, tablet, desktop and fullscreen layouts keep their owners. */
+@media(max-width:767px){
+ body.plaza-object-zheleznovodsk main#main.plaza-block-home .plaza-hero-video:not(:fullscreen){max-height:70vh;max-height:min(70svh,calc(100svh - 136px))}
+}
+/* In short landscape windows the retained plaque occupies the lower frame.
+   Keep Play in the free space above it rather than under the glass caption.
+   --video-caption-height comes from the existing video ResizeObserver. */
+@media(max-width:767px) and (max-height:500px) and (min-aspect-ratio:1/1){
+ body.plaza-object-zheleznovodsk main#main.plaza-block-home .plaza-hero-video:not(:fullscreen) .plaza-video-controls .plaza-video-toggle{top:max(0px,calc((100% - var(--video-caption-height,128px) - 16px - 50px)/2));transform:translateX(-50%)}
+}
+
+/* The PSG full-width tablet poster needs full-width source selection too. */
+@media(max-width:979px){body.plaza-object-zheleznovodsk main#main.plaza-block-home .plaza-hero-video>picture[data-plaza-psg-poster]{position:absolute;inset:0;display:block;width:100%;height:100%}}
+
+/* A stacked heading cannot remain sticky above its own following paragraph. */
+@media(min-width:701px) and (max-width:1023px){
+ html body.plaza-shell:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) main#main.plaza-block-home :is(.section-heading,.included-grid)>:is(div:has(>h2),h2){position:static;top:auto}
+}
+
+/* PSK: two short phone actions occupy one stable row, 26 October 2026. */
+body.plaza-object-kislovodsk :is(.plaza-hero-price-compact,.plaza-media-label-compact){display:none!important}
+@media(max-width:700px){
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-actions .wp-block-buttons{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px!important;width:100%;flex-wrap:nowrap!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-actions .wp-block-button{width:100%!important;min-width:0!important;flex:none!important;margin:0!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-actions .wp-block-button__link{display:flex!important;align-items:center;justify-content:center;width:100%!important;min-width:0!important;box-sizing:border-box;height:48px;min-height:48px;padding:10px 8px!important;font-size:13px!important;gap:0!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-actions .wp-block-button__link::before{content:none!important;display:none!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-actions svg{display:none!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .plaza-hero-price-wide,html body.plaza-object-kislovodsk main#main.plaza-block-home .plaza-media-label-wide{display:none!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home :is(.plaza-hero-price-compact,.plaza-media-label-compact){display:inline!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-visual:has(>.hero-media-links[data-plaza-links-count="2"]){padding-bottom:54px!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-media-links[data-plaza-links-count="2"]{top:auto;bottom:0;left:0;right:0;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;flex-wrap:nowrap}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-media-links :is(.hero-camera-link,.hero-tour-link){font-size:12px!important;gap:6px!important;min-width:0}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home .hero-visual:has(>.hero-media-links[data-plaza-links-count="2"])>.hero-glass{bottom:70px!important}
+}

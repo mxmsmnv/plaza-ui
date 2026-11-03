@@ -1,0 +1,36 @@
+/* One room structure and card renderer, shared by the Wellness property. */
+#main .wellness-room-mosaic.wp-block-gallery.has-nested-images{display:grid;grid-template-columns:1.85fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:2.65/1;margin:0}
+#main .wellness-room-mosaic.has-nested-images figure.wp-block-image:not(#individual-image){width:100%;height:100%;margin:0;min-width:0;overflow:hidden;border-radius:var(--plaza-radius-ui,4px);aspect-ratio:auto}
+#main .wellness-room-mosaic figure:first-child{grid-row:span 2}
+#main .wellness-room-mosaic figure:nth-child(n+4){display:none}
+#main .wellness-room-mosaic .wp-lightbox-container{width:100%;height:100%}
+#main .wellness-room-mosaic img{width:100%;height:100%;object-fit:cover}
+#main .wellness-room-mosaic figure:nth-child(3) .lightbox-trigger{opacity:1;top:auto;left:auto;right:16px;bottom:16px;width:auto;height:44px;padding:12px 16px;display:flex;align-items:center;gap:10px;border-radius:var(--plaza-radius-ui,4px);background:var(--panel);color:var(--ink);backdrop-filter:blur(4px)}
+#main .wellness-room-mosaic figure:nth-child(3) .lightbox-trigger::after{content:attr(data-photo-label);font:400 12px/1.5 Montserrat,sans-serif;white-space:nowrap}
+.wellness-room-highlights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin:28px 0 0;padding:24px 0;border-bottom:1px solid var(--line)}
+.wellness-room-highlights>div{display:flex;align-items:flex-start;gap:16px;min-width:0}
+.wellness-room-highlights dt{flex:0 0 32px;color:var(--accent);padding-top:3px}
+.wellness-room-highlights dt svg{width:32px;height:32px}
+.wellness-room-highlights dd{margin:0;min-width:0}
+.wellness-room-highlights strong{display:block;font-size:15px;line-height:1.6;font-weight:500}
+.wellness-room-highlights dd>span{display:block;font-size:12px;line-height:1.6;color:var(--muted);margin-top:6px}
+.wellness-room-story{min-width:0}
+#main .wellness-room-layout{padding-bottom:48px}
+#main .wellness-room-description h2,#main .wellness-room-amenities h2,.wellness-room-faq h2{font-size:clamp(28px,3vw,40px);margin:0 0 24px}
+#main .wellness-room-amenities{margin-top:40px}
+.wellness-room-amenity-rail .swipe-rail{grid-auto-columns:calc((100% - 32px)/3);gap:16px}
+.wellness-amenity-card{padding:20px var(--plaza-card-padding-inline);min-width:0}
+.wellness-amenity-card h3{font-size:21px;line-height:1.3;margin:0 0 20px}
+#main .wellness-amenity-card ul{columns:1;margin:0;padding-left:18px;font-size:14px;line-height:1.6}
+#main .wellness-amenity-card li{margin-bottom:10px}
+#main .wellness-room-faq{padding-top:16px;padding-bottom:40px}
+#main .wellness-room-faq h2{margin-top:0}
+.wellness-room-faq>p{max-width:65ch}
+.wellness-room-final-booking{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:32px;background:var(--panel);border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);margin-block:16px 64px}
+.wellness-room-final-booking h2{font-size:clamp(30px,3vw,42px);margin:0 0 16px}
+.wellness-room-final-booking p{margin-block:12px}
+.wellness-room-final-booking>.button{flex-shrink:0}
+.wellness-room-related .swipe-rail{grid-auto-columns:calc((100% - 48px)/3);gap:24px;padding-block:8px 24px}
+@media(max-width:1050px){.wellness-room-highlights{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.wellness-room-amenity-rail .swipe-rail{grid-auto-columns:100%}.wellness-room-related .swipe-rail{grid-auto-columns:calc((100% - 24px)/2)}.wellness-room-final-booking{margin-bottom:48px;gap:24px}}
+@media(max-width:767px){#main .wellness-room-mosaic.wp-block-gallery.has-nested-images{display:block;aspect-ratio:3/2}#main .wellness-room-mosaic figure:nth-child(n+2){display:none}#main .wellness-room-mosaic figure:first-child .lightbox-trigger{opacity:1;top:auto;left:auto;right:12px;bottom:12px;width:auto;height:44px;padding:12px;display:flex;align-items:center;gap:8px;background:var(--panel);color:var(--ink);border-radius:var(--plaza-radius-ui,4px)}#main .wellness-room-mosaic figure:first-child .lightbox-trigger::after{content:attr(data-photo-label);font:400 12px/1.5 Montserrat,sans-serif}.wellness-room-highlights{gap:20px 16px;margin-top:20px;padding:20px 0}.wellness-room-highlights>div{gap:10px}.wellness-room-highlights dt{flex-basis:26px}.wellness-room-highlights dt svg{width:26px;height:26px}.wellness-room-highlights strong{font-size:13px}.wellness-room-highlights dd>span{font-size:11px}.wellness-room-reserve{order:0}.wellness-room-final-booking{display:block;padding:24px;margin-bottom:40px}.wellness-room-final-booking>.button{margin-top:16px;width:100%;justify-content:center}.wellness-room-related .swipe-rail{grid-auto-columns:100%}}
+

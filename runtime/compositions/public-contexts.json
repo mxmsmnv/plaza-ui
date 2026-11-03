@@ -1,0 +1,405 @@
+{
+  "plaza": {
+    "source_url": "https://plaza.spa/",
+    "shell": {
+      "property": "plaza",
+      "currentIndex": -1,
+      "hotels": [
+        {
+          "key": "kislovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Кисловодск",
+          "day": "https://plaza.spa/wp-content/uploads/plaza-kislovodsk-facade-20261024-v1/day-1672.webp",
+          "night": "https://plaza.spa/wp-content/uploads/plaza-kislovodsk-facade-20261024-v1/evening-1672.webp",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1254289318/",
+          "displayName": "Плаза СПА",
+          "soon": false,
+          "url": "https://kislovodsk.plaza.spa/"
+        },
+        {
+          "key": "zheleznovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Железноводск",
+          "day": "https://plaza.spa/wp-content/uploads/plaza-transfer-media/2026/10/zheleznovodsk-den-adaptivnyj.webp",
+          "night": "https://plaza.spa/wp-content/uploads/plaza-transfer-media/2026/10/zheleznovodsk-vecher-adaptivnyj.webp",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1019902659/",
+          "displayName": "Плаза СПА",
+          "soon": false,
+          "url": "https://zheleznovodsk.plaza.spa/"
+        }
+      ],
+      "home": "https://plaza.spa/"
+    },
+    "pageMenu": null
+  },
+  "kislovodsk": {
+    "source_url": "https://plaza.spa/kislovodsk/",
+    "shell": {
+      "property": "kislovodsk",
+      "currentIndex": 0,
+      "hotels": [
+        {
+          "key": "kislovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Кисловодск",
+          "day": "https://plaza.spa/wp-content/uploads/resort-20261015/prototype-plugin/%D0%9A%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%20%E2%80%94%20%D0%BD%D0%B0%D1%81%D1%82%D0%BE%D1%8F%D1%89%D0%B8%D0%B9%20%D1%84%D0%B0%D1%81%D0%B0%D0%B4.jpg",
+          "night": "https://plaza.spa/wp-content/uploads/resort-20261015/prototype-plugin/%D0%9A%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%20%E2%80%94%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80%20%D1%81%20%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%20%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81%D0%B0.png",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1254289318/",
+          "displayName": "Плаза Спа",
+          "url": "https://plaza.spa/kislovodsk/"
+        },
+        {
+          "key": "zheleznovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Железноводск",
+          "day": "https://plaza.spa/wp-content/uploads/resort-20261015/prototype-plugin/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%20%E2%80%94%20%D0%BD%D0%B0%D1%81%D1%82%D0%BE%D1%8F%D1%89%D0%B8%D0%B9%20%D1%84%D0%B0%D1%81%D0%B0%D0%B4.jpg",
+          "night": "https://plaza.spa/wp-content/uploads/resort-20261015/prototype-plugin/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%20%E2%80%94%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80%20%D1%81%20%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%20%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81%D0%B0.png",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1019902659/",
+          "displayName": "Плаза Спа",
+          "url": "https://plaza.spa/zheleznovodsk/"
+        }
+      ],
+      "home": "https://plaza.spa/kislovodsk/"
+    },
+    "pageMenu": {
+      "property": "kislovodsk",
+      "enabled": true,
+      "version": "20261023-page-menu-1",
+      "duration": 1050,
+      "basePath": "/kislovodsk/",
+      "pages": [
+        {
+          "id": "home",
+          "title": "Главная",
+          "subtitle": "Время для себя",
+          "href": "https://plaza.spa/kislovodsk/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/home-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/home-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/home-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/home-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/home-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/home-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "rooms",
+          "title": "Номера",
+          "subtitle": "Ваше место покоя",
+          "href": "https://plaza.spa/kislovodsk/rooms/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/rooms-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/rooms-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/rooms-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/rooms-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/rooms-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/rooms-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "medical",
+          "title": "Медицина",
+          "subtitle": "Забота о здоровье",
+          "href": "https://plaza.spa/kislovodsk/medical/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/medical-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/medical-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/medical-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/medical-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/medical-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/medical-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "restaurants",
+          "title": "Питание",
+          "subtitle": "Вкус вашего отдыха",
+          "href": "https://plaza.spa/kislovodsk/services/restaurants/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/restaurants-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/restaurants-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/restaurants-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/restaurants-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/restaurants-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/restaurants-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "about",
+          "title": "О санатории",
+          "subtitle": "Знакомство с Плазой",
+          "href": "https://plaza.spa/kislovodsk/about/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/about-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/about-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/about-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/about-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/about-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/about-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "services",
+          "title": "Услуги",
+          "subtitle": "Детали вашего отдыха",
+          "href": "https://plaza.spa/kislovodsk/services/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/services-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/services-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/services-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/services-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/services-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/services-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "photos",
+          "title": "Фотогалерея",
+          "subtitle": "Место будущих впечатлений",
+          "href": "https://plaza.spa/kislovodsk/about/photos/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/photos-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/photos-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/photos-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/photos-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/photos-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/photos-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "contacts",
+          "title": "Контакты",
+          "subtitle": "До встречи в Кисловодске",
+          "href": "https://plaza.spa/kislovodsk/about/#about-contacts",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/contacts-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/contacts-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/light/contacts-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/contacts-1440.webp?v=1793624312",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/contacts-640.webp?v=1793624312 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/kislovodsk/refresh-20261102/dark/contacts-1440.webp?v=1793624312 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        }
+      ],
+      "baseUrl": "https://plaza.spa/kislovodsk/",
+      "currentURL": "https://plaza.spa/kislovodsk/"
+    }
+  },
+  "zheleznovodsk": {
+    "source_url": "https://plaza.spa/zheleznovodsk/",
+    "shell": {
+      "property": "zheleznovodsk",
+      "currentIndex": 1,
+      "hotels": [
+        {
+          "key": "kislovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Кисловодск",
+          "day": "https://plaza.spa/wp-content/uploads/plaza-kislovodsk-facade-20261024-v1/day-1672.webp",
+          "night": "https://plaza.spa/wp-content/uploads/plaza-kislovodsk-facade-20261024-v1/evening-1672.webp",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1254289318/",
+          "displayName": "Плаза Спа",
+          "url": "https://plaza.spa/kislovodsk/"
+        },
+        {
+          "key": "zheleznovodsk",
+          "name": "ПЛАЗА СПА",
+          "city": "Железноводск",
+          "day": "https://plaza.spa/wp-content/uploads/wellness-20261014/prototype/2026/10/zheleznovodsk-den-adaptivnyj.webp",
+          "night": "https://plaza.spa/wp-content/uploads/wellness-20261014/prototype/2026/10/zheleznovodsk-vecher-adaptivnyj.webp",
+          "map": "https://yandex.ru/maps/org/plaza_spa/1019902659/",
+          "displayName": "Плаза Спа",
+          "url": "https://plaza.spa/zheleznovodsk/"
+        }
+      ],
+      "home": "https://plaza.spa/zheleznovodsk/"
+    },
+    "pageMenu": {
+      "property": "zheleznovodsk",
+      "enabled": true,
+      "version": "20261023-page-menu-1",
+      "duration": 1050,
+      "basePath": "/zheleznovodsk/",
+      "pages": [
+        {
+          "id": "home",
+          "title": "Главная",
+          "subtitle": "Время для себя",
+          "href": "https://plaza.spa/zheleznovodsk/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/home-1440.webp?v=1792962118",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/home-640.webp?v=1792962098 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/home-1440.webp?v=1792962118 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/home-1440.webp?v=1792961738",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/home-640.webp?v=1792961717 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/home-1440.webp?v=1792961738 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "rooms",
+          "title": "Номера",
+          "subtitle": "Ваше место покоя",
+          "href": "https://plaza.spa/zheleznovodsk/rooms/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/rooms-1440.webp?v=1792962293",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/rooms-640.webp?v=1792962272 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/rooms-1440.webp?v=1792962293 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/rooms-1440.webp?v=1792961937",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/rooms-640.webp?v=1792961917 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/rooms-1440.webp?v=1792961937 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "medical",
+          "title": "Медицина",
+          "subtitle": "Забота о здоровье",
+          "href": "https://plaza.spa/zheleznovodsk/medical/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/medical-1440.webp?v=1792962159",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/medical-640.webp?v=1792962139 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/medical-1440.webp?v=1792962159 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/medical-1440.webp?v=1792961778",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/medical-640.webp?v=1792961758 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/medical-1440.webp?v=1792961778 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "restaurants",
+          "title": "Питание",
+          "subtitle": "Вкус вашего отдыха",
+          "href": "https://plaza.spa/zheleznovodsk/services/restaurants/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/restaurants-1440.webp?v=1792962240",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/restaurants-640.webp?v=1792962220 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/restaurants-1440.webp?v=1792962240 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/restaurants-1440.webp?v=1792961898",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/restaurants-640.webp?v=1792961877 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/restaurants-1440.webp?v=1792961898 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "about",
+          "title": "О санатории",
+          "subtitle": "Знакомство с Плазой",
+          "href": "https://plaza.spa/zheleznovodsk/about/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/about-1440.webp?v=1792962037",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/about-640.webp?v=1792962015 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/about-1440.webp?v=1792962037 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/about-1440.webp?v=1792961656",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/about-640.webp?v=1792961636 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/about-1440.webp?v=1792961656 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "services",
+          "title": "Услуги",
+          "subtitle": "Детали вашего отдыха",
+          "href": "https://plaza.spa/zheleznovodsk/services/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/services-1440.webp?v=1792962332",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/services-640.webp?v=1792962313 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/services-1440.webp?v=1792962332 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/services-1440.webp?v=1792961996",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/services-640.webp?v=1792961976 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/services-1440.webp?v=1792961996 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "photos",
+          "title": "Фотогалерея",
+          "subtitle": "Место будущих впечатлений",
+          "href": "https://plaza.spa/zheleznovodsk/about/photos/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/photos-1440.webp?v=1792962199",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/photos-640.webp?v=1792962179 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/photos-1440.webp?v=1792962199 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/photos-1440.webp?v=1792961858",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/photos-640.webp?v=1792961838 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/photos-1440.webp?v=1792961858 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        },
+        {
+          "id": "contacts",
+          "title": "Контакты",
+          "subtitle": "До встречи в Железноводске",
+          "href": "https://plaza.spa/zheleznovodsk/about/contacts/",
+          "light": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/contacts-1440.webp?v=1792962077",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/contacts-640.webp?v=1792962057 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/light/contacts-1440.webp?v=1792962077 1440w",
+            "width": 1440,
+            "height": 900
+          },
+          "dark": {
+            "src": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/contacts-1440.webp?v=1792961696",
+            "srcset": "https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/contacts-640.webp?v=1792961676 640w, https://plaza.spa/wp-content/mu-plugins/plaza-property-ui/shared/page-menu/previews/zheleznovodsk/clean-20261025/dark/contacts-1440.webp?v=1792961696 1440w",
+            "width": 1440,
+            "height": 900
+          }
+        }
+      ],
+      "baseUrl": "https://plaza.spa/zheleznovodsk/",
+      "currentURL": "https://plaza.spa/zheleznovodsk/"
+    }
+  }
+}

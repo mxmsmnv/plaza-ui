@@ -1,0 +1,26 @@
+/* Photo mosaic uses the shared site wrap; colours and photo treatment inherit the property. */
+.plaza-home-gallery{width:100%;max-width:none}
+.plaza-home-gallery-heading{margin-bottom:var(--plaza-section-after)}
+.plaza-home-gallery-mosaic{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(8px,.8vw,16px)}
+.plaza-home-gallery-photo{display:block;position:relative;min-width:0;width:100%;height:clamp(176px,14.5vw,300px);padding:0;border:0;grid-column:span 1;cursor:pointer}
+.plaza-home-gallery-photo:nth-child(4n+1),.plaza-home-gallery-photo:nth-child(4n+3){grid-column:span 2}
+.plaza-home-gallery-photo:nth-child(n+5){grid-column:span 2}
+.plaza-home-gallery-photo:nth-child(5),.plaza-home-gallery-photo:nth-child(7){grid-column:span 1}
+.plaza-home-gallery-photo img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+.plaza-home-gallery-link{display:flex;justify-content:center;margin-top:var(--plaza-section-after)}
+.plaza-home-gallery-link a{display:inline-flex;align-items:center;gap:6px;min-height:44px;color:var(--plaza-service-link-color,var(--accent));font-size:16px;font-weight:500;line-height:1.5}
+.plaza-home-gallery-link a:is(:hover,:focus-visible){color:var(--plaza-service-link-hover,var(--gold))}
+.plaza-home-gallery-link svg{width:24px;height:24px;margin-block-end:0}
+@media(min-width:701px) and (max-width:1050px){
+ .plaza-home-gallery-mosaic{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .plaza-home-gallery-photo{height:clamp(170px,25vw,250px)}
+ .plaza-home-gallery-photo:nth-child(n){grid-column:span 1}
+ .plaza-home-gallery-photo:nth-child(4n+1),.plaza-home-gallery-photo:nth-child(4n+4){grid-column:span 2}
+}
+@media(max-width:700px){
+ .plaza-home-gallery-mosaic{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;padding:4px 0 20px}
+ .plaza-home-gallery-mosaic::-webkit-scrollbar{display:none}
+ .plaza-home-gallery-photo{flex:0 0 82%;height:auto;aspect-ratio:4/3}
+ .plaza-home-gallery .plaza-slider-controls{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+ .plaza-home-gallery-link{margin-top:16px}
+}

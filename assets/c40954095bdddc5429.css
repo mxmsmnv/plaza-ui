@@ -1,0 +1,14 @@
+.plaza-sitemap-edit-label{display:inline;white-space:normal}
+.plaza-sitemap-content-date{display:inline-block;margin-left:.65em;font-size:10px;font-weight:400;line-height:1.4;opacity:.55;white-space:nowrap;color:inherit;vertical-align:baseline}
+.plaza-sitemap-content-date[hidden],.plaza-sitemap-content-clock[hidden],.plaza-sitemap-edit-date{display:none!important}
+html body.plaza-shell #plaza-footer-map-title .plaza-sitemap-date-switch,
+html body.plaza-shell #plaza-footer-map-title .plaza-sitemap-date-switch:is(:hover,:focus,:focus-visible,:active){
+ display:inline!important;position:static!important;appearance:none!important;min-width:0!important;min-height:0!important;width:auto!important;height:auto!important;
+ padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;
+ font:inherit!important;letter-spacing:inherit!important;line-height:inherit!important;color:inherit!important;text-decoration:none!important;text-shadow:inherit!important;
+ cursor:text!important;transform:none!important;filter:none!important;transition:none!important;animation:none!important;outline:none!important;opacity:1!important;
+}
+html body.plaza-shell #plaza-footer-map-title .plaza-sitemap-date-switch::before,
+html body.plaza-shell #plaza-footer-map-title .plaza-sitemap-date-switch::after{content:none!important}
+
+.plaza-sitemap-property [data-plaza-map-extra][hidden]{display:none!important}

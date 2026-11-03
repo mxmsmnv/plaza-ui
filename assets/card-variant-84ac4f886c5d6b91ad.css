@@ -1,0 +1,399 @@
+/* Canonical edges footer. Theme/profile colours come from shared tokens. */
+html body.plaza-shell #contacts.plaza-footer-edges{box-sizing:border-box;position:relative;isolation:isolate;width:100%;max-width:none;margin:0;padding:24px 48px 12px;background-color:var(--plaza-footer-background,var(--bg));background-image:linear-gradient(var(--plaza-footer-gradient-angle,135deg),var(--plaza-footer-background,var(--bg)),var(--plaza-footer-gradient-end));color:var(--ink);font:400 .875rem/1.25rem Montserrat,Arial,sans-serif}
+html body.plaza-shell #contacts.plaza-footer-edges::before,html body.plaza-shell #contacts.plaza-footer-edges::after{content:none}
+html body.plaza-shell .plaza-footer-edges *{box-sizing:border-box}
+html body.plaza-shell .plaza-footer-edge-inner{max-width:var(--plaza-footer-content-max);margin-inline:auto;display:grid;gap:8px;min-width:0}
+html body.plaza-shell .plaza-footer-primary{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:'brand prompt' 'address contacts' 'map social';gap:0 32px;align-items:center;min-width:0}
+html body.plaza-shell .plaza-footer-primary>*{min-width:0}
+html body.plaza-shell .plaza-footer-edges :is(a,button){text-decoration:none}
+html body.plaza-shell .plaza-footer-map-dialog :is(a,button){color:var(--plaza-service-link-color,var(--gold))}
+html body.plaza-shell .plaza-footer-map-dialog :is(a,button){transition:color var(--plaza-icon-duration) var(--plaza-icon-easing),filter var(--plaza-header-neon-off,300ms) linear}
+html body.plaza-shell .plaza-footer-edges button{border:0;background:none;box-shadow:none;padding:0;margin:0;border-radius:var(--plaza-radius-ui);font:inherit;cursor:pointer}
+html body.plaza-shell .plaza-footer-map-dialog :is(a,button):focus-visible{outline:2px solid var(--plaza-service-link-color,var(--gold));outline-offset:3px}
+html body.plaza-shell .plaza-footer-edge-brand,html body.plaza-shell .plaza-footer-edge-prompt{display:flex;align-items:center;min-height:44px;font-family:Montserrat,Arial,sans-serif;font-size:var(--plaza-footer-title-size);line-height:var(--plaza-footer-title-line)}
+html body.plaza-shell .plaza-footer-edge-brand{grid-area:brand;font-weight:var(--plaza-footer-brand-weight);letter-spacing:.02em;width:fit-content}
+html body.plaza-shell .plaza-footer-edge-prompt{grid-area:prompt;justify-content:end;text-align:right;font-weight:500;margin:0}
+html body.plaza-shell .plaza-footer-edge-address{grid-area:address;display:flex;align-items:center;min-height:44px;gap:8px;width:fit-content;font-size:.875rem;line-height:1.25rem}
+html body.plaza-shell .plaza-footer-edge-address>svg,html body.plaza-shell .plaza-footer-edge-phone>svg{display:block;flex:0 0 16px;width:16px;height:16px}
+html body.plaza-shell .plaza-footer-edge-contacts{grid-area:contacts;display:flex;align-items:center;flex-wrap:wrap;justify-content:end;justify-self:end;gap:0 24px}
+html body.plaza-shell .plaza-footer-edge-phone,html body.plaza-shell .plaza-footer-edge-mail{display:flex;align-items:center;min-height:44px;font-size:.875rem;line-height:1.25rem;white-space:nowrap}
+html body.plaza-shell .plaza-footer-edge-phone{gap:8px}
+html body.plaza-shell .plaza-footer-map-trigger{grid-area:map;display:flex;align-items:center;justify-self:start;gap:8px;min-height:44px}
+html body.plaza-shell .plaza-footer-map-trigger>svg{display:block;flex:none;width:var(--plaza-footer-icon-size);height:var(--plaza-footer-icon-size);margin-right:12px}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links{grid-area:social;display:grid;grid-template-columns:repeat(7,44px);gap:0;justify-self:end;justify-items:center;align-items:center;width:auto;max-width:none;margin:0;padding:0;min-height:44px}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links>a{display:flex;align-items:center;justify-content:center;width:44px;min-width:44px;height:44px;min-height:44px;grid-column:auto;grid-row:auto;margin:0;padding:0;border:0;background:none;box-shadow:none}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links>a>svg{display:block;flex:none;width:var(--plaza-footer-icon-size);height:var(--plaza-footer-icon-size);fill:currentColor}
+html body.plaza-shell .plaza-footer-edge-bottom{display:grid;grid-template-columns:44px max-content max-content minmax(0,1fr) 44px;grid-template-areas:'theme copy policy medical up';align-items:center;gap:0 20px;min-width:0;color:var(--muted);font-size:.75rem;line-height:1rem}
+html body.plaza-shell .plaza-footer-edge-legal{display:contents}
+html body.plaza-shell .plaza-footer-edge-copy{grid-area:copy;display:flex;align-items:center;gap:4px;margin:0;min-height:44px;white-space:nowrap}
+html body.plaza-shell .plaza-footer-edge-copy>a,html body.plaza-shell .plaza-footer-edge-policy{display:flex;align-items:center;min-height:44px;font:inherit}
+html body.plaza-shell .plaza-footer-edge-policy{grid-area:policy;white-space:nowrap}
+html body.plaza-shell .plaza-footer-edge-medical{grid-area:medical;margin:0;text-align:center;justify-self:center;font:inherit;white-space:nowrap}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-control{display:flex;align-items:center;justify-content:center;position:static;width:44px;min-width:44px;height:44px;min-height:44px;padding:0;margin:0;border:0;background:none;box-shadow:none}
+html body.plaza-shell .plaza-footer-edge-control>svg{width:var(--plaza-footer-icon-size);height:var(--plaza-footer-icon-size);flex:none}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-theme{grid-area:theme;justify-self:start;margin-left:0}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-up{grid-area:up;justify-self:end;margin-right:0}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-primary{grid-template-areas:'contacts social'}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-contacts{justify-self:start;justify-content:start}
+html body.plaza-shell .plaza-footer-map-dialog{width:min(1240px,calc(100vw - 64px));max-width:calc(100vw - 32px);max-height:82dvh;margin:auto;padding:20px 28px 28px;border:0;border-radius:var(--plaza-radius-ui);background:var(--surface);color:var(--ink);box-shadow:0 12px 40px #0003;font:400 .875rem/1.25rem Montserrat,Arial,sans-serif;overflow:auto;overscroll-behavior:contain}
+html body.plaza-shell .plaza-footer-map-dialog::backdrop{background:#0003}
+html body.plaza-shell .plaza-footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:12px}
+html body.plaza-shell .plaza-footer-map-head>h2{font:500 1.125rem/1.5rem Montserrat,Arial,sans-serif;color:var(--ink);margin:0}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-map-close{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none}
+html body.plaza-shell .plaza-footer-map-close>svg{width:20px;height:20px}
+html body.plaza-shell .plaza-footer-map-body.footer-nav{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px;margin:0;padding:0;border:0;background:none}
+html body.plaza-shell .plaza-footer-map-body section{min-width:0}
+html body.plaza-shell .plaza-footer-map-body h3{font:500 .875rem/1.25rem Montserrat,Arial,sans-serif;color:var(--ink);margin:0 0 8px}
+html body.plaza-shell .plaza-footer-map-body ul{display:block;list-style:none;margin:0;padding:0}
+html body.plaza-shell .plaza-footer-map-body li{margin:0;padding:0;list-style:none}
+html body.plaza-shell .plaza-footer-map-body a{display:flex;align-items:center;min-height:44px;padding:4px 0;font:400 .875rem/1.25rem Montserrat,Arial,sans-serif;overflow-wrap:anywhere}
+@media(hover:hover) and (pointer:fine){html body.plaza-shell .plaza-footer-map-dialog :is(a,button):hover{color:var(--plaza-service-link-hover,var(--plaza-interaction))}}
+@media(max-width:1239px){html body.plaza-shell #contacts.plaza-footer-edges{padding-inline:24px}html body.plaza-shell .plaza-footer-primary{column-gap:24px}}
+@media(max-width:1179px){html body.plaza-shell .plaza-footer-map-body.footer-nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1199px){
+ html body.plaza-shell .plaza-footer-edge-bottom{grid-template-columns:44px minmax(0,1fr) 44px;grid-template-areas:'legal legal legal' 'theme medical up';gap:0 12px}
+ html body.plaza-shell .plaza-footer-edge-legal{grid-area:legal;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 24px}
+ html body.plaza-shell .plaza-footer-edge-medical{white-space:normal}
+}
+@media(max-width:699px),(max-width:960px) and (max-height:500px){
+ html body.plaza-shell #contacts.plaza-footer-edges{padding:20px 20px max(12px,env(safe-area-inset-bottom))}
+ html body.plaza-shell .plaza-footer-primary{grid-template-columns:minmax(0,1fr);grid-template-areas:'brand' 'address' 'contacts' 'social';gap:4px;justify-items:center;text-align:center}
+ html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-prompt,html body.plaza-shell .plaza-footer-edges .plaza-footer-map-trigger{display:none}
+ html body.plaza-shell .plaza-footer-edge-brand,html body.plaza-shell .plaza-footer-edge-address{justify-self:center;justify-content:center}
+ html body.plaza-shell .plaza-footer-edge-address>span{max-width:32ch}
+ html body.plaza-shell .plaza-footer-edge-contacts{justify-self:center;justify-content:center;gap:0 20px}
+ html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links{justify-self:center}
+ html body.plaza-shell .plaza-footer-edge-bottom{grid-template-columns:44px minmax(0,1fr) 44px;grid-template-areas:'legal legal legal' 'medical medical medical' 'theme . up';row-gap:4px}
+ html body.plaza-shell .plaza-footer-edge-legal{gap:0 20px}
+ html body.plaza-shell .plaza-footer-edge-copy,html body.plaza-shell .plaza-footer-edge-policy{justify-content:center}
+ html body.plaza-shell .plaza-footer-edge-medical{max-width:50ch}
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-primary{grid-template-areas:'contacts' 'social'}
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-contacts{justify-self:center;justify-content:center}
+ html body.plaza-shell .plaza-footer-map-dialog{width:calc(100vw - 32px);padding:16px}
+ html body.plaza-shell .plaza-footer-map-body.footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:379px){
+ html body.plaza-shell #contacts.plaza-footer-edges{padding-inline:16px}
+ html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links{grid-template-columns:repeat(8,minmax(0,1fr));width:100%;max-width:280px}
+ html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links>a{grid-column:span 2;justify-self:center}
+ html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links>a:nth-child(5){grid-column:2/span 2}
+ html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links>a:nth-child(6){grid-column:4/span 2}
+ html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-social.social-links>a:nth-child(7){grid-column:6/span 2}
+ html body.plaza-shell .plaza-footer-edge-contacts{gap:0 16px}
+}
+@media(prefers-reduced-motion:reduce){html body.plaza-shell .plaza-footer-edges :is(a,button){transition:none}}
+
+/* Network profile: three footer levels, eight equally sized icon targets. */
+html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-social.social-links{grid-template-columns:repeat(8,44px)}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-sitemap-icon{display:flex;align-items:center;justify-content:center;width:44px;min-width:44px;height:44px;min-height:44px;padding:0}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-sitemap-icon>svg{width:var(--plaza-footer-icon-size);height:var(--plaza-footer-icon-size);fill:none}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-bottom{grid-template-columns:44px minmax(0,1fr) max-content 12px 44px;grid-template-areas:'theme copy policy . up';gap:0}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-legal{display:contents}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-copy{margin-left:-4px}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-policy{justify-self:end;margin-right:0}
+html body.plaza-shell .plaza-footer-compact .plaza-footer-network-medical{grid-area:auto;justify-self:center;width:100%;max-width:none;margin:0;padding:4px 0 8px;white-space:normal;font-size:.75rem;line-height:1.5rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);opacity:.62;text-align:center}
+/* Native dialog, common PlazaUI disclosure engine; colours owned by plaza.css. */
+html body.plaza-shell .plaza-sitemap-dialog{width:min(1040px,90vw);max-width:1040px;height:90dvh;max-height:90dvh;padding:20px;border:0;background:var(--plaza-sitemap-background,var(--surface));box-shadow:var(--plaza-sitemap-shadow);overflow:hidden}
+html body.plaza-shell .plaza-sitemap-dialog[open]{display:flex;flex-direction:column}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head{flex:none;min-height:48px;margin:0 0 8px;padding-right:64px;gap:16px}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head>h2{font:400 clamp(24px,2.2vw,32px)/1.2 Lora,Georgia,serif;letter-spacing:-.025em}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-close{top:20px;right:20px;left:auto;width:48px;height:48px}
+html body.plaza-shell .plaza-sitemap{min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 16px 24px;scrollbar-width:thin;scrollbar-color:var(--plaza-service-link-color) var(--surface)}
+html body.plaza-shell .plaza-sitemap-root{display:flex;justify-content:center;position:relative;padding-bottom:20px}
+html body.plaza-shell .plaza-sitemap-root:after{content:'';position:absolute;bottom:0;left:50%;height:20px;border-left:1px solid var(--plaza-sitemap-border)}
+html body.plaza-shell .plaza-sitemap-root>button{display:flex;flex-direction:column;justify-content:center;min-height:48px;padding:4px 20px;font-size:.8125rem;border:1px solid var(--plaza-sitemap-border);border-radius:var(--plaza-radius-ui);font-weight:600;text-align:center}
+html body.plaza-shell .plaza-sitemap-root>button>span{font-size:.6875rem;font-weight:400;color:var(--muted);margin-top:4px}
+html body.plaza-shell .plaza-sitemap-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;position:relative;align-items:start}
+html body.plaza-shell .plaza-sitemap-branches:before{content:'';position:absolute;left:calc(25% - 12px);right:calc(25% - 12px);top:0;height:1px;background:linear-gradient(90deg,var(--plaza-sitemap-kislovodsk) 0 50%,var(--plaza-sitemap-zheleznovodsk) 50% 100%)}
+html body.plaza-shell .plaza-sitemap-branch{--branch:var(--plaza-sitemap-kislovodsk);min-width:0;position:relative;padding-top:16px}
+html body.plaza-shell .plaza-sitemap-branch[data-sitemap-city=zheleznovodsk]{--branch:var(--plaza-sitemap-zheleznovodsk)}
+html body.plaza-shell .plaza-sitemap-branch:before{content:'';position:absolute;left:50%;top:0;height:16px;border-left:1px solid var(--branch)}
+html body.plaza-shell footer#contacts .plaza-sitemap-branch :is(a,summary){color:var(--branch)}
+html body.plaza-shell .plaza-sitemap-disclosure{margin:0;padding:0;border:0;background:none;box-shadow:none;border-radius:0;min-width:0}
+html body.plaza-shell footer#contacts .plaza-sitemap-dialog .plaza-sitemap-disclosure>summary{margin-inline:0;display:flex;align-items:center;gap:0;justify-content:flex-start;min-height:44px;padding:0 var(--plaza-card-padding-inline,16px);list-style:none;cursor:pointer;font:400 .8125rem/1.45 Montserrat,Arial,sans-serif}
+html body.plaza-shell .plaza-sitemap-disclosure>summary::-webkit-details-marker{display:none}
+html body.plaza-shell .plaza-sitemap-disclosure>summary::marker{content:''}
+html body.plaza-shell .plaza-sitemap-city>summary{border-top:1px solid var(--branch);border-bottom:1px solid color-mix(in srgb,var(--branch) 28%,transparent);padding-bottom:0;min-height:44px;font-weight:500}
+html body.plaza-shell .plaza-sitemap-disclosure>summary>a{display:flex;align-items:center;min-height:44px;min-width:0;padding:4px 0;overflow-wrap:anywhere}
+html body.plaza-shell .plaza-sitemap-toggle{position:relative;display:block;flex:none;width:44px;height:44px;margin-left:0}
+html body.plaza-shell .plaza-sitemap-toggle:before{content:'';position:absolute;inset:13px auto auto 13px;width:18px;height:18px;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform .3s ease}
+html body.plaza-shell .plaza-sitemap-toggle:after{content:none}
+html body.plaza-shell .plaza-sitemap-disclosure>summary[aria-expanded=true]>.plaza-sitemap-toggle:after,html body.plaza-shell .plaza-sitemap-disclosure[open]>summary:not([aria-expanded])>.plaza-sitemap-toggle:before{transform:rotate(180deg)}
+html body.plaza-shell .plaza-sitemap-children{list-style:none;margin:0 0 0 12px;padding:0 0 0 24px;border-left:0}
+html body.plaza-shell .plaza-sitemap-node{position:relative;list-style:none;margin:0;padding:0;min-width:0}
+html body.plaza-shell .plaza-sitemap-node:before{content:'';position:absolute;top:0;left:-24px;width:20px;height:22px;border:solid color-mix(in srgb,var(--branch) 44%,transparent);border-width:0 0 1px 1px;border-bottom-left-radius:0;pointer-events:none}
+html body.plaza-shell .plaza-sitemap-leaf{display:flex;align-items:center;min-height:44px;padding:4px 16px;font-size:.8125rem;line-height:1.5;overflow-wrap:anywhere}
+html body.plaza-shell .plaza-sitemap-branch :is(a,summary):focus-visible{outline-color:var(--branch)}
+@media(hover:hover) and (pointer:fine){html body.plaza-shell footer#contacts .plaza-sitemap-branch :is(a,button[data-plaza-sitemap-all]):hover{color:var(--branch);filter:brightness(1.12)}}
+@media(max-width:699px),(max-width:960px) and (max-height:500px){
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-bottom{grid-template-columns:44px minmax(0,1fr) 44px;grid-template-areas:'copy copy copy' 'theme policy up';gap:0}
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-policy{justify-self:center;justify-content:center;white-space:normal;text-align:center;margin-right:0;max-width:100%;overflow-wrap:normal}
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-copy{margin-left:0;min-width:0;white-space:normal;flex-wrap:wrap;justify-content:center;gap:0 4px;font-size:.75rem;line-height:1.5}
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-network-medical{font-size:.75rem;line-height:1.5;padding-top:4px;opacity:1}
+ html body.plaza-shell .plaza-sitemap-dialog{width:90%;max-width:90%;max-height:90dvh;padding:12px}
+ html body.plaza-shell .plaza-sitemap{padding:0 4px 16px}
+ html body.plaza-shell .plaza-sitemap-branches{grid-template-columns:minmax(0,1fr);gap:24px}
+ html body.plaza-shell .plaza-sitemap-branches:before{display:none}
+ html body.plaza-shell .plaza-sitemap-branch{padding-top:0}
+ html body.plaza-shell .plaza-sitemap-branch:before{display:none}
+ html body.plaza-shell .plaza-sitemap-children{margin-left:8px;padding-left:16px}
+ html body.plaza-shell .plaza-sitemap-node:before{left:-16px;width:12px}
+}
+html body.plaza-shell .plaza-sitemap-node:after{content:'';position:absolute;left:-24px;top:22px;bottom:0;border-left:1px solid color-mix(in srgb,var(--branch) 44%,transparent);pointer-events:none}
+html body.plaza-shell .plaza-sitemap-node:last-child:after{content:none}
+html body.plaza-shell footer#contacts .plaza-sitemap a{background-image:none;text-decoration:none}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head>h2{margin-right:auto}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-sitemap-expand-all{min-height:44px;padding:4px 12px;border:1px solid var(--plaza-sitemap-border);font-size:.8125rem;white-space:nowrap}
+html body.plaza-shell .plaza-sitemap-expand-all:disabled{opacity:.6;cursor:wait}
+@media(max-width:699px),(max-width:960px) and (max-height:500px){
+ html body.plaza-shell .plaza-sitemap-node:after{left:-16px}
+ html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-close{top:12px;right:12px;left:auto}
+ html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head{flex-wrap:wrap;gap:4px 12px}
+ html body.plaza-shell .plaza-sitemap-dialog .plaza-sitemap-expand-all{padding-inline:8px}
+}
+@media(max-width:419px){
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-social.social-links{grid-template-columns:repeat(4,44px);column-gap:12px;width:auto;max-width:none}
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-social.social-links>a:nth-child(n){grid-column:auto;grid-row:auto}
+}
+@media(prefers-reduced-motion:reduce){html body.plaza-shell .plaza-sitemap-toggle:before{transition:none}}
+
+/* Shared compact footer and sitemap refinements, 19.10.2026. */
+html body.plaza-shell .plaza-footer-edge-phone>svg{display:block;flex:0 0 20px;width:20px;height:20px;margin:0;fill:none;stroke:currentColor;stroke-width:1.6}
+@media(hover:hover) and (pointer:fine){html[data-theme=dark] body.plaza-shell .plaza-footer-edge-theme:is(:hover,:focus-visible)>.sun{filter:brightness(1.18) drop-shadow(0 0 2.4px currentColor) drop-shadow(0 0 8.4px currentColor) drop-shadow(0 0 19.2px currentColor)}}
+html body.plaza-shell .plaza-sitemap-dialog{isolation:isolate}
+html body.plaza-shell .plaza-sitemap-dialog :is(.plaza-footer-map-head,.plaza-sitemap){position:relative;z-index:1}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head>h2{padding-left:16px}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-sitemap-expand-all{display:inline-flex;align-items:center;gap:8px;background:var(--plaza-sitemap-control-bg);border-radius:var(--plaza-radius-ui)}
+html body.plaza-shell .plaza-sitemap-expand-all>svg{width:18px;height:18px;flex:none}
+html body.plaza-shell .plaza-sitemap-root>button{font-weight:400;background:var(--plaza-sitemap-control-bg)}
+html body.plaza-shell footer#contacts .plaza-sitemap strong{font-weight:700}
+/* Property maps: compact width and Lucide chevron-down (ISC), rotated when open. */
+html body.plaza-shell .plaza-sitemap-property{width:min(760px,90%);max-width:min(760px,90%)}
+html body.plaza-shell .plaza-sitemap-property .plaza-sitemap-toggle:before{inset:13px auto auto 6px;width:18px;height:18px;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform .3s ease}
+html body.plaza-shell .plaza-sitemap-property .plaza-sitemap-toggle:after{content:none}
+html body.plaza-shell .plaza-sitemap-property .plaza-sitemap-disclosure>summary[aria-expanded=true]>.plaza-sitemap-toggle:before,html body.plaza-shell .plaza-sitemap-property .plaza-sitemap-disclosure[open]>summary:not([aria-expanded])>.plaza-sitemap-toggle:before{transform:rotate(180deg)}
+@media(prefers-reduced-motion:reduce){html body.plaza-shell .plaza-sitemap-property .plaza-sitemap-toggle:before{transition:none}}
+html body.plaza-shell .plaza-sitemap-property .plaza-sitemap-branches{grid-template-columns:minmax(0,1fr)}
+html body.plaza-shell .plaza-sitemap-property :is(.plaza-sitemap-branches,.plaza-sitemap-branch):before{content:none}
+html body.plaza-shell .plaza-sitemap-property .plaza-sitemap-branch{padding-top:0}
+html body.plaza-shell .plaza-sitemap-dialog>.plaza-sitemap-orbits{display:block;z-index:0;--night-core-1:var(--plaza-sitemap-orbit-1);--night-rgb-1:var(--plaza-sitemap-orbit-1);--night-core-2:var(--plaza-sitemap-orbit-2);--night-rgb-2:var(--plaza-sitemap-orbit-2);--night-core-3:var(--plaza-sitemap-orbit-3);--night-rgb-3:var(--plaza-sitemap-orbit-3)}
+html body.plaza-shell .plaza-sitemap-orbits>.plaza-night-orbit{--spot-strength:var(--plaza-sitemap-orbit-strength);--spot-size:min(85vmax,1000px);--scroll-shift:0px}
+@media(prefers-reduced-motion:no-preference){html body.plaza-shell .plaza-sitemap-dialog[open]>.plaza-sitemap-orbits>.plaza-night-orbit{animation:plaza-spotlight-drift var(--spot-drift-duration) ease-in-out var(--spot-drift-delay) infinite;animation-play-state:running}}
+@media(max-width:699px){html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head>h2{font-size:24px;padding-left:4px}html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head{padding-right:52px}}
+html body.plaza-shell .plaza-sitemap-expand-all>.collapse{display:none}
+html body.plaza-shell .plaza-sitemap-expand-all[aria-expanded=true]>.expand{display:none}
+html body.plaza-shell .plaza-sitemap-expand-all[aria-expanded=true]>.collapse{display:block}
+
+/* Keep the floating close anchored to the dialog, not its header flex row. */
+html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head{position:static;z-index:auto}
+html body.plaza-shell .plaza-sitemap-dialog .plaza-footer-map-head>:is(h2,.plaza-sitemap-expand-all){position:relative;z-index:1}
+
+/* Override inherited footer-orbit colours on the actual light nodes. */
+html body.plaza-shell footer#contacts .plaza-sitemap-dialog>.plaza-sitemap-orbits>.plaza-night-orbit:nth-child(3n+1){--spot-core:var(--plaza-sitemap-orbit-1);--spot-rgb:var(--plaza-sitemap-orbit-1);--spot-strength:var(--plaza-sitemap-orbit-strength)}
+html body.plaza-shell footer#contacts .plaza-sitemap-dialog>.plaza-sitemap-orbits>.plaza-night-orbit:nth-child(3n+2){--spot-core:var(--plaza-sitemap-orbit-2);--spot-rgb:var(--plaza-sitemap-orbit-2);--spot-strength:var(--plaza-sitemap-orbit-strength)}
+html body.plaza-shell footer#contacts .plaza-sitemap-dialog>.plaza-sitemap-orbits>.plaza-night-orbit:nth-child(3n){--spot-core:var(--plaza-sitemap-orbit-3);--spot-rgb:var(--plaza-sitemap-orbit-3);--spot-strength:var(--plaza-sitemap-orbit-strength)}
+
+/* Preserve the same outer icon axes after the footer stacks on small screens. */
+@media(max-width:699px),(max-width:960px) and (max-height:500px){
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-contacts{justify-self:stretch;justify-content:start}
+ html body.plaza-shell .plaza-footer-compact .plaza-footer-edge-social.social-links{width:auto;max-width:100%;justify-content:center;justify-self:center}
+}
+
+/* Public footer actions have one colour owner. Palettes define the two roles.
+   Semantic a[href]/button membership is automatic; SVGs/text inherit currentColor.
+   Legacy service/interaction rules defer to data-plaza-footer="edges". */
+html body.plaza-shell footer#contacts[data-plaza-footer="edges"]>.plaza-footer-edge-inner :where(a[href],button){color:var(--plaza-footer-action-color);transition:color var(--plaza-icon-duration) var(--plaza-icon-easing),filter var(--plaza-header-neon-off,300ms) linear}
+html body.plaza-shell footer#contacts[data-plaza-footer="edges"]>.plaza-footer-edge-inner :where(a[href],button) :where(span,svg){color:inherit}
+html body.plaza-shell footer#contacts[data-plaza-footer="edges"]>.plaza-footer-edge-inner :where(a[href],button):focus-visible{color:var(--plaza-footer-action-hover);outline:2px solid currentColor;outline-offset:3px}
+@media(hover:hover) and (pointer:fine){html body.plaza-shell footer#contacts[data-plaza-footer="edges"]>.plaza-footer-edge-inner :where(a[href],button):not(:disabled):hover{color:var(--plaza-footer-action-hover)}}
+@media(prefers-reduced-motion:reduce){html body.plaza-shell footer#contacts[data-plaza-footer="edges"]>.plaza-footer-edge-inner :where(a[href],button){transition:none}}
+
+/* Network map: quiet daylight, explicit disclosure targets and text-only link feedback. */
+html:not([data-theme=dark]) body.plaza-network .plaza-sitemap-dialog:not(.plaza-sitemap-property){background:linear-gradient(145deg,#faf8f3,#f1ede4)}
+html:not([data-theme=dark]) body.plaza-network .plaza-sitemap-dialog>.plaza-sitemap-orbits{display:none}
+html body.plaza-network .plaza-sitemap-root:after,html body.plaza-network .plaza-sitemap-branches:before,html body.plaza-network .plaza-sitemap-branch:before{content:none}
+html body.plaza-network .plaza-sitemap-city>summary{border-top:0;border-bottom:0}
+html body.plaza-network .plaza-sitemap-root>button{border:0;background:transparent;box-shadow:none;padding:8px 20px;font:500 17px/1.4 Montserrat,Arial,sans-serif;color:var(--ink);cursor:pointer}
+html body.plaza-network .plaza-sitemap-root>button>span{font-size:12px;line-height:1.5;color:var(--muted)}
+html body.plaza-network .plaza-sitemap-toggle{margin-left:16px}
+html body.plaza-shell footer#contacts .plaza-sitemap-branch :is(a,button[data-plaza-sitemap-all]){transform-origin:left center;text-decoration:none;background-image:none;transition:color .25s ease,transform .35s cubic-bezier(.34,1.56,.64,1)}
+html body.plaza-shell footer#contacts .plaza-sitemap-branch :is(a,button[data-plaza-sitemap-all]):focus-visible{color:color-mix(in srgb,var(--branch) 55%,var(--ink));transform:translateX(4px)}
+@media(hover:hover) and (pointer:fine){html body.plaza-shell footer#contacts .plaza-sitemap-branch :is(a,button[data-plaza-sitemap-all]):hover{color:color-mix(in srgb,var(--branch) 55%,var(--ink));transform:translateX(4px);filter:none}}
+html body.plaza-network .plaza-sitemap-root>button:focus-visible{outline:2px solid var(--plaza-service-link-color,var(--gold));outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html body.plaza-shell footer#contacts .plaza-sitemap-branch :is(a,button[data-plaza-sitemap-all]){transition:color .2s ease}html body.plaza-shell footer#contacts .plaza-sitemap-branch :is(a,button[data-plaza-sitemap-all]):is(:hover,:focus-visible){transform:none}}
+
+/* Align the first phone glyph to the same 44px icon column as the theme control. */
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-phone{display:grid;grid-template-columns:44px auto;gap:0}
+html body.plaza-shell .plaza-footer-edges .plaza-footer-edge-phone>svg{justify-self:center;width:var(--plaza-footer-icon-size);height:var(--plaza-footer-icon-size);margin:0}
+html body.plaza-shell .plaza-footer-network .plaza-sitemap-dialog .plaza-footer-map-head{min-height:0;margin:0;padding:0}
+
+html body.plaza-shell .plaza-sitemap-property button[data-plaza-sitemap-all]{display:inline-flex;align-items:center;min-height:44px;text-align:left;color:var(--branch)}
+
+/* Kislovodsk footer: optical icon size and printer below the first social icon. */
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-edge-control>.plaza-sun-icon{width:28px;height:28px}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-compact .plaza-footer-edge-bottom{grid-template-columns:44px minmax(0,1fr) 44px 264px 44px;grid-template-areas:'theme copy print policy up'}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-edge-print{grid-area:print}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-compact .plaza-footer-edge-policy{margin-right:12px}
+@media(max-width:699px),(max-width:960px) and (max-height:500px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-compact .plaza-footer-edge-social.social-links{grid-template-columns:repeat(4,44px);column-gap:12px;width:212px;max-width:none}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-compact .plaza-footer-edge-bottom{grid-template-columns:calc((100% - 212px)/2) 44px minmax(0,1fr) 44px;grid-template-areas:'copy copy copy copy' 'theme print policy up'}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-compact .plaza-footer-edge-policy{margin:0;padding-inline:6px;font-size:.6875rem}
+}
+
+
+/* Both properties: one action row down to 320px; retain 44px touch targets. */
+@media(max-width:699px),(max-width:960px) and (max-height:500px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-compact .plaza-footer-edge-bottom{grid-template-columns:max(44px,calc((100% - 212px)/2)) 44px minmax(0,1fr) 44px;grid-template-areas:'copy copy copy copy' 'theme print policy up'}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .plaza-footer-compact .plaza-footer-edge-social.social-links{justify-self:start;margin-left:max(44px,calc((100% - 212px)/2))}
+}
+
+/* Shared footer: wide layout with centered small-screen adaptation. */
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-primary{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:'contacts social';gap:4px 24px}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-social.social-links{grid-template-columns:repeat(7,44px);justify-self:end;justify-content:end;width:auto;max-width:100%;margin:0;column-gap:0}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-social.social-links>a:nth-child(n){grid-column:auto;grid-row:auto}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-secondary{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 24px;min-width:0;font-size:.75rem;line-height:1.5}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-origin{display:grid;grid-template-columns:44px max-content minmax(0,1fr);align-items:center;gap:0 8px;min-width:0;max-width:100%}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-origin :is(a,button){min-height:44px;display:flex;align-items:center;font:inherit;text-align:left}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-credit{white-space:nowrap}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-network-home{min-width:0}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-utilities{display:flex;align-items:center;justify-content:end;margin-left:auto;gap:0}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint{border-top:1px solid color-mix(in srgb,var(--plaza-footer-action-color) 25%,transparent);display:flex;flex-direction:row-reverse;align-items:baseline;justify-content:space-between;gap:4px 32px;font-size:.75rem;line-height:1.5rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:4px calc((44px - var(--plaza-footer-icon-size))/2) 8px}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint>a{flex:none;font:inherit;letter-spacing:inherit;text-align:left;min-height:44px;display:flex;align-items:center}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint>p{margin:0;text-align:right;font:inherit;letter-spacing:inherit;max-width:none}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet{box-sizing:border-box;width:min(780px,calc(100vw - 40px));max-width:calc(100vw - 32px);max-height:82dvh;margin:auto;padding:28px;border:0;border-radius:var(--plaza-radius-ui);background:var(--surface);color:var(--ink);box-shadow:var(--plaza-page-menu-shadow-hover);font:400 .875rem/1.6 Montserrat,Arial,sans-serif;overflow:hidden;--plaza-close-top:16px;--plaza-close-left:auto;--plaza-close-right:16px;--plaza-close-icon-size:24px}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet[open]{display:flex;flex-direction:column;gap:20px}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet::backdrop{background:color-mix(in srgb,var(--bg) 64%,transparent);backdrop-filter:blur(8px)}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-credit-sheet{width:min(500px,calc(100vw - 40px))}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet>h2{margin:0;padding:0 52px 0 0;font:400 clamp(22px,2.3vw,30px)/1.25 Lora,Georgia,serif;color:var(--ink);flex:none}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet-body{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--plaza-footer-action-color) transparent}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet-body p{margin:0 0 16px;overflow-wrap:anywhere}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet-body p:last-child{margin-bottom:0}
+/* Center the compact footer only on smaller viewports. */
+@media(max-width:900px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-primary{grid-template-columns:minmax(0,1fr);grid-template-areas:'contacts' 'social';gap:8px}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-social.social-links{grid-template-columns:repeat(7,44px);justify-self:center;justify-content:center;width:auto;max-width:100%;margin:0;column-gap:0}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-secondary{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-width:0;font-size:.8125rem;line-height:1.5}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-origin{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0 8px;min-width:0;max-width:100%}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-origin :is(a,button){min-height:44px;display:flex;align-items:center;justify-content:center;font:inherit;text-align:center}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-utilities{display:flex;align-items:center;justify-content:center;margin:0;gap:0}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:.8125rem;line-height:1.7;letter-spacing:normal;text-transform:none;text-align:center;color:var(--muted);padding:12px 0 16px}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint>a{flex:none;max-width:100%;font:inherit;letter-spacing:inherit;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint>p{margin:0;text-align:center;font:inherit;letter-spacing:inherit;max-width:100%;text-wrap:balance}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-contacts{justify-self:center;justify-content:center;gap:0 20px}
+}
+
+/* Narrow screens wrap the same centered component without shrinking its type. */
+@media(max-width:760px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-social.social-links{display:flex;flex-wrap:wrap;justify-self:center;justify-content:center;width:308px;max-width:100%;gap:0;margin:0}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-social.social-links>a{flex:0 0 44px}
+}
+@media(max-width:359px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-social.social-links{width:176px}
+}
+@media(max-width:599px){html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet{padding:24px 20px;gap:16px}html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet>h2{padding-right:44px}html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) .plaza-footer-sheet{--plaza-close-top:12px;--plaza-close-right:12px}}
+
+/* Temporary footer experiment, only the Kislovodsk room catalog (2626). */
+html body.plaza-object-kislovodsk footer#contacts .plaza-footer-fineprint>p{color:#fff} html:has(body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #plaza-footer-policy-dialog[open]){scrollbar-gutter:stable} html:has(body.plaza-object-plaza .plaza-policy-modal[open]){scrollbar-gutter:stable}
+@media screen and (prefers-reduced-motion:no-preference){
+ html body.plaza-object-kislovodsk main#main{position:relative;z-index:1;background:var(--bg);box-shadow:none}
+ html body.plaza-object-kislovodsk main#main::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--bg);box-shadow:-100vw 0 0 100vw var(--bg),100vw 0 0 100vw var(--bg);clip-path:inset(0 -100vw)}
+ html body.plaza-object-kislovodsk:has(:where(footer#contacts.plaza-footer-edges)) main#main::after{content:"";position:absolute;top:100%;left:50%;width:min(1280px,calc(100vw - 64px));height:32px;transform:translateX(-50%);pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);background:linear-gradient(to bottom,rgba(92,72,37,.16),transparent 10px),linear-gradient(to bottom,rgba(92,72,37,.10),transparent 28px)}
+ html[data-theme=dark] body.plaza-object-kislovodsk main#main::after{background:linear-gradient(to bottom,rgba(209,181,121,.08),transparent 10px),linear-gradient(to bottom,rgba(209,181,121,.06),transparent 28px)}
+ @media(min-width:901px){
+  html body.plaza-shell.plaza-object-kislovodsk main#main:has(>#booking){margin-bottom:32px}
+  html body.plaza-shell.plaza-object-kislovodsk main#main>#booking#booking.plaza-booking-panel{margin-bottom:0!important}
+ }
+ html body.plaza-object-kislovodsk main#main.psk-medical{padding-bottom:0;margin-bottom:32px}
+ html body.plaza-object-kislovodsk main#main.psk-medical>#final{padding-bottom:0}
+ html body.plaza-object-kislovodsk footer#contacts.plaza-footer-edges{position:sticky;bottom:0;z-index:0}
+}
+/* Accepted frame-reveal motion, scoped to this trial page's policy. */
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #plaza-footer-policy-dialog[data-policy-state=entering]::backdrop{animation:plaza-policy-backdrop-in 1400ms cubic-bezier(.16,1,.3,1) both}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #plaza-footer-policy-dialog[data-policy-state=leaving]::backdrop{animation:plaza-policy-backdrop-out 900ms cubic-bezier(.4,0,1,1) both}
+@keyframes plaza-policy-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes plaza-policy-backdrop-out{from{opacity:1}to{opacity:0}}
+@media (prefers-reduced-motion:reduce){html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) #plaza-footer-policy-dialog[data-policy-state]::backdrop{animation-duration:100ms}}
+
+
+
+html body.plaza-object-plaza .plaza-policy-modal[data-policy-state=entering]::backdrop{animation:plaza-policy-backdrop-in 1400ms cubic-bezier(.16,1,.3,1) both}
+html body.plaza-object-plaza .plaza-policy-modal[data-policy-state=leaving]::backdrop{animation:plaza-policy-backdrop-out 900ms cubic-bezier(.4,0,1,1) both}
+@media(prefers-reduced-motion:reduce){html body.plaza-object-plaza .plaza-policy-modal[data-policy-state]::backdrop{animation-duration:100ms}}
+html body .plaza-footer-sheet[data-policy-state=entering]::backdrop{animation:plaza-policy-backdrop-in 1400ms cubic-bezier(.16,1,.3,1) both}
+html body .plaza-footer-sheet[data-policy-state=leaving]::backdrop{animation:plaza-policy-backdrop-out 900ms cubic-bezier(.4,0,1,1) both}
+@media(prefers-reduced-motion:reduce){html body .plaza-footer-sheet[data-policy-state]::backdrop{animation-duration:100ms}}
+/* Shared modal motion for map, camera and informational dialogs. */
+html:has(dialog[data-plaza-frame-motion][open]){scrollbar-gutter:stable}
+html body dialog[data-plaza-frame-motion][data-policy-state=entering]::backdrop{animation:plaza-policy-backdrop-in 1400ms cubic-bezier(.16,1,.3,1) both}
+html body dialog[data-plaza-frame-motion][data-policy-state=leaving]::backdrop{animation:plaza-policy-backdrop-out 900ms cubic-bezier(.4,0,1,1) both}
+@media(prefers-reduced-motion:reduce){html body dialog[data-plaza-frame-motion][data-policy-state]::backdrop{animation-duration:100ms}}
+/* Network desktop CTA: one equal 64px interval above and below, independent of reveal. */
+@media screen and (min-width:1000px){html body.plaza-shell.plaza-object-plaza>main>#booking#booking#booking.plaza-booking-panel{margin-bottom:64px!important}}
+/* The footer reveal follows each profile's own palette. */
+@media screen and (min-width:901px) and (prefers-reduced-motion:no-preference){html body.plaza-shell.plaza-object-plaza>main>#booking#booking.plaza-booking-panel,html body.plaza-shell.plaza-object-zheleznovodsk main#main>#booking#booking#booking.plaza-booking-panel{margin-bottom:32px!important}}
+@media screen and (min-width:1345px) and (prefers-reduced-motion:no-preference){html body.plaza-object-plaza>main>#booking{box-shadow:none!important}}
+@media screen and (prefers-reduced-motion:no-preference){
+ html body.plaza-object-plaza>main,html body.plaza-object-zheleznovodsk main#main{position:relative;z-index:1;background:inherit;box-shadow:0 4px 10px -4px rgba(92,72,37,.18),0 14px 28px -12px rgba(92,72,37,.24)}
+ html body.plaza-object-zheleznovodsk main#main{background:var(--bg);box-shadow:0 4px 10px -4px rgba(20,54,35,.18),0 14px 28px -12px rgba(20,54,35,.24)}
+ html[data-theme=dark] body.plaza-object-plaza>main{box-shadow:0 4px 10px -4px rgba(209,181,121,.10),0 14px 28px -12px rgba(209,181,121,.14)}
+ html[data-theme=dark] body.plaza-object-zheleznovodsk main#main{box-shadow:0 4px 10px -4px rgba(156,168,135,.10),0 14px 28px -12px rgba(156,168,135,.14)}
+ html body:is(.plaza-object-plaza,.plaza-object-zheleznovodsk) footer#contacts.plaza-footer-edges{position:sticky;bottom:0;z-index:0}
+ @media(min-width:1345px){
+  html body.plaza-object-plaza>main,html body.plaza-object-zheleznovodsk main#main{box-shadow:none}
+  html body.plaza-object-plaza>main::after,html body.plaza-object-zheleznovodsk main#main::after{content:"";position:absolute;top:100%;left:50%;width:min(1280px,calc(100% - 64px));height:32px;transform:translateX(-50%);pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);background:linear-gradient(to bottom,rgba(92,72,37,.16),transparent 10px),linear-gradient(to bottom,rgba(92,72,37,.10),transparent 28px)}
+  html body.plaza-object-zheleznovodsk main#main::after{background:linear-gradient(to bottom,rgba(20,54,35,.16),transparent 10px),linear-gradient(to bottom,rgba(20,54,35,.10),transparent 28px)}
+  html[data-theme=dark] body.plaza-object-plaza>main,html[data-theme=dark] body.plaza-object-zheleznovodsk main#main{box-shadow:none}
+  html[data-theme=dark] body.plaza-object-plaza>main::after{background:linear-gradient(to bottom,rgba(209,181,121,.08),transparent 10px),linear-gradient(to bottom,rgba(209,181,121,.06),transparent 28px)}
+  html[data-theme=dark] body.plaza-object-zheleznovodsk main#main::after{background:linear-gradient(to bottom,rgba(156,168,135,.08),transparent 10px),linear-gradient(to bottom,rgba(156,168,135,.06),transparent 28px)}
+ }
+}
+
+@media screen and (prefers-reduced-motion:no-preference){
+ html body.plaza-shell.plaza-object-zheleznovodsk main#main{box-shadow:none!important}
+ html body.plaza-shell.plaza-object-zheleznovodsk main#main::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--bg);box-shadow:-100vw 0 0 100vw var(--bg),100vw 0 0 100vw var(--bg);clip-path:inset(0 -100vw)}
+ html body.plaza-shell.plaza-object-zheleznovodsk main#main::after{content:"";position:absolute;top:100%;left:50%;width:min(1280px,calc(100vw - 64px));height:32px;transform:translateX(-50%);pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);background:linear-gradient(to bottom,rgba(20,54,35,.16),transparent 10px),linear-gradient(to bottom,rgba(20,54,35,.10),transparent 28px)}
+ html[data-theme=dark] body.plaza-shell.plaza-object-zheleznovodsk main#main::after{background:linear-gradient(to bottom,rgba(156,168,135,.08),transparent 10px),linear-gradient(to bottom,rgba(156,168,135,.06),transparent 28px)}
+ @media(min-width:901px){
+  html body.plaza-shell.plaza-object-zheleznovodsk main#main:has(>#booking){margin-bottom:32px}
+  html body.plaza-shell.plaza-object-zheleznovodsk main#main>#booking#booking#booking.plaza-booking-panel{margin-bottom:0!important}
+ }
+}
+@media screen and (prefers-reduced-motion:no-preference){
+ html body.plaza-shell.plaza-object-plaza>main,html[data-theme=dark] body.plaza-shell.plaza-object-plaza>main{box-shadow:none}
+ html body.plaza-shell.plaza-object-plaza>main::after{content:"";position:absolute;top:100%;left:50%;width:min(1280px,calc(100vw - 64px));height:32px;transform:translateX(-50%);pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);background:linear-gradient(to bottom,rgba(92,72,37,.16),transparent 10px),linear-gradient(to bottom,rgba(92,72,37,.10),transparent 28px)}
+ html[data-theme=dark] body.plaza-shell.plaza-object-plaza>main::after{background:linear-gradient(to bottom,rgba(209,181,121,.08),transparent 10px),linear-gradient(to bottom,rgba(209,181,121,.06),transparent 28px)}
+}
+/* Fineprint divider: accepted warm shadow by day and a soft palette glow by night. */
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint{position:relative}
+html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint::before{content:"";position:absolute;top:0;left:50%;width:min(1150px,100%);height:20px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(ellipse 50% 73% at 50% 0%,rgba(116,93,52,.19) 0%,rgba(116,93,52,0) 63%)}
+html body.plaza-object-zheleznovodsk footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint::before{background:radial-gradient(ellipse 50% 73% at 50% 0%,rgba(54,89,71,.19) 0%,rgba(54,89,71,0) 63%)}
+html[data-theme="dark"] body:is(.plaza-object-kislovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint::before{background:radial-gradient(ellipse 50% 73% at 50% 0%,rgba(209,181,121,.16) 0%,rgba(209,181,121,0) 63%)}
+html[data-theme="dark"] body.plaza-object-zheleznovodsk footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint::before{background:radial-gradient(ellipse 50% 73% at 50% 0%,rgba(156,168,135,.16) 0%,rgba(156,168,135,0) 63%)}
+/* Reserve a separate close row when the policy title cannot fit beside it. */
+@media(max-width:349px){html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) #plaza-footer-policy-dialog>h2{padding-top:40px;padding-right:0}}
+
+html body.plaza-object-kislovodsk .plaza-sitemap-node:nth-last-child(1 of :not([hidden]))::after{content:none}
+
+/* PSK opt-in credit card: grows from © 2026, returns to the same point. */
+html:has(body.plaza-object-kislovodsk #plaza-footer-credit-dialog[open]){scrollbar-gutter:stable}
+html body.plaza-object-kislovodsk .plaza-footer-credit-sheet[data-plaza-credit-dock]{position:fixed;inset:auto;margin:0;left:16px;top:16px;width:min(430px,calc(100vw - 32px));max-width:calc(100vw - 32px);max-height:calc(100dvh - 32px);padding:28px;gap:18px;box-shadow:var(--plaza-page-menu-shadow-hover);transform:none;background:var(--glass);background:var(--glass-panel-bg);-webkit-backdrop-filter:blur(var(--glass-blur));backdrop-filter:blur(var(--glass-blur));border:1px solid var(--line)}
+html body.plaza-object-kislovodsk .plaza-footer-credit-sheet[data-plaza-credit-dock]::backdrop{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+html body.plaza-object-kislovodsk .plaza-footer-credit-sheet[data-plaza-credit-dock]>h2{font-size:26px}
+html body.plaza-object-kislovodsk .plaza-footer-credit-sheet[data-plaza-credit-dock] .plaza-footer-sheet-body{font-size:14px;line-height:1.75}
+html body.plaza-object-kislovodsk .plaza-footer-credit-sheet[data-plaza-credit-dock] .plaza-credit-tools{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:18px;font-size:12px;line-height:1.5;color:var(--ink)}
+html body.plaza-object-kislovodsk .plaza-credit-tools img{display:block;flex:none;width:40px;height:40px;object-fit:contain;color-scheme:light}
+html[data-theme="dark"] body.plaza-object-kislovodsk .plaza-credit-tools img{color-scheme:dark}
+@media(max-width:599px){html body.plaza-object-kislovodsk .plaza-footer-credit-sheet[data-plaza-credit-dock]{padding:24px;gap:16px}}
+
+/* About landing: fineprint inherits the footer theme text role. */
+html body.page-id-2616.plaza-object-kislovodsk footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint>p{color:var(--muted)}
+
+/* Mobile footer: aligned fine print and readable contact number for all properties. */
+@media(max-width:700px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-edge-phone{font-size:16px;line-height:1.3}
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-fineprint{padding:16px 0 5px;gap:5px}
+}
+@media(max-width:360px){
+ html body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk,.plaza-object-plaza) footer#contacts.plaza-footer-recomposed .plaza-footer-origin>.plaza-footer-credit{display:none}
+}
+

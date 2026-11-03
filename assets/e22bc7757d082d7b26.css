@@ -1,0 +1,120 @@
+
+
+/* Выбор санатория: единое спокойное золото и читаемые города. */
+#pn-panel .pn-title-row{display:grid;grid-template-columns:max-content minmax(0,1fr) var(--pn-select-width,85.28px);align-items:center;justify-content:normal;gap:12px;}
+
+#pn-panel .pn-city{font-size:13px;line-height:1.5;margin:0;min-width:0;justify-self:start;white-space:nowrap;}
+
+#pn-panel .pn-city:is(:hover,:focus-visible),#pn-panel .pn-city:is(:hover,:focus-visible) span{color:#b2945f!important;text-decoration-color:#b2945f!important;}
+
+#pn-panel .pn-city:is(:hover,:focus-visible) span{text-decoration:underline!important;text-decoration-thickness:1px!important;text-underline-offset:4px;}
+
+#pn-panel .pn-city::after,#pn-panel .pn-city span::after{background:#b2945f!important;}
+
+#pn-panel .pn-select{width:var(--pn-select-width,85.28px);min-width:var(--pn-select-width,85.28px);max-width:var(--pn-select-width,85.28px);height:44px;min-height:44px;justify-self:end;padding:7px 12px;border:1px solid #b2945f!important;background:transparent!important;color:#b2945f!important;border-radius:var(--plaza-radius-ui,4px);box-shadow:none!important;filter:none!important;transform:none!important;transition:background-color .2s,color .2s!important;}
+
+#pn-panel .pn-select:is(:hover,:focus-visible){background:#b2945f!important;color:#fff!important;border-color:#b2945f!important;box-shadow:none!important;filter:none!important;transform:none!important;}
+
+#pn-panel .pn-select::before,#pn-panel .pn-select::after{content:none!important;display:none!important;}
+
+@media(max-width:600px){#pn-panel .pn-title-row{grid-template-columns:minmax(0,1fr) var(--pn-select-width,85.28px);column-gap:8px;row-gap:0;}
+#pn-panel .pn-card-title{grid-column:1;grid-row:1;}
+#pn-panel .pn-city{grid-column:1;grid-row:2;font-size:12px;}
+#pn-panel .pn-select{grid-column:2;grid-row:1 / span 2;}
+}
+
+
+/* Города в меню: одна линия непосредственно под текстом. */
+#pn-panel .pn-city::before,#pn-panel .pn-city::after,#pn-panel .pn-city span::before,#pn-panel .pn-city span::after{content:none!important;display:none!important;}
+
+#pn-panel .pn-city,#pn-panel .pn-city:is(:hover,:focus-visible){text-decoration:none!important;border-bottom:0!important;box-shadow:none!important;background-image:none!important;}
+
+
+/* Города: восстанавливаем исходную плавную линию только под текстом. */
+#pn-panel .pn-city span,#pn-panel .pn-city:is(:hover,:focus-visible) span{text-decoration:none!important;position:relative;}
+
+#pn-panel .pn-city span::after{content:none!important;display:none!important;}
+
+#pn-panel .pn-city:is(:hover,:focus-visible) span::after{transform:scaleX(1);}
+
+@media(prefers-reduced-motion:reduce){#pn-panel .pn-city span::after{transition:none;}
+}
+
+/* Owner-only reveal control; retains all registry entries. */
+.plaza-net-lab #pn-panel:not(.pn-show-all) .pn-soon-card{display:none!important}
+.plaza-net-lab #pn-panel .pn-heading p{display:flex!important;align-items:center;gap:8px}
+.plaza-net-lab #pn-panel .pn-reveal-all,.plaza-net-lab #pn-panel .pn-reveal-all:is(:hover,:focus,:active){display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 44px;color:#B39560;background:none!important;border:0;box-shadow:none!important;filter:none!important;transform:none!important;transition:none!important;text-decoration:none!important;cursor:pointer}
+.plaza-net-lab #pn-panel .pn-reveal-all::before,.plaza-net-lab #pn-panel .pn-reveal-all::after{content:none!important}
+.plaza-net-lab #pn-panel .pn-reveal-all svg{display:block;width:30px;height:30px}
+.plaza-net-lab #pn-panel .pn-reveal-all svg *{animation:none!important;transition:none!important}
+.plaza-net-lab #pn-panel .pn-reveal-all:focus-visible{outline:1px solid #B39560;outline-offset:2px}
+@media(max-width:499px){.plaza-net-lab #pn-panel .pn-heading{flex-wrap:wrap}.plaza-net-lab #pn-panel .pn-heading p{flex:1 1 100%;justify-content:flex-end}.plaza-net-lab #pn-panel .pn-network-home{width:auto;height:44px}.plaza-net-lab #pn-panel .pn-network-home .pb-network-full{display:inline!important;font-size:10px}.plaza-net-lab #pn-panel .pn-network-home .pn-network-emblem{display:none}}
+
+/* Use the reference compact arrangement when longer property names require it. */
+@media(min-width:701px){#pn-panel.pn-compact-captions .pn-title-row{grid-template-columns:minmax(0,1fr) var(--pn-select-width,85.28px)!important;column-gap:8px;row-gap:0}#pn-panel.pn-compact-captions .pn-card-title{grid-column:1;grid-row:1}#pn-panel.pn-compact-captions .pn-city{grid-column:1;grid-row:2}#pn-panel.pn-compact-captions .pn-select{grid-column:2;grid-row:1 / span 2}}
+
+/* Expanded network: four cards along one row on wide screens. */
+@media(min-width:1051px){.plaza-net-lab #pn-panel.pn-show-all .pn-grid{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1200px;width:100%;gap:20px}.plaza-net-lab #pn-panel.pn-show-all .pn-card-title{font-size:clamp(14px,1.15vw,19px)!important;letter-spacing:0}.plaza-net-lab #pn-panel.pn-show-all .pn-title-row{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:44px 44px 44px;gap:0}.plaza-net-lab #pn-panel.pn-show-all .pn-card-title{grid-column:1;grid-row:1;white-space:nowrap}.plaza-net-lab #pn-panel.pn-show-all .pn-city{grid-column:1;grid-row:2;min-height:44px}.plaza-net-lab #pn-panel.pn-show-all .pn-select{grid-column:1;grid-row:3;justify-self:start}.plaza-net-lab #pn-panel.pn-show-all .pn-caption{padding:8px 4px 4px}}
+
+.plaza-net-lab #pn-panel .pn-reveal-all{opacity:.5}
+
+/* Wellness header, 15 October: phone first, all navigation behind the existing burger. */
+@media(min-width:701px) and (max-width:800px){body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .site-header .brand{flex-basis:154px!important}body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .site-header .brand svg{width:154px!important}body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner>.header-call{font-size:12px!important;flex-shrink:0}body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-price .price-long{display:none!important}body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-price .price-short{display:inline!important}}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner>.header-call{display:flex!important;width:auto!important;min-width:44px;gap:10px;margin-left:auto;margin-right:0;font:500 14px/1.4 Montserrat,sans-serif;white-space:nowrap}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner>.header-call span{display:inline!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-actions{display:flex!important;flex:0 0 auto!important;align-items:center;gap:14px!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-actions .site-nav{display:flex!important;flex:0 0 44px!important;margin:0!important;order:0!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-actions .pn-burger{display:flex!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner>.pn-toggle{flex:0 0 auto!important;width:auto!important;justify-content:flex-start;gap:12px!important;padding-right:8px}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-emblem{color:hsl(38deg 35% 54%)!important}body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-emblem [fill]:not([fill="none"]){fill:hsl(38deg 35% 54%)!important}
+@media(min-width:701px){body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-emblem{display:none}}
+@media(max-width:700px){
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner{gap:4px!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner>.pn-toggle{order:1!important;flex:0 0 auto!important;gap:8px!important;padding-left:8px!important;padding-right:0}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner>.header-call{order:2!important;margin-left:auto!important;width:44px!important;flex:0 0 44px!important;gap:0!important;padding:0!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-inner>.header-call span{display:none!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .header-actions{order:3!important;gap:0!important;flex:0 0 44px!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-heading{display:flex!important;flex-wrap:nowrap!important;align-items:center;justify-content:space-between;gap:8px}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-heading p{display:flex!important;flex:0 0 auto!important;margin:0!important;gap:4px}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-home{width:44px!important;height:44px;min-width:44px;padding:0!important;justify-content:center;background:none!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-home .pn-network-label,body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-home .pb-network-full,body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-home .pb-network-short{display:none!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-network-home .pn-network-emblem{display:block!important;width:30px;height:30px}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-heading h2{font-size:18px}body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel .pn-reveal-all{display:none!important}body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #pn-panel:not(.pn-show-all) .pn-soon-card{display:grid!important}
+}
+
+/* Naming and network link alignment, 16 October 2026. */
+@media(min-width:701px){body.plaza-shell #pn-panel .pn-heading p{display:flex!important;align-items:center!important}body.plaza-shell #pn-panel .pn-reveal-all{order:1;align-self:center}body.plaza-shell #pn-panel .pn-network-home{display:inline-flex;align-items:center;gap:8px}body.plaza-shell #pn-panel .pn-network-home .pn-network-emblem{order:1;align-self:center;margin:0!important;vertical-align:middle}}
+
+/* Shared property header: native links, selected card, coordinated phone hover. */
+body.plaza-shell #pn-panel .pn-card[data-selected="true"]{border:1px solid var(--pn-gold)!important}
+body.plaza-shell #pn-panel .pn-card[data-selected="true"] .pn-select{opacity:1;cursor:default}
+body.plaza-shell .site-header .header-call,body.plaza-shell .site-header .header-call span{transition:color var(--plaza-icon-duration,.35s) ease}
+html body.plaza-shell .site-header .header-call>svg{transition:transform var(--plaza-icon-duration,.35s) ease,color var(--plaza-icon-duration,.35s) ease!important}
+/* Service-link colours are owned by shared/assets/links/service-links.css. */
+body.plaza-shell #pn-panel .pn-reveal-all{order:1!important}
+@media(prefers-reduced-motion:reduce){body.plaza-shell .site-header .header-call,body.plaza-shell .site-header .header-call :is(span,svg){transition:none}}
+
+/* Final shared picker state and network-link geometry. */
+html body.plaza-shell #pn-panel .pn-heading p{display:flex!important;align-items:center!important;gap:8px!important;margin:0!important;padding:0!important;line-height:1!important}
+html body.plaza-shell #pn-panel .pn-heading p>a{display:inline-flex!important;align-items:center!important;justify-content:center;align-self:center!important;height:44px!important;min-height:44px!important;box-sizing:border-box!important;margin:0!important;padding-block:0!important;vertical-align:middle;line-height:1!important;transform:none!important;top:auto!important}
+html body.plaza-shell #pn-panel .pn-heading p>a.pn-reveal-all{order:1!important;padding:0!important}
+html body.plaza-shell #pn-panel .pn-heading p>a.pn-reveal-all svg{display:block!important;margin:0!important;transform:translateY(-2px)!important;vertical-align:middle}
+html body.plaza-shell #pn-panel .pn-card[data-selected="true"] button.pn-select:disabled{background:var(--plaza-accent-deep,var(--pn-gold))!important;border-color:var(--plaza-accent-deep,var(--pn-gold))!important;color:#fff!important;opacity:1!important;box-shadow:none!important}
+html body.plaza-object-zheleznovodsk #pn-panel .pn-card[data-selected="true"] button.pn-select:disabled{background:#365947!important;border-color:#365947!important;color:#fff!important}
+
+/* Network label and emblem share their color and hover target. */
+html body.plaza-shell #pn-panel .pn-heading p{--pn-network-color:var(--gold,#B39560);--pn-network-hover:var(--plaza-link-hover,var(--plaza-interaction,#D4AB68))}
+html body.plaza-shell #pn-panel .pn-heading p :is(a.pn-network-home,a.pn-reveal-all){color:var(--pn-network-color)!important;opacity:1!important;transition:color var(--plaza-icon-duration,.35s) ease!important}
+html body.plaza-shell #pn-panel .pn-heading p :is(.pn-reveal-all,.pn-network-home) svg{color:inherit!important}
+html body.plaza-shell #pn-panel .pn-heading p :is(.pn-reveal-all,.pn-network-home) svg [fill]:not([fill="none"]){fill:currentColor!important}
+html body.plaza-shell #pn-panel .pn-heading p:focus-within :is(a.pn-network-home,a.pn-reveal-all){color:var(--pn-network-hover)!important}
+@media(hover:hover) and (pointer:fine){html body.plaza-shell #pn-panel .pn-heading p:hover :is(a.pn-network-home,a.pn-reveal-all){color:var(--pn-network-hover)!important}}
+@media(prefers-reduced-motion:reduce){html body.plaza-shell #pn-panel .pn-heading p :is(a.pn-network-home,a.pn-reveal-all){transition:none!important}}
+
+/* PSK picker: cities identify the property; selection is the explicit action. */
+body.plaza-object-kislovodsk #pn-panel{--pn-select-width:120px}
+body.plaza-object-kislovodsk #pn-panel .pn-title-row{align-items:baseline}
+body.plaza-object-kislovodsk #pn-panel .pn-select{align-self:center}
+body.plaza-object-kislovodsk #pn-panel .pn-city-static{display:block;min-height:0;cursor:default}
+body.plaza-object-kislovodsk #pn-panel .pn-city-static span{text-decoration:none!important}

@@ -1,0 +1,8 @@
+/* A light policy dialog retains its own ink in either page theme. */
+body.plaza-shell dialog.plaza-policy-modal .plaza-policy-head{color:var(--pi,#45413b);background:color-mix(in srgb,var(--pi,#45413b) 6%,#fff);border-bottom-color:var(--pb,var(--line))}
+body.plaza-shell dialog.plaza-policy-modal .plaza-policy-head h2,
+body.plaza-shell dialog.plaza-policy-modal .plaza-policy-body :is(h1,h2,h3,h4,h5,h6){color:var(--pi,#45413b)!important}
+/* Property policy pages use the active page theme, without a white dialog surface. */
+body.plaza-property-policy-page :is(.resort-page-heading,.wellness-page-heading) h1,
+body.plaza-property-policy-page :is(.resort-page-content,.wellness-page-content),
+body.plaza-property-policy-page :is(.resort-page-content,.wellness-page-content) :is(h1,h2,h3,h4,h5,h6){color:var(--ink)!important}

@@ -1,0 +1,54 @@
+/* Only document snapshots: the independent theme-reveal module is untouched. */
+html[data-plaza-document-stack]::view-transition {
+  background: var(--plaza-page-canvas, Canvas);
+  overflow: clip;
+}
+html[data-plaza-document-stack]::view-transition-group(root) {
+  animation: none;
+}
+html[data-plaza-document-stack]::view-transition-image-pair(root) {
+  isolation: auto;
+}
+html[data-plaza-document-stack]::view-transition-old(root),
+html[data-plaza-document-stack]::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  transform-origin: 50% 50%;
+}
+html[data-plaza-document-stack]::view-transition-old(root) { z-index: 1; }
+html[data-plaza-document-stack]::view-transition-new(root) { z-index: 2; }
+
+/* Night document snapshots are separate from theme-reveal's root snapshots.
+   The participant remains html: its viewport size, scroll and header persist. */
+html[data-plaza-document-snapshot="plaza-document-card"] {
+  view-transition-name: plaza-document-card;
+  background-color: var(--plaza-page-canvas, var(--bg));
+}
+html[data-plaza-document-snapshot]::view-transition-group(plaza-document-card) {
+  animation: none;
+}
+html[data-plaza-document-snapshot]::view-transition-image-pair(plaza-document-card) {
+  isolation: auto;
+}
+html[data-plaza-document-snapshot]::view-transition-old(plaza-document-card),
+html[data-plaza-document-snapshot]::view-transition-new(plaza-document-card) {
+  animation: none;
+  mix-blend-mode: normal;
+  transform-origin: 50% 50%;
+  background-color: var(--plaza-page-canvas, var(--bg));
+}
+html[data-plaza-document-snapshot]::view-transition-old(plaza-document-card) { z-index: 1; }
+html[data-plaza-document-snapshot]::view-transition-new(plaza-document-card) { z-index: 2; }
+
+/* Existence markers match only real single-image groups. Used only at night. */
+html[data-theme="dark"][data-plaza-document-stack]::view-transition-old(root):only-child,
+html[data-theme="dark"][data-plaza-document-stack]::view-transition-old(plaza-document-card):only-child {
+  --plaza-document-single: old;
+}
+html[data-theme="dark"][data-plaza-document-stack]::view-transition-new(root):only-child,
+html[data-theme="dark"][data-plaza-document-stack]::view-transition-new(plaza-document-card):only-child {
+  --plaza-document-single: new;
+}
+/* Different names create sibling groups; order the groups themselves. */
+html[data-theme="dark"][data-plaza-document-old-snapshot="root"]::view-transition-group(root) { z-index: 1; }
+html[data-theme="dark"][data-plaza-document-new-snapshot="plaza-document-card"]::view-transition-group(plaza-document-card) { z-index: 2; }

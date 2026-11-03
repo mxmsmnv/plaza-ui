@@ -1,0 +1,223 @@
+/* The controller preloads these local faces before its single circle transition commits. */
+@font-face{font-family:"Plaza Cormorant Infant";font-style:normal;font-weight:400;font-display:swap;src:url("https://plaza.spa/wp-content/themes/plaza-resort-migration/assets/fonts/CormorantInfant-Regular-cyrillic-latin.woff2") format("woff2")}
+@font-face{font-family:"Plaza Cormorant Infant";font-style:normal;font-weight:500;font-display:swap;src:url("https://plaza.spa/wp-content/themes/plaza-resort-migration/assets/fonts/CormorantInfant-Medium-cyrillic-latin.woff2") format("woff2")}
+@font-face{font-family:"Plaza Cormorant Infant";font-style:italic;font-weight:400;font-display:swap;src:url("https://plaza.spa/wp-content/themes/plaza-resort-migration/assets/fonts/CormorantInfant-Italic-cyrillic-latin.woff2") format("woff2")}
+
+/* Both presentations share the original story and existing page palette. */
+html body.plaza-shell.plaza-object-zheleznovodsk.plaza-photo-story-page main#main.pg-story{--pg-edition-gap:36px;padding-bottom:0!important}
+html body.plaza-shell.plaza-object-zheleznovodsk.plaza-photo-story-page main#main.pg-story>#booking.plaza-booking-panel{margin-top:var(--pg-edition-gap)!important;margin-bottom:0!important}
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;justify-items:start;gap:8px 36px;padding-top:20px;padding-bottom:var(--pg-edition-gap);margin-top:24px;margin-bottom:0;margin-inline:auto;text-align:left;min-width:0}
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition h2{font:400 clamp(24px,2.7vw,36px)/1.25 Lora,Georgia,serif;letter-spacing:-.02em;margin:0;color:var(--ink);text-wrap:balance}
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition h2,body.plaza-object-zheleznovodsk .pg-story .pg-edition-copy{grid-column:1}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-copy{max-width:72ch}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-copy p{font-size:13px;line-height:1.75;color:var(--muted);margin:0}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch{grid-column:2;grid-row:1/span 2;display:inline-flex;align-items:stretch;padding:4px;gap:4px;border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);border-radius:999px;background:var(--soft);max-width:100%;box-sizing:border-box}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button{appearance:none;display:inline-flex;gap:9px;align-items:center;justify-content:center;min-height:44px;min-width:146px;padding:8px 20px;box-sizing:border-box;border:0;border-radius:999px;background:transparent;font:500 12px/1.4 Montserrat,Arial,sans-serif;text-decoration:none;color:var(--muted);cursor:pointer;transition:color .35s ease,background-color .35s ease,box-shadow .35s ease}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button svg{width:20px;height:20px;flex:none}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button[aria-pressed="true"]{background:var(--surface,var(--bg,#fff));color:var(--ink);box-shadow:0 1px 8px #0000000d}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button:is(:hover,:focus-visible){color:var(--accent)}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button[data-pg-edition-pending="true"][aria-busy="true"]{cursor:progress}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button[data-pg-edition-pending="true"][aria-busy="true"] svg{display:none}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button[data-pg-edition-pending="true"][aria-busy="true"]::after{content:"";display:block;order:-1;flex:none;width:20px;height:20px;box-sizing:border-box;border:1px solid currentColor;border-right-color:transparent;border-radius:50%;animation:pg-edition-loading .9s linear infinite}
+@keyframes pg-edition-loading{to{transform:rotate(1turn)}}
+
+/* The opening composition stays complete; the white heading returns above the painting. */
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-frame::after{content:none}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-photo-words{position:absolute;inset:0;display:flex;align-items:flex-start;padding:clamp(20px,4cqw,52px) 4%;transform:none}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-photo-words h2{color:#fff;font-size:clamp(28px,6cqw,70px);line-height:1.18;text-shadow:0 1px 2px rgba(5,20,12,.95),0 4px 12px rgba(5,20,12,.75)}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-photo-words .pg-city-line{text-align:left}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-city-line:nth-child(2) .pg-city-line-content::before{content:"Здесь у ";visibility:hidden;white-space:pre;font-kerning:none;font-variant-ligatures:none}
+
+/* Presentation changes are synchronous; only the controller's circle reveals the new page. */
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-art-layer{position:absolute;inset:0;z-index:1;pointer-events:none;background-repeat:no-repeat;background-size:cover;background-position:center;opacity:0}
+body.plaza-object-zheleznovodsk .pg-story .consultant-portrait[data-pg-edition-key]{position:relative}
+body.plaza-object-zheleznovodsk .pg-story .consultant-portrait[data-pg-edition-key]>.pg-edition-art-layer{z-index:3}
+
+/* Narrative typography changes with the artwork; navigation, booking UI and shell retain their fonts. */
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story .pg-top h1,
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story .pg-collection :is(h2,h3),
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story #gallery-edition h2{font-family:"Plaza Cormorant Infant",Georgia,serif;font-weight:500;letter-spacing:-.018em}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story :is([data-pg-id="1"],[data-pg-id="7"],[data-pg-id="24"]) .pg-photo-words h2{font-size:8.8cqw}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story [data-pg-id="1"] .pg-photo-words{padding-block-start:1.5%}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story [data-pg-id="1"] .pg-photo-words h2{line-height:1.05}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story .pg-title-row>p,
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story :is(.pg-note p,.pg-room-copy p,figcaption,.pg-edition-copy p){font-family:"Plaza Cormorant Infant",Georgia,serif;font-size:20px;font-weight:400;line-height:1.55;letter-spacing:0}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story :is(a.pg-link,.pg-room-label){font-family:"Plaza Cormorant Infant",Georgia,serif;font-size:19px;font-weight:500;line-height:1.5}
+
+@media(min-width:701px){
+ body.plaza-object-zheleznovodsk:not(.plaza-gallery-watercolor) .pg-story [data-pg-id="1"] .pg-photo-words h2{font-size:7cqw}
+}
+
+@media(max-width:1050px){
+ html body.plaza-shell.plaza-object-zheleznovodsk.plaza-photo-story-page main#main.pg-story{--pg-edition-gap:32px}
+ body.plaza-object-zheleznovodsk .pg-story #gallery-edition{gap:8px 24px}
+ body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button{min-width:130px;padding-inline:14px}
+}
+@media(max-width:700px){
+ html body.plaza-shell.plaza-object-zheleznovodsk.plaza-photo-story-page main#main.pg-story{--pg-edition-gap:24px}
+ body.plaza-object-zheleznovodsk .pg-story #gallery-edition{grid-template-columns:minmax(0,1fr);gap:12px;padding-top:16px;justify-items:center;text-align:center}
+ body.plaza-object-zheleznovodsk .pg-story .pg-edition-copy p{font-size:12px}
+ body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch{grid-column:1;grid-row:auto;width:min(100%,330px)}
+ body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button{flex:1;min-width:0;padding-inline:12px;font-size:11px;gap:7px}
+ body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story :is([data-pg-id="7"],[data-pg-id="24"]) .pg-photo-words h2{font-size:var(--pg-mobile-overlay-size)}
+ body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story [data-pg-id="1"] .pg-photo-words h2{font-size:10.2cqw}
+}
+@media(prefers-reduced-motion:reduce){
+ body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button{transition:none}
+ body.plaza-object-zheleznovodsk .pg-story .pg-edition-switch button[data-pg-edition-pending="true"][aria-busy="true"]::after{animation:none}
+}
+@media print{body.plaza-object-zheleznovodsk .pg-story :is(#gallery-edition,.pg-edition-art-layer){display:none}}
+
+/* Facades: taller native windows preserve rooftop signage throughout the page. */
+body.plaza-object-zheleznovodsk .pg-story .pg-collection .pg-photo.pg-native:is([data-pg-id="4"],[data-pg-id="24"]) .pg-frame{aspect-ratio:3/2!important}
+
+/* Intro letters retain real text semantics; only transition snapshots animate their ink. */
+body.plaza-object-zheleznovodsk .pg-story .pg-intro-word{white-space:nowrap}
+body.plaza-object-zheleznovodsk .pg-story .pg-intro-glyph{display:inline-block}
+@keyframes pg-intro-out{from{opacity:1;filter:blur(0);transform:none}to{opacity:0;filter:blur(1px);transform:none}}
+@keyframes pg-intro-in{from{opacity:0;filter:blur(1px);transform:none}to{opacity:1;filter:blur(0);transform:none}}
+
+
+/* The cover uses the canonical masked-letter entrance after the two-second image reveal. */
+body.plaza-object-zheleznovodsk .pg-story[data-pg-cover-pending="true"] [data-pg-id="1"] .pg-photo-words{visibility:hidden}
+/* Small facade overscan: only ten pixels each side, retaining a little internal parallax. */
+/* Twenty percent taller windows; the lobby title follows a top-to-bottom scroll path. */
+body.plaza-object-zheleznovodsk .pg-story .pg-collection [data-pg-id="7"] .pg-frame,
+body.plaza-object-zheleznovodsk .pg-story .pg-collection [data-pg-id="7"] .pg-frame{aspect-ratio:1.55!important}
+@media(max-width:1050px){body.plaza-object-zheleznovodsk .pg-story .pg-collection [data-pg-id="7"] .pg-frame,body.plaza-object-zheleznovodsk .pg-story .pg-collection [data-pg-id="7"] .pg-frame{aspect-ratio:1.25!important}}
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-story .pg-collection [data-pg-id="7"] .pg-frame,body.plaza-object-zheleznovodsk .pg-story .pg-collection [data-pg-id="7"] .pg-frame{aspect-ratio:2/3!important}}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="7"] .pg-frame::after{background:none}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="7"] .pg-photo-words{inset:2% 4% auto;padding:0;transform:none!important;align-items:flex-start}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="7"] .pg-photo-words h2{font-size:7.2cqw;line-height:1.1}
+
+
+/* Both introductory blocks share one vertical centre, in both editions. */
+body.plaza-object-zheleznovodsk .pg-story .pg-title-row{align-items:center}
+/* True internal watercolor motion, bounded to five percent total crop. */
+
+/* Restore the shared internal-parallax canvas; retain the approved tall windows. */
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-frame{--plaza-photo-shadow:none;aspect-ratio:3/2;overflow:hidden;border-radius:var(--plaza-radius-ui,4px);background:transparent;box-shadow:none;clip-path:none}
+body.plaza-object-zheleznovodsk .pg-story.pg-motion :is([data-pg-id="1"],[data-pg-id="4"],[data-pg-id="24"]) .pg-image-depth{position:absolute;inset-inline:0;top:50%;height:calc(100% + var(--pg-photo-reserve,0px))!important;width:100%;transform:translate3d(0,calc(-50% + var(--pg-photo-y,0px) + var(--pg-pointer-y,0px)),0)!important;will-change:transform}
+body.plaza-object-zheleznovodsk .pg-story :is([data-pg-id="1"],[data-pg-id="4"],[data-pg-id="24"]) .pg-image-depth picture{display:block;width:100%;height:100%}
+body.plaza-object-zheleznovodsk .pg-story :is([data-pg-id="1"],[data-pg-id="4"],[data-pg-id="24"]) .pg-image-depth img{width:100%;height:100%;object-fit:cover}
+body.plaza-object-zheleznovodsk .pg-story :is([data-pg-id="1"],[data-pg-id="4"],[data-pg-id="24"]) .pg-edition-art-layer{background-size:cover!important}
+/* Reserve the larger measured edition before any font animation can change layout. */
+body.plaza-object-zheleznovodsk .pg-story .pg-title-row{align-items:flex-start;min-height:var(--pg-intro-reserve,150px)}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe]{min-height:0!important}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe="photo"] h1{font-family:Lora,Georgia,serif!important;font-weight:400!important;letter-spacing:-.025em!important}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe="photo"]>p{font-family:Montserrat,Arial,sans-serif!important;font-size:13px!important;font-weight:400!important;line-height:1.7!important;letter-spacing:normal!important}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe="watercolor"] h1{font-family:"Plaza Cormorant Infant",Georgia,serif!important;font-weight:500!important;letter-spacing:-.018em!important}
+body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe="watercolor"]>p{font-family:"Plaza Cormorant Infant",Georgia,serif!important;font-size:20px!important;font-weight:400!important;line-height:1.55!important;letter-spacing:0!important}
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe="photo"]>p{font-size:12px!important}}
+/* After image reveal, the entire finished cover title fades in; no letter-delay replay. */
+body.plaza-object-zheleznovodsk .pg-story[data-pg-cover-fade] [data-pg-id="1"] :is(.plaza-motion-letter,.pg-city-char){transform:none!important;filter:none!important;opacity:1!important;animation:none!important;transition:none!important}
+
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-story .pg-title-row{display:block!important}}
+
+/* Scoped shortcut beside the lead; does not enter text morphing or change row height. */
+body.plaza-object-zheleznovodsk .pg-title-row{position:relative}
+body.plaza-object-zheleznovodsk .pg-title-row>p{padding-right:48px;box-sizing:border-box}
+body.plaza-object-zheleznovodsk .pg-edition-quick{position:absolute;right:0;top:0;display:grid;place-items:center;width:40px;height:40px;padding:9px;border:0;border-radius:50%;background:transparent;color:var(--accent);cursor:pointer;opacity:.8}
+body.plaza-object-zheleznovodsk .pg-edition-quick svg{width:22px;height:22px;display:block}
+body.plaza-object-zheleznovodsk .pg-edition-quick [hidden]{display:none!important}
+body.plaza-object-zheleznovodsk .pg-edition-quick:hover{opacity:1}
+body.plaza-object-zheleznovodsk .pg-edition-quick:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-edition-quick{top:calc(clamp(36px,8vw,52px) + 14px)}}
+@media print{body.plaza-object-zheleznovodsk .pg-edition-quick{display:none}}
+
+/* Same 22px symbol as the measured header phone, with a full 48px pointer target. */
+body.plaza-object-zheleznovodsk .pg-edition-quick{z-index:5;width:48px;height:48px;padding:13px;opacity:1;box-sizing:border-box;touch-action:manipulation;color:var(--accent);transition:color .35s ease}
+body.plaza-object-zheleznovodsk .pg-edition-quick :is(span,svg,path,circle){pointer-events:none}
+body.plaza-object-zheleznovodsk .pg-edition-quick svg{width:var(--pg-quick-icon-size,22px);height:var(--pg-quick-icon-size,22px);transition:transform .35s ease;transform-origin:center}
+body.plaza-object-zheleznovodsk .pg-edition-quick:is(:hover,:focus-visible){color:color-mix(in srgb,var(--accent) 65%,#fff)}
+body.plaza-object-zheleznovodsk .pg-edition-quick:is(:hover,:focus-visible) svg{transform:translate(3px,-2px) rotate(-3deg) scale(1.04)}
+@media(prefers-reduced-motion:reduce){body.plaza-object-zheleznovodsk .pg-edition-quick,body.plaza-object-zheleznovodsk .pg-edition-quick svg{transition:none}body.plaza-object-zheleznovodsk .pg-edition-quick:is(:hover,:focus-visible) svg{transform:none}}
+
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-city-line:nth-child(2) .pg-city-line-content::before{content:none}
+body.plaza-object-zheleznovodsk .pg-story .pg-title-row{display:grid;grid-template-columns:1.618fr 1fr;gap:var(--pg-gap)}
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-story .pg-title-row{display:block}}
+
+/* Keep the native PSG facade compositions and their signs within the taller window. */
+body.plaza-object-zheleznovodsk .pg-photo:is([data-pg-id="4"],[data-pg-id="24"]) .pg-frame {aspect-ratio:3/2;}
+/* Cancel the old viewport-height cover before its aspect ratio can expand the mobile grid. */
+@media(max-width:700px){
+ body.plaza-object-zheleznovodsk .pg-story .pg-collection [data-pg-id="1"] .pg-frame{width:100%;height:auto;min-height:0;aspect-ratio:3/2!important}
+ body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-photo-words{transform:none!important}
+ body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-photo-words h2{font-size:10.2cqw;line-height:1.12}
+}
+
+/* Original compact switch, with only a fine outline and the accepted elastic text. */
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition{
+ padding:20px 24px;border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);
+ border-radius:4px;box-sizing:border-box;background:transparent;box-shadow:none;
+}
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition .pg-ink-word{display:inline-block;white-space:nowrap}
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-story #gallery-edition{padding:20px 16px}}
+
+/* The invitation follows booking; narrower than the booking panel, same shared Stripe. */
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition{width:calc(min(1280px,100% - 64px) * .8);margin-top:36px;margin-bottom:36px;grid-template-columns:minmax(0,1fr) auto}
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition>h2,body.plaza-object-zheleznovodsk .pg-story #gallery-edition .pg-edition-copy{position:relative;z-index:1}
+body.plaza-object-zheleznovodsk .pg-story #gallery-edition .pg-edition-switch{position:relative;z-index:1}
+/* The evening title stays near the top; only its photograph retains internal motion. */
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="24"] .pg-photo-words{inset:5% 4% auto;padding:0;align-items:flex-start;transform:none!important}
+@media(max-width:1050px){body.plaza-object-zheleznovodsk .pg-story #gallery-edition{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:12px}body.plaza-object-zheleznovodsk .pg-story #gallery-edition .pg-edition-switch{grid-column:1;grid-row:auto}}
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-story #gallery-edition{width:calc(100% - 48px);margin-block:24px;padding:20px 12px}body.plaza-object-zheleznovodsk .pg-story #gallery-edition .pg-edition-switch button{padding-inline:10px;gap:6px}}
+
+/* Three opt-in title tracks use the existing shared story motion engine. */
+body.plaza-object-zheleznovodsk .pg-story :is([data-pg-id="1"],[data-pg-id="7"],[data-pg-id="24"]) .pg-photo-words{
+ inset:0 auto auto 0;width:100%;box-sizing:border-box;padding:0 4%!important;display:block;
+ transform:translate3d(0,var(--pg-title-y,0px),0)!important;
+}
+@media(prefers-reduced-motion:reduce){body.plaza-object-zheleznovodsk .pg-story :is([data-pg-id="1"],[data-pg-id="7"],[data-pg-id="24"]) .pg-photo-words{top:4%;transform:none!important}}
+
+/* White paper around watercolor originals, including touch and fullscreen cinema. */
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story-lightbox,
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story-lightbox::backdrop{
+ background:#fff!important;color:#45413b;color-scheme:light;
+ --bg:#fff;--surface:#fff;--ink:#45413b;--muted:#67645e;--accent:#917747;--line:rgba(145,119,71,.22);
+}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story-lightbox :is(.plaza-cinema-viewport,.plaza-cinema-stage,.plaza-cinema-layer){background:#fff!important}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story-lightbox :is(.plaza-cinema-count,.wellness-photo-counter){color:#45413b!important;text-shadow:none!important}
+
+/* Desktop rail is an invisible interaction layer above the visible cinema stage. */
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story-lightbox .wellness-photo-track{background:transparent!important}
+body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story-lightbox.plaza-gallery-touch .wellness-photo-slide{background:#fff!important}
+
+/* The mobile shortcut shares the heading row; the lead uses the full width. */
+@media(max-width:700px){
+ body.plaza-object-zheleznovodsk .pg-story .pg-title-row{display:grid!important;grid-template-columns:minmax(0,1fr) 48px;column-gap:12px;row-gap:0;align-items:center;align-content:start}
+ body.plaza-object-zheleznovodsk .pg-story .pg-title-row>h1{grid-column:1;grid-row:1;min-width:0;font-size:clamp(28px,10vw,38px)}
+ body.plaza-object-zheleznovodsk .pg-story .pg-title-row>.pg-edition-quick{position:static;grid-column:2;grid-row:1;align-self:center;transform:translateY(var(--pg-quick-ink-y,0px))}
+ body.plaza-object-zheleznovodsk .pg-story .pg-title-row>p{grid-column:1/-1;grid-row:2;width:100%;max-width:none;padding-right:0;margin-top:14px}
+}
+
+@media(max-width:700px){body.plaza-object-zheleznovodsk.plaza-gallery-watercolor .pg-story .pg-title-row>p,body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe="watercolor"]>p{font-size:16px!important}}
+
+@media(max-width:700px){body.plaza-object-zheleznovodsk:not(.plaza-gallery-watercolor) .pg-story .pg-title-row>p,body.plaza-object-zheleznovodsk .pg-story [data-pg-layout-probe="photo"]>p{font-size:14px!important}}
+
+/* The room rail must remain a scroll container on phones. */
+@media(max-width:700px){
+ body.plaza-object-zheleznovodsk .pg-story .pg-room-mosaic{overflow-x:auto!important;overflow-y:hidden!important}
+ body.plaza-object-zheleznovodsk .pg-story .pg-room-copy{margin-top:0;margin-bottom:24px}
+ body.plaza-object-zheleznovodsk .pg-story .pg-room-collection{padding-bottom:0;margin-bottom:0}
+ body.plaza-object-zheleznovodsk .pg-story .pg-room-collection+.pg-note{margin-top:0}
+}
+
+
+/* Preserve the native PSG cover and photo focal points; share the approved rail geometry. */
+body.plaza-object-zheleznovodsk .pg-story [data-pg-id="1"] .pg-title-visual{max-width:100%;box-sizing:border-box}
+@media(min-width:701px){
+ body.plaza-object-zheleznovodsk .pg-story .pg-room-collection>.pg-room-copy{grid-column:2;grid-row:1}
+ body.plaza-object-zheleznovodsk .pg-story .pg-room-collection>.pg-room-mosaic{grid-column:1;grid-row:1}
+}
+@media(max-width:700px){
+ body.plaza-object-zheleznovodsk .pg-story .pg-mobile-photo-rail .pg-photo,
+ body.plaza-object-zheleznovodsk .pg-story .pg-room-mosaic>[data-pg-tile]{height:75svh;aspect-ratio:auto!important}
+ body.plaza-object-zheleznovodsk .pg-story .pg-mobile-photo-rail .pg-photo .pg-frame{height:100%;aspect-ratio:auto!important}
+ body.plaza-object-zheleznovodsk .pg-story .pg-title-row[data-pg-layout-probe="photo"]>p{font-size:14px!important}
+ body.plaza-object-zheleznovodsk .pg-story .pg-title-row[data-pg-layout-probe="watercolor"]>p{font-size:16px!important}
+ body.plaza-object-zheleznovodsk .pg-story [data-pg-id="16"] :is(img,.pg-edition-art-layer){object-position:35% center!important;background-position:35% center!important}
+}
+body.plaza-object-zheleznovodsk .pg-story .pg-edition-mobile-break{display:none}
+@media(max-width:700px){body.plaza-object-zheleznovodsk .pg-story .pg-edition-mobile-break{display:block}}

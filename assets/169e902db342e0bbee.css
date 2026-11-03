@@ -1,0 +1,20 @@
+/* The gallery wrapper stays neutral; this registered panorama has one camera of its own. */
+body.plaza-object-kislovodsk .pg-story [data-pg-id="16"] [data-pg-image]{position:absolute;inset:0;width:100%;height:100%;transform:none;will-change:auto}
+body.plaza-object-kislovodsk .pg-story [data-pg-id="16"] .pg-park-scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;user-select:none;perspective:1400px;perspective-origin:60% 75%;opacity:0}
+body.plaza-object-kislovodsk .pg-story [data-pg-id="16"] .pg-park-canvas{position:absolute;left:var(--pg-park-left,0px);top:var(--pg-park-top,0px);width:var(--pg-park-width,100%);height:var(--pg-park-height,100%);transform-origin:60% 75%;transform:rotateX(var(--pg-park-rotate-x,0deg)) rotateY(var(--pg-park-rotate-y,0deg))}
+body.plaza-object-kislovodsk .pg-story [data-pg-id="16"] .pg-park-layer{position:absolute;inset:0;display:block;width:100%;height:100%;margin:0;padding:0;border:0;pointer-events:none;transform:translate3d(var(--pg-park-layer-x,0px),var(--pg-park-layer-y,0px),0)}
+/* Rock and woman are children of the same layer and inherit one identical camera matrix. */
+body.plaza-object-kislovodsk .pg-story [data-pg-id="16"] .pg-park-plate{position:absolute;left:var(--pg-park-place-x,0%);top:var(--pg-park-place-y,0%);width:var(--pg-park-place-scale,100%);height:var(--pg-park-place-scale,100%);background-position:0 0;background-size:100% 100%;background-repeat:no-repeat}
+body.plaza-object-kislovodsk .pg-story [data-pg-id="16"][data-pg-park-depth="ready"] [data-pg-image]>picture{opacity:0}
+body.plaza-object-kislovodsk .pg-story [data-pg-id="16"][data-pg-park-active="true"] .pg-park-scene[data-pg-park-shown="true"] :is(.pg-park-canvas,.pg-park-layer){will-change:transform}
+@media(prefers-reduced-motion:reduce){body.plaza-object-kislovodsk .pg-story [data-pg-id="16"] :is(.pg-park-canvas,.pg-park-layer){transform:none;will-change:auto}}
+@media print{
+ body.plaza-object-kislovodsk .pg-story [data-pg-id="16"] .pg-park-scene{display:none}
+ body.plaza-object-kislovodsk .pg-story [data-pg-id="16"][data-pg-park-depth="ready"] [data-pg-image]>picture{opacity:1}
+}
+
+/* Two complementary cloud bands retain the approved pixels and move at distinct depths. */
+.pg-park-scene [data-pg-park-layer="clouds-far"]{mask-image:linear-gradient(#000 24%,transparent 30%);-webkit-mask-image:linear-gradient(#000 24%,transparent 30%)}
+.pg-park-scene[data-pg-park-edition="watercolor"] [data-pg-park-layer="clouds-near"]{mask-image:linear-gradient(transparent 24%,#000 30%);-webkit-mask-image:linear-gradient(transparent 24%,#000 30%)}
+.pg-park-scene[data-pg-park-edition="photo"] [data-pg-park-layer="clouds-near"]{mask-image:linear-gradient(transparent 24%,#000 30%,#000 38%,transparent 42%);-webkit-mask-image:linear-gradient(transparent 24%,#000 30%,#000 38%,transparent 42%)}
+.pg-park-scene[data-pg-park-edition="photo"] [data-pg-park-layer="sky"]{mask-image:none;-webkit-mask-image:none}

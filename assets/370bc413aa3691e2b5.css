@@ -1,0 +1,43 @@
+/* PLAZA geometry: shared by network and both property themes. */
+:root{--plaza-radius-ui:4px;--plaza-card-padding-inline:16px;--plaza-booking-padding:var(--plaza-section-after);--plaza-section-before:64px;--plaza-section-after:36px;--plaza-section-band-bottom:80px;--link-underline-thickness:1px;--plaza-accordion-duration:1s}
+@media(max-width:1050px){:root{--plaza-booking-padding:32px;--plaza-section-before:48px;--plaza-section-after:32px;--plaza-section-band-bottom:64px}}
+@media(max-width:700px){:root{--plaza-booking-padding:24px;--plaza-section-before:36px;--plaza-section-after:24px;--plaza-section-band-bottom:56px}}
+
+/* One icon motion contract. Contexts supply colour, never geometry. */
+:root{--glass-icon-lift:-2px;--glass-icon-rotate:-3deg;--glass-icon-scale:1.04;--plaza-icon-shift-x:3px;--plaza-icon-duration:.35s;--plaza-icon-easing:ease;--plaza-icon-transform:translate(var(--plaza-icon-shift-x),var(--glass-icon-lift)) rotate(var(--glass-icon-rotate)) scale(var(--glass-icon-scale));--plaza-table-inset:16px;--plaza-button-min-height:48px;--plaza-control-size:44px;--plaza-accordion-easing:cubic-bezier(.22,.61,.36,1)}
+
+/* One card spotlight contract; properties provide their accent RGB. */
+:root{--plaza-card-light-radius:640px;--plaza-card-light-border:1px;--plaza-card-light-strength:.85;--plaza-card-light-fill:.11;--plaza-card-light-in:200ms;--plaza-card-light-out:450ms}
+
+/* Shared glass button border trace; one pass per interaction. */
+:root{--plaza-glow-line-thickness:1px;--plaza-glow-line-length:20;--plaza-glow-blur-size:4px;--plaza-glow-duration:500ms;--plaza-glow-offset:48px}
+
+/* Spotlight colour sampled from the indicated heading letter; other UI accents stay in their palettes. */
+
+/* Camera + header phone: approved per-property service palette, 18 October 2026. */
+/* Service colours follow the shared theme palette below. */
+
+/* Glass action border palettes; one shared hover implementation. */
+
+/* Three Kislovodsk gold roles for named header, text-link and editorial-icon components. */
+
+/* Zheleznovodsk theme palette; existing shared components consume these roles. */
+
+
+/* plaza-comparison-type-system: one scale for both room comparison pages. */
+:root{--plaza-comparison-body-size:1rem;--plaza-comparison-body-line:1.5rem;--plaza-comparison-data-size:.875rem;--plaza-comparison-data-line:1.25rem;--plaza-comparison-meta-size:.75rem;--plaza-comparison-meta-line:1rem;--plaza-comparison-title-size:1.375rem;--plaza-comparison-title-line:1.75rem;--plaza-comparison-row-hover-strength:12%;--plaza-comparison-row-hover-duration:160ms}
+
+/* Preview outline: same subtle theme-aware border as tables and cards. */
+
+/* Opaque shared hover-preview reverse, independently of the shared glass. */
+
+/* Approved edges footer, 18 October 2026. Shared geometry; inherited property palette. */
+:root{--plaza-footer-content-max:1240px;--plaza-footer-title-size:1.125rem;--plaza-footer-title-line:1.5rem;--plaza-footer-brand-weight:600;--plaza-footer-icon-size:20px}
+
+/* One primary-action palette for header price, booking, dates and price cards. */
+
+:root{--plaza-card-details-align:flex-start}
+
+/* Approved Kislovodsk room price width; booking colour and light remain native. */
+body.plaza-object-kislovodsk{--plaza-room-price-width:8rem}
+body.plaza-object-kislovodsk .plaza-room-card :is(.catalog-price,.ds-booking-action){box-sizing:border-box;width:var(--plaza-room-price-width);min-width:var(--plaza-room-price-width);max-width:100%;justify-content:center;white-space:nowrap}

@@ -1,0 +1,36 @@
+/* Isolated light-only booklets. Exactly one 12-page treatment is exposed at a time. */
+body.plaza-photo-story-page #plaza-psk-gallery-print{display:none}
+#plaza-psk-gallery-print .pg-print-pages{display:none}
+
+@media screen{
+    html:has(body.plaza-gallery-print-preview){background:#eeeae3!important;min-height:100%;height:auto!important;overflow-x:clip!important;overflow-y:auto!important}
+    body.plaza-gallery-print-preview{background:#eeeae3!important;color:#45413b!important;min-height:100vh;height:auto!important;margin:0!important;padding:0!important;overflow:visible!important}
+    body.plaza-gallery-print-preview > :not(#plaza-psk-gallery-print){display:none!important}
+    body.plaza-gallery-print-preview #plaza-psk-gallery-print{display:block!important;position:relative;z-index:0;color:#45413b;color-scheme:light;background:#eeeae3;font-family:Montserrat,Arial,sans-serif;min-width:0;max-width:100%;margin:0;padding:0 0 32px}
+    #plaza-psk-gallery-print .pg-print-toolbar{background:#fff;border-bottom:1px solid #ded7cb;padding:22px 24px;margin:0 0 28px}
+    #plaza-psk-gallery-print .pg-print-toolbar-inner{max-width:1000px;margin:auto}
+    #plaza-psk-gallery-print .pg-print-heading h1{font:400 clamp(24px,4vw,32px)/1.25 Lora,Georgia,serif;letter-spacing:-.02em;color:#45413b;margin:0 0 8px}
+    #plaza-psk-gallery-print .pg-print-heading p{font:400 12px/1.6 Montserrat,Arial,sans-serif;color:#67645e;margin:0 0 14px}
+    #plaza-psk-gallery-print .pg-print-back{box-sizing:border-box;display:inline-flex;align-items:center;min-height:44px;font:500 12px/1.5 Montserrat,Arial,sans-serif;color:#756037!important;letter-spacing:0;background-color:transparent;border:0;border-radius:4px;padding:10px 0;margin:0;box-shadow:none;text-shadow:none;transform:none}
+    #plaza-psk-gallery-print .pg-print-back:focus-visible{outline:2px solid #756037;outline-offset:4px}
+    #plaza-psk-gallery-print .pg-print-back:hover{color:#45413b!important}
+    #plaza-psk-gallery-print .pg-print-status{font:400 11px/1.6 Montserrat,Arial,sans-serif;color:#67645e;margin:10px 0 0}
+    #plaza-psk-gallery-print .pg-print-pages{width:min(794px,calc(100% - 32px));margin:0 auto;gap:24px;min-width:0;padding:0}
+    #plaza-psk-gallery-print[data-pg-print-edition="photo"] .pg-print-pages[data-pg-print-pages="photo"],#plaza-psk-gallery-print[data-pg-print-edition="watercolor"] .pg-print-pages[data-pg-print-pages="watercolor"]{display:grid}
+    #plaza-psk-gallery-print .pg-print-page{box-sizing:border-box;width:100%;aspect-ratio:210/297;margin:0;padding:0;background:#fff;box-shadow:0 2px 14px rgba(69,65,59,.12);overflow:hidden;min-width:0}
+    #plaza-psk-gallery-print .pg-print-page img{display:block;width:100%;height:100%;max-width:none;margin:0;padding:0;object-fit:contain;object-position:center;border:0;border-radius:0;box-shadow:none;filter:none!important;transform:none!important}
+}
+
+@media print{
+    @page{size:210mm 297mm;margin:0}
+    html:has(body.plaza-photo-story-page){height:auto!important;min-height:0!important;margin:0!important;padding:0!important;background:#fff!important;overflow:visible!important;transform:none!important;scroll-behavior:auto!important}
+    body.plaza-photo-story-page{height:auto!important;min-height:0!important;width:210mm!important;margin:0!important;padding:0!important;overflow:visible!important;background:#fff!important;transform:none!important;color-scheme:light!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body.plaza-photo-story-page > :not(#plaza-psk-gallery-print){display:none!important}
+    body.plaza-photo-story-page #plaza-psk-gallery-print{display:block!important;position:static!important;float:none!important;width:210mm!important;max-width:none!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;background:#fff!important;box-shadow:none!important;overflow:visible!important;transform:none!important}
+    #plaza-psk-gallery-print .pg-print-toolbar{display:none!important}
+    #plaza-psk-gallery-print .pg-print-pages{display:none!important;width:210mm!important;max-width:none!important;margin:0!important;padding:0!important;gap:0!important}
+    #plaza-psk-gallery-print[data-pg-print-edition="photo"] .pg-print-pages[data-pg-print-pages="photo"],#plaza-psk-gallery-print[data-pg-print-edition="watercolor"] .pg-print-pages[data-pg-print-pages="watercolor"]{display:block!important}
+    #plaza-psk-gallery-print .pg-print-page{page:auto;box-sizing:border-box!important;display:block!important;position:relative!important;float:none!important;width:210mm!important;max-width:none!important;height:297mm!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;overflow:hidden!important;break-inside:avoid;page-break-inside:avoid;break-after:page;page-break-after:always;transform:none!important}
+    #plaza-psk-gallery-print .pg-print-page:last-child{break-after:auto;page-break-after:auto}
+    #plaza-psk-gallery-print .pg-print-page img{display:block!important;width:210mm!important;max-width:none!important;height:297mm!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;object-fit:contain!important;filter:none!important;transform:none!important;box-shadow:none!important}
+}

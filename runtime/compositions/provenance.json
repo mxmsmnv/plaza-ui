@@ -1,0 +1,146 @@
+{
+  "files": [
+    {
+      "path": "runtime/compositions/welcome-book.js",
+      "source_path": "wp-content/themes/plaza-resort-migration/assets/resort-welcomebook-a.js",
+      "source_sha256": "a9827256e4dc28320ad4b314fee761ad22fb0928d3e2b3a48fd5e8f5989ca113",
+      "output_sha256": "a9827256e4dc28320ad4b314fee761ad22fb0928d3e2b3a48fd5e8f5989ca113",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/psk-guide.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-guide/guide.js",
+      "source_sha256": "cd1d438d9eb20eb22e700f874151b25ba0dc5ada101df5dd0bfbaf348c44fcba",
+      "output_sha256": "cd1d438d9eb20eb22e700f874151b25ba0dc5ada101df5dd0bfbaf348c44fcba",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/psg-guide.js",
+      "source_path": "wp-content/mu-plugins/plaza-psg-guide/guide.js",
+      "source_sha256": "8eba9a6a93e773952f80b1497449fc07cdb603c9923cdadb5ef8bf88c6775105",
+      "output_sha256": "0ad321d3788a8c101e17cb020d50b22d9564b156d7bdae1d5d3dfccc397426cf",
+      "transformation": "Original frontend file with empty-hash integration guard: id ? getElementById(id) : null instead of id && getElementById(id), avoiding optional call on empty string. Valid-document behavior and animation unchanged."
+    },
+    {
+      "path": "runtime/compositions/psk-about.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-guide/about.js",
+      "source_sha256": "e536e7b59f755b678ca3186029c1e3aae0b670dd3b8a2ac9cc87c82bb51a3a96",
+      "output_sha256": "e536e7b59f755b678ca3186029c1e3aae0b670dd3b8a2ac9cc87c82bb51a3a96",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/medical-info.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-guide/medical-info.js",
+      "source_sha256": "74a1c7c82b03dea9d3d0d6daaeb7cabaee236fe6703677716937eff1c925bdb8",
+      "output_sha256": "74a1c7c82b03dea9d3d0d6daaeb7cabaee236fe6703677716937eff1c925bdb8",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/medical-page.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-guide/medical.js",
+      "source_sha256": "27f71bfcb59c4259395a60e04d6cc6870b46aae71e4339072287054dae7dca12",
+      "output_sha256": "27f71bfcb59c4259395a60e04d6cc6870b46aae71e4339072287054dae7dca12",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/not-found.js",
+      "source_path": "wp-content/themes/plaza-resort-migration/assets/not-found.js",
+      "source_sha256": "04bb6fde0bc6355c5de07baefcfe7bd492d22f226d2229f50e99faf7cee78c31",
+      "output_sha256": "04bb6fde0bc6355c5de07baefcfe7bd492d22f226d2229f50e99faf7cee78c31",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/header-picker.js",
+      "source_path": "wp-content/mu-plugins/plaza-property-ui/shared/php/header/main-script.php",
+      "source_sha256": "f4368d64dc1ce26fa50d09b565b100fd78ce147f54d7aaca4149bf5fec5b677c",
+      "output_sha256": "c4883d25a047bb8b87efc51b71ab0193357c6959d37dae266b92951a4bdf7886",
+      "transformation": "Original complete header JS; one PHP home_url literal resolved to public network URL; one direct navigation endpoint changed to specimen notification. All menu DOM construction/geometry/burger movement preserved."
+    },
+    {
+      "path": "runtime/compositions/page-menu.js",
+      "source_path": "wp-content/mu-plugins/plaza-property-ui/shared/page-menu/menu.js",
+      "source_sha256": "a7d571b9d0326f4b76d7772e8fdcd5902ede2ed41b389e7ee58f4f4bd1b7073d",
+      "output_sha256": "3788b07eeff67b8d00564c2bdfd612a0490d495f831e023342a0f0312e006277",
+      "transformation": "Original complete menu renderer and movements; source-origin/current-path read from injected public context for opaque sandbox; terminal navigation sends notification and restores open-menu state instead of leaving iframe."
+    },
+    {
+      "path": "runtime/compositions/guest-search.js",
+      "source_path": "wp-content/mu-plugins/plaza-property-ui/shared/search/guest-search.js",
+      "source_sha256": "d404d19b31a726244f4e5bdaf5dc928b5d1acbc0b7bf50f60164af55c9fd4b03",
+      "output_sha256": "9769c05627fae5f1d9bfaefa4543a03d4b58f47218f4b9dcfb8b42c8854053da",
+      "transformation": "Original ranking, morphology, debounce, suggestions and keyboard behavior; URL base/origin use public source home for opaque sandbox. No search request added."
+    },
+    {
+      "path": "runtime/compositions/search-targets.js",
+      "source_path": "wp-content/mu-plugins/plaza-property-ui/shared/search/targets.js",
+      "source_sha256": "f6fbeb3b20f873ec9dccae0736adc7edd12e320fbae51655d813bce1880f4fd8",
+      "output_sha256": "f6fbeb3b20f873ec9dccae0736adc7edd12e320fbae51655d813bce1880f4fd8",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/medical-pagers.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-guide/medical.js",
+      "source_sha256": "27f71bfcb59c4259395a60e04d6cc6870b46aae71e4339072287054dae7dca12",
+      "output_sha256": "24c74927ceec2a3a2816265942f8db30264583670b8cd4c9988015ae89a318ef",
+      "transformation": "Exact table pager function and calls excerpt; added null-control guard for isolated specimens and optional category chips; matching/pagination/rendering unchanged."
+    },
+    {
+      "path": "runtime/compositions/newyear-plan.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-newyear-2027/newyear.js",
+      "source_sha256": "cd0b7919fdd7bb32862073603097683eca8cf0cc097c275f69904d7aca911a14",
+      "output_sha256": "064a7f69e5f0215bf7e57c5e77c659fff5b2cba3b4a3ff2207b59ce48640aaa2",
+      "transformation": "Exact original seating-viewer block with root/dialog guards; no source drawing, geometry, zoom increments, gestures or timing rewritten."
+    },
+    {
+      "path": "runtime/compositions/newyear-rails.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-newyear-2027/newyear.js",
+      "source_sha256": "cd0b7919fdd7bb32862073603097683eca8cf0cc097c275f69904d7aca911a14",
+      "output_sha256": "b0c9ce8f8567482f44cd44d8fcf40db7a0bde79b530b85ed3db5736da5d24f89",
+      "transformation": "Exact original mountSwipeRail/food block plus its original fine/touchMedia/touchDevice/syncTouch closure prerequisites; added absent-rail guard for isolated fragments. Transitions, gestures and timing unchanged."
+    },
+    {
+      "path": "runtime/compositions/newyear-page-effects.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-newyear-2027/newyear.js",
+      "source_sha256": "cd0b7919fdd7bb32862073603097683eca8cf0cc097c275f69904d7aca911a14",
+      "output_sha256": "f205d53f266f297a4744e3be6ad4f6a34abc5892eef2fec10be545eb67da3676",
+      "transformation": "Original first two effects IIFEs, excluding remote finale unit; added hero-presence integration guard in first IIFE only so isolated cards skip full page/seating initialization. Entire second persistent-soft-brushes IIFE unchanged."
+    },
+    {
+      "path": "runtime/compositions/privacy-cookie.js",
+      "source_path": "wp-content/themes/plaza-network-theme/assets/privacy-camera.js",
+      "source_sha256": "cd5f543a33fd69cfd51172bf56387590686b02301e77ae698792c9e5c8a1c552",
+      "output_sha256": "f1996877e55ce553949e6405015d81c182c702c886e0b946932f53c81c1d8fe2",
+      "transformation": "Exact privacy/cookie IIFE; source-origin comparator uses source context under sandbox. No map/camera embeds. localStorage failures already caught by original."
+    },
+    {
+      "path": "runtime/compositions/map-camera.js",
+      "source_path": "wp-content/themes/plaza-network-theme/assets/privacy-camera.js",
+      "source_sha256": "cd5f543a33fd69cfd51172bf56387590686b02301e77ae698792c9e5c8a1c552",
+      "output_sha256": "1780f84ca3b7ac515b147eef589e29ef2e5d5b79d0958b39dab4ca12c3d0f317",
+      "transformation": "Exact map/camera IIFEs excerpt; emitted image URLs absolutized; original remote URL assignment gated by context.allowExternalEmbeds strict true inside original click handlers. Default about:blank; actual URL retained as metadata. Camera autoplay permission and &ap flag removed, nested allow-forms removed."
+    },
+    {
+      "path": "runtime/compositions/newyear-finale-gated.js",
+      "source_path": "wp-content/mu-plugins/plaza-psk-newyear-2027/newyear.js",
+      "source_sha256": "cd0b7919fdd7bb32862073603097683eca8cf0cc097c275f69904d7aca911a14",
+      "output_sha256": "a036763520d700fe8ccc202c99110db6e1fbac86feb69c8241d7ffcb2670229f",
+      "transformation": "Original third IIFE inside explicit activation wrapper; audio URL resolved against supplied public asset base with credentials omitted; dynamic library checks exact supplied runtimeAssetOrigin for opaque srcdoc. Fireworks recipes/geometry/timing/audio synthesis unchanged; no finale code runs before explicit action."
+    },
+    {
+      "path": "runtime/compositions/network-content.js",
+      "source_path": "wp-content/themes/plaza-network-theme/assets/content.js",
+      "source_sha256": "febee8ea3111c6447c031676179b0a1f6e64f695ad0b78daa3601ec88cf8d3e6",
+      "output_sha256": "febee8ea3111c6447c031676179b0a1f6e64f695ad0b78daa3601ec88cf8d3e6",
+      "transformation": "byte-identical original frontend file"
+    },
+    {
+      "path": "runtime/compositions/network-adapter.js",
+      "source_path": "wp-content/themes/plaza-network-theme/assets/network/network.js",
+      "source_sha256": "445bae87d288c3e869ee16b5fbd4f613321767917a1b58ec5c42c3b69abf7794",
+      "output_sha256": "445bae87d288c3e869ee16b5fbd4f613321767917a1b58ec5c42c3b69abf7794",
+      "transformation": "byte-identical original frontend file"
+    }
+  ],
+  "contexts": "Public allowlisted shell/page-menu JSON from archived anonymous HTML; not a browser/runtime capture.",
+  "search": "Subset of exported published public pages; ranking behavior original, corpus not full production index."
+}

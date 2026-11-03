@@ -1,0 +1,126 @@
+/* Shared breadcrumb geometry. Both migration renderers keep their real URLs and schema. */
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) ol{
+ display:flex;flex-wrap:nowrap;align-items:flex-start;gap:0 16px;list-style:none;margin:0;padding:0;font:400 12px/1.5 Montserrat,Arial,sans-serif;color:var(--muted)
+}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) li{
+ display:flex;align-items:center;gap:12px;min-width:0;min-height:44px;margin:0;padding:0;font:inherit;box-sizing:border-box
+}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) li::after{content:none!important}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) li::before{content:none}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) li+li::before{
+ content:'›';display:inline-flex;align-items:center;align-self:center;flex:none;min-height:44px;margin:0;padding:0;font:inherit;color:var(--muted);opacity:.65
+}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) :is(a,li>[aria-current=page]){
+ display:inline-flex;align-items:center;min-height:44px;margin:0;padding:0;font:inherit;line-height:inherit;box-sizing:border-box;color:inherit
+}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) [aria-current=page]{padding:0;color:var(--ink)}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) a.plaza-text-link>.plaza-link-label{margin:0;padding:0;font:inherit;line-height:inherit}
+@media(max-width:767px){
+ html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) ol{font-size:11px;gap:0 10px}
+ html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) li{gap:8px}
+}
+/* Override the inherited underline padding that also matched the current LI. */
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) [aria-current=page]{padding-bottom:0!important}
+
+/* One shared link treatment; override legacy theme declarations only inside breadcrumbs. */
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs){--link-underline-thickness:1px;--link-underline-duration:350ms}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) a.plaza-breadcrumb-link{
+ background-image:none!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none
+}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) a.plaza-breadcrumb-link>.plaza-link-label{
+ background-image:linear-gradient(currentColor,currentColor)!important;
+ background-position:left bottom!important;background-repeat:no-repeat!important;
+ background-size:0 var(--link-underline-thickness)!important;
+ transition:background-size var(--link-underline-duration) ease!important;
+ -webkit-box-decoration-break:clone;box-decoration-break:clone
+}
+html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) a.plaza-breadcrumb-link:focus-visible>.plaza-link-label{background-size:100% var(--link-underline-thickness)!important}
+@media(hover:hover) and (pointer:fine){
+ html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) a.plaza-breadcrumb-link:hover>.plaza-link-label{background-size:100% var(--link-underline-thickness)!important}
+}
+@media(prefers-reduced-motion:reduce){
+ html body.plaza-shell nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) a.plaza-breadcrumb-link>.plaza-link-label{transition:none!important}
+}
+
+/* A single native scroll strip: no tall wrapped rows, no lost ancestors. */
+html body nav:is(.wellness-breadcrumbs,.resort-breadcrumbs){max-width:100%;min-width:0;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;scrollbar-color:var(--gold,#b2945f) transparent;scroll-padding-inline:4px}
+html body nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) ol{width:max-content;min-width:100%;max-width:none!important;flex-wrap:nowrap!important;align-items:center!important;row-gap:0!important}
+html body nav:is(.wellness-breadcrumbs,.resort-breadcrumbs) li{flex:0 0 auto;white-space:nowrap}
+html body nav:is(.wellness-breadcrumbs,.resort-breadcrumbs):focus-visible{outline:2px solid var(--gold,#b2945f);outline-offset:2px}
+html body nav:is(.wellness-breadcrumbs,.resort-breadcrumbs)::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+html body nav:is(.wellness-breadcrumbs,.resort-breadcrumbs)::-webkit-scrollbar-thumb{background:var(--gold,#b2945f);border-radius:4px}
+
+
+/* Kislovodsk approved breadcrumb contract, 31.10.2026. Catalogue and pages share these tokens. */
+body.plaza-object-kislovodsk {
+ --plaza-breadcrumb-font-size:12px;
+ --plaza-breadcrumb-font-weight:400;
+ --plaza-breadcrumb-line-height:1.5;
+ --plaza-breadcrumb-gap:10px;
+ --plaza-breadcrumb-space-top:24px;
+ --plaza-breadcrumb-space-bottom:24px;
+ --plaza-breadcrumb-hit-height:44px;
+ --plaza-breadcrumb-color:var(--icon-gold,var(--ui-gold,#917747));
+ --plaza-breadcrumb-hover-color:var(--icon-gold-hover,#d1b579);
+ --plaza-breadcrumb-duration:350ms;
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs {
+ display:block;min-width:0;max-width:100%;padding:0!important;
+ margin-block:var(--plaza-breadcrumb-space-top) var(--plaza-breadcrumb-space-bottom)!important;
+ font:var(--plaza-breadcrumb-font-weight) var(--plaza-breadcrumb-font-size)/var(--plaza-breadcrumb-line-height) Montserrat,Arial,sans-serif;
+ text-transform:none;letter-spacing:normal;color:var(--muted);
+ --link-underline-thickness:1px;--link-underline-duration:var(--plaza-breadcrumb-duration);
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs ol {
+ display:flex;align-items:center;flex-wrap:nowrap;gap:0;list-style:none;margin:0;padding:0;
+ width:max-content;min-width:100%;font:inherit;letter-spacing:normal;text-transform:none;
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs li {
+ display:flex;flex:0 0 auto;align-items:center;gap:0;min-height:var(--plaza-breadcrumb-hit-height);
+ margin:0;padding:0!important;font:inherit;white-space:nowrap;letter-spacing:normal;text-transform:none;
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs li+li::before {
+ content:'›';display:inline-flex;align-items:center;align-self:center;flex:none;
+ min-height:var(--plaza-breadcrumb-hit-height);margin-inline:var(--plaza-breadcrumb-gap);
+ padding:0;font:inherit;color:var(--muted);opacity:.65;
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs li::after {content:none!important}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a {
+ display:inline-flex;align-items:center;min-height:var(--plaza-breadcrumb-hit-height);padding:0!important;
+ font:inherit!important;letter-spacing:normal;text-transform:none;color:var(--plaza-breadcrumb-color)!important;
+ background:none!important;text-decoration:none!important;border:0;transform:none!important;
+ transition:color var(--plaza-breadcrumb-duration) ease;
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a>.plaza-link-label {
+ display:inline;min-height:0;padding:0!important;margin:0;font:inherit!important;line-height:inherit!important;
+ color:inherit!important;background-image:linear-gradient(currentColor,currentColor)!important;
+ background-position:left bottom!important;background-repeat:no-repeat!important;
+ background-size:0 1px!important;transition:background-size var(--plaza-breadcrumb-duration) ease;
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a::before,
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a::after {content:none!important}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a:focus-visible {
+ color:var(--plaza-breadcrumb-hover-color)!important;outline:2px solid currentColor;outline-offset:2px;
+}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a:focus-visible>.plaza-link-label {background-size:100% 1px!important}
+html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs [aria-current=page] {color:var(--ink)!important}
+@media(hover:hover) and (pointer:fine) {
+ html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a:hover {color:var(--plaza-breadcrumb-hover-color)!important}
+ html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a:hover>.plaza-link-label {background-size:100% 1px!important}
+}
+/* Template adapters remove only the old extra space above the common component. */
+html body.plaza-object-kislovodsk main.pg-page,
+html body.plaza-object-kislovodsk main.ds-page,
+html body.plaza-object-kislovodsk .resort-page-navigation,
+html body.plaza-object-kislovodsk .pg-story .pg-top {padding-top:0!important}
+html body.plaza-object-kislovodsk .resort-page-navigation {padding-bottom:0!important}
+@media(max-width:767px) {
+ body.plaza-object-kislovodsk {--plaza-breadcrumb-font-size:11px;--plaza-breadcrumb-gap:8px;--plaza-breadcrumb-space-top:16px;--plaza-breadcrumb-space-bottom:16px}
+}
+@media(prefers-reduced-motion:reduce) {
+ html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a,
+ html body.plaza-object-kislovodsk nav.resort-breadcrumbs.plaza-breadcrumbs a>.plaza-link-label {transition:none!important}
+}
+
+/* Transparent first-screen copy must not add a second top interval after breadcrumbs. */
+html body.plaza-object-kislovodsk .plaza-breadcrumbs + header.pg-hero .pg-hero-copy {padding-top:0!important;align-self:start}

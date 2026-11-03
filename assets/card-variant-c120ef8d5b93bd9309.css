@@ -1,0 +1,12 @@
+/* Destination-only responsive repairs. The prototype, network and Wellness are unchanged. */
+body.resort-migration #contacts.site-footer .social-links a{min-width:44px!important;width:44px!important;height:44px!important;min-height:44px!important;flex:0 0 44px!important}
+body.resort-migration #contacts.site-footer .social-links a:last-child{display:flex!important}
+@media(min-width:768px) and (max-width:1050px){
+ body.resort-migration #contacts.site-footer .footer-top{grid-template-columns:minmax(0,1fr) minmax(344px,1fr)!important;gap:24px!important}
+ body.resort-migration #contacts.site-footer .social-links{gap:6px!important;flex-wrap:nowrap!important}
+}
+@media(max-width:767px){
+ body.resort-migration #contacts.site-footer .social-links{gap:4px!important;flex-wrap:wrap!important;height:auto!important}
+ body.resort-migration #medicine .plaza-slider-controls .rail-dots button::after{background:var(--accent,#917747)!important}
+}
+body.resort-migration #contacts .footer-copyright-group>p>a{display:inline-flex!important;min-height:44px!important;align-items:center}

@@ -1,0 +1,49 @@
+/* plaza: independently owned day/night colours. Do not merge site palettes. */
+:root{--plaza-glow-line-color:#fff;--plaza-glow-blur-color:#fff;}
+body:is(.plaza-object-plaza){--plaza-card-light-rgb:238,217,172}
+html body.plaza-shell:is(.plaza-object-plaza){--plaza-gold-deep:#917747;--plaza-gold-light:#D1B579;--plaza-gold-bright:#EED9AC;--plaza-ui-gold:var(--plaza-gold-deep);--plaza-ui-gold-hover:var(--plaza-gold-light);--plaza-service-link-color:var(--plaza-ui-gold);--plaza-service-link-hover:var(--plaza-ui-gold-hover);--icon-gold:var(--plaza-ui-gold);--icon-gold-hover:var(--plaza-ui-gold-hover)}
+html[data-theme="dark"] body.plaza-shell:is(.plaza-object-plaza){--plaza-ui-gold:var(--plaza-gold-light);--plaza-ui-gold-hover:var(--plaza-gold-bright)}
+html body.plaza-shell{--plaza-footer-gradient-end:color-mix(in srgb,var(--bg) 94%,var(--plaza-service-link-color,var(--gold)) 6%)}
+html[data-theme=dark] body.plaza-shell{--plaza-footer-gradient-end:color-mix(in srgb,var(--bg) 86%,var(--plaza-service-link-color,var(--gold)) 14%)}
+html body.plaza-shell{--plaza-primary-button-bg:var(--gold);--plaza-primary-button-ink:var(--plaza-button-ink,#fff)}
+html[data-theme=dark] body.plaza-shell{--plaza-primary-button-ink:var(--plaza-button-ink,var(--plaza-bg-night,#171c1b))}
+
+/* This site's accordion light: shared geometry, independent colour declarations. */
+html body.plaza-shell{--plaza-accordion-light-stops:rgba(255,255,255,.95),rgba(255,255,255,.35) 48%,transparent 85%}
+html[data-theme=dark] body.plaza-shell{--plaza-accordion-light-stops:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),.18),transparent 75%;--plaza-accordion-border-core:rgba(var(--plaza-card-light-rgb,var(--plaza-highlight-rgb)),.65)}
+
+/* Network booking surface and semantic colours of its public sitemap. */
+html body.plaza-shell.plaza-object-plaza{--plaza-booking-card-bg:linear-gradient(135deg,#fcfbf8,#f7f3eb);--plaza-booking-card-border:rgba(145,119,71,.22);--plaza-booking-card-shadow:0 2px 4px rgba(92,72,37,.035),0 12px 28px rgba(92,72,37,.065);--plaza-sitemap-kislovodsk:#917747;--plaza-sitemap-zheleznovodsk:#365947;--plaza-sitemap-border:rgba(145,119,71,.26);--plaza-sitemap-shadow:0 24px 80px #0004,0 8px 24px #0002}
+html[data-theme=dark] body.plaza-shell.plaza-object-plaza{--plaza-booking-card-bg:var(--surface);--plaza-booking-card-border:rgba(209,181,121,.24);--plaza-booking-card-shadow:0 12px 28px rgba(0,0,0,.2);--plaza-sitemap-kislovodsk:#D1B579;--plaza-sitemap-zheleznovodsk:#9CA887;--plaza-sitemap-border:rgba(209,181,121,.28);--plaza-sitemap-shadow:0 24px 80px #0007,0 8px 24px #0005}
+
+/* This site's sitemap surface and standard dialog controls. */
+html body.plaza-shell{--plaza-sitemap-background:linear-gradient(135deg,#f1eee6,#e7e1d5);--plaza-sitemap-control-bg:color-mix(in srgb,var(--surface) 65%,transparent);--plaza-sitemap-orbit-1:209,181,121;--plaza-sitemap-orbit-2:156,168,135;--plaza-sitemap-orbit-3:178,148,95;--plaza-sitemap-orbit-strength:.20;--plaza-dialog-close-bg:#fcfbf8;--plaza-dialog-close-ink:var(--plaza-service-link-color);--plaza-dialog-close-hover:var(--plaza-service-link-hover);--plaza-dialog-close-shadow:0 8px 24px #0006,0 2px 6px #0004;}
+html[data-theme=dark] body.plaza-shell{--plaza-sitemap-background:linear-gradient(135deg,var(--surface),var(--bg));--plaza-sitemap-control-bg:color-mix(in srgb,var(--surface) 80%,transparent);--plaza-sitemap-orbit-strength:.13;}
+
+/* Public footer action roles belong to this site's palette, for both themes. */
+html body.plaza-shell.plaza-object-plaza{--plaza-footer-action-color:var(--plaza-service-link-color);--plaza-footer-action-hover:var(--plaza-service-link-hover)}
+
+/* Guest-map Polaroid and Yandex action: network-owned colours. */
+html body.plaza-shell.plaza-network{--plaza-map-paper:#fff;--plaza-map-paper-ink:#171717;--plaza-map-paper-shadow:0 4px 12px #0004;--plaza-map-cta-bg:var(--glass-panel-bg);--plaza-map-cta-ink:var(--ink);--plaza-map-yandex-hover:#e9342c;--plaza-map-cta-border:var(--line);--plaza-map-cta-shadow:inset 0 1px 0 #ffffffcc,0 4px 14px #00000024;--plaza-map-marker-ink:linear-gradient(176deg,#252525 0%,#484848 38%,#2d2d2d 60%,#444 100%);}
+
+/* Day network FAQ: white flashlight, fading outward into transparency. */
+html:not([data-theme=dark]) body.plaza-shell.plaza-network .pb-faq{
+ --plaza-card-light-radius:320px;
+ --plaza-accordion-light-stops:rgba(255,255,255,.95) 0%,rgba(255,255,255,.35) 48%,transparent 85%;
+}
+
+/* Network FAQ resting surface. The white Stripe light is a separate unchanged layer. */
+html body.plaza-shell.plaza-network{--plaza-network-faq-background:linear-gradient(115deg,color-mix(in srgb,var(--bg) 96%,var(--plaza-service-link-color) 4%),color-mix(in srgb,var(--bg) 87%,var(--plaza-service-link-color) 13%))}
+html[data-theme=dark] body.plaza-shell.plaza-network{--plaza-network-faq-background:linear-gradient(115deg,color-mix(in srgb,var(--bg) 96%,var(--plaza-service-link-color) 4%),color-mix(in srgb,var(--bg) 91%,var(--plaza-service-link-color) 9%))}
+
+/* Only the guest map uses glass for its close control; sitemap retains its role. */
+html body.plaza-shell.plaza-network .plaza-map-modal{--plaza-dialog-close-bg:var(--glass-panel-bg);--plaza-dialog-close-shadow:inset 0 1px 0 #ffffffcc,0 4px 14px #00000024}
+html[data-theme=dark] body.plaza-shell.plaza-network{--plaza-map-cta-shadow:inset 0 1px 0 #ffffffcc,0 4px 14px #00000038;--plaza-map-cta-hover-shadow:inset 0 1px 0 #ffffffcc,inset 0 0 18px #ffffff0d,0 0 18px color-mix(in srgb,var(--plaza-service-link-color) 22%,transparent),0 7px 20px #00000045;--plaza-map-cta-hover-border:color-mix(in srgb,var(--plaza-service-link-color) 50%,transparent)}
+html[data-theme=dark] body.plaza-shell.plaza-network .plaza-map-modal{--plaza-dialog-close-shadow:inset 0 1px 0 #ffffffcc,0 4px 14px #00000038}
+
+/* Opaque sanatorium picker: network palette, independent of the map glass material. */
+html body.plaza-shell.plaza-object-plaza{--plaza-picker-surface:linear-gradient(135deg,#fcfbf8 0%,#f5f0e6 55%,#ece3d1 100%)}
+html[data-theme="dark"] body.plaza-shell.plaza-object-plaza{--plaza-picker-surface:linear-gradient(135deg,#2b2d27 0%,#232923 55%,#19211f 100%)}
+
+/* Tooltip colour only: common tooltip.css owns both shadow layers and their opacity. */
+html body.plaza-shell.plaza-object-plaza{--plaza-tooltip-shadow-rgb:92,72,37}

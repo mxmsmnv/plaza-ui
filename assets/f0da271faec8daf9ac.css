@@ -1,0 +1,76 @@
+/* Only the methods catalogue layout; components retain their shared owners. */
+
+body.plaza-psk-guide .pg-methods .pg-hero {grid-template-columns:repeat(2,minmax(0,1fr));align-items:center}
+
+body.plaza-psk-guide .pg-methods .pg-hero h1 {max-width:21ch;font-size:clamp(2rem,3.6vw,3.25rem)}
+
+body.plaza-psk-guide .pg-methods .pg-hero-photo {aspect-ratio:16/9;overflow:hidden;border-radius:var(--plaza-radius-ui,4px)}
+
+body.plaza-psk-guide .pg-methods .pg-hero-photo>img {aspect-ratio:auto;border-radius:0;box-shadow:none}
+
+body.plaza-psk-guide .pg-methods .pg-section-nav {justify-content:center;gap:8px 28px;margin-top:32px}
+
+body.plaza-psk-guide .pg-methods :is(.pg-methods-intro,.pg-methods-group) {margin-top:var(--plaza-section-before,64px);scroll-margin-top:110px}
+
+body.plaza-psk-guide .pg-methods :is(.pg-methods-intro,.pg-methods-group)>h2 {margin-bottom:24px}
+
+body.plaza-psk-guide .pg-methods .pg-methods-intro>p {max-width:var(--pg-reading-width)}
+
+body.plaza-psk-guide .pg-methods .pg-methods-catalog {margin-top:32px}
+
+body.plaza-psk-guide .pg-methods .pg-methods-catalog>ul {columns:2;column-gap:48px}
+
+body.plaza-psk-guide .pg-methods .pg-methods-catalog li {break-inside:avoid;padding-bottom:8px}
+
+body.plaza-psk-guide .pg-methods .pg-methods-detail {padding:0 24px 24px}
+
+body.plaza-psk-guide .pg-methods .resort-accordion-label {margin:0;font-size:1.25rem;line-height:1.4;min-width:0}
+
+body.plaza-psk-guide .pg-methods #booking {width:100%;max-width:none;margin:var(--plaza-section-before,64px) 0 0}
+
+body.plaza-psk-guide .pg-methods {padding-bottom:var(--plaza-section-before,64px)}
+
+@media(max-width:1050px){
+
+ body.plaza-psk-guide .pg-methods .pg-hero {gap:24px}
+
+ body.plaza-psk-guide .pg-methods .pg-tech-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+
+}
+
+@media(max-width:700px){
+
+ body.plaza-psk-guide .pg-methods .pg-hero {grid-template-columns:minmax(0,1fr)}
+
+ body.plaza-psk-guide .pg-methods .pg-hero h1 {max-width:23ch}
+
+ body.plaza-psk-guide .pg-methods .pg-hero-copy {padding-block:0}
+
+ body.plaza-psk-guide .pg-methods .pg-section-nav {justify-content:flex-start;gap:4px 20px}
+
+ body.plaza-psk-guide .pg-methods .pg-tech-grid {grid-template-columns:minmax(0,1fr)}
+
+ body.plaza-psk-guide .pg-methods .pg-methods-catalog>ul {columns:1}
+
+ body.plaza-psk-guide .pg-methods .pg-methods-detail {padding-inline:16px}
+
+}
+
+
+
+body.plaza-psk-guide .pg-methods .resort-accordion summary>.resort-accordion-label {grid-column:2}
+
+
+
+body.plaza-psk-guide main.pg-methods .pg-methods-detail>:is(p,ul,ol)+:is(p,ul,ol) {margin-top:var(--plaza-flow-paragraph,20px)}
+
+body.plaza-psk-guide .pg-methods .pg-methods-diagnostic-links {margin-bottom:24px}
+
+
+body.plaza-psk-guide main#main.pg-page.pg-methods {padding-bottom:0;margin-bottom:var(--plaza-section-before,64px)}
+
+body.plaza-psk-guide .pg-methods .pg-methods-group summary {grid-template-columns:minmax(0,1fr) 24px}
+body.plaza-psk-guide .pg-methods .pg-methods-group summary>.resort-accordion-label {grid-column:1}
+body.plaza-psk-guide main#main.pg-methods #booking {margin-bottom:0!important}
+
+body.plaza-psk-guide main#main.pg-page.pg-methods {margin-bottom:max(40px,var(--plaza-section-before,64px))!important} body.plaza-psk-guide main#main.pg-page.pg-methods #booking {margin-top:max(40px,var(--plaza-section-before,64px))!important}

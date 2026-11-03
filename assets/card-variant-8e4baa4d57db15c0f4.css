@@ -1,0 +1,62 @@
+/* Home search continues the quiet, open facts strip above. */
+.wellness-search{margin-top:0;margin-bottom:48px}
+.wellness-search-surface{padding:28px var(--plaza-card-padding-inline) 16px var(--plaza-card-padding-inline);border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;position:relative;isolation:isolate}
+.wellness-search-heading{padding:0 0 12px}
+.wellness-search-heading h2{font:400 clamp(25px,2.2vw,30px)/1.3 Lora,Georgia,serif;letter-spacing:-.025em;margin:0 0 8px;color:var(--ink)}
+.wellness-search-heading p{margin:0;max-width:70ch;font:400 13px/1.7 Montserrat,Arial,sans-serif;color:var(--muted)}
+.wellness-search #plaza-home-search-form.tl-container{min-height:90px;background:transparent;padding:0}.wellness-search iframe{width:100%;border:0;display:block}
+@media(max-width:767px){.wellness-search{margin-bottom:32px}.wellness-search-surface{padding:24px var(--plaza-card-padding-inline) 12px var(--plaza-card-padding-inline)}.wellness-search-heading{padding:0 0 12px}}
+/* 2026-10-16: compact search above facts, Zheleznovodsk only. */
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search{margin-top:0;margin-bottom:0}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-surface{padding:8px var(--plaza-card-padding-inline) 0 var(--plaza-card-padding-inline)}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-heading{display:flex;align-items:center;gap:24px;padding:0}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-heading h2{flex:none;font-size:22px;line-height:1.2;margin:0}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-heading p{font-size:12px;line-height:1.5;max-width:none;margin:0}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search #plaza-home-search-form.tl-container{margin:0;min-height:0}
+@media(max-width:979px){
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-surface{padding:12px var(--plaza-card-padding-inline) 0 var(--plaza-card-padding-inline)}
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-heading{gap:8px 20px;flex-wrap:wrap}
+}
+@media(max-width:767px){
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-surface{padding:16px var(--plaza-card-padding-inline) 8px var(--plaza-card-padding-inline)}
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-heading{display:block;padding-bottom:4px}
+ body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search-heading h2{font-size:22px;margin-bottom:6px}
+}
+
+/* 2026-10-16: form only, equal vertical inset and one shared facts boundary. */
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search .wellness-search-surface{padding:8px var(--plaza-card-padding-inline);border-bottom:0}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) main#main .facts+.wellness-search{margin-top:0}
+@media(max-width:979px){body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search .wellness-search-surface{padding:8px var(--plaza-card-padding-inline)}}
+@media(max-width:767px){body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .wellness-search .wellness-search-surface{padding:8px var(--plaza-card-padding-inline)}}
+
+
+/* Both property homes: preserve the separately measured provider footprint before its first scroll load.
+   Provider iframe widths: <376 => 284px; 376..880 => 158px; >=881 => 98px.
+   The named inline-size container measures the real available form width. */
+.wellness-search[data-plaza-lazy-search] .wellness-search-surface{container:plaza-home-search / inline-size}
+body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .wellness-search #plaza-home-search-form[data-plaza-load="scroll"]{min-height:284px;opacity:0;filter:blur(3px);pointer-events:none;transition:opacity 600ms ease,filter 600ms ease}
+@container plaza-home-search (min-width:376px){
+ body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .wellness-search #plaza-home-search-form[data-plaza-load="scroll"]{min-height:158px}
+}
+@container plaza-home-search (min-width:881px){
+ body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .wellness-search #plaza-home-search-form[data-plaza-load="scroll"]{min-height:98px}
+}
+body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .wellness-search #plaza-home-search-form[data-plaza-load="scroll"]:is([data-plaza-search-state="ready"],[data-plaza-search-state="error"]){opacity:1;filter:blur(0);pointer-events:auto}
+.wellness-search[data-plaza-lazy-search] .wellness-search-fallback{display:none;position:absolute;inset:8px var(--plaza-card-padding-inline);margin:0;align-items:center;pointer-events:none}
+.wellness-search[data-plaza-lazy-search] .wellness-search-fallback a{pointer-events:auto}
+.wellness-search[data-plaza-lazy-search] [data-plaza-search-state="error"]+.wellness-search-fallback{display:flex}
+@media(prefers-reduced-motion:reduce){
+ body:is(.plaza-object-kislovodsk,.plaza-object-zheleznovodsk) .wellness-search #plaza-home-search-form[data-plaza-load="scroll"]{transition:none;filter:none}
+}
+
+/* Both homes: reserve geometry while lower sections wait for the booking-form fade. */
+html.plaza-home-sequence body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main .wellness-search ~ :not(script):not(style),
+html.plaza-home-sequence body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) footer[data-plaza-footer="edges"]{opacity:0;visibility:hidden}
+html.plaza-home-sequence.plaza-home-sequence-open body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main .wellness-search ~ :not(script):not(style),
+html.plaza-home-sequence.plaza-home-sequence-open body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) footer[data-plaza-footer="edges"]{visibility:visible}
+html.plaza-home-sequence.plaza-home-sequence-open body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main .wellness-search ~ .plaza-home-sequence-shown,
+html.plaza-home-sequence.plaza-home-sequence-open body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) footer[data-plaza-footer="edges"].plaza-home-sequence-shown{opacity:1}
+@media print{
+ html.plaza-home-sequence body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main .wellness-search ~ :not(script):not(style),
+ html.plaza-home-sequence body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) footer[data-plaza-footer="edges"]{opacity:1;visibility:visible}
+}

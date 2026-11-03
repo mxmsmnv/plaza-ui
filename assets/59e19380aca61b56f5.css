@@ -1,0 +1,31 @@
+/* Reversible room-preview surface. Content is composed from approved room data. */
+.comparison-preview[data-preview-effect="flip"]{--comparison-flip-duration:650ms;width:320px;max-width:calc(100vw - 32px);perspective:1100px}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-card{width:100%;perspective:1100px}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-inner{position:relative;height:180px;transform-style:preserve-3d;transform:rotateY(0deg);transition:transform var(--comparison-flip-duration) cubic-bezier(.22,.61,.36,1)}
+.comparison-preview[data-preview-effect="flip"][data-flipped] .comparison-flip-inner{transform:rotateY(180deg)}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-face{box-sizing:border-box;position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:var(--plaza-radius-ui,4px);backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:var(--plaza-photo-shadow,0 25px 20px -20px rgba(104,85,61,.45)),0 22px 46px -10px rgba(0,0,0,.42),0 8px 18px -6px rgba(0,0,0,.24);border:1px solid var(--plaza-preview-border-color,var(--line))}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-front{background:var(--surface);overflow:hidden;transform:rotateY(0deg)}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-front .room-photo-link{height:100%}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-back{display:flex;flex-direction:column;align-items:stretch;gap:6px;overflow:hidden;padding:14px 16px;transform:rotateY(180deg);pointer-events:none;color:var(--ink)}
+.comparison-preview[data-preview-effect="flip"][data-flipped] .comparison-flip-front{pointer-events:none}
+.comparison-preview[data-preview-effect="flip"][data-flipped] .comparison-flip-back{pointer-events:auto}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-title{flex:none;font-family:Lora,Georgia,serif;font-size:calc(20px * var(--comparison-copy-scale,1));font-weight:400;line-height:1.15;letter-spacing:0;margin:0;padding:0}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-title a{display:flex;align-items:flex-start;gap:6px;min-width:0;font:inherit;color:inherit;text-decoration:none}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-title a:hover{color:var(--plaza-service-link-hover,var(--gold))}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-back .room-catalog-specs{flex:none;display:flex;align-items:baseline;gap:14px;border:0;margin:0;padding:0;font:400 11.5px/1.25 Montserrat,Arial,sans-serif;color:var(--muted);letter-spacing:0}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-back .room-catalog-specs span,.comparison-preview[data-preview-effect="flip"] .comparison-flip-back .room-catalog-specs small{font:inherit;color:inherit}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-description{flex:none;margin:0;padding:0;font:400 max(11.5px,calc(12px * var(--comparison-copy-scale,1)))/1.4 Montserrat,Arial,sans-serif;color:var(--muted);letter-spacing:0}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-details{position:static;flex:none;align-self:flex-end;display:flex;margin:auto 0 0;padding:0}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-price-link{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;font:500 12px/1.2 Montserrat,Arial,sans-serif;letter-spacing:0;min-height:32px;padding:8px 12px;white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.comparison-preview[data-preview-effect="flip"] .comparison-flip-inner{transition:none}}
+
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-back .comparison-flip-price-link{min-height:32px!important;height:32px!important;padding:8px 12px!important}
+
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-title .plaza-link-label{min-width:0;flex:1}
+.comparison-preview[data-preview-effect="flip"] .comparison-flip-title .pn-external-arrow{flex:none;width:12px;height:12px;margin:4px 0 0}
+
+/* Kislovodsk: preserve mouse previews below the old1024px cutoff, never touch-hover. */
+@media(hover:hover) and (pointer:fine){body.plaza-object-kislovodsk .comparison-preview[data-preview-effect="flip"]{display:block!important}}
+
+/* Approved opaque reverse for both properties: room and view previews. */
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) .comparison-preview[data-preview-effect="flip"] .comparison-flip-back{background:var(--plaza-preview-surface);-webkit-backdrop-filter:none;backdrop-filter:none;opacity:1}

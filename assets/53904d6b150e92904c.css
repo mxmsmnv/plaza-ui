@@ -1,0 +1,70 @@
+/* Shared structure; each property supplies its own accent/surface tokens. */
+body.plaza-mobile-home #faq .plaza-faq-disclosure{display:contents;min-width:0}
+body.plaza-mobile-home #faq .plaza-faq-disclosure>summary{display:none}
+body.plaza-mobile-home #faq .plaza-faq-content{min-width:0}
+@media(max-width:767px){
+ body.plaza-mobile-home #faq .plaza-faq-desktop-prompt{display:none}
+ body.plaza-mobile-home #faq .plaza-faq-intro .wp-block-buttons{margin-top:16px;margin-bottom:24px}
+ body.plaza-mobile-home #faq .plaza-faq-disclosure{display:block;min-width:0;border:0}
+ body.plaza-mobile-home #faq .plaza-faq-disclosure>summary{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr) 20px;align-items:center;gap:12px;min-height:64px;margin:0;padding:12px 4px;list-style:none;cursor:pointer;color:var(--accent);font:400 22px/1.3 Lora,Georgia,serif}
+ body.plaza-mobile-home #faq .plaza-faq-disclosure>summary::-webkit-details-marker{display:none}
+ body.plaza-mobile-home #faq .plaza-faq-disclosure>summary .plaza-faq-bulb{width:30px;height:30px}
+ body.plaza-mobile-home #faq .plaza-faq-disclosure>summary .plaza-faq-plus{width:20px;height:20px}
+ body.plaza-mobile-home #faq .plaza-faq-disclosure>summary[aria-expanded=true] .plaza-faq-plus-vertical{opacity:0}
+ body.plaza-mobile-home #faq .plaza-faq-bottom-shadow{position:absolute;top:100%;left:0;right:0;height:14px;overflow:hidden;pointer-events:none}
+ body.plaza-mobile-home #faq .plaza-faq-bottom-shadow::before{content:'';position:absolute;bottom:100%;left:12px;right:12px;height:20px;box-shadow:0 6px 10px rgba(0,0,0,.14)}
+ html[data-theme=dark] body.plaza-mobile-home #faq .plaza-faq-bottom-shadow::before{box-shadow:0 6px 10px rgba(0,0,0,.3)}
+ body.plaza-mobile-home #faq .plaza-faq-content{padding-top:16px}
+ body.plaza-mobile-home #faq .plaza-faq-disclosure>summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+}
+@media(hover:hover) and (pointer:fine){body.plaza-mobile-home #faq .plaza-faq-disclosure>summary:hover{color:var(--plaza-interaction,var(--accent))}}
+@media(prefers-reduced-motion:reduce){body.plaza-mobile-home #faq .plaza-faq-disclosure,body.plaza-mobile-home #faq .plaza-faq-disclosure>summary{transition:none}}
+
+/* Deliberate phrase groups; hero rules align to the brand row. */
+.plaza-label-line{display:inline}
+@media(max-width:767px){
+ html body.plaza-mobile-home main .plaza-section-divider{font-size:13px!important;letter-spacing:3px!important;gap:14px}
+ body.plaza-mobile-home .plaza-label-line{display:block;white-space:normal}
+ body.plaza-mobile-home .plaza-label-space{display:none}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider{display:grid!important;grid-template-columns:minmax(12px,1fr) max-content minmax(12px,1fr);column-gap:14px;row-gap:6px}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider>span{display:contents}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider .plaza-hero-city{grid-column:2;grid-row:1;white-space:nowrap}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider .plaza-hero-name{grid-column:2;grid-row:2;white-space:nowrap}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider .stars{grid-column:2;grid-row:3;margin:0!important}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider .plaza-hero-separator{display:none}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider::before{grid-column:1;grid-row:2;align-self:center;width:100%}
+ html body.plaza-shell.plaza-mobile-home main#main>section.hero>.plaza-section-divider::after{grid-column:3;grid-row:2;align-self:center;width:100%}
+}
+@media(max-width:359px){html body.plaza-mobile-home main #medicine>.plaza-section-divider{letter-spacing:2px!important;gap:8px}}
+
+
+body.plaza-object-kislovodsk .plaza-facts-controls{display:none}
+body.plaza-object-kislovodsk #faq .plaza-faq-award{display:flex;align-items:center;gap:20px;margin:24px 0 12px;max-width:480px}
+body.plaza-object-kislovodsk #faq .plaza-faq-award img{display:block;width:64px;height:auto;flex:none}
+body.plaza-object-kislovodsk #faq .plaza-faq-award p{margin:0;font:inherit;min-width:0}
+
+body.plaza-object-kislovodsk #faq .plaza-faq-award-line{display:block;color:var(--muted)}
+body.plaza-object-kislovodsk #faq .plaza-faq-award-name{color:inherit;font-family:Lora,Georgia,serif;font-size:1.5em;font-weight:400;line-height:1.3;margin:4px 0}
+body.plaza-object-kislovodsk #faq .plaza-faq-award-link{position:relative;display:block;flex:none;width:64px;border-radius:10px;overflow:hidden;isolation:isolate;transition:transform .35s cubic-bezier(.22,.61,.36,1)}
+body.plaza-object-kislovodsk #faq .plaza-faq-award-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;transform:scale(1.06)}
+@media(hover:hover) and (pointer:fine){
+ body.plaza-object-kislovodsk #faq .plaza-faq-award-link:hover{transform:scale(1.06)}
+}
+@media(prefers-reduced-motion:reduce){
+ body.plaza-object-kislovodsk #faq .plaza-faq-award-link{transition:none}
+ body.plaza-object-kislovodsk #faq .plaza-faq-award-link:is(:hover,:focus-visible){transform:none}
+}
+
+@media(max-width:1050px){body.plaza-object-kislovodsk #faq .plaza-faq-award{flex-direction:column;align-items:flex-start;gap:16px}}
+
+body.plaza-object-kislovodsk #faq .plaza-faq-intro>p{max-width:46ch}
+@media(max-width:700px){
+ html body.plaza-object-kislovodsk main#main.plaza-block-home>.plaza-facts-rail{display:grid!important;grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:100%;gap:0!important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y;align-items:stretch;padding:0!important}
+ body.plaza-object-kislovodsk .plaza-facts-rail::-webkit-scrollbar{display:none}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home>.plaza-facts-rail>div{display:flex!important;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:16px!important;min-width:0;box-sizing:border-box;padding:24px 20px!important;scroll-snap-align:start;border:0!important;border-right:1px solid var(--line)!important}
+ html body.plaza-object-kislovodsk main#main.plaza-block-home>.plaza-facts-rail>div:last-child{border-right:0!important}
+ body.plaza-object-kislovodsk .plaza-facts-rail>div>div{min-width:0;width:100%}
+ body.plaza-object-kislovodsk .plaza-facts-rail p{margin-inline:auto;max-width:34ch}
+ body.plaza-object-kislovodsk .plaza-facts-controls:not([hidden]){display:flex;margin-top:8px;margin-bottom:0}
+ body.plaza-object-kislovodsk #faq .plaza-faq-award{gap:16px;margin-top:20px}
+}

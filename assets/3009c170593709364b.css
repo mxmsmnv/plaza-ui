@@ -1,0 +1,4 @@
+{{SCOPE}} #booking .consultant-portrait{position:relative;isolation:isolate;margin:0 auto;overflow:hidden;border-radius:50%;background:var(--surface);box-shadow:0 8px 24px rgba(69,65,59,.09)}
+{{SCOPE}} #booking .consultant-poster{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%;transform:scale(1);transform-origin:center;transition:transform .6s ease;filter:none;border-radius:0;pointer-events:none}
+@media(prefers-reduced-motion:reduce){{{SCOPE}} #booking .consultant-poster{transition:none}{{SCOPE}} #booking .consultant-portrait:hover .consultant-poster{transform:none}}
+{{SCOPE}} #booking a.consultant-portrait{display:block;cursor:pointer;text-decoration:none}{{SCOPE}} #booking a.consultant-portrait:focus-visible{outline:2px solid var(--gold);outline-offset:4px}

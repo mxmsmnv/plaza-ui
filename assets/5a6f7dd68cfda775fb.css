@@ -1,0 +1,7 @@
+/* Approved +25% H2 scale for both photo journals; shared physical source. */
+.pg-story .pg-note h2{font-size:clamp(37.5px,3.875vw,57.5px)}
+.pg-story .pg-room-copy h2{font-size:clamp(35px,3.75vw,52.5px)}
+@media(max-width:700px){.pg-story .pg-note h2{font-size:40px}.pg-story .pg-room-copy h2{font-size:37.5px}}
+
+/* Approved shared mobile overlay size; the opening Zheleznovodsk cover has its own 17cqw scale. */
+.pg-story{--pg-mobile-overlay-size:11.5cqw}

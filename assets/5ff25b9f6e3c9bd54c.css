@@ -1,0 +1,14 @@
+/* Approved photo-shadow component: shared room galleries and photo journals, both properties. */
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk){--plaza-photo-shadow:0 25px 20px -20px rgba(104,85,61,.45)}
+html[data-theme="dark"] body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk){--plaza-photo-shadow:0 25px 20px -20px rgba(43,37,24,.70)}
+#main.pg-story .pg-lightbox-frame{box-shadow:var(--plaza-photo-shadow,none)}
+#main.pg-story .pg-room-mosaic{overflow:visible}
+
+/* Homepage: one shadow on the entire card; standalone media keep their own shadow. */
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main.plaza-block-home .photo-frame:not(.card .photo-frame),
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main.plaza-block-home .plaza-hero-video{box-shadow:var(--plaza-photo-shadow,none)}
+
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main.plaza-block-home .card:has(.photo-frame):not(:hover):not(:focus-within){box-shadow:var(--plaza-photo-shadow,none)!important}
+body:is(.plaza-object-zheleznovodsk,.plaza-object-kislovodsk) #main.plaza-block-home .card .photo-frame{box-shadow:none}
+
+

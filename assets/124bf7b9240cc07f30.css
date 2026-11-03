@@ -1,0 +1,27 @@
+.plaza-block-home .wp-block-group{box-sizing:border-box}
+.plaza-block-home .wp-block-heading{margin:0;font-weight:500}
+.plaza-block-home .wp-block-image{margin:0}
+.plaza-block-home .wp-block-image img{width:100%;height:auto}
+.plaza-block-home .wp-block-buttons{display:flex;flex-wrap:wrap;gap:12px;margin:0}
+.plaza-block-home .wp-block-button{margin:0;padding:0}
+.plaza-block-home .plaza-button .wp-block-button__link{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 20px;border:1px solid var(--gold);border-radius:var(--radius);background:var(--gold);color:#171c1b;font:500 13px/1.5 Montserrat,Arial,sans-serif;box-shadow:0 1px 2px rgba(0,0,0,.08);text-align:center;transition:border-color .3s,box-shadow .3s,transform .2s}
+.plaza-block-home .plaza-button .wp-block-button__link:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,#b2945f,#d4ab68,#e2cfab,#d4ab68,#b2945f);background-size:220% 100%;background-position:100% 0;opacity:0;transition:opacity .3s,background-position .65s}
+.plaza-block-home .plaza-button .wp-block-button__link:hover:before{opacity:1;background-position:0 0}
+.plaza-block-home .plaza-outline .wp-block-button__link{background:transparent;color:var(--ink);box-shadow:none}
+.plaza-block-home .plaza-outline .wp-block-button__link:hover{color:#171c1b}
+.plaza-block-home p.text-link{margin-bottom:0}
+.plaza-block-home .text-link a{display:inline-flex;align-items:center;min-height:44px}
+.plaza-block-home .card-body>p.text-link{margin-top:auto;font-size:13px;color:var(--accent)}
+.plaza-block-home .card-body>p.text-link a{color:var(--accent)}
+.plaza-block-home .topic-links p{margin:0!important}
+.plaza-block-home .hero-glass .eyebrow{margin:0;font:500 8px/1.6 Montserrat,Arial,sans-serif}
+.plaza-block-home .plaza-icon{display:inline-flex;color:var(--accent);flex-shrink:0}
+.plaza-block-home .inclusions .check{font-size:20px;margin:0}
+.plaza-block-home .faq-list summary:after{content:'+';font-size:24px;color:var(--accent)}
+.plaza-block-home .faq-list details[open] summary:after{content:'−'}
+.plaza-block-home .booking-phone{font-size:clamp(19px,3vw,29px)!important;letter-spacing:-.04em}
+.plaza-block-home .booking-phone a{color:var(--accent)}
+.plaza-block-home .booking-actions .wp-block-buttons,.plaza-block-home .booking-actions .wp-block-button,.plaza-block-home .booking-actions .wp-block-button__link{width:100%}
+.plaza-block-home .hero-visual>.photo-frame img{height:auto}
+.plaza-block-home .feature-photo img{height:auto}
+@media(min-width:1024px) and (max-width:1279px){.plaza-block-home .hero-actions .wp-block-buttons{flex-direction:column;align-items:flex-start}}

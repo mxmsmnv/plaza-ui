@@ -1,0 +1,164 @@
+/* Same photo composition and disclosure as Kislovodsk Standard; no WP hover triggers. */
+.wellness-photo-gallery{--photo-control-ink:#283e32}
+[data-theme=dark] .wellness-photo-gallery{--photo-control-ink:#f1f0e6}
+.wellness-photo-mosaic{position:relative;display:grid;grid-template-columns:1.85fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:2.65}
+#main .wellness-photo-gallery .wellness-photo-button{display:block;position:relative;min-width:0;width:100%;height:100%;padding:0;margin:0;border:0;border-radius:var(--plaza-radius-ui,4px);overflow:hidden;background:transparent;box-shadow:var(--plaza-photo-shadow,none);cursor:pointer;line-height:0;transform:none;transition:box-shadow .35s ease}
+.wellness-photo-mosaic>.wellness-photo-button:first-child{grid-row:span 2}
+#main .wellness-photo-gallery .wellness-photo-button img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1s ease,filter 1s ease}
+#main .wellness-photo-gallery .wellness-photo-button::before,#main .wellness-photo-gallery .wellness-photo-button::after{content:none}
+#main .wellness-photo-gallery .wellness-photo-all{position:absolute;right:20px;bottom:20px;z-index:2;min-height:48px;padding:12px 20px;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);color:var(--photo-control-ink);font:400 13px/1.5 Montserrat,sans-serif;box-shadow:var(--plaza-photo-shadow,var(--shadow));cursor:pointer;transition:box-shadow .3s;transform:none}
+.wellness-photo-more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}.wellness-photo-more[hidden]{display:none}
+#main .wellness-photo-more .wellness-photo-button{aspect-ratio:3/2}
+.wellness-photo-gallery button:focus-visible{outline:2px solid var(--accent,#789b69);outline-offset:4px}
+.wellness-photo-dialog{position:fixed;inset:0;max-width:none;max-height:none;width:100%;height:100dvh;margin:0;padding:0;border:0;background:#161b17;color:#f1f0e6;overflow:hidden;z-index:2147483647}
+.wellness-photo-dialog::backdrop{background:#161b17}
+.wellness-photo-track{display:flex;gap:0;width:100%;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior:contain;touch-action:pan-x pinch-zoom}
+.wellness-photo-track::-webkit-scrollbar{display:none}.wellness-photo-slide{flex:0 0 100%;width:100%;height:100%;margin:0;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;scroll-snap-stop:always}
+.wellness-photo-slide img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;user-select:none}
+.wellness-photo-dialog .plaza-slider-controls{position:absolute!important;inset:0!important;height:100%!important;width:100%!important;margin:0!important;padding:0!important;pointer-events:none;display:block!important}
+.wellness-photo-dialog .rail-dots{display:none!important}.wellness-photo-dialog .rail-arrows{position:absolute;inset:50% 20px auto;display:flex!important;justify-content:space-between;transform:translateY(-50%);pointer-events:none}
+.wellness-photo-dialog .icon-button,.wellness-photo-dialog .wellness-photo-close{display:grid!important;place-items:center;width:48px!important;height:48px!important;min-width:48px;padding:0;border:1px solid rgba(255,255,255,.3);border-radius:var(--plaza-radius-ui,4px);background:rgba(252,251,248,.85)!important;color:#283e32!important;box-shadow:0 4px 16px rgba(0,0,0,.16);pointer-events:auto;cursor:pointer}
+.wellness-photo-dialog .icon-button:disabled{opacity:.35;cursor:default}.wellness-photo-close{position:absolute;z-index:3;right:20px;top:max(20px,env(safe-area-inset-top));font-size:0}
+.wellness-photo-close svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.5}
+.wellness-photo-counter{position:absolute;bottom:max(20px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);margin:0;padding:6px 12px;border-radius:var(--plaza-radius-ui,4px);background:rgba(252,251,248,.85);color:#fff;text-shadow:1px 1px 1px #000;font:400 13px/1.5 Montserrat,sans-serif;font-variant-numeric:tabular-nums;pointer-events:none}
+@media(hover:hover) and (pointer:fine){#main .wellness-photo-gallery .wellness-photo-button:hover img{transform:scale(1.035);filter:brightness(1.05)}}
+@media(max-width:767px){.wellness-photo-mosaic{display:block;aspect-ratio:3/2}.wellness-photo-mosaic>.wellness-photo-button:nth-child(n+2){display:none}#main .wellness-photo-gallery .wellness-photo-all{right:12px;bottom:12px;padding:10px 16px}.wellness-photo-more{grid-template-columns:repeat(2,minmax(0,1fr))}.wellness-photo-dialog .rail-arrows{inset:auto 12px max(18px,env(safe-area-inset-bottom));transform:none}.wellness-photo-slide img{height:calc(100% - 144px)}.wellness-photo-close{right:12px}.wellness-photo-counter{bottom:max(28px,env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){#main .wellness-photo-gallery *{transition:none!important;scroll-behavior:auto!important}}
+@media(min-width:768px){.wellness-photo-more>.wellness-photo-repeat{display:none}}
+/* Keep photo controls legible over the shared generic button hover. */
+#main .wellness-photo-gallery .wellness-photo-all,#main .wellness-photo-gallery .wellness-photo-all:hover,#main .wellness-photo-gallery .wellness-photo-all:focus{color:var(--photo-control-ink)!important}
+@media(max-width:767px){#main .wellness-photo-gallery .wellness-photo-mosaic>.wellness-photo-button:nth-child(n+2){display:none}.wellness-photo-more>div{aspect-ratio:3/2}}
+/* Experimental presentation; navigation stays in the shared PlazaUI rail. */
+.plaza-gallery-cinema{--cinema-control-shadow:0 4px 16px rgba(0,0,0,.08);--cinema-control-size:48px;--cinema-edge:28px;background:var(--bg,#171c1b);isolation:isolate}
+/* The modal stays open; only its complete child surface enters the fullscreen top layer. */
+.plaza-cinema-viewport{position:absolute;inset:0;box-sizing:border-box;width:100%;height:100%;margin:0;padding:0;overflow:hidden;background:inherit;color:inherit}
+.plaza-cinema-viewport::backdrop{background:inherit}
+.plaza-gallery-cinema .wellness-photo-track{position:relative;z-index:2;scroll-snap-type:none;background:transparent}
+.plaza-gallery-cinema .wellness-photo-track img{opacity:0}
+.plaza-cinema-stage{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.plaza-cinema-layer{position:absolute;inset:0;overflow:hidden;background:var(--bg,#171c1b)}
+.plaza-cinema-layer img{display:block;width:100%;height:100%;object-fit:cover;max-width:none;max-height:none;user-select:none;transform-origin:center}
+/* Preserve complete journal frames on black; room galleries keep their cover mode. */
+.wellness-photo-dialog[data-photo-fit="contain"],.wellness-photo-dialog[data-photo-fit="contain"]::backdrop{background:#000}
+.plaza-gallery-cinema[data-photo-fit="contain"] .plaza-cinema-layer{background:#000}
+.plaza-gallery-cinema[data-photo-fit="contain"] .plaza-cinema-layer img{object-fit:contain}
+#main .wellness-photo-dialog.plaza-gallery-cinema .plaza-slider-controls{display:none!important}
+.plaza-gallery-cinema :is(.wellness-photo-close,.wellness-photo-counter){
+ box-sizing:border-box;display:grid!important;place-items:center;
+ width:var(--cinema-control-size)!important;height:var(--cinema-control-size)!important;min-width:var(--cinema-control-size);padding:0;margin:0;
+ background:rgb(from var(--surface,#fcfbf8) r g b / .325)!important;color:var(--ink,#45413b)!important;
+ backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+ border:1px solid rgb(from var(--line,rgba(147,119,71,.22)) r g b / .11);border-radius:var(--radius,4px);
+ box-shadow:var(--cinema-control-shadow);
+}
+.plaza-gallery-cinema :is(button,.wellness-photo-track):focus-visible{outline:2px solid var(--accent,#b2945f);outline-offset:-4px}
+.plaza-gallery-cinema .wellness-photo-close{z-index:5;top:max(24px,env(safe-area-inset-top));right:var(--cinema-edge);opacity:1;transition:background-color .2s,color .2s,opacity var(--cinema-controls-fade,1s) ease;transform:none}
+.plaza-gallery-cinema .wellness-photo-counter{z-index:4;bottom:max(24px,env(safe-area-inset-bottom));right:var(--cinema-edge);left:auto;transform:none;font:400 11px/1 Montserrat,Arial,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap;pointer-events:auto;cursor:default;user-select:none}
+.plaza-cinema-cursor{position:fixed;z-index:6;pointer-events:none;opacity:0;transition:opacity 1s ease;display:grid;place-items:center;box-sizing:border-box;width:100px;height:100px;box-shadow:var(--cinema-control-shadow);overflow:hidden;border-radius:var(--radius,4px);background:transparent;color:#fff}
+.plaza-cinema-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;user-select:none}
+.plaza-cinema-cursor::after{content:'';position:absolute;inset:0;z-index:2;box-sizing:border-box;border:1px solid var(--plaza-cinema-preview-border);border-radius:inherit;pointer-events:none}
+.plaza-cinema-cursor.is-visible{opacity:1;transition-duration:.6s}
+.plaza-cinema-cursor svg{position:relative;z-index:1;filter:drop-shadow(1px 1px 1px #000);width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.plaza-cinema-cursor[data-direction=previous] svg{transform:scaleX(-1)}
+.plaza-cinema-status{position:absolute;z-index:5;left:50%;bottom:90px;transform:translateX(-50%);max-width:calc(100% - 32px);margin:0;padding:12px 20px;background:var(--surface);color:var(--ink);border-radius:var(--plaza-radius-ui,4px);font:400 14px/1.5 Montserrat,Arial,sans-serif}
+.plaza-cinema-status:empty{display:none}
+@media(hover:hover) and (pointer:fine){.plaza-gallery-cinema .wellness-photo-track{cursor:none}.plaza-gallery-cinema .wellness-photo-close:hover{background:var(--surface)!important;color:var(--accent)!important}}
+@media(max-width:767px){.plaza-gallery-cinema{--cinema-edge:16px}.plaza-gallery-cinema .wellness-photo-close{top:max(16px,env(safe-area-inset-top))}.plaza-gallery-cinema .wellness-photo-counter{bottom:max(16px,env(safe-area-inset-bottom))}}
+@media(hover:none),(pointer:coarse){.plaza-cinema-cursor{display:none!important}}
+@media(prefers-reduced-motion:reduce){.plaza-gallery-cinema *{transition:none!important}}
+.plaza-gallery-cinema .wellness-photo-track.plaza-cinema-native-cursor{cursor:default}
+.plaza-gallery-cinema .plaza-cinema-fullscreen{cursor:pointer;opacity:1;transition:background-color .2s,color .2s,opacity var(--cinema-controls-fade,1s) ease}
+.plaza-gallery-cinema.is-controls-idle{--cinema-controls-fade:1s}
+.plaza-gallery-cinema.is-controls-idle :is(.wellness-photo-close,.plaza-cinema-fullscreen){opacity:0}
+.plaza-gallery-cinema .plaza-cinema-fullscreen::before,.plaza-gallery-cinema .plaza-cinema-fullscreen::after{content:none!important}
+#main .plaza-gallery-cinema .plaza-cinema-count{position:static;margin:0;padding:0;font:inherit;line-height:inherit;background:none;border:0;pointer-events:none;opacity:1;color:#fff;text-shadow:1px 1px 1px #000;transition:opacity .18s}
+.plaza-cinema-fullscreen svg{position:absolute;left:50%;top:50%;width:24px;height:24px;transform:translate(-50%,-50%);fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:0;pointer-events:none;transition:opacity .18s}
+#main .plaza-gallery-cinema .plaza-cinema-fullscreen:focus-visible .plaza-cinema-count{opacity:0}
+.plaza-gallery-cinema .plaza-cinema-fullscreen:focus-visible svg{opacity:1}
+@media(hover:hover) and (pointer:fine){
+ #main .plaza-gallery-cinema .plaza-cinema-fullscreen:hover .plaza-cinema-count{opacity:0}
+ .plaza-gallery-cinema .plaza-cinema-fullscreen:hover svg{opacity:1}
+ .plaza-gallery-cinema .plaza-cinema-fullscreen:hover{background:rgb(from var(--surface,#fcfbf8) r g b / .5)!important;color:var(--accent)!important}
+}
+
+/* Touch uses the browser scroll-snap rail, with no cinema renderer or fullscreen tap. */
+.plaza-gallery-touch{background:#000!important}
+.plaza-gallery-touch::backdrop{background:#000!important}
+.plaza-gallery-touch .wellness-photo-track{scroll-snap-type:x mandatory;touch-action:pan-x pan-y pinch-zoom;-webkit-overflow-scrolling:touch;scroll-behavior:auto}
+.plaza-gallery-touch .wellness-photo-slide{background:#000}
+.plaza-gallery-touch .wellness-photo-slide img{width:100%;height:100%;max-height:100%;object-fit:contain;object-position:center;transform-origin:center;touch-action:pan-x}
+.plaza-gallery-touch .wellness-photo-counter{left:auto;right:16px;transform:none;pointer-events:none}
+.plaza-gallery-touch .plaza-slider-controls,.plaza-gallery-touch .rail-arrows{display:none!important}
+@media(max-width:1050px),(hover:none),(pointer:coarse),(any-pointer:coarse){
+ .pg-story .pg-lightbox-open svg{display:none!important}
+ 
+}
+
+.plaza-gallery-touch .wellness-photo-track:focus{outline:none!important}
+
+/* One photo-journal entry policy for every property: ordinary cursor, no magnifier, full-frame click target. */
+.pg-story .pg-lightbox-frame{position:relative}
+#main.pg-story .pg-lightbox-open{position:absolute;inset:0;z-index:4;display:block;width:100%;height:100%;min-height:0;margin:0;padding:0;border:0;border-radius:var(--plaza-radius-ui,4px);background:transparent!important;box-shadow:none!important;transform:none!important;cursor:default!important;touch-action:pan-x pan-y;line-height:0}
+#main.pg-story .pg-lightbox-open::before,#main.pg-story .pg-lightbox-open::after{content:none!important}
+#main.pg-story .pg-lightbox-open:focus-visible{outline:2px solid var(--accent);outline-offset:-5px}
+
+
+
+/* Portrait crop belongs only to portrait phones, never to landscape iPads. */
+@media(max-width:700px) and (orientation:portrait){.plaza-gallery-touch .wellness-photo-slide img{width:min(100vw,calc((100dvh - 112px)*.8));height:min(125vw,calc(100dvh - 112px));object-fit:cover;object-position:var(--plaza-photo-position,50% 50%)}}
+.plaza-gallery-touch :is(.wellness-photo-close,.wellness-photo-counter){opacity:1;transition:opacity .35s ease}
+.plaza-gallery-touch.is-controls-idle :is(.wellness-photo-close,.wellness-photo-counter){opacity:0;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.plaza-gallery-touch :is(.wellness-photo-close,.wellness-photo-counter){transition:none}}
+/* Explicit shared fit also applies on portrait phones; preserve the complete source frame. */
+.plaza-gallery-touch[data-photo-fit="contain"] .wellness-photo-slide img{width:100%;height:100%;object-fit:contain;object-position:center}
+
+/* Optional poster launchers for room models and tours; material/motion stays shared. */
+.plaza-room-media{display:block}
+.plaza-room-media>.plaza-room-media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;min-width:0}
+.plaza-room-media-grid>.plaza-room-media-card{display:grid;grid-template-rows:auto 1fr;min-width:0;overflow:hidden;isolation:isolate;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);background:var(--surface);color:var(--ink);text-decoration:none}
+.plaza-room-media-card:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.plaza-room-media-visual{min-width:0;aspect-ratio:4/3;overflow:hidden;background:var(--bg)}
+.plaza-room-media-visual img{display:block;box-sizing:border-box;width:100%;height:100%;object-fit:cover}
+.plaza-room-media-visual.is-plan{background:var(--surface)}
+.plaza-room-media-visual.is-plan img{padding:16px;object-fit:contain}
+.plaza-room-media-copy{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:24px}
+.plaza-room-media-copy h3{margin:0;font-size:clamp(24px,2.1vw,30px);line-height:1.25;text-wrap:balance}
+.plaza-room-media-copy p{margin:0;color:var(--muted);font-size:16px;line-height:1.6;overflow-wrap:anywhere}
+.plaza-room-media-action{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-block-start:auto;padding-block-start:8px;color:var(--plaza-service-link-color,var(--accent));font-size:14px;line-height:1.5}
+.plaza-room-media-action svg{flex:none;width:22px;height:22px}
+.plaza-room-media-dialog{position:fixed;inset:0;box-sizing:border-box;width:min(1400px,94vw);max-width:none;height:90dvh;max-height:90dvh;margin:auto;padding:0;overflow:hidden;border:0;border-radius:var(--plaza-radius-ui,4px);background:var(--surface);color:var(--ink);box-shadow:var(--plaza-sitemap-shadow,var(--shadow))}
+.plaza-room-media-dialog::backdrop{background:var(--plaza-room-media-backdrop,rgba(0,0,0,.6))}
+.plaza-room-media-viewport{display:grid;grid-template-rows:auto minmax(0,1fr);box-sizing:border-box;width:100%;height:100%;min-height:0;overflow:hidden}
+.plaza-room-media-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;border-block-end:1px solid var(--line);background:var(--surface)}
+.plaza-room-media-toolbar h3{min-width:0;margin:0;font-size:clamp(18px,2vw,24px);line-height:1.35;overflow-wrap:anywhere}
+.plaza-room-media-toolbar [data-room-media-close]{flex:0 0 48px;min-width:48px;min-height:48px}
+.plaza-room-media-player{min-width:0;min-height:0;overflow:hidden;background:var(--bg)}
+.plaza-room-media-player iframe{display:block;box-sizing:border-box;width:100%;height:100%;border:0}
+.plaza-room-media-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding:8px 20px;border-block-start:1px solid var(--line);background:var(--surface)}
+.plaza-room-media-status{position:absolute;z-index:2;inset:auto 20px 16px;padding:10px 14px;background:var(--surface);flex:1 1 260px;min-width:0;margin:0;color:var(--muted);font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.plaza-room-media-status[hidden]{display:none}
+.plaza-room-media-footer [data-room-media-external]{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px;line-height:1.5}
+@media(max-width:700px){
+ .plaza-room-media>.plaza-room-media-grid{grid-template-columns:minmax(0,1fr)}
+ .plaza-room-media-copy{padding:20px}
+ .plaza-room-media-toolbar{gap:12px;padding:8px 12px}
+ .plaza-room-media-footer{gap:4px 16px;padding:6px 12px}
+}
+@media(max-height:500px){
+ .plaza-room-media-toolbar{padding-block:4px}
+ .plaza-room-media-footer{padding-block:4px}
+}
+
+/* Room media uses the accepted photo hover and shared link/icon roles. */
+.plaza-room-media-visual img{transition:transform .35s ease,filter .35s ease}
+.plaza-room-media-action{transition:color var(--plaza-icon-duration,.35s) var(--plaza-icon-easing,ease)}
+.plaza-room-media-action svg{transition:transform var(--plaza-icon-duration,.35s) var(--plaza-icon-easing,ease);transform-origin:center}
+.plaza-room-media-card:focus-visible .plaza-room-media-visual img{transform:scale(1.035);filter:brightness(1.05)}
+.plaza-room-media-card:focus-visible .plaza-room-media-action{color:var(--plaza-service-link-hover)}
+.plaza-room-media-card:focus-visible .plaza-room-media-action svg{transform:var(--plaza-icon-transform)}
+@media(hover:hover) and (pointer:fine){
+ .plaza-room-media-card:hover .plaza-room-media-visual img{transform:scale(1.035);filter:brightness(1.05)}
+ .plaza-room-media-card:hover .plaza-room-media-action{color:var(--plaza-service-link-hover)}
+ .plaza-room-media-card:hover .plaza-room-media-action svg{transform:var(--plaza-icon-transform)}
+}
+@media(prefers-reduced-motion:reduce){.plaza-room-media-visual img,.plaza-room-media-action,.plaza-room-media-action svg{transition:none!important;transform:none!important}}

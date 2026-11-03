@@ -1,0 +1,92 @@
+/* Wellness: solid popup cards, transparent iframe gutters, no glass. */
+.plaza-tl-popup-frame{background:transparent!important;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:var(--plaza-radius-ui,4px)}
+html.plaza-tl-popup{--tl-ink:#293e33;--tl-muted:#626e62;--tl-accent:#365947;--tl-on-accent:#fff;--tl-edge:rgba(54,89,71,.24);--tl-glow:rgba(120,168,106,.16);--tl-panel:#f8f8f2;--tl-wash:rgba(120,168,106,.09);--tl-disabled:rgba(41,62,51,.38);--tl-rule:rgba(54,89,71,.16);--mainColor:var(--tl-accent)!important;color-scheme:light}
+html.plaza-tl-popup[data-theme=dark]{--tl-ink:#edf1e7;--tl-muted:#bfcbbd;--tl-accent:#78a86a;--tl-on-accent:#112318;--tl-edge:rgba(120,168,106,.4);--tl-panel:#112219;--tl-wash:rgba(120,168,106,.12);--tl-disabled:rgba(237,241,231,.32);--tl-rule:rgba(120,168,106,.2);color-scheme:dark}
+html.plaza-tl-popup,html.plaza-tl-popup body{background:transparent!important}
+.plaza-tl-popup :is(.datepicker,.guests-select-container){color:var(--tl-ink);background:var(--tl-panel);border-radius:var(--plaza-radius-ui,4px);box-shadow:var(--tl-card-shadow);font-family:Montserrat,Arial,sans-serif}
+.plaza-tl-popup .datepicker{--comp-line-color-default:54,89,71,.12;--sys-color-primary:54,89,71;--sys-color-primary-interaction:43,76,57;--sys-color-on-primary:255,255,255;--sys-color-primary-outline-variant:255,255,255,.38;--sys-color-on-container-lowest:98,110,98;--comp-text-color-default:41,62,51;--comp-text-color-secondary:98,110,98;--comp-text-color-tertiary:41,62,51,.38;--sys-color-container:54,89,71,.06;--sys-color-container-high:54,89,71,.12;--sys-color-outline:54,89,71,.24;--sys-color-surface-bright:0,0,0,0}
+.plaza-tl-popup[data-theme=dark] .datepicker{--comp-line-color-default:120,168,106,.16;--sys-color-primary:120,168,106;--sys-color-primary-interaction:144,190,130;--sys-color-on-primary:17,35,24;--sys-color-primary-outline-variant:17,35,24,.38;--sys-color-on-container-lowest:191,203,189;--comp-text-color-default:237,241,231;--comp-text-color-secondary:191,203,189;--comp-text-color-tertiary:237,241,231,.32;--sys-color-container:120,168,106,.08;--sys-color-container-high:120,168,106,.16;--sys-color-outline:120,168,106,.3}
+.plaza-tl-popup .datepicker>[role=region]{background:transparent!important;font-family:Montserrat,Arial,sans-serif!important;color:var(--tl-ink)}
+.plaza-tl-popup .datepicker h2{font-family:Lora,Georgia,serif;font-weight:400;letter-spacing:-.02em;color:var(--tl-ink)}
+.plaza-tl-popup .datepicker [role=gridcell]{font-family:Montserrat,Arial,sans-serif}
+.plaza-tl-popup .datepicker [role=gridcell] [class] span{letter-spacing:normal;font-weight:500}
+.plaza-tl-popup .datepicker [aria-disabled=true]{color:var(--tl-disabled)}
+.plaza-tl-popup .datepicker [aria-disabled=true] span{color:var(--tl-disabled)!important}
+.plaza-tl-popup .datepicker button:focus-visible,.plaza-tl-popup [role=button]:focus-visible,.plaza-tl-popup input:focus-visible,.plaza-tl-popup select:focus-visible{outline:2px solid var(--tl-accent)!important;outline-offset:2px;box-shadow:0 0 12px var(--tl-glow)}
+.plaza-tl-popup .guests-select{background:transparent!important;color:var(--tl-ink)!important;font-family:Montserrat,Arial,sans-serif!important}
+.plaza-tl-popup :is(.guests-select__header,.guests-select__content,.guests-select__controls,.guests-select__group){background:transparent!important;border-color:var(--tl-rule)!important}
+.plaza-tl-popup .guests-select__title{font-family:Lora,Georgia,serif;font-weight:400;color:var(--tl-ink);letter-spacing:-.02em}
+.plaza-tl-popup :is(.guests-select__label,.guests-select__group-title){color:var(--tl-muted)!important}
+.plaza-tl-popup :is(.guests-select__stepper,.guests-select__stepper-input){background:transparent!important;border-color:var(--tl-rule)!important;color:var(--tl-ink)!important;font-family:Montserrat,Arial,sans-serif!important;caret-color:var(--tl-accent)}
+.plaza-tl-popup :is(.guests-select__stepper-button,.guests-select__close,.guests-select__button){color:var(--tl-accent)!important;transition:color .25s,background-color .25s,box-shadow .25s}
+.plaza-tl-popup .guests-select__stepper-button[aria-disabled=true]{color:var(--tl-disabled)!important;box-shadow:none!important}
+.plaza-tl-popup .guests-select__button.-apply{background:var(--tl-accent)!important;color:var(--tl-on-accent)!important;border-radius:var(--plaza-radius-ui,4px);box-shadow:0 3px 9px rgba(12,30,20,.14);font-family:Montserrat,Arial,sans-serif}
+.plaza-tl-popup .guests-select__button.-add-room{background:transparent!important;font-family:Montserrat,Arial,sans-serif}
+.plaza-tl-popup select{background:var(--tl-panel);color:var(--tl-ink);border-color:var(--tl-rule);font-family:Montserrat,Arial,sans-serif}
+.plaza-tl-popup ::selection{background:var(--tl-accent);color:var(--tl-on-accent)}
+.plaza-tl-popup *{scrollbar-color:var(--tl-accent) transparent;scrollbar-width:thin}
+@media(hover:hover) and (pointer:fine){.plaza-tl-popup :is(.guests-select__stepper-button,.guests-select__button):not([aria-disabled=true]):not([disabled]):hover{background-color:var(--tl-wash);box-shadow:0 0 12px var(--tl-glow)}.plaza-tl-popup .datepicker button:not([disabled]):not([aria-disabled=true]):not([disabled]):hover{box-shadow:inset 0 0 0 1px var(--tl-accent),0 0 12px var(--tl-glow)}}
+
+
+@media(prefers-reduced-motion:reduce){.plaza-tl-popup *{transition:none!important;animation:none!important}}
+.plaza-tl-popup .guests-select{box-shadow:none!important;border-radius:var(--plaza-radius-ui,4px)}
+.plaza-tl-popup :is(.guests-select__label,.guests-select__group-title){opacity:1}
+.plaza-tl-popup .guests-select__tooltip{background:rgba(25,48,35,.97);color:#f4f7ee;opacity:1;box-shadow:0 4px 12px rgba(12,30,20,.16)}
+.plaza-tl-popup .guests-select__tooltip::after{border-top-color:rgba(25,48,35,.97)}/* Native guest modal reports a 300px iframe; include its own 7px gutters. */
+html.plaza-tl-popup.-modal .guests-select-wrapper{min-width:0;width:100%;padding-inline:7px}
+html.plaza-tl-popup.-modal .guests-select-container{min-width:0;width:100%}
+html.plaza-tl-popup.-modal .guests-select{width:100%}
+.plaza-tl-popup .datepicker footer button{background:var(--tl-accent)!important;color:var(--tl-on-accent)!important;border-radius:var(--plaza-radius-ui,4px);font-family:Montserrat,Arial,sans-serif}
+/* A closed desktop popup must not widen the page after switching to a narrower viewport. */
+.plaza-tl-popup-frame[style*="opacity: 0"]{left:0!important;max-width:100%!important;backdrop-filter:none;-webkit-backdrop-filter:none}
+
+/* Equal elevation on both provider panels; never blur their rectangular iframe. */
+html.plaza-tl-popup{--tl-card-shadow:0 3px 8px rgba(55,75,65,.08),0 20px 42px rgba(55,75,65,.16)}
+html.plaza-tl-popup[data-theme=dark]{--tl-card-shadow:0 3px 8px rgba(0,0,0,.18),0 20px 42px rgba(0,0,0,.32)}
+html.plaza-tl-popup :is(.datepicker,.guests-select-container){box-shadow:var(--tl-card-shadow);border:0;backdrop-filter:none;-webkit-backdrop-filter:none}
+/* Same lower green light and lift as the main Wellness action buttons. */
+.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button){position:relative;isolation:isolate;overflow:hidden;transition:box-shadow .35s ease,transform .4s ease}
+.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button)::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 130%,rgba(120,168,106,.58),rgba(120,168,106,.24) 44%,transparent 78%),linear-gradient(0deg,rgba(120,168,106,.2),transparent 65%);opacity:0;transition:opacity .35s ease}
+.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button):focus-visible{transform:translateY(-2px);box-shadow:inset 0 -7px 13px rgba(120,168,106,.2),0 5px 15px rgba(55,75,65,.18),0 8px 24px rgba(120,168,106,.12)}
+.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button):focus-visible::before{opacity:1}
+@media(hover:hover) and (pointer:fine){.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button):hover{transform:translateY(-2px);box-shadow:inset 0 -7px 13px rgba(120,168,106,.2),0 5px 15px rgba(55,75,65,.18),0 8px 24px rgba(120,168,106,.12)}.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button):hover::before{opacity:1}}
+@media(prefers-reduced-motion:reduce){.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button){transform:none!important}.plaza-tl-popup :is(.guests-select__button.-apply,.datepicker footer button)::before{transition:none}}
+
+/* User revision: card outline only, no surrounding substrate or elevation. */
+.plaza-tl-popup-frame{box-shadow:none!important;border:0!important;background:transparent!important}
+html.plaza-tl-popup :is(.guests-select-wrapper){background:transparent!important;box-shadow:none!important;backdrop-filter:none!important}
+html.plaza-tl-popup :is(.datepicker,.guests-select-container){box-shadow:none!important;border:1px solid var(--tl-rule)!important;box-sizing:border-box}
+/* Wellness typography: Lora display, Montserrat controls. */
+
+html.plaza-tl-popup :is(button,input,select,.guests-select__label,.guests-select__group-title){font-family:Montserrat,Arial,sans-serif!important}
+html.plaza-tl-popup .guests-select__title{font:400 24px/1.3 Lora,Georgia,serif!important;letter-spacing:-.02em}
+html.plaza-tl-popup .guests-select__group-title{font-size:12px!important;line-height:1.5!important;font-weight:600!important;letter-spacing:.05em}
+html.plaza-tl-popup .guests-select__label{font-size:10px!important;line-height:1.5!important;font-weight:500!important;min-height:42px;display:flex;align-items:flex-end;padding-bottom:8px;box-sizing:content-box}
+html.plaza-tl-popup .guests-select__stepper{background:rgba(54,89,71,.035)!important;border-radius:var(--plaza-radius-ui,4px);min-height:48px}
+html.plaza-tl-popup .guests-select__stepper-input{font-size:20px!important;line-height:1.25!important;font-weight:400!important;font-variant-numeric:tabular-nums}
+html.plaza-tl-popup .guests-select__stepper-button{height:32px;min-height:0;min-width:0}
+html.plaza-tl-popup .guests-select__button{font-size:13px!important;line-height:1.45!important;font-weight:500!important;letter-spacing:0!important;min-height:44px}
+html.plaza-tl-popup .guests-select__button.-add-room{font-size:10px!important;border:1px solid var(--tl-rule);border-radius:var(--plaza-radius-ui,4px)}
+html.plaza-tl-popup .datepicker h2{font:400 22px/1.35 Lora,Georgia,serif!important}
+html.plaza-tl-popup .datepicker [role=gridcell]{font-size:14px!important;font-variant-numeric:tabular-nums}
+html.plaza-tl-popup .datepicker footer{font-family:Montserrat,Arial,sans-serif;font-size:13px;line-height:1.5}
+html.plaza-tl-popup .datepicker footer button{font:500 13px/1.5 Montserrat,Arial,sans-serif!important;min-height:44px}
+html.plaza-tl-popup[data-theme=dark]{--tl-panel:#172d24;--tl-muted:#d0dbcd;--tl-rule:rgba(160,197,148,.3);--tl-accent:#b9cea1;--tl-on-accent:#17291e;--tl-disabled:rgba(237,241,231,.38)}
+html.plaza-tl-popup[data-theme=dark] :is(.datepicker,.guests-select-container){background:radial-gradient(ellipse at 100% 0,rgba(120,168,106,.14),transparent 65%),linear-gradient(150deg,#203c30,#15291f 70%)!important;border-color:rgba(160,197,148,.46)!important;box-shadow:inset 0 1px 0 rgba(208,231,185,.12),inset 0 0 24px rgba(120,168,106,.07)!important}
+html.plaza-tl-popup[data-theme=dark] .guests-select__stepper{background:rgba(9,23,17,.3)!important;border-color:rgba(160,197,148,.36)!important}
+html.plaza-tl-popup[data-theme=dark] .guests-select__button.-add-room{color:#d0dfc4!important;background:rgba(120,168,106,.06)!important}
+html.plaza-tl-popup .datepicker > header > div[aria-hidden=true]{font:400 22px/1.35 Lora,Georgia,serif!important}
+/* Guest steppers: bare icons, site-green interaction. */
+html.plaza-tl-popup .guests-select__stepper-button,
+html.plaza-tl-popup .guests-select__stepper-button::before,
+html.plaza-tl-popup .guests-select__stepper-button::after{background:transparent!important;box-shadow:none!important;border-color:transparent!important;backdrop-filter:none!important}
+@media(hover:hover){html.plaza-tl-popup .guests-select__stepper-button:not([aria-disabled=true]):not([disabled]):hover{color:#53834f!important;background:transparent!important;box-shadow:none!important}}
+html.plaza-tl-popup[data-theme=dark] .guests-select__stepper-button:not([aria-disabled=true]):not([disabled]):hover{color:#a4ce8b!important}
+html.plaza-tl-popup .guests-select__stepper-button:focus-visible{outline:1px solid var(--tl-accent);outline-offset:2px}
+/* Guest counters: no rectangular surface behind the number and icons. */
+html.plaza-tl-popup .guests-select-container :is(.guests-select__stepper,.guests-select__stepper-input),
+html.plaza-tl-popup .guests-select-container .guests-select__stepper::before,
+html.plaza-tl-popup .guests-select-container .guests-select__stepper::after{background:transparent!important;border-color:transparent!important;box-shadow:none!important;filter:none!important}
+/* Guest fields: one clean outline; age matches its label. */
+html.plaza-tl-popup .guests-select-container .guests-select__stepper{border:1px solid var(--tl-rule)!important;background:transparent!important;box-shadow:none!important;box-sizing:border-box}
+html.plaza-tl-popup .guests-select-container .guests-select__select-control{font:500 10px/1.5 Montserrat,Arial,sans-serif!important;min-width:0!important;max-width:100%;width:100%;box-sizing:border-box;padding:8px 30px 8px 12px!important;border:1px solid var(--tl-rule)!important;box-shadow:none!important}

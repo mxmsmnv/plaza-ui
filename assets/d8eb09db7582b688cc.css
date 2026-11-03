@@ -1,0 +1,114 @@
+/* Single A4 room sheet; inherits the approved network print foundations. */
+#plaza-print.pp-room h1 { font-size:30pt; margin-bottom:3mm; }
+#plaza-print.pp-room .pp-lead { font-size:9.5pt; line-height:1.5; margin-bottom:5mm; }
+#plaza-print.pp-room .pp-top { margin-bottom:5mm; }
+#plaza-print.pp-room .pp-top>span { text-align:right; }
+#plaza-print.pp-room .pp-room-gallery { display:grid; grid-template-columns:124mm 1fr; gap:3mm; margin-bottom:5mm; }
+#plaza-print.pp-room .pp-room-hero img { display:block; width:124mm; height:84mm; object-fit:cover; border-radius:1mm; }
+#plaza-print.pp-room .pp-room-mosaic { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(3,26mm); gap:3mm; }
+#plaza-print.pp-room .pp-room-mosaic picture,#plaza-print.pp-room .pp-room-mosaic picture img { display:block; width:26mm; height:26mm; object-fit:cover; border-radius:1mm; }
+#plaza-print.pp-room .pp-room-qr-tile { display:flex; flex-direction:column; align-items:center; justify-content:center; width:26mm; height:26mm; background:white; }
+#plaza-print.pp-room .pp-room-qr-tile a { display:block; }
+#plaza-print.pp-room .pp-room-qr-tile img { display:block; width:22mm; height:22mm; }
+#plaza-print.pp-room .pp-room-qr-tile figcaption { margin:0; font-size:5.5pt; line-height:1.3; text-align:center; }
+#plaza-print.pp-room .pp-room-facts { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4mm; margin:0 0 4mm; padding:4mm 0; border-top:.25mm solid #b39560; border-bottom:.2mm solid #d8cdbb; }
+#plaza-print.pp-room .pp-room-facts dt { font-size:10.5pt; font-weight:500; color:#8c7041; line-height:1.4; margin:0 0 1.5mm; }
+#plaza-print.pp-room .pp-room-facts dd { font-size:7pt; line-height:1.5; margin:0; }
+#plaza-print.pp-room .pp-room-description { margin-bottom:5mm; }
+#plaza-print.pp-room .pp-room-description p { font-size:8.5pt; line-height:1.5; }
+#plaza-print.pp-room h2 { font-size:17pt; margin-bottom:4mm; }
+#plaza-print.pp-room .pp-room-amenities { margin-bottom:5mm; gap:5mm; }
+#plaza-print.pp-room .pp-room-amenities>div { padding-top:3mm; }
+#plaza-print.pp-room .pp-room-amenities h3 { font-size:10pt; margin-bottom:2mm; }
+#plaza-print.pp-room .pp-room-amenities ul { margin:0; padding-left:3.5mm; font-size:7.5pt; line-height:1.5; list-style:disc; }
+#plaza-print.pp-room .pp-room-amenities li { margin-bottom:.5mm; }
+#plaza-print.pp-room .pp-room-contact { margin-top:3mm; }
+#plaza-print.pp-room .pp-room-contact h3 { font-size:11pt; margin-bottom:2mm; }
+#plaza-print.pp-room .pp-room-contact p { font-size:9pt; }
+#plaza-print.pp-room a { color:inherit!important; }
+@media screen and (max-width:810px) {
+ #plaza-print.pp-room.pp-preview { margin:0; }
+}
+/* Additional room titles, uneven photo counts, and the two compact catalogues. */
+#plaza-print.pp-room h1.pp-long-title { font-size:24pt; }
+#plaza-print.pp-room .pp-room-mosaic.pp-tiles-5>figure:first-child { grid-column:span 2; }
+#plaza-print.pp-room .pp-room-mosaic.pp-tiles-5>figure:first-child picture,#plaza-print.pp-room .pp-room-mosaic.pp-tiles-5>figure:first-child img { width:55mm; }
+#plaza-print.pp-room .pp-room-mosaic.pp-tiles-4>figure:nth-child(-n+2) { grid-column:span 2; }
+#plaza-print.pp-room .pp-room-mosaic.pp-tiles-4>figure:nth-child(-n+2) picture,#plaza-print.pp-room .pp-room-mosaic.pp-tiles-4>figure:nth-child(-n+2) img { width:55mm; }
+#plaza-print.pp-catalog h1 { font-size:28pt; }
+#plaza-print.pp-catalog .pp-lead { margin-bottom:5mm; }
+#plaza-print.pp-catalog .pp-catalog-table { table-layout:fixed; width:182mm; font-size:7pt; line-height:1.35; }
+#plaza-print.pp-catalog .pp-catalog-table th,#plaza-print.pp-catalog .pp-catalog-table td { padding:1.3mm 1mm; vertical-align:middle; text-align:center; overflow-wrap:normal; }
+#plaza-print.pp-catalog .pp-catalog-table th:first-child { width:auto; padding-left:0; text-align:left; }
+#plaza-print.pp-catalog .pp-catalog-table thead th { font:500 6.5pt/1.4 Montserrat,sans-serif; color:#8c7041; }
+#plaza-print.pp-catalog .pp-catalog-table tbody th { font-weight:500; }
+#plaza-print.pp-catalog .pp-catalog-room { display:grid; grid-template-columns:18mm minmax(0,1fr); gap:2mm; align-items:center; }
+#plaza-print.pp-catalog .pp-catalog-room picture,#plaza-print.pp-catalog .pp-catalog-room img { display:block; width:18mm; height:10mm; object-fit:cover; border-radius:1mm; }
+#plaza-print.pp-catalog .pp-catalog-note { margin:3mm 0 4mm; font-size:6.5pt; line-height:1.5; }
+#plaza-print.pp-catalog .pp-catalog-end { display:flex; gap:5mm; align-items:center; margin-bottom:4mm; }
+#plaza-print.pp-catalog .pp-catalog-end img { display:block; width:25mm; height:25mm; }
+#plaza-print.pp-catalog .pp-catalog-end h3 { font-size:12pt; margin-bottom:2mm; }
+#plaza-print.pp-catalog .pp-catalog-end p { font-size:8pt; margin-bottom:1mm; }
+#plaza-print.pp-catalog .pp-catalog-end .pp-catalog-url { font-size:7pt; }
+#plaza-print.pp-catalog .pp-room-contact { margin-top:0; }
+#plaza-print.pp-catalog .pp-room-contact h3 { display:none; }
+/* Dense room descriptions keep the same composition on one A4 leaf. */
+#plaza-print.pp-compact .pp-top { margin-bottom:4mm; }
+#plaza-print.pp-compact .pp-lead { margin-bottom:4mm; }
+#plaza-print.pp-compact .pp-room-gallery { grid-template-columns:128mm 1fr; margin-bottom:4mm; }
+#plaza-print.pp-compact .pp-room-hero img { width:128mm; height:78mm; }
+#plaza-print.pp-compact .pp-room-mosaic { grid-template-rows:repeat(3,24mm); }
+#plaza-print.pp-compact .pp-room-mosaic picture,#plaza-print.pp-compact .pp-room-mosaic picture img { width:24mm; height:24mm; }
+#plaza-print.pp-compact .pp-room-mosaic.pp-tiles-5>figure:first-child picture,#plaza-print.pp-compact .pp-room-mosaic.pp-tiles-5>figure:first-child img,#plaza-print.pp-compact .pp-room-mosaic.pp-tiles-4>figure:nth-child(-n+2) picture,#plaza-print.pp-compact .pp-room-mosaic.pp-tiles-4>figure:nth-child(-n+2) img { width:51mm; }
+#plaza-print.pp-compact .pp-room-qr-tile { width:24mm; height:24mm; }
+#plaza-print.pp-compact .pp-room-qr-tile img { width:20mm; height:20mm; }
+#plaza-print.pp-compact .pp-room-facts { padding:3mm 0; margin-bottom:3mm; }
+#plaza-print.pp-compact .pp-room-description { margin-bottom:3mm; }
+#plaza-print.pp-compact .pp-room-amenities { margin-bottom:3mm; }
+
+/* Kislovodsk room sheets with a validated print plan; catalogues and Wellness keep their layout. */
+#plaza-print.pp-room.pp-room-plan .pp-room-gallery { margin-bottom:3mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-hero img { height:68mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-mosaic { grid-template-rows:repeat(3,calc(62mm / 3)); }
+#plaza-print.pp-room.pp-room-plan .pp-room-mosaic picture,
+#plaza-print.pp-room.pp-room-plan .pp-room-mosaic picture img { height:calc(62mm / 3); }
+#plaza-print.pp-room.pp-room-plan .pp-room-qr-tile { height:calc(62mm / 3); }
+#plaza-print.pp-room.pp-room-plan .pp-room-qr-tile img { width:18mm; height:18mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-layout { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)) 100mm; column-gap:5mm; row-gap:3mm; align-items:start; break-inside:avoid; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity { min-width:0; border-top:.25mm solid #b39560; padding-top:2.5mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity:nth-child(1) { grid-column:1; grid-row:1; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity:nth-child(2) { grid-column:2; grid-row:1; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity:nth-child(3) { grid-column:1 / span 2; grid-row:2; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity h3 { font-size:10pt; margin-bottom:2mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity ul { margin:0; padding-left:3.5mm; font-size:7.5pt; line-height:1.5; list-style:disc; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity li { margin-bottom:.5mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-amenity:nth-child(3) ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:3mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-view { grid-column:3; grid-row:1 / span 2; align-self:end; justify-self:end; width:100mm; max-width:100%; margin:0; break-inside:avoid; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-view img { display:block; width:100%; height:auto; object-fit:contain; border-radius:0; }
+#plaza-print.pp-room.pp-room-plan .pp-bottom { gap:4mm; align-items:baseline; }
+#plaza-print.pp-room.pp-room-plan .pp-room-plan-contacts { white-space:nowrap; text-align:right; }
+/* Reuse the accepted Lux plan size and spacing; verify each room's A4 fit. */
+#plaza-print.pp-room.pp-room-plan .pp-top { margin-bottom:3mm; }
+#plaza-print.pp-room.pp-room-plan h1 { margin-bottom:2mm; }
+#plaza-print.pp-room.pp-room-plan .pp-lead { margin-bottom:3mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-facts { margin-bottom:2mm; }
+#plaza-print.pp-room.pp-room-plan .pp-room-description { margin-bottom:2mm; }
+#plaza-print.pp-room.pp-room-plan h2 { margin-bottom:3mm; }
+
+/* Longer room descriptions: stack the two shorter groups beside the long list.
+   Retain 100mm plan and all type sizes; the photo block gives back only 4mm. */
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-hero img { height:64mm; }
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-mosaic { grid-template-rows:repeat(3,calc(58mm / 3)); }
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-mosaic picture,
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-mosaic picture img,
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-qr-tile { height:calc(58mm / 3); }
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-plan-amenity:nth-child(1) { grid-row:1 / span 2; }
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-plan-amenity:nth-child(3) { grid-column:2; grid-row:2; }
+#plaza-print.pp-room.pp-room-plan.pp-compact .pp-room-plan-amenity:nth-child(3) ul { display:block; }
+
+/* One gold separator weight for the eleven Kislovodsk room sheets. */
+#plaza-print.pp-room.pp-kislovodsk-room .pp-top { border-bottom:.25mm solid #b39560; }
+#plaza-print.pp-room.pp-kislovodsk-room .pp-room-facts { border-top:.25mm solid #b39560; border-bottom:.25mm solid #b39560; }
+#plaza-print.pp-room.pp-kislovodsk-room .pp-room-amenities>div,
+#plaza-print.pp-room.pp-kislovodsk-room .pp-room-plan-amenity { border-top:.25mm solid #b39560; }
+#plaza-print.pp-room.pp-kislovodsk-room .pp-bottom { border-top:.25mm solid #b39560; }

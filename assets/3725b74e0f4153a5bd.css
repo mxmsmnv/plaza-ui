@@ -1,0 +1,72 @@
+/* Imported Wellness pages share the existing palette, fonts and controls. */
+.wellness-section-nav{border-block:1px solid var(--line);margin:0 0 32px;padding:10px 0}
+.wellness-section-nav ul{display:flex;flex-wrap:wrap;gap:4px 28px;list-style:none;padding:0;margin:0}
+.wellness-section-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:13px;color:var(--ink)}
+.wellness-section-nav a[aria-current]{font-weight:600;color:var(--accent)}
+.wellness-refined-content{min-width:0;font-size:15px;line-height:1.85}
+.wellness-refined-content>p,.wellness-refined-content>ul,.wellness-refined-content>ol{max-width:72ch}
+.wellness-refined-content>p{margin-block:0 20px}
+.wellness-refined-content h2{scroll-margin-top:112px;max-width:35ch;line-height:1.3}
+.wellness-refined-content h3{font-size:24px;line-height:1.4}
+.wellness-refined-content h4,.wellness-refined-content h5{font:500 16px/1.6 Montserrat,Arial,sans-serif;letter-spacing:0;text-transform:none;margin:24px 0 12px}
+.wellness-refined-content li{margin-bottom:8px}
+.wellness-page-toc{margin:0 0 32px;padding:20px 24px;background:var(--panel);border-radius:var(--plaza-radius-ui,4px)}
+.wellness-page-toc>span{font-size:13px;font-weight:600;color:var(--ink)}
+.wellness-page-toc ul{display:flex;flex-wrap:wrap;gap:4px 24px;list-style:none;padding:8px 0 0;margin:0}
+.wellness-page-toc li{margin:0}.wellness-page-toc a{display:inline-flex;align-items:center;min-height:44px;font-size:13px}
+.wellness-refined-content .wellness-accordion{max-width:100%}
+.wellness-refined-content .wellness-accordion details>div>p,.wellness-refined-content .wellness-accordion details>div>ul{max-width:75ch}
+.wellness-refined-content .wellness-accordion details>div:has(iframe){padding-right:0}
+.wellness-refined-content .wellness-table{scrollbar-color:var(--accent) var(--panel);scrollbar-width:thin}
+.wellness-refined-content .wellness-table:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.wellness-refined-content th{font-size:13px;font-weight:600;vertical-align:top}
+.wellness-refined-content td{font-size:13px;line-height:1.7;vertical-align:top}
+.wellness-refined-content tr[hidden]{display:none}
+.wellness-refined-content td:last-child{font-variant-numeric:tabular-nums}
+.wellness-refined-content .wellness-photo-gallery{display:block!important;margin-block:28px}
+.wellness-refined-content .wellness-photo-mosaic{max-height:520px}
+.wellness-refined-content .wellness-photo-slide img{object-fit:contain!important;aspect-ratio:auto}
+.wellness-refined-content .wellness-photo-dialog .plaza-slider-controls{z-index:2}
+.wellness-refined-content .wellness-photo-counter{z-index:3}
+.wellness-refined-content details[hidden]{display:none}
+.wellness-transfer-contact{padding:20px 24px;margin:0 0 28px;background:var(--panel);border-radius:var(--plaza-radius-ui,4px)}
+.wellness-transfer-contact p{margin:0 0 8px;max-width:72ch}
+.wellness-document-search{max-width:72ch;margin:24px 0}
+.wellness-document-search[hidden]{display:none}
+.wellness-document-search label{display:grid;gap:8px;font-size:13px;font-weight:500}
+.wellness-document-search input{min-height:48px;padding:12px;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);background:var(--panel);color:var(--ink);font:400 14px/1.5 Montserrat,Arial,sans-serif}
+.wellness-document-search input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wellness-document-search input::placeholder{color:var(--muted);opacity:1}
+.wellness-refined-content a[href^="tel:"],.wellness-refined-content a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px}
+.wellness-refined-content .wellness-contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px;max-width:none;border-bottom:1px solid var(--line);padding:16px 0;margin:0}
+.wellness-contact-row>strong{flex:0 0 100%;font-weight:500;color:var(--ink)}
+.wellness-embed-link{margin:12px 0;font-size:13px}.wellness-embed-link a{display:inline-flex;min-height:44px;align-items:center}
+.wellness-editorial-directory section{display:flex;justify-content:space-between;align-items:center;gap:32px;border-bottom:1px solid var(--line);padding:28px 0}
+.wellness-editorial-directory section:first-child{padding-top:0}.wellness-page-content .wellness-editorial-directory h2{font-size:clamp(26px,2.5vw,34px);margin:0 0 12px}
+.wellness-editorial-directory p{max-width:66ch;margin:0}.wellness-directory-action{display:inline-flex;align-items:center;gap:12px;min-height:44px;flex-shrink:0;font-size:13px}
+.wellness-directory-action svg{width:18px;height:18px}
+.wellness-price-tools{margin:24px 0 0;padding:24px;background:var(--panel);border-radius:var(--plaza-radius-ui,4px)}
+.wellness-price-tools[hidden]{display:none}.wellness-price-fields{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+.wellness-price-fields label{display:grid;gap:8px;font-size:13px;font-weight:500;min-width:0}
+.wellness-price-fields input,.wellness-price-fields select{width:100%;min-width:0;min-height:48px;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);padding:12px;background:var(--bg);color:var(--ink);font:400 14px/1.5 Montserrat,Arial,sans-serif;caret-color:var(--accent);color-scheme:light}
+[data-theme=dark] .wellness-price-fields input,[data-theme=dark] .wellness-price-fields select{color-scheme:dark}
+.wellness-price-fields input::placeholder{color:var(--muted);opacity:1}
+.wellness-price-paging{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:16px;font-size:13px}
+.wellness-price-paging p{flex:1 1 240px;margin:0}.wellness-price-paging>div{display:flex;gap:12px}
+.wellness-price-paging button{min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:var(--plaza-radius-ui,4px);background:transparent;color:var(--ink);font:500 12px/1.5 Montserrat,Arial,sans-serif;cursor:pointer}
+.wellness-price-paging button:disabled{opacity:.45;cursor:default}
+.wellness-price-tools :is(input,select,button):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wellness-price-tools button:not(:disabled):is(:hover,:focus-visible){background:var(--panel);border-color:var(--accent)}
+[data-theme=dark] .wellness-page-toc,[data-theme=dark] .wellness-price-tools{background:rgba(25,43,34,.76);backdrop-filter:blur(14px)}
+@media(max-width:1050px){.wellness-section-nav ul{gap:4px 20px}.wellness-editorial-directory section{gap:24px}}
+@media(max-width:767px){.wellness-section-nav{margin-bottom:24px}.wellness-section-nav ul{gap:0 18px}.wellness-section-nav a{font-size:12px}.wellness-refined-content{font-size:14px;line-height:1.8}.wellness-page-toc{padding:16px}.wellness-page-toc ul{display:block}.wellness-page-toc a{min-height:44px}.wellness-price-tools{padding:16px}.wellness-price-fields{grid-template-columns:1fr;gap:16px}.wellness-price-paging{gap:12px}.wellness-price-paging p{flex-basis:100%}.wellness-editorial-directory section{display:block;padding-block:24px}.wellness-directory-action{margin-top:12px}.wellness-refined-content .wellness-contact-row{display:flex;flex-direction:column;align-items:flex-start;gap:4px}.wellness-contact-row>strong{flex:auto}.wellness-refined-content td,.wellness-refined-content th{padding:16px}.wellness-refined-content .wellness-photo-mosaic{max-height:none}}
+@media(prefers-reduced-motion:reduce){.wellness-refined-content *{scroll-behavior:auto}}
+.wellness-content-note{margin-block:0 32px;padding:20px 24px;border-left:2px solid var(--accent);background:var(--panel);color:var(--ink);font-size:14px;line-height:1.8}
+.wellness-content-note p{margin:8px 0 0}.wellness-content-note p:first-child{margin-top:0}
+.page-id-1828 .wellness-page-booking{display:none}
+.page-id-1828 .wellness-refined-content a:has(img[src*="app_store"]),.page-id-1828 .wellness-refined-content a:has(img[src*="google_play"]){display:inline-flex;max-width:220px;min-height:44px;margin-block:8px}
+.page-id-1828 .wellness-refined-content a:has(img) img{width:100%;height:auto}
+@media(max-width:767px){.wellness-content-note{padding:16px 20px}}
+
+/* Generic editorial content follows its content height; media and room layouts stay intrinsic. */
+.wellness-page .wellness-page-content{min-height:0}

@@ -1,0 +1,112 @@
+/* Medical print adapter. Shared print.css owns the page, logo, typography and footer. */
+#plaza-print.med-print{color:#302e29;background:#fff;font:9pt/1.45 Montserrat,Arial,sans-serif;color-scheme:light}
+#plaza-print.med-print .mp-page{height:267mm;min-height:0;padding-bottom:13mm;break-inside:avoid}
+#plaza-print.med-print .mp-content{height:calc(100% - 38mm);position:relative}
+#plaza-print.med-print .mp-brand{display:flex;align-items:center;gap:6mm}
+#plaza-print.med-print .mp-brand>svg{width:40mm;height:auto;flex:none}
+#plaza-print.med-print .pp-top{height:20mm;margin:0 0 5mm;padding:0 0 4mm}
+#plaza-print.med-print .mp-cover .pp-top{height:29mm}
+#plaza-print.med-print .mp-cover .mp-content{height:calc(100% - 47mm)}
+#plaza-print.med-print .mp-cover-qr{display:flex;align-items:center;gap:3mm;font-size:6.8pt}
+#plaza-print.med-print .mp-cover-qr svg{width:26mm;height:26mm;flex:none;max-width:none}
+#plaza-print.med-print h1{font-size:27pt;line-height:1.15;margin:0 0 4mm}
+#plaza-print.med-print h2{font-size:22pt;line-height:1.2;margin:0 0 4mm}
+#plaza-print.med-print h3{font-size:11pt;line-height:1.25;margin:0 0 2mm}
+#plaza-print.med-print p{margin:0 0 3mm}
+#plaza-print.med-print .mp-lead{font-size:9pt;line-height:1.55;margin-bottom:4mm}
+#plaza-print.med-print .mp-intro{max-width:170mm;font-size:9pt;margin-bottom:7mm}
+#plaza-print.med-print img{display:block;max-width:100%;height:auto;object-fit:cover;border-radius:0}
+#plaza-print.med-print .mp-watercolor{height:98mm;margin:0 0 3mm}
+#plaza-print.med-print .mp-watercolor img{width:182mm;height:98mm;object-fit:contain}
+#plaza-print.med-print .mp-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin:0 0 5mm;padding:3mm 0;border-block:.2mm solid #d8cdbb}
+#plaza-print.med-print .mp-facts strong{display:block;font:400 17pt/1.1 Lora,Georgia,serif;color:#8c7041}
+#plaza-print.med-print .mp-facts span{display:block;font-size:6.6pt;line-height:1.4;margin-top:1.5mm}
+#plaza-print.med-print .mp-cover h2{font-size:16pt;margin:0 0 3mm}
+#plaza-print.med-print .mp-profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm 5mm}
+#plaza-print.med-print .mp-profiles h3{font-size:10pt;margin-bottom:1mm}
+#plaza-print.med-print .mp-profiles p{font-size:7.2pt;line-height:1.45;margin:0}
+#plaza-print.med-print .mp-note{font-size:6.7pt;line-height:1.5;color:#736a5a;margin-top:4mm}
+#plaza-print.med-print .mp-program-grid,#plaza-print.med-print .mp-method-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8mm 4mm}
+#plaza-print.med-print .mp-program-grid article,#plaza-print.med-print .mp-method-grid article{break-inside:avoid;min-width:0;border:0;background:none;box-shadow:none;padding:0}
+#plaza-print.med-print .mp-program-grid figure,#plaza-print.med-print .mp-method-grid figure{margin:0 0 3mm}
+#plaza-print.med-print .mp-program-grid img{width:58mm;height:32.6mm}
+#plaza-print.med-print .mp-program-grid h3{font-size:11.5pt}
+#plaza-print.med-print .mp-program-grid p{font-size:7.3pt;line-height:1.45;margin:0 0 1.3mm}
+#plaza-print.med-print .mp-consultant{display:flex;align-items:center;gap:5mm;padding:5mm 0;border-block:.2mm solid #d8cdbb;margin-top:7mm}
+#plaza-print.med-print .mp-consultant picture{flex:none}
+#plaza-print.med-print .mp-consultant img{width:19mm;height:19mm;border-radius:50%}
+#plaza-print.med-print .mp-consultant h3{font-size:13pt;margin-bottom:1.5mm}
+#plaza-print.med-print .mp-consultant p{font-size:8pt;margin:0 0 2mm}
+#plaza-print.med-print .mp-consultant a{font-size:14pt;font-weight:500;color:#8c7041}
+#plaza-print.med-print .mp-method-grid img{width:58mm;height:33mm}
+#plaza-print.med-print .mp-method-grid article{min-height:71mm}
+#plaza-print.med-print .mp-method-grid p{font-size:8pt;line-height:1.5}
+#plaza-print.med-print .mp-methods .mp-method-note{margin-top:9mm;border-top:.25mm solid #b39560;padding-top:4mm}
+#plaza-print.med-print .mp-method-note p{font-size:8pt}
+#plaza-print.med-print .mp-equipment .mp-method-grid{gap:4mm 4mm}
+#plaza-print.med-print .mp-equipment .mp-method-grid article{min-height:0}
+#plaza-print.med-print .mp-equipment .mp-method-grid img{height:33mm}
+#plaza-print.med-print .mp-equipment .mp-method-grid h3{font-size:10.5pt}
+#plaza-print.med-print .mp-equipment .mp-method-grid p{font-size:7.2pt;line-height:1.4;margin-bottom:0}
+#plaza-print.med-print .mp-equipment .mp-method-note{margin-top:4mm}
+#plaza-print.med-print .mp-schedule-intro{font-size:7.2pt;margin-bottom:3mm}
+#plaza-print.med-print .mp-doctors h2{font-size:20pt}
+#plaza-print.med-print .mp-schedule{width:182mm;table-layout:fixed;border-collapse:collapse;font:400 6pt/1.15 Montserrat,Arial,sans-serif;min-width:0}
+#plaza-print.med-print .mp-schedule .mp-doctor-col{width:60mm}
+#plaza-print.med-print .mp-schedule .mp-room-col{width:8mm}
+#plaza-print.med-print .mp-schedule :is(th,td){padding:.1mm .6mm;vertical-align:middle;text-align:center;border-bottom:.15mm solid #d8cdbb;background:none;color:#302e29}
+#plaza-print.med-print .mp-schedule thead th{height:6mm;font:500 7pt/1.1 Montserrat,Arial,sans-serif;border-bottom:.3mm solid #b39560}
+#plaza-print.med-print .mp-schedule tbody tr{height:5.4mm;break-inside:avoid}
+#plaza-print.med-print .mp-schedule tbody th{width:auto;padding-left:0;text-align:left;font-weight:400}
+#plaza-print.med-print .mp-doctor-cell{display:flex;align-items:center;gap:2mm}
+#plaza-print.med-print .mp-avatar{display:block;width:4.6mm;min-width:4.6mm;height:4.6mm}
+#plaza-print.med-print .mp-avatar img{width:4.6mm;height:4.6mm;border-radius:50%}
+#plaza-print.med-print .mp-doctor-cell b{display:block;font-size:6.5pt;line-height:1.15;font-weight:500}
+#plaza-print.med-print .mp-doctor-cell small{display:block;font-size:5.2pt;line-height:1.15;margin-top:.2mm}
+#plaza-print.med-print .mp-doctors .mp-note{margin-top:3mm;font-size:6.3pt}
+#plaza-print.med-print .mp-registry img{width:182mm;height:102.4mm;margin:6mm 0 0}
+#plaza-print.med-print .mp-final h2{font-size:24pt}
+#plaza-print.med-print .mp-final-contact{margin-top:7mm;padding-block:6mm}
+#plaza-print.med-print .mp-final-contact img{width:25mm;height:25mm}
+#plaza-print.med-print .mp-final-contact a{font-size:17pt}
+#plaza-print.med-print .mp-final-contact p a{font-size:10pt}
+#plaza-print.med-print .mp-address{margin-top:7mm;font-size:8pt}
+#plaza-print.med-print .pp-bottom{font-size:6.4pt;line-height:1.4}
+#plaza-print.med-print.pp-preview{display:block;width:210mm;margin:24px auto;background:none;padding:0}
+#plaza-print.med-print.pp-preview .mp-page{width:210mm;height:297mm;margin:0 0 24px;padding:15mm 14mm;box-shadow:0 2px 12px #0002;background:#fff}
+#plaza-print.med-print.pp-preview .mp-content{height:calc(267mm - 38mm)}
+#plaza-print.med-print.pp-preview .mp-cover .mp-content{height:calc(267mm - 47mm)}
+#plaza-print.med-print.pp-preview .pp-bottom{left:14mm;right:14mm;bottom:15mm}
+@media print{
+ @page{size:A4 portrait;margin:15mm 14mm}
+ html,body.page-id-2615{background:#fff!important;color:#302e29!important;height:auto!important;min-height:0!important;overflow:visible!important;color-scheme:light!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ body.page-id-2615>*:not(#plaza-print){display:none!important}
+ html body #plaza-print.med-print{display:block!important;width:auto!important;max-width:none!important;margin:0!important;padding:0!important;background:#fff!important}
+ html body #plaza-print.med-print .mp-page{width:182mm;height:267mm;margin:0;padding:0 0 13mm;box-shadow:none;break-after:page}
+ html body #plaza-print.med-print .mp-page:last-child{break-after:auto}
+ html body #plaza-print.med-print .mp-content{height:calc(267mm - 38mm)}
+ html body #plaza-print.med-print .mp-cover .mp-content{height:calc(267mm - 47mm)}
+ html body #plaza-print.med-print .pp-bottom{left:0;right:0;bottom:0}
+ #plaza-print.med-print .pp-top{display:flex!important}
+}
+
+body.plaza-medical-print-preview>*:not(#plaza-print){display:none!important}
+
+#plaza-print.med-print .mp-equipment .mp-method-grid figure{margin-bottom:2mm}
+
+/* Requested cover, complete method rows and final QR. Only medical print. */
+#plaza-print.med-print .mp-cover-qr{margin-left:auto;text-align:right;justify-content:flex-end}
+#plaza-print.med-print .mp-cover-qr span{max-width:23mm}
+#plaza-print.med-print .mp-equipment h2{font-size:20pt;line-height:1.15}
+#plaza-print.med-print .mp-equipment .mp-intro{font-size:8pt;margin-bottom:4mm}
+#plaza-print.med-print .mp-equipment .mp-method-grid{gap:4mm}
+#plaza-print.med-print .mp-equipment .mp-method-grid figure{margin-bottom:2mm}
+#plaza-print.med-print .mp-equipment .mp-method-grid img{height:22mm;object-fit:contain}
+#plaza-print.med-print .mp-equipment .mp-method-grid h3{font-size:9.2pt;line-height:1.15;margin-bottom:1.5mm}
+#plaza-print.med-print .mp-equipment .mp-method-grid p{font-size:6.8pt;line-height:1.35;margin:0}
+#plaza-print.med-print .mp-equipment-note{margin-top:4mm;padding-top:3mm;border-top:.2mm solid #b39560;font-size:7pt;line-height:1.4}
+#plaza-print.med-print .mp-avatar-note{margin-top:1mm}
+#plaza-print.med-print .mp-final-contact>div{min-width:0;flex:1}
+#plaza-print.med-print .mp-final-qr{flex:none;margin-left:3mm;width:26mm;text-align:center;text-decoration:none;color:#302e29}
+#plaza-print.med-print .mp-final-qr svg{display:block;width:26mm;height:26mm;max-width:none}
+#plaza-print.med-print .mp-final-qr span{display:block;margin-top:1mm;font:400 6.5pt/1.3 Montserrat,Arial,sans-serif}

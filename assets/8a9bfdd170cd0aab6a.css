@@ -1,0 +1,170 @@
+/* Art Plaza print booklet. One A4 sheet per .np-page, independent of site theme. */
+.np-book { display:none; }
+
+html.np-preview { background:#e9e7e2!important; }
+html.np-preview body { margin:0!important; padding:20px 0!important; background:none!important; }
+html.np-preview body.page-id-2582 :is(.site-header,.site-footer,#contacts,.breadcrumbs,.resort-breadcrumbs,.skip-link,.screen-reader-text,.psk-ny) { display:none!important; }
+html.np-preview body.page-id-2582 :is(main.resort-page,article.resort-special) { display:block!important; width:auto!important; max-width:none!important; margin:0!important; padding:0!important; }
+html.np-preview .np-book { display:block!important; }
+html.np-preview .np-book .np-page { margin:0 auto 20px; box-shadow:0 3px 18px #0002; }
+
+.np-book {
+  --np-gold:#917747;
+  --np-ink:#302d28;
+  --np-muted:#69645c;
+  --np-line:#ded6c7;
+  color-scheme:light!important;
+  color:var(--np-ink)!important;
+  font:10pt/1.45 Montserrat,Arial,sans-serif;
+  print-color-adjust:exact;
+  -webkit-print-color-adjust:exact;
+}
+.np-book,.np-book * { box-sizing:border-box; animation:none!important; transition:none!important; text-shadow:none!important; filter:none!important; transform:none!important; }
+.np-book *::before,.np-book *::after { content:none!important; }
+.np-book .np-page {
+  page:auto!important;
+  width:210mm;
+  height:297mm;
+  padding:12mm 14mm 10mm;
+  display:flex;
+  flex-direction:column;
+  gap:5mm;
+  background:#fff!important;
+  color:var(--np-ink)!important;
+  break-before:auto!important;
+  break-after:page;
+  break-inside:avoid;
+  overflow:visible;
+}
+.np-book .np-page:last-child { break-after:auto; }
+.np-book .np-top { display:flex; align-items:center; justify-content:space-between; gap:8mm; height:14mm; flex:0 0 14mm; padding-bottom:3mm; border-bottom:.25mm solid var(--np-line); }
+.np-book .np-top img { width:54mm; height:12mm; object-fit:contain; border-radius:0; }
+.np-book .np-top span { max-width:100mm; text-align:right; font:400 7.5pt/1.5 Montserrat,Arial,sans-serif; color:var(--np-gold); }
+.np-book .np-content { flex:1 1 auto; min-height:0; }
+.np-book footer { display:flex; align-items:center; justify-content:space-between; gap:5mm; height:10mm; flex:0 0 10mm; padding-top:2mm; border-top:.25mm solid var(--np-line); color:var(--np-muted); font:400 6.7pt/1.4 Montserrat,Arial,sans-serif; }
+.np-book .np-footer-brand { flex:1; }
+.np-book .np-footer-phone { flex:0 0 auto; color:var(--np-gold); font-size:10pt; font-weight:500; white-space:nowrap; }
+.np-book .np-page-number { width:12mm; text-align:right; white-space:nowrap; }
+.np-book h1,.np-book h2,.np-book h3 { font-family:Lora,Georgia,serif!important; font-weight:400!important; letter-spacing:-.02em; line-height:1.15; color:var(--np-ink)!important; opacity:1!important; -webkit-text-fill-color:currentColor!important; }
+.np-book h1 { margin:0 0 7mm; font-size:29pt; }
+.np-book h2 { margin:0 0 3mm; font-size:19pt; }
+.np-book h3 { margin:0 0 2mm; font-size:14pt; }
+.np-book h4 { margin:0 0 1.5mm; font:500 10.5pt/1.35 Montserrat,Arial,sans-serif; color:var(--np-ink); }
+.np-book em,.np-book .np-gold { color:var(--np-gold)!important; font-style:normal; background:none!important; -webkit-text-fill-color:currentColor!important; }
+.np-book p { margin:0 0 3mm; }
+.np-book a { color:inherit; text-decoration:none; }
+.np-book img { display:block; max-width:100%; border-radius:4px; opacity:1!important; }
+.np-book figure,.np-book article { margin:0; break-inside:avoid; }
+.np-book .np-two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5mm; }
+.np-book .np-three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4mm; }
+
+/* Cover: daylight photograph, restrained offer, QR above the photo. */
+.np-book .np-cover .np-content { display:flex; flex-direction:column; gap:5mm; }
+.np-book .np-cover-heading { display:flex; align-items:center; justify-content:space-between; gap:7mm; flex:0 0 auto; }
+.np-book .np-cover h1 { margin:0 0 3mm; font-size:39pt; white-space:nowrap; }
+.np-book .np-lead { margin:0; font-size:13pt; line-height:1.45; }
+.np-book .np-lead span { font-size:10pt; color:var(--np-muted); }
+.np-book .np-qr-link { flex:0 0 27mm; align-self:flex-start; padding-top:1mm; }
+.np-book .np-qr { width:27mm; height:27mm; border-radius:0; object-fit:contain; }
+.np-book .np-cover-image { width:100%; height:96mm; object-fit:cover; object-position:center; }
+.np-book .np-cover-intro h2 { margin:0 0 2mm; font-size:21pt; }
+.np-book .np-cover-intro p { margin:0; font-size:8.5pt; color:var(--np-muted); }
+.np-book .np-offer { padding:5mm 6mm; border:.25mm solid var(--np-line); border-radius:4px; background:#f7f3eb; }
+.np-book .np-offer .np-kicker { margin:0 0 2mm; font-size:7.5pt; line-height:1.4; text-transform:uppercase; letter-spacing:.06em; color:var(--np-gold); }
+.np-book .np-offer h2 { margin:0 0 2.5mm; font-size:23pt; color:var(--np-gold)!important; }
+.np-book .np-offer p { margin:0 0 2.5mm; font-size:8.5pt; line-height:1.48; }
+.np-book .np-offer p:last-child { margin:0; font-size:8pt; color:var(--np-muted); }
+
+/* Artists: identical host grid, broad gold stage, bright three-band grid. */
+.np-book .np-artists .np-content>h2 { margin:0 0 3mm; font-size:18pt; }
+.np-book .np-hosts { gap:7mm; margin-bottom:6mm; }
+.np-book .np-hosts article { display:grid; grid-template-columns:45mm minmax(0,1fr); gap:3mm; align-items:center; min-height:43mm; }
+.np-book .np-host-photo { height:43mm; border-radius:4px; overflow:hidden; }
+.np-book .np-host-photo img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.np-book .np-host-copy h3 { margin:0 0 2mm; font-size:14pt; line-height:1.2; }
+.np-book .np-host-copy p { margin:0; font-size:8pt; color:var(--np-muted); }
+.np-book .np-headliner { position:relative; isolation:isolate; display:grid; grid-template-columns:47% minmax(0,1fr); gap:5mm; align-items:center; height:96mm; margin:0 0 6mm; border-radius:4px; overflow:hidden; background:#f6e3b9; }
+.np-book .np-headliner-stage { position:absolute; inset:0; z-index:-1; width:100%; height:100%; object-fit:cover; opacity:.85!important; }
+.np-book .np-koldun-photo { position:relative; height:100%; background:none; }
+.np-book .np-koldun-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center bottom; border-radius:0; }
+.np-book .np-headliner-copy { padding:7mm 7mm 7mm 0; }
+.np-book .np-headliner-copy>p:first-child { text-transform:uppercase; letter-spacing:.08em; font-size:7pt; margin:0 0 3mm; color:var(--np-gold); }
+.np-book .np-headliner-copy h2 { font-size:28pt; line-height:1.05; margin:0 0 5mm; }
+.np-book .np-headliner-copy>p { font-size:9pt; line-height:1.5; margin:0 0 4mm; }
+.np-book .np-headliner dl { display:grid; grid-template-columns:1fr; gap:2mm; margin:0; font-size:8.5pt; }
+.np-book .np-headliner dl>div { display:flex; align-items:baseline; gap:6mm; }
+.np-book .np-headliner dt { width:24mm; flex:0 0 24mm; }
+.np-book .np-headliner dd { margin:0; font-weight:500; white-space:nowrap; }
+.np-book .np-performer-photo { position:relative; height:33mm; margin-bottom:2.5mm; border-radius:4px; overflow:hidden; background:#f6e3b9; }
+.np-book .np-performer-photo img { position:absolute; inset:0; width:100%; height:100%; border-radius:0; }
+.np-book .np-performer-stage { object-fit:cover; }
+.np-book .np-performer-photo img:last-child { object-fit:contain; object-position:center bottom; }
+.np-book .np-three h3 { margin:0 0 1.5mm; font-size:12pt; letter-spacing:-.03em; }
+.np-book .np-three p { margin:0; font-size:7.5pt; line-height:1.4; color:var(--np-muted); }
+
+/* Rooms preserve the existing photographs and alternate their image positions. */
+.np-book .np-venues h1 { margin-bottom:8mm; font-size:30pt; }
+.np-book .np-venue-rows { display:grid; gap:15mm; }
+.np-book .np-venue-rows article { display:grid; grid-template-columns:1.35fr 1fr; gap:7mm; align-items:center; }
+.np-book .np-venue-rows article:nth-child(2) { grid-template-columns:1fr 1.35fr; }
+.np-book .np-venue-rows article:nth-child(2) .np-venue-image { grid-column:2; grid-row:1; }
+.np-book .np-venue-rows article:nth-child(2) .np-venue-copy { grid-column:1; grid-row:1; }
+.np-book .np-venue-image img { width:100%; height:79mm; object-fit:cover; object-position:center; }
+.np-book .np-venue-copy h3 { font-size:19pt; margin:0 0 4mm; }
+.np-book .np-venue-copy p { font-size:9.5pt; line-height:1.5; }
+.np-book .np-venue-copy p:nth-last-child(2) { font-weight:500; font-size:11pt; color:var(--np-gold); }
+.np-book .np-venue-copy p:last-child { margin:0; color:var(--np-muted); font-size:8.5pt; }
+
+.np-book ol { list-style:none; margin:0; padding:0; }
+.np-book ol>li { display:grid; grid-template-columns:30mm minmax(0,1fr); gap:5mm; padding:4mm 0; border-bottom:.25mm solid var(--np-line); break-inside:avoid; }
+.np-book ol>li:last-child { border-bottom:0; }
+.np-book time { font-size:9.5pt; color:var(--np-gold); white-space:nowrap; }
+.np-book ol p { margin:1.5mm 0 0; font-size:9.5pt; line-height:1.5; color:var(--np-muted); }
+.np-book .np-program ol { display:grid; grid-auto-rows:1fr; min-height:209mm; }
+.np-book .np-program ol>li { align-content:center; padding:3mm 0; }
+
+.np-book .np-dishes .np-two { gap:5mm 6mm; }
+.np-book .np-dishes figure img { width:100%; height:53mm; object-fit:cover; }
+.np-book figcaption { margin-top:2mm; font-size:8.5pt; line-height:1.4; }
+.np-book figcaption strong,.np-book figcaption span { display:block; }
+.np-book figcaption strong { font-weight:500; }
+.np-book figcaption span { margin-top:1mm; font-size:7.5pt; color:var(--np-muted); }
+
+/* The complete banquet menu occupies its own full-height, text-only sheet. */
+.np-book .np-menu .np-content { display:flex; flex-direction:column; }
+.np-book .np-menu h1 { font-size:28pt; margin-bottom:8mm; }
+.np-book .np-menu-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12mm; flex:1 1 auto; min-height:0; }
+.np-book .np-menu-column { display:flex; flex-direction:column; justify-content:space-between; gap:5mm; }
+.np-book .np-menu-column article { margin:0; }
+.np-book .np-menu h3 { font-size:13.5pt; line-height:1.22; color:var(--np-gold)!important; margin:0 0 2.5mm; }
+.np-book .np-menu p,.np-book .np-menu li { font-size:9.5pt; line-height:1.5; }
+.np-book .np-menu p { margin:0; }
+.np-book .np-menu ul { margin:0; padding-left:4mm; }
+.np-book .np-menu li { padding-left:.5mm; margin:0 0 1.6mm; }
+.np-book .np-menu li:last-child { margin-bottom:0; }
+
+.np-book .np-children h1 { margin-bottom:5mm; }
+.np-book .np-child-image { width:100%; margin:0 0 5mm; }
+.np-book .np-child-image img { width:100%; height:auto; aspect-ratio:1672/941; object-fit:contain; }
+.np-book .np-children ol>li { padding:3mm 0; }
+.np-book .np-children h4 { font-size:9.5pt; }
+.np-book .np-children ol p { font-size:8.5pt; line-height:1.45; }
+.np-book .np-children time { font-size:8.5pt; }
+
+.np-book .np-plan h1 { margin-bottom:5mm; }
+.np-book .np-plans { display:grid; gap:4mm; }
+.np-book .np-plans h2 { margin:0 0 2mm; font-size:14pt; }
+.np-book .np-plans img { width:100%; height:96mm; object-fit:contain; border-radius:0; }
+
+@page { size:A4 portrait; margin:0; }
+@media print {
+  html,body.page-id-2582 { margin:0!important; padding:0!important; width:auto!important; min-width:0!important; min-height:0!important; background:#fff!important; background-image:none!important; color:#302d28!important; color-scheme:light!important; }
+  body.page-id-2582 :is(.site-header,.site-footer,#contacts,.breadcrumbs,.resort-breadcrumbs,.skip-link,.screen-reader-text,.psk-ny,.plaza-tooltip,.plaza-page-transition,.plaza-transition-overlay,dialog) { display:none!important; }
+  body.page-id-2582 :is(main.resort-page,article.resort-special) { display:block!important; width:100%!important; max-width:none!important; min-height:0!important; margin:0!important; padding:0!important; background:#fff!important; border:0!important; }
+  body.page-id-2582 .np-book { display:block!important; position:static!important; width:210mm!important; height:auto!important; margin:0!important; padding:0!important; background:#fff!important; }
+  body.page-id-2582 .np-book .np-page { margin:0!important; box-shadow:none!important; }
+  body.page-id-2582 .np-book,body.page-id-2582 .np-book * { visibility:visible!important; }
+  body.page-id-2582 .np-book a[href]::after { content:none!important; }
+}
+
+@media print {body.page-id-2582>:not(.np-book){display:none!important;}body.page-id-2582>.np-book{display:block!important;}}

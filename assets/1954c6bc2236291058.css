@@ -1,0 +1,13 @@
+/* Geometry only. Fonts, colors, word reveal and line breaks remain owned by the page. */
+[data-plaza-elastic="ready"] { cursor: default; touch-action: pan-y pinch-zoom; }
+.plaza-elastic-letter { display: inline-block; }
+.plaza-heading-gradient .plaza-elastic-gradient-word { background-image: none; }
+.plaza-elastic-gradient-word .plaza-elastic-letter {
+  background-image: var(--plaza-elastic-gradient);
+  background-size: var(--plaza-heading-bg-width) var(--plaza-heading-bg-height);
+  background-position: var(--plaza-elastic-bg-x, 0px) var(--plaza-heading-bg-y, 0px);
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

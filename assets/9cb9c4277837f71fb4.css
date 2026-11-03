@@ -1,0 +1,231 @@
+/* Wellness photographic story — inherits the PLAZA shell and its two themes. */
+.pg-story{--pg-gap:34px;--pg-spread:55px;--pg-chapter:89px;--pg-space:89px;padding-bottom:64px;color:var(--ink);overflow:clip}
+.pg-story .pg-top{padding-top:40px;padding-bottom:32px}
+.pg-story .wellness-breadcrumbs{margin:0 0 28px}
+.pg-story .pg-title-row{display:flex;justify-content:space-between;align-items:baseline;gap:32px}
+.pg-story h1{font:400 clamp(38px,4.4vw,64px)/1.12 Lora,Georgia,serif;margin:0;letter-spacing:-.025em}
+.pg-story .pg-title-row p{font-size:13px;line-height:1.7;color:var(--muted);max-width:38ch;margin:0}
+.pg-story .pg-collection{display:grid;gap:var(--pg-spread)}
+.pg-story .pg-photo{margin:0;min-width:0;align-self:start}
+.pg-story .pg-frame{position:relative;overflow:hidden;border-radius:var(--plaza-radius-ui,4px);aspect-ratio:3/2;background:var(--soft)}
+.pg-story .pg-image-depth{height:100%;width:100%;transform:translate3d(0px,calc(var(--pg-photo-y,0px) + var(--pg-pointer-y,0px)),0) scale(var(--pg-photo-scale,1));transform-origin:center;}
+.pg-story .pg-frame img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;border-radius:0}
+.pg-story figcaption{font:400 11px/1.6 Montserrat,Arial,sans-serif;color:var(--muted);padding-top:10px;letter-spacing:.01em}
+.pg-story .pg-wide .pg-frame{aspect-ratio:2.16/1}
+.pg-story .pg-hero .pg-frame{aspect-ratio:1.75/1}
+.pg-story .pg-pool .pg-frame{aspect-ratio:1.94/1}
+.pg-story .pg-grid{display:grid;gap:var(--pg-gap);align-items:center;margin:0}
+
+
+
+.pg-story .pg-portrait .pg-frame{aspect-ratio:4/5}
+.pg-story .pg-square .pg-frame{aspect-ratio:1/1}
+
+.pg-story .pg-close{align-items:center;margin-top:32px}
+
+
+.pg-story .pg-photo-words{position:absolute;inset:0;display:flex;align-items:center;padding:clamp(28px,5vw,72px);pointer-events:none;z-index:2;transform:translate3d(0,var(--pg-words-y,0px),0)}
+.pg-story .pg-frame:has(.pg-photo-words):after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 22%,rgba(7,20,15,.06) 45%,rgba(7,20,15,.56) 100%);z-index:1}
+.pg-story .pg-photo-words h2{position:relative;z-index:1;color:#fff;font:400 clamp(34px,4.5vw,64px)/1.13 Lora,Georgia,serif;letter-spacing:-.025em;margin:0;max-width:19ch;text-shadow:0 8px 20px rgba(0,0,0,.34),0 2px 5px rgba(0,0,0,.18)}
+.pg-story .pg-note{display:grid;grid-template-columns:1.618033989fr 1fr;gap:var(--pg-gap);align-items:center;margin:calc(var(--pg-chapter) - var(--pg-spread)) 0 0;padding:0}
+.pg-story .pg-note h2{font-family:Lora,Georgia,serif;font-weight:400;line-height:1.2;letter-spacing:-.02em;margin:0;color:var(--ink)}
+.pg-story .pg-note p{font-size:14px;line-height:1.85;color:var(--muted);margin:0 0 12px;max-width:43ch}
+.pg-story .pg-note a,.pg-story .pg-room-link a{display:inline-flex;align-items:center;min-height:44px;font-size:12px;line-height:1.6;color:var(--accent)}
+.pg-story .pg-room-link{text-align:right;margin:0 0 12px}
+.pg-story .pg-ending{margin:0}
+.pg-story .pg-ending .pg-frame{aspect-ratio:1.95/1}
+@media(min-width:1051px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.pg-story.pg-motion .pg-image-depth{transform:translate3d(0px,calc(var(--pg-photo-y,0px) + var(--pg-pointer-y,0px)),0) scale(var(--pg-photo-scale,1.12))}}
+@media(max-width:1050px){.pg-story{--pg-gap:21px;padding-bottom:48px}.pg-story .pg-top{padding-top:36px}.pg-story .pg-title-row{gap:24px}.pg-story .pg-title-row p{max-width:31ch}.pg-story .pg-note{gap:21px;padding-inline:0}.pg-story .pg-trio{grid-template-columns:repeat(3,minmax(0,1fr))}.pg-story .pg-trio .pg-frame{aspect-ratio:3/2}}
+@media(max-width:700px){.pg-story{--pg-gap:21px;--pg-spread:34px;--pg-chapter:55px;--pg-space:55px;padding-bottom:40px}.pg-story.wrap,.pg-story .wrap{width:calc(100% - 32px)}.pg-story .pg-top{padding-top:24px;padding-bottom:24px}.pg-story .wellness-breadcrumbs{margin-bottom:22px}.pg-story .pg-title-row{display:block}.pg-story .pg-title-row p{max-width:34ch;margin-top:14px;font-size:12px}.pg-story .pg-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:21px;margin:0}.pg-story .pg-grid>.pg-photo{grid-column:auto;margin:0}.pg-story .pg-wide .pg-frame,.pg-story .pg-hero .pg-frame,.pg-story .pg-pool .pg-frame{aspect-ratio:4/3}.pg-story .pg-photo-words{padding:22px}.pg-story .pg-photo-words h2{font-size:clamp(28px,7.5vw,38px);line-height:1.13}.pg-story .pg-portrait .pg-frame{aspect-ratio:4/5}.pg-story .pg-square .pg-frame{aspect-ratio:4/3}.pg-story .pg-note{grid-template-columns:minmax(0,1fr);gap:21px;margin:21px 0 0}.pg-story .pg-note p{font-size:13px;margin-bottom:4px}.pg-story .pg-room-link{text-align:left;margin-bottom:0}.pg-story .pg-room-link a{font-size:11px}.pg-story .pg-ending{margin:0}.pg-story .pg-ending .pg-frame{aspect-ratio:4/3}.pg-story figcaption{padding-top:8px}}
+@media(prefers-reduced-motion:reduce){.pg-story .pg-image-depth,.pg-story .pg-photo-words{transform:none}}
+@media print{.pg-story .pg-image-depth,.pg-story .pg-photo-words{transform:none}.pg-story .pg-photo{break-inside:avoid}}
+
+html.lenis.lenis-smooth{scroll-behavior:auto}
+.pg-story .pg-room-collection{display:grid;grid-template-columns:1.618033989fr 1fr;align-items:center;gap:var(--pg-gap);margin:0;padding:21px 0;color:var(--ink);text-decoration:none}
+.pg-story .pg-room-mosaic{display:grid;grid-template-columns:1.618033989fr 1fr;grid-template-rows:1fr 1fr;gap:8px;aspect-ratio:1.65;overflow:hidden;border-radius:var(--plaza-radius-ui,4px)}
+.pg-story .pg-room-mosaic span{overflow:hidden;min-width:0;min-height:0;border-radius:var(--plaza-radius-ui,4px)}
+.pg-story .pg-room-mosaic span:first-child{grid-row:span 2}
+.pg-story .pg-room-mosaic img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1s ease,filter 1s ease}
+.pg-story .pg-room-copy h2{font-family:Lora,Georgia,serif;font-weight:400;line-height:1.2;margin:0 0 18px;letter-spacing:-.02em}
+.pg-story .pg-room-copy p{font-size:13px;line-height:1.8;color:var(--muted);max-width:35ch;margin:0 0 12px}
+.pg-story .pg-room-copy .pg-room-label{font-size:12px;min-height:44px;display:inline-flex;align-items:center;color:var(--accent);gap:12px}
+.pg-story .pg-room-label svg{width:20px;height:20px;flex:none;transition:transform .35s ease}
+.pg-story .pg-room-collection:focus-visible{outline:2px solid var(--accent);outline-offset:8px;border-radius:var(--plaza-radius-ui,4px)}
+@media(hover:hover) and (pointer:fine){.pg-story .pg-room-collection:is(:hover,:focus-visible) img{transform:scale(1.035);filter:brightness(1.1)}.pg-story .pg-room-collection:is(:hover,:focus-visible) .pg-room-label svg{transform:translateX(3px)}}
+@media(max-width:700px){.pg-story .pg-room-collection{grid-template-columns:minmax(0,1fr);gap:20px;margin:2px 0;padding:24px 0}.pg-story .pg-room-mosaic{aspect-ratio:1.4;gap:6px}.pg-story .pg-room-copy h2{margin-bottom:12px}.pg-story .pg-photo-words{align-items:flex-end}}
+@media(prefers-reduced-motion:reduce){.pg-story .pg-room-mosaic img,.pg-story .pg-room-label svg{transition:none;transform:none!important}}
+
+.pg-story .pg-grid .pg-photo.pg-billiards .pg-frame{aspect-ratio:3/2}
+
+/* Preserve complete native compositions; portrait and square masters are authored that way. */
+.pg-story .pg-collection .pg-photo.pg-native .pg-frame{aspect-ratio:var(--pg-native-ratio,3/2)}
+.pg-story{--pg-copy-size:14px}
+.pg-story .pg-note p,.pg-story .pg-note a.pg-link,.pg-story .pg-room-copy p,.pg-story .pg-room-copy .pg-room-label{font-size:var(--pg-copy-size);line-height:1.85}
+.pg-story .pg-note a.pg-link,.pg-story .pg-room-copy .pg-room-label{font-weight:500;min-height:44px}
+.pg-story .pg-room-copy .pg-room-label{display:inline-flex;align-items:center}
+.pg-story .pg-room-label .plaza-link-label{display:inline;position:relative;padding-bottom:4px;background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .35s ease}
+.pg-story .pg-room-collection:is(:hover,:focus-visible) .pg-room-label .plaza-link-label{background-size:100% 1px}
+html:not([data-theme=dark]) body.plaza-object-zheleznovodsk .pg-story .pg-room-label{color:#365947}
+html:not([data-theme=dark]) body.plaza-object-zheleznovodsk .pg-story .pg-room-collection:is(:hover,:focus-visible) .pg-room-label{color:#244633}
+html[data-theme=dark] body.plaza-object-zheleznovodsk .pg-story :is(a.pg-link,.pg-room-label){color:#b7d7ac!important;text-shadow:0 3px 12px rgba(120,168,106,.24);transition:color .35s ease,text-shadow .35s ease}
+html[data-theme=dark] body.plaza-object-zheleznovodsk .pg-story a.pg-link:is(:hover,:focus-visible),html[data-theme=dark] body.plaza-object-zheleznovodsk .pg-story .pg-room-collection:is(:hover,:focus-visible) .pg-room-label{color:#d7f2c6!important;text-shadow:0 3px 15px rgba(120,168,106,.48)}
+@media(min-width:1051px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .pg-story.pg-motion [data-pg-pair]{padding-block:34px;margin-block:0}
+ .pg-story.pg-motion [data-pg-pair]>.pg-photo{transform:translate3d(0,var(--pg-pair-y,0px),0)}
+}
+@media(max-width:700px){.pg-story{--pg-copy-size:13px}}
+@media(prefers-reduced-motion:reduce){.pg-story [data-pg-pair]>.pg-photo{transform:none!important}.pg-story a.pg-link,.pg-story .pg-room-label,.pg-story .pg-room-label .plaza-link-label{transition:none!important}}
+
+/* Use the common color role so the shared high-specificity interaction selector resolves the gallery night value. */
+html[data-theme=dark] .pg-story a.pg-link{--plaza-link-hover:#d7f2c6}
+.pg-story#main a.pg-link{transition:color .35s ease,text-shadow .35s ease!important}
+@media(prefers-reduced-motion:reduce){.pg-story#main a.pg-link{transition:none!important}}
+
+/* A complete place and its close detail share one editorial spread. */
+
+.pg-story .pg-restaurant-shot{width:calc((100% - var(--pg-gap)) * .618033989);margin:0}
+
+.pg-story .pg-ending .pg-photo-words h2{text-shadow:0 12px 26px rgba(0,0,0,.58),0 3px 8px rgba(0,0,0,.34)}
+.pg-story .pg-room-mosaic .pg-image-depth{width:100%;height:100%}
+@media(hover:hover) and (pointer:fine){.pg-story .pg-room-collection:is(:hover,:focus-visible) img{transform:none}}
+@media(max-width:700px){.pg-story .pg-restaurant-shot{width:100%;margin:0}}
+
+/* v6: complete native compositions; intentional left portrait crop only for the library. */
+.pg-story .pg-library-portrait{width:100%;justify-self:stretch}
+.pg-story .pg-collection .pg-photo.pg-library-portrait .pg-frame{aspect-ratio:4/5}
+.pg-story .pg-library-portrait img{object-position:left center}
+.pg-story [data-pg-id="7"] .pg-photo-words h2{font-size:clamp(34px,4.5vw,64px);color:#fff;-webkit-text-stroke:0;text-shadow:0 8px 20px rgba(0,0,0,.34),0 2px 5px rgba(0,0,0,.18)}
+
+
+
+@media(min-width:1051px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+.pg-story.pg-motion [data-pg-pair]{padding-block:34px}
+
+
+}
+@media(max-width:700px){.pg-story [data-pg-id="7"] .pg-photo-words h2{font-size:clamp(28px,7.5vw,38px)}}
+
+/* The only two paired layouts: golden tracks after subtracting the gutter. */
+.pg-story .pg-pair--large-left{grid-template-columns:1.618033989fr 1fr}
+.pg-story .pg-pair--large-right{grid-template-columns:1fr 1.618033989fr}
+.pg-story .pg-pair>.pg-photo{grid-column:auto;width:100%;align-self:center;margin:0}
+.pg-story .pg-trio{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pg-story .pg-title-row{display:grid;grid-template-columns:1.618033989fr 1fr;gap:var(--pg-gap)}
+@media(max-width:700px){.pg-story .pg-pair,.pg-story .pg-trio,.pg-story .pg-title-row{grid-template-columns:minmax(0,1fr)}.pg-story .pg-trio .pg-photo{grid-column:auto}.pg-story .pg-title-row{gap:0}}
+
+/* Entrances use a separate outer mask and character layer; inner parallax stays untouched. */
+.pg-story .pg-title-word{display:inline-block;white-space:nowrap;vertical-align:top}
+.pg-story .pg-title-char{display:inline-block}
+.pg-story.pg-entrance-ready [data-pg-reveal] .pg-frame{clip-path:inset(0 var(--pg-reveal-inset,0%) 0 round 4px)}
+.pg-story .pg-title-done .pg-title-word{overflow:visible!important}
+@media(prefers-reduced-motion:reduce){.pg-story [data-pg-reveal] .pg-frame{clip-path:none!important}.pg-story .pg-title-char{transform:none!important;filter:none!important;transition:none!important}.pg-story .pg-title-word{overflow:visible!important}}
+
+/* City heading: two offset lines rise behind stationary horizontal masks. */
+.pg-story [data-pg-id="1"] .pg-frame{container-type:inline-size}
+.pg-story [data-pg-id="1"] .pg-photo-words{padding-inline:4%;align-items:center}
+.pg-story [data-pg-id="1"] .pg-photo-words h2{font-size:8.8cqw;line-height:1.2;max-width:none;width:100%;letter-spacing:-.025em}
+.pg-story .pg-title-masked .pg-title-visual{display:block;width:100%}
+.pg-story .pg-city-line{display:block;overflow:hidden;white-space:nowrap;padding-top:.08em;margin-top:-.08em;text-align:left}
+.pg-story .pg-city-line+.pg-city-line{text-align:right;margin-top:.04em}
+.pg-story .pg-title-masked.pg-title-done .pg-city-line{overflow:visible}
+@media(prefers-reduced-motion:reduce){.pg-story .pg-city-line{overflow:visible}}
+
+
+/* Approved title sizing; no temporary controls. */
+.pg-story [data-pg-id="7"] .pg-frame,.pg-story [data-pg-id="24"] .pg-frame{container-type:inline-size}
+.pg-story [data-pg-id="7"] .pg-photo-words h2,.pg-story [data-pg-id="24"] .pg-photo-words h2{font-size:8.8cqw;width:100%;max-width:none}
+.pg-story .pg-title-masked .pg-city-line+.pg-city-line{text-align:right}
+
+/* A stationary 4px window clips an oversized image layer, never a blank travel canvas. */
+.pg-story .pg-frame,.pg-story [data-pg-tile],.pg-story .pg-room-mosaic{border-radius:var(--plaza-radius-ui,4px);overflow:hidden;isolation:isolate}
+.pg-story .pg-frame{background:transparent}
+.pg-story .pg-image-depth img{border-radius:0}
+.pg-story [data-pg-id="7"] .pg-photo-words h2{font-size:8cqw}
+@media(prefers-reduced-motion:no-preference){
+ .pg-story.pg-motion .pg-image-depth{position:absolute;inset-inline:0;top:50%;height:calc(100% + var(--pg-photo-reserve,0px));width:100%;transform:translate3d(0,calc(-50% + var(--pg-photo-y,0px) + var(--pg-pointer-y,0px)),0);transform-origin:center;will-change:transform}
+ .pg-story.pg-motion .pg-frame img,.pg-story.pg-motion [data-pg-tile] img{object-fit:cover}
+ .pg-story.pg-motion [data-pg-tile]{position:relative}
+ .pg-story.pg-motion .pg-library-portrait img{object-position:left center}
+}
+
+/* Portrait phone edition; larger viewports keep their existing composition. */
+.pg-story .pg-mobile-photo-rail,.pg-story .pg-mobile-carousel{display:contents}
+@media(min-width:701px){.pg-story .pg-mobile-carousel>.rail-controls,.pg-story .pg-room-collection>.rail-controls{display:none!important}}
+@media(max-width:700px){
+ .pg-story .pg-collection .pg-photo .pg-frame,.pg-story .pg-collection .pg-photo.pg-native .pg-frame,.pg-story .pg-collection .pg-photo.pg-library-portrait .pg-frame{aspect-ratio:4/5}
+ .pg-story .pg-restaurant-shot{width:100%}
+ .pg-story .pg-frame picture{display:block;width:100%;height:100%}
+ .pg-story .pg-frame img,.pg-story .pg-room-mosaic img{object-position:var(--pg-mobile-position,50% 50%)!important}
+ .pg-story.pg-motion .pg-image-depth{position:absolute;inset-inline:0;top:50%;height:calc(100% + var(--pg-photo-reserve,0px));width:100%;transform:translate3d(0,calc(-50% + var(--pg-photo-y,0px)),0);will-change:transform}
+ .pg-story .pg-photo-words{padding:12% 6% 20px;align-items:flex-start;transform:none!important;transform:none!important}
+ .pg-story [data-pg-id] .pg-photo-words h2{font-size:var(--pg-mobile-overlay-size);line-height:1.2;width:100%;max-width:none}
+ .pg-story .pg-photo .pg-frame{container-type:inline-size}
+ .pg-story .pg-city-line,.pg-story .pg-city-line+.pg-city-line{text-align:left;margin-top:0}
+ .pg-story .pg-title-masked .pg-city-line:nth-child(2){text-align:center;margin-top:.06em}
+ .pg-story .pg-title-masked .pg-city-line:nth-child(3){text-align:right;margin-top:.06em}
+ .pg-story .pg-mobile-photo-rail,.pg-story .pg-room-mosaic{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;grid-template-columns:none;grid-template-rows:none;aspect-ratio:auto;padding:0;scrollbar-width:none;touch-action:pan-x pan-y;overscroll-behavior-x:contain;border-radius:var(--plaza-radius-ui,4px)}
+ .pg-story .pg-mobile-photo-rail::-webkit-scrollbar,.pg-story .pg-room-mosaic::-webkit-scrollbar{display:none}
+ .pg-story .pg-mobile-carousel{display:block;min-width:0}
+ .pg-story .pg-mobile-photo-rail>.pg-grid{display:contents}
+ .pg-story .pg-mobile-photo-rail .pg-photo,.pg-story .pg-room-mosaic>[data-pg-tile]{flex:0 0 88%;min-width:0;margin:0;aspect-ratio:4/5;position:relative;overflow:hidden;align-self:stretch}
+ .pg-story .pg-mobile-photo-rail figcaption{display:none}
+ /* Swipe slides use the same internal parallax and overscan as single photographs. */
+ .pg-story [data-pg-mobile-rail] picture{display:block;height:100%}
+ .pg-story [data-pg-mobile-rail] img{width:100%;height:100%;object-fit:cover}
+ .pg-story .pg-room-collection{display:block;padding-block:24px}
+ .pg-story .pg-room-copy{margin-top:24px}
+ .pg-story .pg-room-collection .pg-room-label{display:inline-flex;min-height:44px}
+ .pg-story .pg-mobile-carousel>.rail-controls,.pg-story .pg-room-collection>.rail-controls{display:flex;justify-content:center;margin:4px 0 0;padding:0;min-height:44px}
+ .pg-story :is(.pg-mobile-carousel,.pg-room-collection)>.rail-controls .rail-arrows{display:none}
+ .pg-story :is(.pg-mobile-carousel,.pg-room-collection)>.rail-controls .rail-dots{display:flex;justify-content:center;gap:0;max-width:100%}
+ .pg-story .pg-top{padding-top:12px}
+ .pg-story .wellness-breadcrumbs{margin-bottom:14px}
+}
+
+@media(max-width:700px){.pg-story [data-pg-id] .pg-photo-words{align-items:flex-start}}
+
+/* Journal-length captions and the approved Kislovodsk motion language. */
+.pg-story figcaption{font-size:13px;line-height:1.65;max-width:68ch;text-wrap:pretty}
+@media(min-width:1051px){.pg-story figcaption{font-size:14px}}
+.pg-story :is([data-pg-id="7"],[data-pg-id="24"]) .pg-city-line{transform:translate3d(var(--pg-line-converge,0%),0,0)}
+@media(prefers-reduced-motion:reduce){.pg-story :is([data-pg-id="7"],[data-pg-id="24"]) .pg-city-line{transform:none!important}}
+@media print{}
+/* Independent stagger: first/second/third line finish within one second after trigger. */
+.pg-story .pg-caption-animated{overflow:hidden;overflow:clip}
+.pg-story .pg-caption-line{display:block;overflow:hidden;overflow:clip}
+.pg-story .pg-caption-line-inner{display:block;white-space:nowrap;transform:translate3d(0,-110%,0);opacity:0}
+.pg-story .pg-caption-started .pg-caption-line-inner{animation:pg-caption-line-enter var(--pg-caption-line-duration,600ms) cubic-bezier(.4,0,.2,1) var(--pg-caption-line-delay,0ms) both}
+.pg-story .pg-caption-complete .pg-caption-line-inner{animation:none;transform:none;opacity:1}
+@keyframes pg-caption-line-enter{0%{transform:translate3d(0,-110%,0);opacity:0}45%{opacity:.2}100%{transform:translate3d(0,0,0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.pg-story .pg-caption-line-inner{animation:none!important;transform:none!important;opacity:1!important}}
+@media print{.pg-story .pg-caption-line-inner{animation:none!important;transform:none!important;opacity:1!important;white-space:normal}}
+
+/* Photo-story entry points reuse the existing room cinema dialog. */
+
+[data-pg-story] .pg-story-lightbox .plaza-cinema-layer img{object-fit:contain}
+@media(hover:none),(pointer:coarse){}
+@media(hover:hover) and (pointer:fine){}
+
+/* Pure black letterboxing in the photo-story viewer, in both themes. */
+[data-pg-story] .pg-story-lightbox,[data-pg-story] .pg-story-lightbox::backdrop,[data-pg-story] .pg-story-lightbox .plaza-cinema-stage,[data-pg-story] .pg-story-lightbox .plaza-cinema-layer{background:#000000!important}
+
+/* Per-photograph editorial data, not one forced crop for all subjects. */
+@media(max-width:700px){
+ .pg-story .pg-frame img,.pg-story .pg-room-mosaic img{transform:scale(var(--pg-mobile-zoom,1));transform-origin:var(--pg-mobile-position,50% 50%)}
+}
+.pg-story [data-pg-id="7"] .pg-frame{aspect-ratio:3/2}
+.pg-story [data-pg-id="7"] .pg-photo-words{top:30%;bottom:auto;align-items:center;padding-block:0;transform:translateY(-50%)}
+.pg-story [data-pg-id="7"] .pg-photo-words h2{font-size:8cqw;line-height:1.13;max-width:none}
+@media(max-width:700px){
+ .pg-story .pg-collection [data-pg-id="7"] .pg-frame{aspect-ratio:4/5}
+ .pg-story [data-pg-id="7"] .pg-photo-words{padding-block:0;padding-inline:5%;transform:translateY(-50%)!important}
+ .pg-story [data-pg-id="7"] .pg-photo-words h2{font-size:var(--pg-mobile-overlay-size);line-height:1.2}
+}
+
+/* Mobile opening cover: full viewport below the 64px header, centered editorial title. */
+@media(max-width:700px){
+ .pg-story .pg-collection [data-pg-id="1"] .pg-frame{height:calc(100svh - 64px);min-height:420px;aspect-ratio:auto}
+ .pg-story [data-pg-id="1"] .pg-photo-words{top:50%;bottom:auto;padding:0 4%;align-items:center;transform:translateY(-50%)!important}
+ .pg-story [data-pg-id="1"] .pg-photo-words h2{font-size:17cqw;line-height:1.15}
+ .pg-story [data-pg-id="1"] .pg-city-line,.pg-story [data-pg-id="1"] .pg-city-line+.pg-city-line{text-align:center;margin-top:.06em}
+}
