@@ -14,3 +14,5 @@ Initial release.
 - Printed booklets show separate complete sheets and remain loaded while scrolling.
 - Overview stack and connection guide; repository references point to plaza-ui.
 - Correct mobile specimen fitting, stable target selection, isolated crop canvases and restored original phone SVG context.
+
+- Stabilize component/state navigation and accordion previews, preserve the reading position during loading, and remove the active sidebar stripe.

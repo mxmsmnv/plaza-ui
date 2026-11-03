@@ -58,3 +58,5 @@ GitHub Pages serves the ready static files. A local HTTP server is sufficient fo
 ## Preview Fitting
 
 Isolated element previews use stable source selectors, hide unrelated siblings without changing layout, and fit their full bounds into the available width. Preview padding scales with the content; small controls do not inherit a large scene minimum height. Bounds observers attach only to existing nodes. Original missing SVG context is supplied by the specimen's optional `svg_sources` field, referencing SVG from existing PLAZA examples.
+
+Preview state setup scrolls only its own iframe. Catalog section navigation uses one cancellable GSAP scroll with the mobile header offset; asynchronous preview sizing preserves the current reading position.
