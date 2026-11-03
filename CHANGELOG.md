@@ -12,3 +12,4 @@ Initial release.
 - Verification: 189 startup checks, eight interaction scenarios and ten framework contract checks.
 - Collapsible sidebar categories, counts, active-page orientation, search clearing and an icon-only theme switch.
 - Printed booklets show separate complete sheets and remain loaded while scrolling.
+- Overview stack and connection guide; repository references point to plaza-ui.

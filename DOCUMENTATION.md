@@ -39,10 +39,18 @@ The overview has no live specimen iframes. All selected-component sections are q
 
 ## Verification and Limits
 
-The first release includes a sequential browser startup check of all 189 examples, eight representative interaction checks and ten framework contract checks. The private archive retains the detailed reports, before/after hashes and source provenance.
+The first release includes a sequential browser startup check of all 189 examples, eight representative interaction checks and ten framework contract checks. These checks were recorded during development; the public catalog retains component IDs, source-site references and dependency paths.
 
 These checks are not exhaustive pixel comparisons and do not guarantee every state, breakpoint, print layout or external service. No screenshots were created. Source/profile selection and a real behavior check remain necessary for each integration.
 
 ## Rights
 
 Read [LICENSE](LICENSE), the notices in `licenses/` and the original bundle headers. The original catalog tooling license does not relicense PLAZA source, specimen markup, branding, photos, media or third-party assets.
+
+## Connection Order
+
+`index.html` loads the local GSAP bundle, CustomEase, Alpine CSP, then `framework.js`, `icons.js`, `state-preview.js`, `preview.js` and `app.js`, all with `defer`. CSS is loaded with stylesheet links (`inter.css` and `style.css`).
+
+`app.js` registers the `plazaCatalog` Alpine data component, calls `PlazaRuntime.start()` and fetches the catalog, examples index and human-readable copy. Each isolated specimen loads the same framework bootstrap before its own runtime modules. Component fonts and styles are taken from its selected JSON payload; catalog icons reference `assets/remix-icons.svg`.
+
+GitHub Pages serves the ready static files. A local HTTP server is sufficient for preview; no frontend build step is required.

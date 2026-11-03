@@ -46,7 +46,7 @@ Open [localhost:8047](http://localhost:8047/).
 
 Alpine.js 3.17.5 CSP owns UI state and event bindings. GSAP 3.15.0 and CustomEase own procedural animations, frame scheduling and rendered CSS keyframes. Small CSS hover transitions and required browser platform APIs remain native.
 
-Local bundles and their notices are included. The examples are integration references, not independent installable packages: check the referenced styles, context and runtime dependencies before reuse.
+The overview explains the stack and shows the actual script loading order. Local bundles and their notices are included. The examples are integration references, not independent installable packages: check the referenced styles, context and runtime dependencies before reuse.
 
 ## AI Implementation Rules
 
@@ -60,7 +60,7 @@ See [DOCUMENTATION.md](DOCUMENTATION.md) for structure, component reuse, runtime
 
 See [CHANGELOG.md](CHANGELOG.md) for the initial release notes.
 
-The source inventory and detailed evidence are maintained in the private [plaza-components](https://github.com/mxmsmnv/plaza-components) archive. This public repository contains no WordPress PHP, database export or credentials.
+This repository contains the static catalog, component examples and their frontend dependencies. Original source paths are provenance references; WordPress PHP, database exports and credentials are excluded.
 
 ## Author
 
