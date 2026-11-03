@@ -54,3 +54,7 @@ Read [LICENSE](LICENSE), the notices in `licenses/` and the original bundle head
 `app.js` registers the `plazaCatalog` Alpine data component, calls `PlazaRuntime.start()` and fetches the catalog, examples index and human-readable copy. Each isolated specimen loads the same framework bootstrap before its own runtime modules. Component fonts and styles are taken from its selected JSON payload; catalog icons reference `assets/remix-icons.svg`.
 
 GitHub Pages serves the ready static files. A local HTTP server is sufficient for preview; no frontend build step is required.
+
+## Preview Fitting
+
+Isolated element previews use stable source selectors, hide unrelated siblings without changing layout, and fit their full bounds into the available width. Preview padding scales with the content; small controls do not inherit a large scene minimum height. Bounds observers attach only to existing nodes. Original missing SVG context is supplied by the specimen's optional `svg_sources` field, referencing SVG from existing PLAZA examples.
