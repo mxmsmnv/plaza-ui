@@ -76,3 +76,5 @@ The catalog reserves only the document height needed for a requested heading to 
 Tab image preloading has a bounded wait; a stalled image cannot keep its panel hidden. Canonical [ResizeObserver loop notifications](https://www.w3.org/TR/resize-observer/#deliver-resize-loop-error) are retained as measurement warnings, separately from script exceptions; preview resize writes are scheduled outside observer delivery.
 
 Crop coordinates are measured in the source viewport after local document scrolling. Ordinary previews keep their original viewport height; they never grow to the element’s position down a long page. Print pages may use their physical page height, while taller interactive elements retain a scrollable native viewport. Local image assets are explicitly permitted by the preview CSP.
+
+The GSAP frame adapter suppresses synchronous callbacks during ticker subscription. This preserves asynchronous frame semantics after an idle wake, so visibility updates and component motion cannot become stuck. Browser disclosure tests wait for completed transitions and explicitly cover an idle ticker.

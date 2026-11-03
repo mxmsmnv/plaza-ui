@@ -19,9 +19,10 @@
   records.get(key).set(listener,cleanup);
   if(options?.signal)options.signal.addEventListener('abort',()=>off(target,type,listener,options),{once:true});
  };
- const queues=new Map();let frameId=0,ticking=false;
- const drain=()=>{if(viewportPaused){gsap.ticker.sleep();return}const batch=[...queues];queues.clear();const now=performance.now();for(const [,callback]of batch){stats.gsapFrames++;try{callback(now)}catch(error){setTimeout(()=>{throw error})}}if(!queues.size){ticking=false;gsap.ticker.remove(drain)}};
- const frame=callback=>{const id=++frameId;queues.set(id,callback);if(!ticking){ticking=true;gsap.ticker.add(drain)}return id};
+ // GSAP may tick synchronously when waking; frame callbacks must run after subscription returns.
+ const queues=new Map();let frameId=0,ticking=false,subscribing=false;
+ const drain=()=>{if(subscribing)return;if(viewportPaused){gsap.ticker.sleep();return}const batch=[...queues];queues.clear();const now=performance.now();for(const [,callback]of batch){stats.gsapFrames++;try{callback(now)}catch(error){setTimeout(()=>{throw error})}}if(!queues.size){ticking=false;gsap.ticker.remove(drain)}};
+ const frame=callback=>{const id=++frameId;queues.set(id,callback);if(!ticking){ticking=true;subscribing=true;try{gsap.ticker.add(drain)}finally{subscribing=false}}return id};
  const cancelFrame=id=>queues.delete(id);
  const easing=value=>{if(typeof value==='function')return value;const text=(value||'linear').trim(),curves={ease:'.25,.1,.25,1','ease-in':'.42,0,1,1','ease-out':'0,0,.58,1','ease-in-out':'.42,0,.58,1'};const curve=curves[text]||text.match(/^cubic-bezier\(([^)]+)\)$/)?.[1];if(curve)return CustomEase.create('',curve);const steps=text.match(/^steps\((\d+)(?:,\s*(start|end|jump-start|jump-end))?\)$/);if(steps){const n=+steps[1],start=/start/.test(steps[2]||'');return p=>Math.min(1,(Math.floor(p*n)+(start?1:0))/n)}return text==='linear'?'none':text};
  function animate(target,input,settings={}){

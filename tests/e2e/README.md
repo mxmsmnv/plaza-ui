@@ -35,3 +35,5 @@ A JSON report is written to `report.json`; override the destination with `UI_REP
 The interaction suite checks overview loading, search and profile filters, sidebar navigation, browser history, theme persistence, element navigation, code display, replay, native sizing, accordion pointer and keyboard behavior, tabs (including a stalled-image regression), booklet pages, rapid route changes, responsive crop bounds, source profile changes and focus retention while background dialogs prepare. Each route gets a fresh browser page, and the browser restarts after every 20 routes to bound memory during long runs. The route sweep checks completion of preview preparation, runtime error messages, accidental page scrolling and horizontal overflow.
 
 Transformed iframe controls are clicked using coordinates mapped from the child viewport to the parent page. This avoids Playwright's unscaled iframe coordinates and exercises real pointer events.
+
+The disclosure scenario first puts the GSAP ticker to sleep and dispatches a resize, reproducing the idle-wake regression. It waits for the actual completed transition rather than assuming a fixed duration.

@@ -22,3 +22,5 @@ Initial release.
 - Keep element state IDs stable across responsive layouts, prevent bottom-page scroll clamping, and restore the original seating-plan dependency in the New Year rails example.
 
 - Preserve native preview viewport dimensions while cropping, permit local preview images, and bound image preloading so tabs remain responsive. Verify 140 browser checks across all 116 component routes and both viewport widths.
+
+- Fix synchronous GSAP ticker wakeups that could freeze visibility updates and offscreen motion; add deterministic idle-resumption coverage.

@@ -84,6 +84,20 @@ async function open(page, id) {
   await ready(page, id);
   await settle(page);
 }
+async function waitDisclosure(details, expected) {
+  const deadline = Date.now() + 5000;
+  while (Date.now() < deadline) {
+    if (
+      await details.evaluate(
+        (n, value) => n.open === value && !n.style.height,
+        expected,
+      )
+    )
+      return;
+    await new Promise((resolve) => setTimeout(resolve, 50));
+  }
+  assert.fail("Disclosure transition did not finish");
+}
 async function physicalClick(page, frameLocator, element) {
   const r = await element.evaluate((n) => n.getBoundingClientRect().toJSON()),
     f = await frameLocator.evaluate((n) => ({
@@ -209,6 +223,10 @@ async function flows(width) {
     `${width}: accordion pointer and keyboard, no page jumps`,
     async () => {
       await open(page, "accordion");
+      await page.evaluate(() => {
+        gsap.ticker.sleep();
+        window.dispatchEvent(new Event("resize"));
+      });
       assert.equal(await page.evaluate(() => scrollY), 0);
       const jump = page
           .locator("#accordion>.section-heading .state-section-nav a")
@@ -226,7 +244,7 @@ async function flows(width) {
           .evaluate((n) => n.getBoundingClientRect().top);
       for (const expected of [false, true, false, true]) {
         await physicalClick(page, iframe, summary);
-        await page.waitForTimeout(1200);
+        await waitDisclosure(details, expected);
         assert.equal((await details.getAttribute("open")) !== null, expected);
         const after = await page
           .locator(id)
@@ -238,7 +256,7 @@ async function flows(width) {
       }
       await summary.evaluate((n) => n.focus({ preventScroll: true }));
       await page.keyboard.press("Escape");
-      await page.waitForTimeout(1200);
+      await waitDisclosure(details, false);
       assert.equal(await details.getAttribute("open"), null);
     },
   );
