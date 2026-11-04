@@ -220,6 +220,67 @@ async function flows(width) {
     },
   );
   await check(
+    `${width}: mobile and desktop controls are available in every preview`,
+    async () => {
+      for (const id of [
+        "layout-and-controls",
+        "accordion",
+        "network-print-booklet",
+      ]) {
+        await open(page, id);
+        assert.equal(
+          await page.locator("#catalog .mobile-width:not([hidden])").count(),
+          await page.locator("#catalog .preview-viewport").count(),
+        );
+        assert.deepEqual(
+          await page.evaluate(() =>
+            [...controllers]
+              .filter(
+                ([, c]) =>
+                  c.section
+                    .querySelector(".mobile-width")
+                    .getAttribute("aria-pressed") !== String(c.mobile),
+              )
+              .map(([id]) => id),
+          ),
+          [],
+        );
+        const button = page.locator("#" + id + ">.specimen .mobile-width");
+        await button.click();
+        await ready(page, id);
+        assert.equal(await button.getAttribute("aria-pressed"), "true");
+        assert.match(await button.getAttribute("aria-label"), /десктоп/);
+        if (id === "network-print-booklet")
+          await page.waitForFunction((id) => {
+            const c = controllers.get(id);
+            return (
+              c.crop &&
+              parseFloat(c.frame.style.width) >= c.crop.x + c.crop.width
+            );
+          }, id);
+        else
+          assert.equal(
+            await page
+              .locator("#" + id + ">.specimen iframe")
+              .evaluate((n) => n.style.width),
+            "390px",
+          );
+        await button.click();
+        await ready(page, id);
+        assert.equal(await button.getAttribute("aria-pressed"), "false");
+      }
+      await open(page, "layout-and-controls");
+      const id = await page.evaluate(
+        () => [...controllers].find(([, c]) => c.isElement)?.[0],
+      );
+      assert.ok(id);
+      const button = page.locator("#" + id + ">.specimen .mobile-width");
+      await button.click();
+      await page.waitForFunction((id) => controllers.get(id)?.stateReady, id);
+      assert.equal(await button.getAttribute("aria-pressed"), "true");
+    },
+  );
+  await check(
     `${width}: accordion pointer and keyboard, no page jumps`,
     async () => {
       await open(page, "accordion");

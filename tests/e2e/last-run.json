@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "version_code": 100,
-  "checked_at": "2026-11-03T23:37:46.207585+00:00",
+  "checked_at": "2026-11-04T00:39:12.666329+00:00",
   "mode": "Full catalog sweep plus focused regression reruns after repairs",
   "browser": "156.0.8078.80",
   "playwright": "1.64.1",
@@ -14,8 +14,8 @@
     768
   ],
   "screenshots": false,
-  "checks": 140,
-  "passed": 140,
+  "checks": 142,
+  "passed": 142,
   "failed": 0,
   "interaction_checks": [
     {
@@ -112,6 +112,14 @@
     },
     {
       "name": "1280: background dialogs do not steal search focus",
+      "passed": true
+    },
+    {
+      "name": "390: mobile and desktop controls are available in every preview",
+      "passed": true
+    },
+    {
+      "name": "1280: mobile and desktop controls are available in every preview",
       "passed": true
     }
   ],

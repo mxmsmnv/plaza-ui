@@ -78,3 +78,5 @@ Tab image preloading has a bounded wait; a stalled image cannot keep its panel h
 Crop coordinates are measured in the source viewport after local document scrolling. Ordinary previews keep their original viewport height; they never grow to the element’s position down a long page. Print pages may use their physical page height, while taller interactive elements retain a scrollable native viewport. Local image assets are explicitly permitted by the preview CSP.
 
 The GSAP frame adapter suppresses synchronous callbacks during ticker subscription. This preserves asynchronous frame semantics after an idle wake, so visibility updates and component motion cannot become stuck. Browser disclosure tests wait for completed transitions and explicitly cover an idle ticker.
+
+Each preview has an independent phone/desktop button in its toolbar, including element and state sections. The icon shows the current viewport; its tooltip describes the next mode. Separate state sections remain available. Print previews preserve enough source width to display the physical page in either mode.
