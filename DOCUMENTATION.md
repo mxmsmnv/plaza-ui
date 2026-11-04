@@ -6,10 +6,11 @@
 
 | Path | Purpose |
 | --- | --- |
-| `index.html`, `app.js`, `style.css` | Catalog shell, search, categories and routing |
+| `index.html`, `category-*.html`, `<id>.html`, `pages.js`, `app.js`, `style.css` | Separate catalog documents, search and native links |
 | `preview.js`, `state-preview.js` | Isolated specimens and their element/state sections |
 | `framework.js` | Alpine bindings and GSAP animation/frame helpers |
-| `catalog.json`, `content.ru.json` | Component inventory and human-readable copy |
+| `navigation.json`, `manifests/` | Lightweight sidebar metadata and individual component manifests |
+| `catalog.json`, `content.ru.json` | Reference inventory and human-readable copy |
 | `examples.json`, `examples/` | Specimen index and payloads |
 | `runtime/shared/` | Shared component behavior |
 | `runtime/cards/` | Card, gallery and media behavior |
@@ -35,7 +36,7 @@ The preview controls, sandbox restrictions, specimen cropping and disabled demo 
 
 Alpine.js 3.17.5 CSP provides reactive catalog controls and UI event binding. GSAP 3.15.0 with CustomEase provides procedural motion and the frame scheduler; rendered CSS keyframes are transferred to GSAP timelines. Small CSS hover transitions, media/dialog APIs and view-transition lifetime remain native. The canvas fireworks renderer remains a third-party dependency.
 
-The overview has no live specimen iframes. All selected-component sections are queued immediately, with at most three previews bootstrapping together. Loaded previews remain present; offscreen motion pauses without unloading their content. Video and expensive effects start on demand. Reduced motion follows the existing component behavior and preview preferences.
+The overview has no live specimen iframes. Every component has a separate `<component-id>.html` document. Elements and states use explicit `?example=…` URLs on that document. Exactly one live preview is mounted per page; the overview and category documents mount none. Offscreen motion pauses without unloading their content. Video and expensive effects start on demand. Reduced motion follows the existing component behavior and preview preferences.
 
 ## Verification and Limits
 
@@ -49,9 +50,9 @@ Read [LICENSE](LICENSE), the notices in `licenses/` and the original bundle head
 
 ## Connection Order
 
-`index.html` loads the local GSAP bundle, CustomEase, Alpine CSP, then `framework.js`, `icons.js`, `state-preview.js`, `preview.js` and `app.js`, all with `defer`. CSS is loaded with stylesheet links (`inter.css` and `style.css`).
+`index.html` loads the local GSAP bundle, CustomEase, Alpine CSP, then `framework.js`, `icons.js`, `pages.js` and `app.js`. Component documents additionally load `state-preview.js` and `preview.js`, all with `defer`. CSS is loaded with stylesheet links (`inter.css` and `style.css`).
 
-`app.js` registers the `plazaCatalog` Alpine data component, calls `PlazaRuntime.start()` and fetches the catalog, examples index and human-readable copy. Each isolated specimen loads the same framework bootstrap before its own runtime modules. Component fonts and styles are taken from its selected JSON payload; catalog icons reference `assets/remix-icons.svg`.
+`app.js` registers the `plazaCatalog` Alpine data component, calls `PlazaRuntime.start()` and fetches lightweight `navigation.json`. Component pages additionally fetch only their own `manifests/<id>.json` and selected specimen. Each isolated specimen loads the same framework bootstrap before its own runtime modules. Component fonts and styles are taken from its selected JSON payload; catalog icons reference `assets/remix-icons.svg`.
 
 GitHub Pages serves the ready static files. A local HTTP server is sufficient for preview; no frontend build step is required.
 
@@ -59,7 +60,7 @@ GitHub Pages serves the ready static files. A local HTTP server is sufficient fo
 
 Isolated element previews use stable source selectors, hide unrelated siblings without changing layout, and fit their full bounds into the available width. Preview padding scales with the content; small controls do not inherit a large scene minimum height. Bounds observers attach only to existing nodes. Original missing SVG context is supplied by the specimen's optional `svg_sources` field, referencing SVG from existing PLAZA examples.
 
-Preview state setup scrolls only its own iframe. Catalog section navigation uses one cancellable GSAP scroll with the mobile header offset; asynchronous preview sizing preserves the current reading position.
+Preview state setup scrolls only its own iframe. Catalog links use native document navigation; asynchronous preview sizing preserves the current reading position.
 
 ## Browser verification
 
@@ -79,4 +80,8 @@ Crop coordinates are measured in the source viewport after local document scroll
 
 The GSAP frame adapter suppresses synchronous callbacks during ticker subscription. This preserves asynchronous frame semantics after an idle wake, so visibility updates and component motion cannot become stuck. Browser disclosure tests wait for completed transitions and explicitly cover an idle ticker.
 
-Each preview has an independent phone/desktop button in its toolbar, including element and state sections. The icon shows the current viewport; its tooltip describes the next mode. Separate state sections remain available. Print previews preserve enough source width to display the physical page in either mode.
+Each preview has an independent phone/desktop button in its toolbar, including element and state sections. The icon shows the current viewport; its tooltip describes the next mode. Separate state pages remain available. Print previews preserve enough source width to display the physical page in either mode.
+
+## Document URLs
+
+`index.html` is the overview; `category-foundation.html` and the other category documents list links. Open `accordion.html` for a component, or `layout-and-controls.html?example=element-1-focus` for a specific element state. `variant`, `viewport` and `theme` query parameters preserve preview choices. Existing `#component-id` links redirect to the new document URLs. Generated metadata and documents are built in the authoring repository with `python3 scripts/build_pages.py`; the published repository serves the resulting files directly.

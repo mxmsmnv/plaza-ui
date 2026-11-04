@@ -18,7 +18,7 @@ Resolve the following paths against the PLAZA UI checkout, not against the consu
 1. Read `catalog.json` to identify component IDs, selectors, profiles, variants and declared states. Use `content.ru.json` for human-readable names and descriptions.
 2. Read `examples.json` to find the actual specimen paths for the selected component and profile.
 3. Read the selected `examples/*.json` payloads, including `markup`, `styles`, `inline_css`, `body_class`, `ancestors`, `layout`, `runtime_context` and `runtime_scripts` when present.
-4. Inspect the referenced CSS, assets and runtime modules. Open the component's live page (`#<component-id>`) to inspect the separate element and state sections where necessary. Applicable states are also discovered by `state-preview.js`; an inventory label alone is not implementation evidence.
+4. Inspect the referenced CSS, assets and runtime modules. Open the component's live page (`<component-id>.html`) to inspect the linked element and state pages where necessary. Applicable states are also discovered by `state-preview.js`; an inventory label alone is not implementation evidence.
 5. Before editing, make a short mapping: requested UI part → component ID → specimen path/profile → required state → dependencies. Keep this in task notes or the implementation summary; do not add it to the product interface.
 
 Do not guess behavior from a screenshot, a component name or a thumbnail. If the relevant implementation cannot be read, identify the missing source and do not fabricate it.

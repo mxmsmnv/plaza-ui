@@ -1,710 +1,494 @@
 {
-  "version": "1.0.0",
-  "version_code": 100,
-  "checked_at": "2026-11-04T00:39:12.666329+00:00",
-  "mode": "Full catalog sweep plus focused regression reruns after repairs",
-  "browser": "156.0.8078.80",
-  "playwright": "1.64.1",
-  "widths": [
-    390,
-    1280
-  ],
-  "additional_crop_widths": [
-    320,
-    768
-  ],
+  "started_at": "2026-11-04T00:59:08.882Z",
   "screenshots": false,
-  "checks": 142,
-  "passed": 142,
-  "failed": 0,
-  "interaction_checks": [
+  "checks": [
     {
-      "name": "390: overview, search and profile filters",
+      "name": "Homepage loads navigation only",
       "passed": true
     },
     {
-      "name": "390: sidebar, history, theme persistence",
+      "name": "Native navigation and device controls",
       "passed": true
     },
     {
-      "name": "390: element jumps, code, replay and native size",
+      "name": "Elements and states are separate documents",
       "passed": true
     },
     {
-      "name": "390: accordion pointer and keyboard, no page jumps",
+      "name": "Legacy shared links redirect",
       "passed": true
     },
     {
-      "name": "390: tabs switch panels",
-      "passed": true
-    },
-    {
-      "name": "390: tabs remain usable while an image is stalled",
-      "passed": true
-    },
-    {
-      "name": "390: booklet pages loaded without scrolling",
-      "passed": true
-    },
-    {
-      "name": "390: rapid route changes and overview cleanup",
-      "passed": true
-    },
-    {
-      "name": "390: responsive crops remain inside their viewport",
-      "passed": true
-    },
-    {
-      "name": "390: wide native previews start at the visible left edge",
-      "passed": true
-    },
-    {
-      "name": "390: source profile changes rebuild previews once",
-      "passed": true
-    },
-    {
-      "name": "390: background dialogs do not steal search focus",
-      "passed": true
-    },
-    {
-      "name": "1280: overview, search and profile filters",
-      "passed": true
-    },
-    {
-      "name": "1280: sidebar, history, theme persistence",
-      "passed": true
-    },
-    {
-      "name": "1280: element jumps, code, replay and native size",
-      "passed": true
-    },
-    {
-      "name": "1280: accordion pointer and keyboard, no page jumps",
-      "passed": true
-    },
-    {
-      "name": "1280: tabs switch panels",
-      "passed": true
-    },
-    {
-      "name": "1280: tabs remain usable while an image is stalled",
-      "passed": true
-    },
-    {
-      "name": "1280: booklet pages loaded without scrolling",
-      "passed": true
-    },
-    {
-      "name": "1280: rapid route changes and overview cleanup",
-      "passed": true
-    },
-    {
-      "name": "1280: responsive crops remain inside their viewport",
-      "passed": true
-    },
-    {
-      "name": "1280: wide native previews start at the visible left edge",
-      "passed": true
-    },
-    {
-      "name": "1280: source profile changes rebuild previews once",
-      "passed": true
-    },
-    {
-      "name": "1280: background dialogs do not steal search focus",
-      "passed": true
-    },
-    {
-      "name": "390: mobile and desktop controls are available in every preview",
-      "passed": true
-    },
-    {
-      "name": "1280: mobile and desktop controls are available in every preview",
+      "name": "Mobile document width and single preview",
       "passed": true
     }
   ],
-  "component_routes": [
+  "smoke": [
     {
       "id": "accordion",
-      "passed": true,
-      "frames": 10
+      "passed": true
     },
     {
       "id": "booking-panel",
-      "passed": true,
-      "frames": 20
+      "passed": true
     },
     {
       "id": "breadcrumbs",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "card-spotlight",
-      "passed": true,
-      "frames": 13
+      "passed": true
     },
     {
       "id": "consultant-portrait-gaze",
-      "passed": true,
-      "frames": 20
+      "passed": true
     },
     {
       "id": "dialog-close",
-      "passed": true,
-      "frames": 28
+      "passed": true
     },
     {
       "id": "editor-foundation",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "elastic-headings",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "font-foundation",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "footer-meta",
-      "passed": true,
-      "frames": 41
+      "passed": true
     },
     {
       "id": "footer-shell",
-      "passed": true,
-      "frames": 50
+      "passed": true
     },
     {
       "id": "footer-sitemap",
-      "passed": true,
-      "frames": 50
+      "passed": true
     },
     {
       "id": "glass-surface",
-      "passed": true,
-      "frames": 14
+      "passed": true
     },
     {
       "id": "guest-search",
-      "passed": true,
-      "frames": 18
+      "passed": true
     },
     {
       "id": "header-shell",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "heading-motion",
-      "passed": true,
-      "frames": 10
+      "passed": true
     },
     {
       "id": "hero-video",
-      "passed": true,
-      "frames": 11
+      "passed": true
     },
     {
       "id": "home-booking-search",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "home-gallery",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "home-loading-choreography",
-      "passed": true,
-      "frames": 29
+      "passed": true
     },
     {
       "id": "icon-registry",
-      "passed": true,
-      "frames": 23
+      "passed": true
     },
     {
       "id": "inner-photo",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "layout-and-controls",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "mobile-home-faq-wrapper",
-      "passed": true,
-      "frames": 11
+      "passed": true
     },
     {
       "id": "network-atlas-hero",
-      "passed": true,
-      "frames": 14
+      "passed": true
     },
     {
       "id": "network-booking-social-layout",
-      "passed": true,
-      "frames": 21
+      "passed": true
     },
     {
       "id": "network-care",
-      "passed": true,
-      "frames": 7
+      "passed": true
     },
     {
       "id": "network-comparison",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "network-faq",
-      "passed": true,
-      "frames": 10
+      "passed": true
     },
     {
       "id": "network-home",
-      "passed": true,
-      "frames": 29
+      "passed": true
     },
     {
       "id": "network-map-camera-dialogs",
-      "passed": true,
-      "frames": 18
+      "passed": true
     },
     {
       "id": "network-principles-rail",
-      "passed": true,
-      "frames": 7
+      "passed": true
     },
     {
       "id": "network-print-booklet",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "network-privacy-cookie",
-      "passed": true,
-      "frames": 11
+      "passed": true
     },
     {
       "id": "network-property-card",
-      "passed": true,
-      "frames": 26
+      "passed": true
     },
     {
       "id": "network-rating",
-      "passed": true,
-      "frames": 26
+      "passed": true
     },
     {
       "id": "network-shell-adapter",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "network-video-poster-pair",
-      "passed": true,
-      "frames": 26
+      "passed": true
     },
     {
       "id": "night-background",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "page-menu",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "page-transition",
-      "passed": true,
-      "frames": 18
+      "passed": true
     },
     {
       "id": "photo-gallery",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "photo-material",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "photo-story",
-      "passed": true,
-      "frames": 78
+      "passed": true
     },
     {
       "id": "plaza-room-print-family",
-      "passed": true,
-      "frames": 1
+      "passed": true
     },
     {
       "id": "privacy-contrast",
-      "passed": true,
-      "frames": 11
+      "passed": true
     },
     {
       "id": "profile-tokens",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "property-home-print-booklet",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "property-not-found-recovery",
-      "passed": true,
-      "frames": 23
+      "passed": true
     },
     {
       "id": "property-picker",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "property-print-foundation",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "psg-booking-page",
-      "passed": true,
-      "frames": 18
+      "passed": true
     },
     {
       "id": "psg-contact-priority",
-      "passed": true,
-      "frames": 12
+      "passed": true
     },
     {
       "id": "psg-data-table",
-      "passed": true,
-      "frames": 21
+      "passed": true
     },
     {
       "id": "psg-detail-page",
-      "passed": true,
-      "frames": 10
+      "passed": true
     },
     {
       "id": "psg-document-search",
-      "passed": true,
-      "frames": 17
+      "passed": true
     },
     {
       "id": "psg-editorial-refinement",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "psg-gallery-print",
-      "passed": true,
-      "frames": 24
+      "passed": true
     },
     {
       "id": "psg-guide-feature-card",
-      "passed": true,
-      "frames": 12
+      "passed": true
     },
     {
       "id": "psg-guide-feature-rail",
-      "passed": true,
-      "frames": 12
+      "passed": true
     },
     {
       "id": "psg-guide-hero",
-      "passed": true,
-      "frames": 13
+      "passed": true
     },
     {
       "id": "psg-guide-navigation",
-      "passed": true,
-      "frames": 7
+      "passed": true
     },
     {
       "id": "psg-guide-page",
-      "passed": true,
-      "frames": 41
+      "passed": true
     },
     {
       "id": "psg-guide-prose-section",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "psg-photo-story",
-      "passed": true,
-      "frames": 118
+      "passed": true
     },
     {
       "id": "psg-profile-shell-adapter",
-      "passed": true,
-      "frames": 31
+      "passed": true
     },
     {
       "id": "psg-room-card-adapter",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "psg-room-detail",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "psg-room-photo-gallery",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "psg-wifi-welcome",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "psk-about-award",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "psk-about-editorial",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "psk-about-jobs-contacts",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "psk-about-print",
-      "passed": true,
-      "frames": 3
+      "passed": true
     },
     {
       "id": "psk-candy-catalogue",
-      "passed": true,
-      "frames": 21
+      "passed": true
     },
     {
       "id": "psk-channel-pages",
-      "passed": true,
-      "frames": 17
+      "passed": true
     },
     {
       "id": "psk-dining-editorial",
-      "passed": true,
-      "frames": 76
+      "passed": true
     },
     {
       "id": "psk-dining-gallery",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "psk-dining-print",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "psk-documents-browser",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "psk-ds-catalogue",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "psk-ds-live-cards",
-      "passed": true,
-      "frames": 82
+      "passed": true
     },
     {
       "id": "psk-ds-reference-tools",
-      "passed": true,
-      "frames": 38
+      "passed": true
     },
     {
       "id": "psk-faq-packing",
-      "passed": true,
-      "frames": 12
+      "passed": true
     },
     {
       "id": "psk-feature-card",
-      "passed": true,
-      "frames": 14
+      "passed": true
     },
     {
       "id": "psk-guide-page",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "psk-medical-goal",
-      "passed": true,
-      "frames": 19
+      "passed": true
     },
     {
       "id": "psk-medical-landing",
-      "passed": true,
-      "frames": 116
+      "passed": true
     },
     {
       "id": "psk-medical-methods",
-      "passed": true,
-      "frames": 14
+      "passed": true
     },
     {
       "id": "psk-medical-print",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "psk-medical-registry",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "psk-medical-sheet",
-      "passed": true,
-      "frames": 16
+      "passed": true
     },
     {
       "id": "psk-newyear-page",
-      "passed": true,
-      "frames": 51
+      "passed": true
     },
     {
       "id": "psk-newyear-plan",
-      "passed": true,
-      "frames": 45
+      "passed": true
     },
     {
       "id": "psk-newyear-print",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "psk-newyear-rails",
-      "passed": true,
-      "frames": 51
+      "passed": true
     },
     {
       "id": "psk-program-card",
-      "passed": true,
-      "frames": 18
+      "passed": true
     },
     {
       "id": "psk-service-card",
-      "passed": true,
-      "frames": 12
+      "passed": true
     },
     {
       "id": "psk-services-page",
-      "passed": true,
-      "frames": 71
+      "passed": true
     },
     {
       "id": "psk-services-transfer-business",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "rail-carousel",
-      "passed": true,
-      "frames": 7
+      "passed": true
     },
     {
       "id": "resort-profile-shell-adapter",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "room-card-interaction",
-      "passed": true,
-      "frames": 22
+      "passed": true
     },
     {
       "id": "scroll-reveal",
-      "passed": true,
-      "frames": 10
+      "passed": true
     },
     {
       "id": "search-targets",
-      "passed": true,
-      "frames": 10
+      "passed": true
     },
     {
       "id": "section-rhythm",
-      "passed": true,
-      "frames": 10
+      "passed": true
     },
     {
       "id": "semantic-card-system",
-      "passed": true,
-      "frames": 7
+      "passed": true
     },
     {
       "id": "semantic-links",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "sticky-photo-copy",
-      "passed": true,
-      "frames": 13
+      "passed": true
     },
     {
       "id": "sticky-table-head",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "sun-icon",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "table-foundation",
-      "passed": true,
-      "frames": 6
+      "passed": true
     },
     {
       "id": "tabs",
-      "passed": true,
-      "frames": 17
+      "passed": true
     },
     {
       "id": "theme-transition",
-      "passed": true,
-      "frames": 9
+      "passed": true
     },
     {
       "id": "tooltips",
-      "passed": true,
-      "frames": 8
+      "passed": true
     },
     {
       "id": "welcome-book-navigation",
-      "passed": true,
-      "frames": 14
+      "passed": true
     }
   ],
-  "measurement_warnings": [],
-  "idle_regression": "Force the GSAP ticker to sleep before a resize and real disclosure interactions"
+  "finished_at": "2026-11-04T00:59:39.521Z",
+  "passed": true
 }
